@@ -186,6 +186,20 @@ added expected return. The other two entry styles (BOS2_CONFIRMED,
 PRE_BOS2_READY) never develop a comparably strong edge at any horizon in
 this sample - re-validate on your own universe before trusting this.
 
+### Best stop-loss for that holding period
+
+`scripts/optimize_stop_loss.py` sweeps 14 stop-loss placements (fixed % from
+1-10%, ATR-multiple stops, and the structural retest-low stop already used
+elsewhere) against every historical Reaccum-Reversal signal, for each
+holding period from 3-10 days. Result: **the structural stop (the chain's
+retest low) wins outright at every point in the 4-7 day window** - highest
+average return (1.28-1.40%) at a moderate, technically-placed risk (~3.3%),
+beating both tighter fixed stops (1-2%, which get stopped out 44-75% of the
+time and collapse the win rate) and looser stops (5-10%/ATR, which risk
+1.5-3x more capital for the same or lower return). This is already the
+scanner's default - see `results/sl_optimization_summary.xlsx` for the full
+sweep. Re-run with `python scripts/optimize_stop_loss.py` any time.
+
 Run it (`python -m smc_scanner.cli backtest`) and read
 `results/backtest_report.md` before trusting live alerts. **Re-tune
 `Config` (breakout buffer, volume multipliers, proximity %, min re-accum
