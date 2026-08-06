@@ -71,9 +71,28 @@ def build_results_table(all_chains_df: pd.DataFrame, cfg=None) -> pd.DataFrame:
     or read back from backtest_all_chains.csv) -> the single formatted
     table that goes into backtest_results.xlsx.
 
-    Only keeps chains that reached a confirmed fresh reversal (that's what
-    SL Level / Target Price are computed against), de-duped by (symbol,
-    reversal date), sorted most-recent-first.
+    Only keeps chains that (a) reached a confirmed fresh reversal - that's
+    what SL Level / Target Price are computed against - AND (b) actually
+    RESOLVED (outcome is BOS2_CONFIRMED / INVALIDATED / TIMEOUT), excluding
+    STILL_OPEN chains.
+
+    Why exclude STILL_OPEN (2026-08-08 fix): for a chain that hasn't
+    resolved yet, "the most recent confirmed pivot-low reversal" is a
+    moving target - every time the backtest re-runs on a later day, that
+    date (and its quality score, computed as-of that date) can silently
+    advance, because the re-accumulation window's end boundary is "now",
+    not a fixed historical point. Verified with real data: comparing two
+    exports taken a few days apart, every discrepancy (16 rows) traced
+    back to a STILL_OPEN chain whose reversal date had moved forward
+    (e.g. AZAD: 2026-07-21 -> 2026-08-05, same BOS1/Retest/Re-Accum dates)
+    - all 290 BOS2_CONFIRMED/INVALIDATED/TIMEOUT rows matched byte-for-byte
+    identically between the two exports. Excluding STILL_OPEN makes this
+    report a stable, reproducible record of only genuinely resolved
+    historical signals (not unconfirmed, still-live bets dressed up as
+    backtest results) - the live scanner/Telegram alerts already surface
+    currently-open setups separately.
+
+    De-duped by (symbol, reversal date), sorted most-recent-first.
     """
     target_reward_risk = getattr(cfg, "target_reward_risk", 1.0) if cfg is not None else 1.0
 
@@ -87,6 +106,8 @@ def build_results_table(all_chains_df: pd.DataFrame, cfg=None) -> pd.DataFrame:
             df[col] = pd.to_datetime(df[col], errors="coerce")
 
     df = df[df["reaccum_reversal_date"].notna()].copy()
+    if "outcome" in df.columns:
+        df = df[df["outcome"] != "STILL_OPEN"].copy()
     if df.empty:
         return pd.DataFrame(columns=RESULTS_XLSX_COLUMNS)
 
@@ -97,6 +118,7 @@ def build_results_table(all_chains_df: pd.DataFrame, cfg=None) -> pd.DataFrame:
         "Symbol": df["symbol"],
         "Quality Score": df["quality_score"],
         "Quality Grade": df["quality_grade"],
+
         "Fresh Reversal Entry Date": df["reaccum_reversal_date"],
         "Fresh Reversal Entry Price": df["reaccum_reversal_price"],
         "Re-Accumulation Date": df["reaccumulation_start_date"],

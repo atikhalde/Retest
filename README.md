@@ -326,13 +326,33 @@ universe, 5y history) run is much larger than the old 150-symbol sample.
 command (and the "Backtest" GitHub workflow) writes - **one file, one
 worksheet**, built directly in-memory from the backtest run (no
 intermediate CSVs, markdown report, or other files are generated). One row
-per historical pattern instance that reached a confirmed fresh reversal,
-de-duped and sorted by most recent Fresh Reversal Entry Date first:
+per historical pattern instance that reached a confirmed fresh reversal
+AND fully **resolved** (outcome is `BOS2_CONFIRMED`, `INVALIDATED`, or
+`TIMEOUT` - `STILL_OPEN` chains are excluded, see below), de-duped and
+sorted by most recent Fresh Reversal Entry Date first:
 
 `Symbol | Quality Score | Quality Grade | Fresh Reversal Entry Date | Fresh Reversal Entry Price | Re-Accumulation Date | Retest Date | BOS1 Breakout Date | PRE_BOS2_READY (Fresh-Entry) Date | SL Level | Target Price`
 
+**Why `STILL_OPEN` chains are excluded (2026-08-08 fix):** for a chain
+that hasn't resolved yet, "the most recent confirmed pivot-low reversal"
+is a moving target - the re-accumulation window's end boundary is
+literally "whenever you last ran the backtest", not a fixed historical
+point. Every time you re-run it on a later day, a still-open chain's
+Fresh Reversal Entry Date (and its quality score, scored as-of that date)
+can silently advance. Verified with real data: comparing two exports taken
+a few days apart, every one of 16 discrepant rows traced back to a
+`STILL_OPEN` chain whose reversal date had moved forward (e.g. AZAD:
+2026-07-21 → 2026-08-05, identical BOS1/Retest/Re-Accum dates both times)
+- all 290 other rows (`BOS2_CONFIRMED`/`INVALIDATED`/`TIMEOUT`) matched
+identically. Excluding `STILL_OPEN` makes this report a stable,
+reproducible record of only genuinely resolved historical signals, instead
+of unconfirmed still-live setups dressed up as backtest results - if you
+want to know what's coiling right now, that's what the live scanner /
+Telegram alerts are for.
+
 - `Quality Score`/`Quality Grade` — the same 0-100 composite score & A/B/C/D
   grade described above, color-coded (green=A, blue=B, yellow=C, red=D).
+
 - `Fresh Reversal Entry Date`/`Price` — the tactical reversal signal itself
   (first green candle closing back above the last confirmed swing-low
   candle's high).
