@@ -165,26 +165,30 @@ You mentioned you already have a bot. Add these as repo secrets:
 - `TELEGRAM_CHAT_ID` (message your bot once, then hit
   `https://api.telegram.org/bot<token>/getUpdates` to read your chat id back)
 
-Alerts only fire for `FRESH_REVERSAL`, and only when **all** of the
-following hold (as of 2026-08-07 — tightened after the universe grew from
-5 → 643 symbols and produced 79 alerts in one run, most of them stale or
-low-quality):
-- the reversal candle is **today's** bar, not up to `recency_bars` (5) days
-  old — no more "confirmed 5d ago" alerts arriving after the move is over.
+Alerts fire for `FRESH_REVERSAL` and `PRE_BOS2_READY`, and only when **all**
+of the following hold (as of 2026-08-08 — tightened after the universe grew
+from 5 → 643 symbols and produced 79 alerts in one run, most of them stale
+or low-quality):
+- **Freshness**, defined per stage since only one of them is a one-bar event:
+  - `FRESH_REVERSAL`: the reversal candle must be **today's** bar, not up to
+    `recency_bars` (5) days old — no more "confirmed 5d ago" alerts arriving
+    after the move is over.
+  - `PRE_BOS2_READY`: this is a persisting coiled-state (can stay true for
+    weeks while a stock sits under resistance), so "fresh" means the symbol
+    just **entered** this stage this run (its previously tracked stage in
+    `results/state.json` wasn't already `PRE_BOS2_READY`) — alerted once on
+    entry, not once per day it continues to sit there.
 - `quality_grade` is **A or B** (score ≥ 65) — C/D-grade setups (weak
   confluence, no real re-accumulation) are computed and still show up in
   `results/latest_scan.csv` for reference, but don't page you.
-- it hasn't already been alerted for that exact reversal date (dedup keyed
-  per-symbol in `results/state.json`, so a same-day re-run of the scan can't
-  double-send).
+- (`FRESH_REVERSAL` only) it hasn't already been alerted for that exact
+  reversal date — dedup keyed per-symbol in `results/state.json`, so a
+  same-day re-run of the scan can't double-send.
 
-`PRE_BOS2_READY` and `FRESH_BOS2` are still fully computed, scored, and
-written to the CSV/report every run — they're just silent on Telegram now.
-Rationale: those two stages can legitimately stay "true" for many days in a
-row (e.g. `PRE_BOS2_READY` while a stock coils under resistance, or
-`FRESH_BOS2` up to `recency_bars` days after the breakout), so the old
-"alert on stage transition" rule pinged once per stock but at a random
-staleness (0-5 days after the actual event) and with no quality floor.
+`FRESH_BOS2` is still fully computed, scored, and written to the CSV/report
+every run — it's just silent on Telegram. Rationale: it can stay true for up
+to `recency_bars` days after the breakout, so it doesn't have as clean a
+"same-day" signal as a reversal candle or a stage transition.
 
 ## 3. Add secrets on GitHub
 
