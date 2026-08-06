@@ -4,3 +4,4 @@ requests>=2.31
 yfinance>=0.2.40
 pyotp>=2.9
 tabulate>=0.9
+openpyxl>=3.1

@@ -1,30 +1,30 @@
 # SMC Structure Scanner - Backtest Report
 
-Generated: 2026-08-06T11:09:30
+Generated: 2026-08-06T15:50:46
 
 ## Pattern completion rate
 
-- Total resolved retest/re-accumulation chains: **158**
-  - BOS2_CONFIRMED: 68
-  - INVALIDATED: 73
-  - TIMEOUT: 17
-  - STILL_OPEN: 8
-- **43.0%** of chains that reached re-accumulation went on to a confirmed BOS2 breakout.
+- Total resolved retest/re-accumulation chains: **876**
+  - BOS2_CONFIRMED: 424
+  - INVALIDATED: 371
+  - TIMEOUT: 81
+  - STILL_OPEN: 53
+- **48.4%** of chains that reached re-accumulation went on to a confirmed BOS2 breakout.
 
 ## Forward returns by entry type & horizon
 
 | entry_type           |   horizon_days |   n_trades |   win_rate_pct |   avg_return_pct |   median_return_pct |   best_pct |   worst_pct |
 |:---------------------|---------------:|-----------:|---------------:|-----------------:|--------------------:|-----------:|------------:|
-| BOS2_CONFIRMED entry |              5 |         66 |           48.5 |             0.69 |               -0.3  |      18.15 |       -6.66 |
-| BOS2_CONFIRMED entry |             10 |         65 |           40   |             0.08 |               -0.85 |      15.03 |       -9.37 |
-| BOS2_CONFIRMED entry |             20 |         64 |           45.3 |             0.55 |               -0.32 |      19.32 |      -11.04 |
-| BOS2_CONFIRMED entry |             40 |         57 |           38.6 |            -1.06 |               -3.26 |      17.59 |      -13.99 |
-| BOS2_CONFIRMED entry |             60 |         55 |           38.2 |            -1.98 |               -5    |      12.97 |      -13.99 |
-| PRE_BOS2_READY entry |              5 |        112 |           47.3 |            -0.05 |               -0.21 |      10.01 |       -7.47 |
-| PRE_BOS2_READY entry |             10 |        112 |           36.6 |             0.14 |               -1.08 |      17.45 |       -7.47 |
-| PRE_BOS2_READY entry |             20 |        106 |           33   |            -0.15 |               -1.66 |      16.9  |       -7.47 |
-| PRE_BOS2_READY entry |             40 |        102 |           28.4 |            -0.5  |               -2.14 |      21.63 |      -15.96 |
-| PRE_BOS2_READY entry |             60 |         99 |           22.2 |            -0.76 |               -2.53 |      24.3  |      -15.96 |
+| BOS2_CONFIRMED entry |              5 |        393 |           44.3 |            -0.49 |               -0.34 |      18.15 |      -12.91 |
+| BOS2_CONFIRMED entry |             10 |        392 |           44.1 |            -0.42 |               -0.72 |      15.03 |      -12.91 |
+| BOS2_CONFIRMED entry |             20 |        382 |           42.4 |            -0.78 |               -1.12 |      19.32 |      -14.17 |
+| BOS2_CONFIRMED entry |             40 |        358 |           37.7 |            -1.35 |               -4.15 |      26.98 |      -14.47 |
+| BOS2_CONFIRMED entry |             60 |        345 |           35.9 |            -1.4  |               -5.26 |      35.89 |      -19.08 |
+| PRE_BOS2_READY entry |              5 |        563 |           40.3 |            -0.36 |               -0.78 |      10.16 |       -9.87 |
+| PRE_BOS2_READY entry |             10 |        552 |           37.7 |            -0.39 |               -1.29 |      17.45 |      -11.65 |
+| PRE_BOS2_READY entry |             20 |        526 |           31.4 |            -0.7  |               -2.12 |      17.11 |      -11.65 |
+| PRE_BOS2_READY entry |             40 |        504 |           23.8 |            -1.16 |               -2.9  |      23.4  |      -15.96 |
+| PRE_BOS2_READY entry |             60 |        480 |           21   |            -0.98 |               -3.13 |      34.91 |      -15.96 |
 
 ## Notes / caveats
 - Entries assume next-bar Open after the signal; stop = the chain's retest low.
