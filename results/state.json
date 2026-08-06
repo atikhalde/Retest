@@ -1,246 +1,736 @@
 {
-  "PGIL": "PRE_BOS2_READY",
-  "SHILPAMED": "FRESH_BOS2",
-  "PNBHOUSING": "FRESH_BOS2",
-  "SUPRAJIT": "FRESH_BOS2",
-  "KERNEX": "FRESH_BOS2",
-  "TALBROAUTO": "FRESH_BOS2",
-  "RBA": "FRESH_BOS2",
-  "KDDL": "FRESH_BOS2",
-  "MARINE": "FRESH_BOS2",
-  "NAHARSPING": "FRESH_BOS2",
-  "ASTERDM": "FRESH_BOS2",
-  "EMIL": "FRESH_BOS2",
-  "AVALON": "FRESH_BOS2",
-  "CRAFTSMAN": "FRESH_BOS2",
-  "GLAND": "FRESH_BOS2",
-  "LLOYDSENGG": "FRESH_BOS2",
-  "RRKABEL": "FRESH_BOS2",
-  "HAPPYFORGE": "FRESH_BOS2",
-  "RAIN": "FRESH_BOS2",
-  "MINDACORP": "FRESH_BOS2",
-  "AEROENTER": "FRESH_BOS2",
-  "BLUEJET": "FRESH_BOS2",
-  "KMEW": "FRESH_BOS2",
-  "ARVIND": "FRESH_BOS2",
-  "IGPL": "FRESH_BOS2",
-  "GRASIM": "FRESH_BOS2",
-  "LLOYDSME": "FRESH_BOS2",
-  "TORNTPHARM": "FRESH_BOS2",
-  "INDORAMA": "FRESH_BOS2",
-  "NAZARA": "FRESH_BOS2",
-  "KAPSTON": "FRESH_BOS2",
-  "NESTLEIND": "FRESH_BOS2",
-  "XPROINDIA": "FRESH_BOS2",
-  "ARMANFIN": "FRESH_REVERSAL",
-  "OLECTRA": "FRESH_REVERSAL",
-  "SUVEN": "FRESH_REVERSAL",
-  "ADOR": "FRESH_REVERSAL",
-  "MMFL": "FRESH_REVERSAL",
-  "OFSS": "FRESH_REVERSAL",
-  "AZAD": "FRESH_REVERSAL",
-  "RISHABH": "FRESH_REVERSAL",
-  "GNA": "FRESH_REVERSAL",
-  "GODREJIND": "FRESH_REVERSAL",
-  "AADHARHFC": "FRESH_REVERSAL",
-  "ABB": "FRESH_REVERSAL",
-  "ANTELOPUS": "FRESH_REVERSAL",
-  "ASTRAMICRO": "FRESH_REVERSAL",
-  "BHARATSE": "FRESH_REVERSAL",
-  "ARKADE": "FRESH_REVERSAL",
-  "SKYGOLD": "FRESH_REVERSAL",
-  "MOTILALOFS": "FRESH_REVERSAL",
-  "YESBANK": "FRESH_REVERSAL",
-  "SENORES": "FRESH_REVERSAL",
-  "RML": "FRESH_REVERSAL",
-  "HARSHA": "FRESH_REVERSAL",
-  "KPIL": "FRESH_REVERSAL",
-  "ZYDUSWELL": "FRESH_REVERSAL",
-  "INGERRAND": "FRESH_REVERSAL",
-  "GOKULAGRO": "FRESH_REVERSAL",
-  "PHOENIXLTD": "FRESH_REVERSAL",
-  "IONEXCHANG": "FRESH_REVERSAL",
-  "LINCOLN": "FRESH_REVERSAL",
-  "RELIGARE": "FRESH_REVERSAL",
-  "SUMICHEM": "FRESH_REVERSAL",
-  "CIEINDIA": "FRESH_REVERSAL",
-  "POWERGRID": "FRESH_REVERSAL",
-  "SANGHVIMOV": "PRE_BOS2_READY",
-  "GARFIBRES": "PRE_BOS2_READY",
-  "EVEREADY": "PRE_BOS2_READY",
-  "CARYSIL": "PRE_BOS2_READY",
-  "NETWEB": "PRE_BOS2_READY",
-  "INDHOTEL": "PRE_BOS2_READY",
-  "TEXINFRA": "PRE_BOS2_READY",
-  "IKS": "PRE_BOS2_READY",
-  "INDIGO": "PRE_BOS2_READY",
-  "MUTHOOTMF": "PRE_BOS2_READY",
-  "STYRENIX": "PRE_BOS2_READY",
-  "LALPATHLAB": "PRE_BOS2_READY",
-  "PVRINOX": "PRE_BOS2_READY",
-  "KIRLOSBROS": "BASING",
-  "RBLBANK": "BASING",
-  "WELCORP": "BASING",
-  "ACE": "BASING",
-  "ALKYLAMINE": "BASING",
-  "NITINSPIN": "BASING",
-  "DIVGIITTS": "BASING",
-  "DATAMATICS": "BASING",
-  "LANDMARK": "BASING",
-  "YATHARTH": "BASING",
-  "ICIL": "BASING",
-  "CERA": "BASING",
-  "MPSLTD": "BASING",
-  "SHREEPUSHK": "BASING",
-  "KPRMILL": "BASING",
-  "SSWL": "BASING",
-  "HIRECT": "BASING",
-  "WELENT": "BASING",
-  "SHAREINDIA": "BASING",
-  "STEL": "BASING",
-  "SENCO": "BASING",
-  "ESAFSFB": "BASING",
-  "PAGEIND": "BASING",
-  "WELSPUNLIV": "BASING",
-  "LUPIN": "BASING",
-  "AIAENG": "BASING",
-  "KSL": "BASING",
-  "QUADFUTURE": "BASING",
-  "SUYOG": "BASING",
-  "LUXIND": "BASING",
-  "IPCALAB": "BASING",
-  "NDRAUTO": "BASING",
-  "TMB": "BASING",
-  "JSWENERGY": "BASING",
-  "ITDC": "BASING",
-  "GRANULES": "BASING",
-  "GANESHHOU": "BASING",
-  "KIRLOSIND": "BASING",
-  "AURUM": "BASING",
-  "JBMA": "BASING",
-  "POWERMECH": "BASING",
-  "TVSSCS": "BASING",
-  "FLUOROCHEM": "BASING",
-  "UJJIVANSFB": "BASING",
-  "VOLTAMP": "BASING",
-  "TANLA": "BASING",
-  "NITCO": "BASING",
-  "PITTIENG": "BASING",
-  "GIPCL": "BASING",
-  "CUMMINSIND": "BASING",
-  "GMRAIRPORT": "BASING",
-  "TCPLPACK": "BASING",
-  "HSCL": "BASING",
-  "BIOCON": "BASING",
-  "KSB": "BASING",
-  "RPGLIFE": "BASING",
-  "PFC": "BASING",
-  "JINDALPOLY": "BASING",
-  "GABRIEL": "IN_RETEST",
-  "UNIPARTS": "IN_RETEST",
-  "RADICO": "IN_RETEST",
-  "MANAPPURAM": "IN_RETEST",
-  "SPORTKING": "IN_RETEST",
-  "JLHL": "IN_RETEST",
-  "NELCO": "IN_RETEST",
-  "REDINGTON": "IN_RETEST",
-  "KRISHANA": "IN_RETEST",
-  "APCOTEXIND": "IN_RETEST",
-  "QUESS": "IN_RETEST",
-  "CENTUM": "STALE_BOS2",
-  "WSTCSTPAPR": "STALE_BOS2",
-  "NGLFINE": "STALE_BOS2",
-  "CNL": "STALE_BOS2",
-  "APOLLOPIPE": "STALE_BOS2",
-  "AMBIKCO": "STALE_BOS2",
-  "ENTERO": "STALE_BOS2",
-  "HINDALCO": "STALE_BOS2",
-  "JSWINFRA": "STALE_BOS2",
-  "RAMRAT": "STALE_BOS2",
-  "TIMKEN": "STALE_BOS2",
-  "SHRIPISTON": "STALE_BOS2",
-  "MARKSANS": "STALE_BOS2",
-  "NAVINFLUOR": "STALE_BOS2",
-  "KARURVYSYA": "STALE_BOS2",
-  "SFL": "STALE_BOS2",
-  "AEROFLEX": "STALE_BOS2",
-  "ROSSTECH": "STALE_BOS2",
-  "ADVENZYMES": "STALE_BOS2",
-  "CUPID": "STALE_BOS2",
-  "FILATEX": "STALE_BOS2",
-  "KABRAEXTRU": "STALE_BOS2",
-  "LAURUSLABS": "STALE_BOS2",
-  "NMDC": "STALE_BOS2",
-  "MEDANTA": "STALE_BOS2",
-  "CHENNPETRO": "STALE_BOS2",
-  "GOLDIAM": "STALE_BOS2",
-  "GUFICBIO": "STALE_BOS2",
-  "CONFIPET": "STALE_BOS2",
-  "RKFORGE": "STALE_BOS2",
-  "IOC": "STALE_BOS2",
-  "FEDERALBNK": "STALE_BOS2",
-  "LINDEINDIA": "STALE_BOS2",
-  "THANGAMAYL": "STALE_BOS2",
-  "FINCABLES": "STALE_BOS2",
-  "APOLLO": "STALE_BOS2",
-  "SASKEN": "STALE_BOS2",
-  "BAJAJ-AUTO": "STALE_BOS2",
-  "AYMSYNTEX": "STALE_BOS2",
-  "PRECWIRE": "STALE_BOS2",
-  "APOLLOHOSP": "STALE_BOS2",
-  "VEDL": "STALE_BOS2",
-  "UNIONBANK": "STALE_BOS2",
-  "SYRMA": "STALE_BOS2",
-  "SPARC": "STALE_BOS2",
-  "IZMO": "STALE_BOS2",
-  "POWERINDIA": "STALE_BOS2",
-  "GVT&D": "STALE_BOS2",
-  "MANINDS": "STALE_BOS2",
-  "PREMIERENE": "STALE_BOS2",
-  "PFOCUS": "STALE_BOS2",
-  "IMFA": "STALE_BOS2",
-  "YASHO": "STALE_BOS2",
-  "SPAL": "STALE_BOS2",
-  "DHANBANK": "STALE_BOS2",
-  "BOROSCI": "STALE_BOS2",
-  "NTPC": "STALE_BOS2",
-  "GESHIP": "STALE_BOS2",
-  "IFCI": "STALE_BOS2",
-  "KINGFA": "STALE_BOS2",
-  "APARINDS": "STALE_BOS2",
-  "IKIO": "STALE_BOS2",
-  "ANDHRSUGAR": "STALE_BOS2",
-  "GHCLTEXTIL": "STALE_BOS2",
-  "PARACABLES": "STALE_BOS2",
-  "NH": "STALE_BOS2",
-  "NUVAMA": "STALE_BOS2",
-  "BAJAJCON": "STALE_BOS2",
-  "BALAMINES": "STALE_BOS2",
-  "CCL": "STALE_BOS2",
-  "SATIN": "STALE_BOS2",
-  "GRINDWELL": "STALE_BOS2",
-  "MBAPL": "STALE_BOS2",
-  "CYIENTDLM": "STALE_BOS2",
-  "JASH": "STALE_BOS2",
-  "VBL": "STALE_BOS2",
-  "NATCOPHARM": "STALE_BOS2",
-  "AGIIL": "STALE_BOS2",
-  "NORTHARC": "STALE_BOS2",
-  "PREMEXPLN": "STALE_BOS2",
-  "SOLARINDS": "STALE_BOS2",
-  "PSPPROJECT": "STALE_BOS2",
-  "TORNTPOWER": "STALE_BOS2",
-  "ADANIPORTS": "STALE_BOS2",
-  "BSE": "STALE_BOS2",
-  "CEIGALL": "STALE_BOS2",
-  "GREAVESCOT": "STALE_BOS2",
-  "DLINKINDIA": "STALE_BOS2",
-  "IDEA": "STALE_BOS2",
-  "SURYODAY": "STALE_BOS2",
-  "ADANIENSOL": "STALE_BOS2",
-  "MANKIND": "STALE_BOS2",
-  "MAHABANK": "STALE_BOS2",
-  "KIRLPNU": "STALE_BOS2",
-  "SMSPHARMA": "STALE_BOS2",
-  "JAYBARMARU": "STALE_BOS2"
+  "SHILPAMED": {
+    "stage": "FRESH_BOS2"
+  },
+  "PNBHOUSING": {
+    "stage": "FRESH_BOS2"
+  },
+  "SUPRAJIT": {
+    "stage": "FRESH_BOS2"
+  },
+  "KERNEX": {
+    "stage": "FRESH_BOS2"
+  },
+  "TALBROAUTO": {
+    "stage": "FRESH_BOS2"
+  },
+  "RBA": {
+    "stage": "FRESH_BOS2"
+  },
+  "KDDL": {
+    "stage": "FRESH_BOS2"
+  },
+  "MARINE": {
+    "stage": "FRESH_BOS2"
+  },
+  "NAHARSPING": {
+    "stage": "FRESH_BOS2"
+  },
+  "ASTERDM": {
+    "stage": "FRESH_BOS2"
+  },
+  "EMIL": {
+    "stage": "FRESH_BOS2"
+  },
+  "AVALON": {
+    "stage": "FRESH_BOS2"
+  },
+  "CRAFTSMAN": {
+    "stage": "FRESH_BOS2"
+  },
+  "GLAND": {
+    "stage": "FRESH_BOS2"
+  },
+  "LLOYDSENGG": {
+    "stage": "FRESH_BOS2"
+  },
+  "RRKABEL": {
+    "stage": "FRESH_BOS2"
+  },
+  "HAPPYFORGE": {
+    "stage": "FRESH_BOS2"
+  },
+  "RAIN": {
+    "stage": "FRESH_BOS2"
+  },
+  "MINDACORP": {
+    "stage": "FRESH_BOS2"
+  },
+  "AEROENTER": {
+    "stage": "FRESH_BOS2"
+  },
+  "BLUEJET": {
+    "stage": "FRESH_BOS2"
+  },
+  "KMEW": {
+    "stage": "FRESH_BOS2"
+  },
+  "ARVIND": {
+    "stage": "FRESH_BOS2"
+  },
+  "IGPL": {
+    "stage": "FRESH_BOS2"
+  },
+  "GRASIM": {
+    "stage": "FRESH_BOS2"
+  },
+  "LLOYDSME": {
+    "stage": "FRESH_BOS2"
+  },
+  "TORNTPHARM": {
+    "stage": "FRESH_BOS2"
+  },
+  "INDORAMA": {
+    "stage": "FRESH_BOS2"
+  },
+  "NAZARA": {
+    "stage": "FRESH_BOS2"
+  },
+  "KAPSTON": {
+    "stage": "FRESH_BOS2"
+  },
+  "NESTLEIND": {
+    "stage": "FRESH_BOS2"
+  },
+  "XPROINDIA": {
+    "stage": "FRESH_BOS2"
+  },
+  "ARMANFIN": {
+    "stage": "FRESH_REVERSAL"
+  },
+  "OLECTRA": {
+    "stage": "FRESH_REVERSAL"
+  },
+  "SUVEN": {
+    "stage": "FRESH_REVERSAL",
+    "last_reversal_alerted": "2026-08-05"
+  },
+  "ADOR": {
+    "stage": "FRESH_REVERSAL"
+  },
+  "MMFL": {
+    "stage": "FRESH_REVERSAL"
+  },
+  "OFSS": {
+    "stage": "FRESH_REVERSAL"
+  },
+  "AZAD": {
+    "stage": "FRESH_REVERSAL",
+    "last_reversal_alerted": "2026-08-05"
+  },
+  "RISHABH": {
+    "stage": "FRESH_REVERSAL"
+  },
+  "GNA": {
+    "stage": "FRESH_REVERSAL"
+  },
+  "GODREJIND": {
+    "stage": "FRESH_REVERSAL"
+  },
+  "AADHARHFC": {
+    "stage": "FRESH_REVERSAL"
+  },
+  "ABB": {
+    "stage": "FRESH_REVERSAL"
+  },
+  "ANTELOPUS": {
+    "stage": "FRESH_REVERSAL"
+  },
+  "ASTRAMICRO": {
+    "stage": "FRESH_REVERSAL"
+  },
+  "BHARATSE": {
+    "stage": "FRESH_REVERSAL"
+  },
+  "ARKADE": {
+    "stage": "FRESH_REVERSAL"
+  },
+  "SKYGOLD": {
+    "stage": "FRESH_REVERSAL"
+  },
+  "MOTILALOFS": {
+    "stage": "FRESH_REVERSAL"
+  },
+  "YESBANK": {
+    "stage": "FRESH_REVERSAL"
+  },
+  "SENORES": {
+    "stage": "FRESH_REVERSAL"
+  },
+  "RML": {
+    "stage": "FRESH_REVERSAL"
+  },
+  "HARSHA": {
+    "stage": "FRESH_REVERSAL"
+  },
+  "KPIL": {
+    "stage": "FRESH_REVERSAL"
+  },
+  "ZYDUSWELL": {
+    "stage": "FRESH_REVERSAL"
+  },
+  "INGERRAND": {
+    "stage": "FRESH_REVERSAL"
+  },
+  "GOKULAGRO": {
+    "stage": "FRESH_REVERSAL"
+  },
+  "PHOENIXLTD": {
+    "stage": "FRESH_REVERSAL"
+  },
+  "IONEXCHANG": {
+    "stage": "FRESH_REVERSAL"
+  },
+  "LINCOLN": {
+    "stage": "FRESH_REVERSAL"
+  },
+  "RELIGARE": {
+    "stage": "FRESH_REVERSAL"
+  },
+  "SUMICHEM": {
+    "stage": "FRESH_REVERSAL"
+  },
+  "CIEINDIA": {
+    "stage": "FRESH_REVERSAL"
+  },
+  "POWERGRID": {
+    "stage": "FRESH_REVERSAL"
+  },
+  "SANGHVIMOV": {
+    "stage": "PRE_BOS2_READY"
+  },
+  "GARFIBRES": {
+    "stage": "PRE_BOS2_READY"
+  },
+  "EVEREADY": {
+    "stage": "PRE_BOS2_READY"
+  },
+  "CARYSIL": {
+    "stage": "PRE_BOS2_READY"
+  },
+  "NETWEB": {
+    "stage": "PRE_BOS2_READY"
+  },
+  "PGIL": {
+    "stage": "PRE_BOS2_READY"
+  },
+  "INDHOTEL": {
+    "stage": "PRE_BOS2_READY"
+  },
+  "TEXINFRA": {
+    "stage": "PRE_BOS2_READY"
+  },
+  "IKS": {
+    "stage": "PRE_BOS2_READY"
+  },
+  "INDIGO": {
+    "stage": "PRE_BOS2_READY"
+  },
+  "MUTHOOTMF": {
+    "stage": "PRE_BOS2_READY"
+  },
+  "STYRENIX": {
+    "stage": "PRE_BOS2_READY"
+  },
+  "LALPATHLAB": {
+    "stage": "PRE_BOS2_READY"
+  },
+  "PVRINOX": {
+    "stage": "PRE_BOS2_READY"
+  },
+  "KIRLOSBROS": {
+    "stage": "BASING"
+  },
+  "RBLBANK": {
+    "stage": "BASING"
+  },
+  "WELCORP": {
+    "stage": "BASING"
+  },
+  "ACE": {
+    "stage": "BASING"
+  },
+  "ALKYLAMINE": {
+    "stage": "BASING"
+  },
+  "NITINSPIN": {
+    "stage": "BASING"
+  },
+  "DIVGIITTS": {
+    "stage": "BASING"
+  },
+  "DATAMATICS": {
+    "stage": "BASING"
+  },
+  "LANDMARK": {
+    "stage": "BASING"
+  },
+  "YATHARTH": {
+    "stage": "BASING"
+  },
+  "ICIL": {
+    "stage": "BASING"
+  },
+  "CERA": {
+    "stage": "BASING"
+  },
+  "MPSLTD": {
+    "stage": "BASING"
+  },
+  "SHREEPUSHK": {
+    "stage": "BASING"
+  },
+  "KPRMILL": {
+    "stage": "BASING"
+  },
+  "SSWL": {
+    "stage": "BASING"
+  },
+  "HIRECT": {
+    "stage": "BASING"
+  },
+  "WELENT": {
+    "stage": "BASING"
+  },
+  "SHAREINDIA": {
+    "stage": "BASING"
+  },
+  "STEL": {
+    "stage": "BASING"
+  },
+  "SENCO": {
+    "stage": "BASING"
+  },
+  "ESAFSFB": {
+    "stage": "BASING"
+  },
+  "PAGEIND": {
+    "stage": "BASING"
+  },
+  "WELSPUNLIV": {
+    "stage": "BASING"
+  },
+  "LUPIN": {
+    "stage": "BASING"
+  },
+  "AIAENG": {
+    "stage": "BASING"
+  },
+  "KSL": {
+    "stage": "BASING"
+  },
+  "QUADFUTURE": {
+    "stage": "BASING"
+  },
+  "SUYOG": {
+    "stage": "BASING"
+  },
+  "LUXIND": {
+    "stage": "BASING"
+  },
+  "IPCALAB": {
+    "stage": "BASING"
+  },
+  "NDRAUTO": {
+    "stage": "BASING"
+  },
+  "TMB": {
+    "stage": "BASING"
+  },
+  "JSWENERGY": {
+    "stage": "BASING"
+  },
+  "ITDC": {
+    "stage": "BASING"
+  },
+  "GRANULES": {
+    "stage": "BASING"
+  },
+  "GANESHHOU": {
+    "stage": "BASING"
+  },
+  "KIRLOSIND": {
+    "stage": "BASING"
+  },
+  "AURUM": {
+    "stage": "BASING"
+  },
+  "JBMA": {
+    "stage": "BASING"
+  },
+  "POWERMECH": {
+    "stage": "BASING"
+  },
+  "TVSSCS": {
+    "stage": "BASING"
+  },
+  "FLUOROCHEM": {
+    "stage": "BASING"
+  },
+  "UJJIVANSFB": {
+    "stage": "BASING"
+  },
+  "VOLTAMP": {
+    "stage": "BASING"
+  },
+  "TANLA": {
+    "stage": "BASING"
+  },
+  "NITCO": {
+    "stage": "BASING"
+  },
+  "PITTIENG": {
+    "stage": "BASING"
+  },
+  "GIPCL": {
+    "stage": "BASING"
+  },
+  "CUMMINSIND": {
+    "stage": "BASING"
+  },
+  "GMRAIRPORT": {
+    "stage": "BASING"
+  },
+  "TCPLPACK": {
+    "stage": "BASING"
+  },
+  "HSCL": {
+    "stage": "BASING"
+  },
+  "BIOCON": {
+    "stage": "BASING"
+  },
+  "KSB": {
+    "stage": "BASING"
+  },
+  "RPGLIFE": {
+    "stage": "BASING"
+  },
+  "PFC": {
+    "stage": "BASING"
+  },
+  "JINDALPOLY": {
+    "stage": "BASING"
+  },
+  "GABRIEL": {
+    "stage": "IN_RETEST"
+  },
+  "UNIPARTS": {
+    "stage": "IN_RETEST"
+  },
+  "RADICO": {
+    "stage": "IN_RETEST"
+  },
+  "MANAPPURAM": {
+    "stage": "IN_RETEST"
+  },
+  "SPORTKING": {
+    "stage": "IN_RETEST"
+  },
+  "JLHL": {
+    "stage": "IN_RETEST"
+  },
+  "NELCO": {
+    "stage": "IN_RETEST"
+  },
+  "REDINGTON": {
+    "stage": "IN_RETEST"
+  },
+  "KRISHANA": {
+    "stage": "IN_RETEST"
+  },
+  "APCOTEXIND": {
+    "stage": "IN_RETEST"
+  },
+  "QUESS": {
+    "stage": "IN_RETEST"
+  },
+  "CENTUM": {
+    "stage": "STALE_BOS2"
+  },
+  "WSTCSTPAPR": {
+    "stage": "STALE_BOS2"
+  },
+  "NGLFINE": {
+    "stage": "STALE_BOS2"
+  },
+  "CNL": {
+    "stage": "STALE_BOS2"
+  },
+  "APOLLOPIPE": {
+    "stage": "STALE_BOS2"
+  },
+  "AMBIKCO": {
+    "stage": "STALE_BOS2"
+  },
+  "ENTERO": {
+    "stage": "STALE_BOS2"
+  },
+  "HINDALCO": {
+    "stage": "STALE_BOS2"
+  },
+  "JSWINFRA": {
+    "stage": "STALE_BOS2"
+  },
+  "RAMRAT": {
+    "stage": "STALE_BOS2"
+  },
+  "TIMKEN": {
+    "stage": "STALE_BOS2"
+  },
+  "SHRIPISTON": {
+    "stage": "STALE_BOS2"
+  },
+  "MARKSANS": {
+    "stage": "STALE_BOS2"
+  },
+  "NAVINFLUOR": {
+    "stage": "STALE_BOS2"
+  },
+  "KARURVYSYA": {
+    "stage": "STALE_BOS2"
+  },
+  "SFL": {
+    "stage": "STALE_BOS2"
+  },
+  "AEROFLEX": {
+    "stage": "STALE_BOS2"
+  },
+  "ROSSTECH": {
+    "stage": "STALE_BOS2"
+  },
+  "ADVENZYMES": {
+    "stage": "STALE_BOS2"
+  },
+  "CUPID": {
+    "stage": "STALE_BOS2"
+  },
+  "FILATEX": {
+    "stage": "STALE_BOS2"
+  },
+  "KABRAEXTRU": {
+    "stage": "STALE_BOS2"
+  },
+  "LAURUSLABS": {
+    "stage": "STALE_BOS2"
+  },
+  "NMDC": {
+    "stage": "STALE_BOS2"
+  },
+  "MEDANTA": {
+    "stage": "STALE_BOS2"
+  },
+  "CHENNPETRO": {
+    "stage": "STALE_BOS2"
+  },
+  "GOLDIAM": {
+    "stage": "STALE_BOS2"
+  },
+  "GUFICBIO": {
+    "stage": "STALE_BOS2"
+  },
+  "CONFIPET": {
+    "stage": "STALE_BOS2"
+  },
+  "RKFORGE": {
+    "stage": "STALE_BOS2"
+  },
+  "IOC": {
+    "stage": "STALE_BOS2"
+  },
+  "FEDERALBNK": {
+    "stage": "STALE_BOS2"
+  },
+  "LINDEINDIA": {
+    "stage": "STALE_BOS2"
+  },
+  "THANGAMAYL": {
+    "stage": "STALE_BOS2"
+  },
+  "FINCABLES": {
+    "stage": "STALE_BOS2"
+  },
+  "APOLLO": {
+    "stage": "STALE_BOS2"
+  },
+  "SASKEN": {
+    "stage": "STALE_BOS2"
+  },
+  "BAJAJ-AUTO": {
+    "stage": "STALE_BOS2"
+  },
+  "AYMSYNTEX": {
+    "stage": "STALE_BOS2"
+  },
+  "PRECWIRE": {
+    "stage": "STALE_BOS2"
+  },
+  "APOLLOHOSP": {
+    "stage": "STALE_BOS2"
+  },
+  "VEDL": {
+    "stage": "STALE_BOS2"
+  },
+  "UNIONBANK": {
+    "stage": "STALE_BOS2"
+  },
+  "SYRMA": {
+    "stage": "STALE_BOS2"
+  },
+  "SPARC": {
+    "stage": "STALE_BOS2"
+  },
+  "IZMO": {
+    "stage": "STALE_BOS2"
+  },
+  "POWERINDIA": {
+    "stage": "STALE_BOS2"
+  },
+  "GVT&D": {
+    "stage": "STALE_BOS2"
+  },
+  "MANINDS": {
+    "stage": "STALE_BOS2"
+  },
+  "PREMIERENE": {
+    "stage": "STALE_BOS2"
+  },
+  "PFOCUS": {
+    "stage": "STALE_BOS2"
+  },
+  "IMFA": {
+    "stage": "STALE_BOS2"
+  },
+  "YASHO": {
+    "stage": "STALE_BOS2"
+  },
+  "SPAL": {
+    "stage": "STALE_BOS2"
+  },
+  "DHANBANK": {
+    "stage": "STALE_BOS2"
+  },
+  "BOROSCI": {
+    "stage": "STALE_BOS2"
+  },
+  "NTPC": {
+    "stage": "STALE_BOS2"
+  },
+  "GESHIP": {
+    "stage": "STALE_BOS2"
+  },
+  "IFCI": {
+    "stage": "STALE_BOS2"
+  },
+  "KINGFA": {
+    "stage": "STALE_BOS2"
+  },
+  "APARINDS": {
+    "stage": "STALE_BOS2"
+  },
+  "IKIO": {
+    "stage": "STALE_BOS2"
+  },
+  "ANDHRSUGAR": {
+    "stage": "STALE_BOS2"
+  },
+  "GHCLTEXTIL": {
+    "stage": "STALE_BOS2"
+  },
+  "PARACABLES": {
+    "stage": "STALE_BOS2"
+  },
+  "NH": {
+    "stage": "STALE_BOS2"
+  },
+  "NUVAMA": {
+    "stage": "STALE_BOS2"
+  },
+  "BAJAJCON": {
+    "stage": "STALE_BOS2"
+  },
+  "BALAMINES": {
+    "stage": "STALE_BOS2"
+  },
+  "CCL": {
+    "stage": "STALE_BOS2"
+  },
+  "SATIN": {
+    "stage": "STALE_BOS2"
+  },
+  "GRINDWELL": {
+    "stage": "STALE_BOS2"
+  },
+  "MBAPL": {
+    "stage": "STALE_BOS2"
+  },
+  "CYIENTDLM": {
+    "stage": "STALE_BOS2"
+  },
+  "JASH": {
+    "stage": "STALE_BOS2"
+  },
+  "VBL": {
+    "stage": "STALE_BOS2"
+  },
+  "NATCOPHARM": {
+    "stage": "STALE_BOS2"
+  },
+  "AGIIL": {
+    "stage": "STALE_BOS2"
+  },
+  "NORTHARC": {
+    "stage": "STALE_BOS2"
+  },
+  "PREMEXPLN": {
+    "stage": "STALE_BOS2"
+  },
+  "SOLARINDS": {
+    "stage": "STALE_BOS2"
+  },
+  "PSPPROJECT": {
+    "stage": "STALE_BOS2"
+  },
+  "TORNTPOWER": {
+    "stage": "STALE_BOS2"
+  },
+  "ADANIPORTS": {
+    "stage": "STALE_BOS2"
+  },
+  "BSE": {
+    "stage": "STALE_BOS2"
+  },
+  "CEIGALL": {
+    "stage": "STALE_BOS2"
+  },
+  "GREAVESCOT": {
+    "stage": "STALE_BOS2"
+  },
+  "DLINKINDIA": {
+    "stage": "STALE_BOS2"
+  },
+  "IDEA": {
+    "stage": "STALE_BOS2"
+  },
+  "SURYODAY": {
+    "stage": "STALE_BOS2"
+  },
+  "ADANIENSOL": {
+    "stage": "STALE_BOS2"
+  },
+  "MANKIND": {
+    "stage": "STALE_BOS2"
+  },
+  "MAHABANK": {
+    "stage": "STALE_BOS2"
+  },
+  "KIRLPNU": {
+    "stage": "STALE_BOS2"
+  },
+  "SMSPHARMA": {
+    "stage": "STALE_BOS2"
+  },
+  "JAYBARMARU": {
+    "stage": "STALE_BOS2"
+  }
 }

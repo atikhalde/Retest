@@ -22,7 +22,18 @@ STAGE_PRIORITY = {
     "STALE_BOS2": 5,
 }
 
-ALERTABLE_STAGES = {"PRE_BOS2_READY", "FRESH_BOS2", "FRESH_REVERSAL"}
+# Stages that still get computed and written to the scan CSV/report, but only
+# FRESH_REVERSAL is actually alerted on Telegram (see _alert_on_transitions) -
+# PRE_BOS2_READY and FRESH_BOS2 stay "visible in the report, silent on Telegram"
+# per explicit user direction (2026-08-07): too many low-signal FRESH_BOS2/
+# PRE_BOS2_READY pings once the universe grew from 5 -> 643 symbols, and most
+# of those alerts were 1-5 trading days stale (recency_bars=5 window) by the
+# time they were read, not same-day events.
+ALERTABLE_STAGES = {"FRESH_REVERSAL"}
+
+# Only alert on a reversal that fired on the MOST RECENT bar (today's EOD
+# close), not up to `recency_bars` days ago - a same-day-only gate.
+ALERT_QUALITY_GRADES = ("A", "B")  # first letter of quality_grade, e.g. "B - Good Setup"
 
 
 def scan_symbol(row, data_source, cfg) -> dict:
@@ -155,6 +166,30 @@ def run_scan(cfg, universe_df: pd.DataFrame, data_source, max_workers: int = 4,
     return out
 
 
+def _is_alert_worthy(row: dict) -> bool:
+    """Same-day reversal + quality-floor gate (2026-08-07 fix).
+
+    Only FRESH_REVERSAL is alertable at all (see ALERTABLE_STAGES). Within
+    that, we additionally require:
+      1. the reversal happened on the MOST RECENT bar (Reversal_date ==
+         last_date), i.e. today's close - not up to `recency_bars` (5) days
+         stale, which is what caused alerts like "reversal confirmed 5d ago"
+         to fire well after the move already happened.
+      2. quality_grade is A or B (score >= 65) - cuts C/D-grade noise
+         (e.g. POWERGRID 29.4, CIEINDIA 33.9) that shouldn't page anyone.
+    """
+    if row.get("stage") not in ALERTABLE_STAGES:
+        return False
+    reversal_date = row.get("Reversal_date")
+    last_date = row.get("last_date")
+    if not reversal_date or not last_date or reversal_date != last_date:
+        return False
+    grade = str(row.get("quality_grade") or "")
+    if not grade or grade[0] not in ALERT_QUALITY_GRADES:
+        return False
+    return True
+
+
 def _alert_on_transitions(cfg, out: pd.DataFrame):
     state = _load_state(cfg)
     new_state = dict(state)
@@ -162,14 +197,27 @@ def _alert_on_transitions(cfg, out: pd.DataFrame):
 
     for row in out.to_dict("records"):
         sym = row["symbol"]
-        prev_stage = state.get(sym)
         cur_stage = row["stage"]
-        new_state[sym] = cur_stage
+        prev_entry = state.get(sym) or {}
+        # tolerate the old (pre-2026-08-07) state.json schema, where the
+        # value was just a bare stage string instead of a dict
+        prev_reversal_alerted = prev_entry.get("last_reversal_alerted") if isinstance(prev_entry, dict) else None
 
-        if cur_stage in ALERTABLE_STAGES and prev_stage != cur_stage:
+        entry = {"stage": cur_stage}
+        reversal_date = row.get("Reversal_date")
+
+        if _is_alert_worthy(row) and reversal_date != prev_reversal_alerted:
             msg = format_alert(row)
             if send_telegram(msg):
                 alerts_sent += 1
+                entry["last_reversal_alerted"] = reversal_date
+        elif prev_reversal_alerted:
+            # carry forward so we don't lose the dedup marker on days this
+            # symbol isn't alert-worthy
+            entry["last_reversal_alerted"] = prev_reversal_alerted
+
+        new_state[sym] = entry
 
     _save_state(cfg, new_state)
-    print(f"[alerts] sent {alerts_sent} telegram alert(s) for new stage transitions")
+    print(f"[alerts] sent {alerts_sent} telegram alert(s) "
+          f"(FRESH_REVERSAL, same-day only, grade A/B only)")
