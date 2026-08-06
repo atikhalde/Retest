@@ -133,9 +133,8 @@ def build_simple_workbook(results_dir=RESULTS_DIR, out_path=None) -> str:
             merged[col] = None
     out = merged[FINAL_COLUMN_ORDER].copy()
 
-    # most relevant/most recent date first: confirmed breakout > pre-breakout alert > retest
-    out["_sort_date"] = out["Confirmed Breakout Date"].fillna(out["Pre-Breakout Alert Date"]).fillna(out["Retest Date"])
-    out = out.sort_values("_sort_date", ascending=False).drop(columns="_sort_date").reset_index(drop=True)
+    # sorted by Reversal Entry Date (most recent tactical entries first)
+    out = out.sort_values("Reversal Entry Date", ascending=False, na_position="last").reset_index(drop=True)
 
     for col in ["Base Date", "Breakout Date", "Peak Date", "Retest Date", "Re-Accumulation Start",
                 "Reversal Entry Date", "Pre-Breakout Alert Date", "Confirmed Breakout Date", "Entry Date"]:

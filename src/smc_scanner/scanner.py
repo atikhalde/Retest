@@ -12,13 +12,14 @@ from .notify import send_telegram, format_alert
 
 STAGE_PRIORITY = {
     "FRESH_BOS2": 0,
-    "PRE_BOS2_READY": 1,
-    "BASING": 2,
-    "IN_RETEST": 3,
-    "STALE_BOS2": 4,
+    "FRESH_REVERSAL": 1,
+    "PRE_BOS2_READY": 2,
+    "BASING": 3,
+    "IN_RETEST": 4,
+    "STALE_BOS2": 5,
 }
 
-ALERTABLE_STAGES = {"PRE_BOS2_READY", "FRESH_BOS2"}
+ALERTABLE_STAGES = {"PRE_BOS2_READY", "FRESH_BOS2", "FRESH_REVERSAL"}
 
 
 def scan_symbol(row, data_source, cfg) -> dict:

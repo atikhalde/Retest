@@ -84,7 +84,8 @@ def test_detects_pre_bos2_ready_before_the_breakout():
     match = detect_pattern(trimmed, cfg, "TEST")
 
     assert match is not None
-    assert match.stage in ("PRE_BOS2_READY", "BASING", "IN_RETEST")
+    assert match.stage in ("PRE_BOS2_READY", "BASING", "IN_RETEST", "FRESH_REVERSAL")
+
 
 
 def test_no_match_on_pure_noise():

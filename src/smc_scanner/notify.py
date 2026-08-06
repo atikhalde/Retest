@@ -27,6 +27,7 @@ def send_telegram(text: str, parse_mode: str = "Markdown") -> bool:
 def format_alert(row: dict) -> str:
     stage_emoji = {
         "PRE_BOS2_READY": "🟡",
+        "FRESH_REVERSAL": "🟠",
         "FRESH_BOS2": "🟢",
         "STALE_BOS2": "⚪",
         "BASING": "🔵",
@@ -41,8 +42,12 @@ def format_alert(row: dict) -> str:
     if row["stage"] == "PRE_BOS2_READY":
         lines.append(f"Distance to breakout: {row.get('distance_to_p1_pct')}%")
         lines.append(f"Volatility contracted: {row.get('volatility_contracted')}")
+    if row["stage"] == "FRESH_REVERSAL":
+        lines.append(f"Reversal entry: {row.get('Reversal_date')} @ {row.get('Reversal_price')}")
+        lines.append(f"Distance to full breakout (P1): {row.get('distance_to_p1_pct')}%")
     if row.get("BOS2_date"):
         lines.append(f"BOS2: {row['BOS2_date']} @ {row['BOS2_price']} ({row.get('bars_since_bos2')} bars ago)")
     lines.append(f"Confluence: {row.get('confluence_score')}")
     lines.append(f"_{row.get('notes','')}_")
     return "\n".join(lines)
+

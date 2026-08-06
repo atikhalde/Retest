@@ -1,6 +1,6 @@
 # SMC Structure Scanner - Backtest Report
 
-Generated: 2026-08-06T16:35:40
+Generated: 2026-08-06T16:45:48
 
 ## Pattern completion rate
 

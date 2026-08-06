@@ -18,6 +18,7 @@ chasing.
 |---|---|
 | `IN_RETEST` | Just bounced off the retest zone; too early to call it re-accumulation |
 | `BASING` | Re-accumulating, but still well below the breakout trigger (P1) |
+| 🟠 `FRESH_REVERSAL` | **A higher-low reversal just confirmed** — a green candle closing back above the last confirmed swing-low candle's high, inside the base. Earlier/tighter tactical entry than waiting for the full P1 breakout (e.g. PGIL on 27 Jul, AUBank on 24 Jul 2026). |
 | 🟡 `PRE_BOS2_READY` | **Re-accumulation minimum satisfied AND price is coiled within ~3% of P1.** The "catch it before it breaks" alert. |
 | 🟢 `FRESH_BOS2` | Continuation breakout just confirmed (within the last few bars) — actionable now |
 | ⚪ `STALE_BOS2` | Breakout already happened too long ago to be a fresh idea |

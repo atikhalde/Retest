@@ -304,7 +304,7 @@ def run_backtest(symbols: List[str], cfg, data_source, horizons=HORIZONS) -> dic
         # "PGIL-right-now"-type setups distinctly from the historical stats.
         try:
             live_match = detect_pattern(df, cfg, symbol)
-            if live_match is not None and live_match.stage in ("FRESH_BOS2", "PRE_BOS2_READY"):
+            if live_match is not None and live_match.stage in ("FRESH_BOS2", "FRESH_REVERSAL", "PRE_BOS2_READY"):
                 conf = confluence_score(df, cfg)
                 live_signals.append({
                     "symbol": symbol, "stage": live_match.stage,
@@ -314,10 +314,13 @@ def run_backtest(symbols: List[str], cfg, data_source, horizons=HORIZONS) -> dic
                     "p1_resistance": round(float(live_match.p1_price), 2) if live_match.p1_price else None,
                     "retest_date": live_match.retest_date, "retest_price": round(float(live_match.retest_price), 2) if live_match.retest_price else None,
                     "reaccum_bars": live_match.reaccum_bars,
+                    "reversal_date": live_match.reversal_date,
+                    "reversal_price": round(float(live_match.reversal_price), 2) if live_match.reversal_price and not pd.isna(live_match.reversal_price) else None,
                     "bos2_date": live_match.bos2_date, "bos2_price": round(float(live_match.bos2_price), 2) if live_match.bos2_price else None,
                     "confluence_score": f"{conf['score']}/{conf['max_score']}",
                     "notes": live_match.notes,
                 })
+
         except Exception as e:
             print(f"  [!] {symbol}: live-signal check failed: {e}")
 
@@ -371,7 +374,7 @@ def run_backtest(symbols: List[str], cfg, data_source, horizons=HORIZONS) -> dic
 
     live_signals_df = pd.DataFrame(live_signals)
     if not live_signals_df.empty:
-        stage_prio = {"FRESH_BOS2": 0, "PRE_BOS2_READY": 1}
+        stage_prio = {"FRESH_BOS2": 0, "FRESH_REVERSAL": 1, "PRE_BOS2_READY": 2}
         live_signals_df["_p"] = live_signals_df["stage"].map(stage_prio).fillna(9)
         live_signals_df = live_signals_df.sort_values("_p").drop(columns="_p").reset_index(drop=True)
 

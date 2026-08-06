@@ -8,6 +8,11 @@ can act on:
 
     IN_RETEST        - just bounced off the retest zone, too early to call basing
     BASING           - re-accumulating, but not yet close to the breakout trigger
+    FRESH_REVERSAL   - a higher-low reversal just confirmed (green candle closing
+                       above the last confirmed swing-low candle's high) within
+                       `recency_bars` - the tactical, earlier entry style (e.g.
+                       PGIL on 27 Jul, AUBANK on 24 Jul) rather than waiting for
+                       the full P1 breakout.
     PRE_BOS2_READY   - re-accumulation minimum satisfied AND price is coiled
                        within `pre_bos2_proximity_pct` of P1 (the level BOS2 must
                        clear). This is the "catch it before it breaks" stage.
@@ -177,9 +182,15 @@ def detect_pattern(df: pd.DataFrame, cfg, symbol: str) -> Optional[PatternMatch]
         else:
             bars_in_reaccum = last_idx - retest_idx
             dist_to_p1 = (p1_price - close[last_idx]) / p1_price
+            bars_since_reversal = (last_idx - last_reversal[0]) if last_reversal[0] is not None else None
             if bars_in_reaccum < cfg.min_reaccum_bars:
                 stage = "IN_RETEST"
                 notes = "Just bounced off the retest zone; too early to call re-accumulation"
+            elif bars_since_reversal is not None and bars_since_reversal <= cfg.recency_bars:
+                stage = "FRESH_REVERSAL"
+                notes = (f"Higher-low reversal confirmed {bars_since_reversal}d ago at {last_reversal[2]:.2f} "
+                         f"(green close above the last confirmed swing-low candle's high). "
+                         f"Tactical early entry, {dist_to_p1*100:.1f}% below P1={p1_price:.2f}.")
             elif dist_to_p1 <= cfg.pre_bos2_proximity_pct and close[last_idx] < p1_price * (1 + cfg.breakout_buffer):
                 stage = "PRE_BOS2_READY"
                 squeeze_txt = "volatility contracted (coiled)" if vol_contracted else "range not yet contracted"
@@ -188,6 +199,7 @@ def detect_pattern(df: pd.DataFrame, cfg, symbol: str) -> Optional[PatternMatch]
             else:
                 stage = "BASING"
                 notes = f"Re-accumulating {bars_in_reaccum}d, still {dist_to_p1*100:.1f}% below P1={p1_price:.2f}"
+
 
             match = PatternMatch(
                 symbol=symbol, stage=stage,
