@@ -26,10 +26,17 @@ Both are evaluated with the same realistic mechanics: entry at next bar's
 Open, a hard stop at the chain's retest low, and returns measured at fixed
 forward horizons.
 
+Every exported row (whether in "All Chains", "BOS2 Trades" or
+"PreBOS2 Trades") carries the FULL stage history of that pattern instance -
+symbol, P0/base date & price, BOS1 date & price, P1 date & price, retest
+date & price, how many bars it re-accumulated, the PRE_BOS2_READY date (if
+any), the BOS2 date & price (if confirmed), and the final outcome - so you
+can trace exactly which real dates the algorithm used for every trade.
+
 This is research tooling, not investment advice - use it to sanity check
 (and re-tune) the scanner's parameters before trusting its live alerts.
 """
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 from typing import List, Optional
 
 import numpy as np
@@ -46,6 +53,7 @@ class Chain:
     p0_idx: int
     p0_price: float
     bos1_idx: int
+    bos1_price: float
     p1_idx: int
     p1_price: float
     retest_idx: int
@@ -138,12 +146,41 @@ def enumerate_chains(df: pd.DataFrame, cfg, symbol: str) -> List[Chain]:
                 outcome, end_idx = "TIMEOUT", min(latest_bos2, n) - 1
 
         chains.append(Chain(
-            symbol=symbol, p0_idx=i0, p0_price=p0_price, bos1_idx=bos1_idx,
+            symbol=symbol, p0_idx=i0, p0_price=p0_price, bos1_idx=bos1_idx, bos1_price=close[bos1_idx],
             p1_idx=p1_idx, p1_price=p1_price, retest_idx=retest_idx, retest_price=retest_price,
             outcome=outcome, end_idx=end_idx, pre_bos2_ready_idx=pre_ready_idx,
         ))
 
     return chains
+
+
+def _d(df, idx):
+    return df.index[idx] if idx is not None else None
+
+
+def chain_base_info(chain: Chain, df: pd.DataFrame) -> dict:
+    """Every stage date/price for a chain, human-readable, regardless of outcome."""
+    reaccum_end_idx = chain.end_idx if chain.outcome != "STILL_OPEN" else None
+    info = {
+        "symbol": chain.symbol,
+        "outcome": chain.outcome,
+        "p0_date": _d(df, chain.p0_idx),
+        "p0_price": round(float(chain.p0_price), 2),
+        "bos1_date": _d(df, chain.bos1_idx),
+        "bos1_price": round(float(chain.bos1_price), 2),
+        "p1_date": _d(df, chain.p1_idx),
+        "p1_price": round(float(chain.p1_price), 2),
+        "retest_date": _d(df, chain.retest_idx),
+        "retest_price": round(float(chain.retest_price), 2),
+        "reaccumulation_start_date": _d(df, chain.retest_idx + 1) if chain.retest_idx + 1 < len(df) else None,
+        "pre_bos2_ready_date": _d(df, chain.pre_bos2_ready_idx),
+        "reaccum_bars": (reaccum_end_idx - chain.retest_idx) if reaccum_end_idx is not None else None,
+        "bos2_date": _d(df, chain.end_idx) if chain.outcome == "BOS2_CONFIRMED" else None,
+        "bos2_price": round(float(df["Close"].values[chain.end_idx]), 2) if chain.outcome == "BOS2_CONFIRMED" else None,
+        "invalidated_date": _d(df, chain.end_idx) if chain.outcome == "INVALIDATED" else None,
+        "timeout_date": _d(df, chain.end_idx) if chain.outcome == "TIMEOUT" else None,
+    }
+    return info
 
 
 def _forward_trade(df: pd.DataFrame, entry_idx: int, stop_price: float, horizons=HORIZONS) -> Optional[dict]:
@@ -156,7 +193,8 @@ def _forward_trade(df: pd.DataFrame, entry_idx: int, stop_price: float, horizons
 
     close = df["Close"].values
     low = df["Low"].values
-    result = {"entry_date": df.index[entry_idx + 1], "entry_price": entry_price, "stop_price": stop_price}
+    result = {"entry_date": df.index[entry_idx + 1], "entry_price": round(float(entry_price), 2),
+              "stop_price": round(float(stop_price), 2)}
 
     stopped_at = None
     for h in horizons:
@@ -164,7 +202,6 @@ def _forward_trade(df: pd.DataFrame, entry_idx: int, stop_price: float, horizons
         if end_i >= n:
             result[f"ret_{h}d_pct"] = None
             continue
-        # did the stop get hit before or at this horizon?
         window_low = low[entry_idx + 1: end_i + 1].min()
         if stopped_at is None and window_low <= stop_price:
             stopped_at = h
@@ -178,9 +215,29 @@ def _forward_trade(df: pd.DataFrame, entry_idx: int, stop_price: float, horizons
     return result
 
 
+# canonical column order for the trade-level exports
+TRADE_COLUMN_ORDER = [
+    "symbol", "outcome",
+    "p0_date", "p0_price", "bos1_date", "bos1_price", "p1_date", "p1_price",
+    "retest_date", "retest_price", "reaccumulation_start_date", "reaccum_bars",
+    "pre_bos2_ready_date", "bos2_date", "bos2_price",
+    "signal_date", "signal_price", "entry_date", "entry_price", "stop_price",
+    "ret_5d_pct", "ret_10d_pct", "ret_20d_pct", "ret_40d_pct", "ret_60d_pct",
+    "stopped_out", "stopped_out_within_days", "eventually_confirmed",
+]
+
+
+def _reorder(df: pd.DataFrame) -> pd.DataFrame:
+    if df.empty:
+        return df
+    cols = [c for c in TRADE_COLUMN_ORDER if c in df.columns] + [c for c in df.columns if c not in TRADE_COLUMN_ORDER]
+    return df[cols]
+
+
 def run_backtest(symbols: List[str], cfg, data_source, horizons=HORIZONS) -> dict:
     from .indicators import add_indicators
 
+    all_chain_rows = []
     all_trades_bos2 = []
     all_trades_pre = []
     outcome_counts = {"BOS2_CONFIRMED": 0, "INVALIDATED": 0, "TIMEOUT": 0, "STILL_OPEN": 0}
@@ -198,27 +255,41 @@ def run_backtest(symbols: List[str], cfg, data_source, horizons=HORIZONS) -> dic
 
         for c in chains:
             outcome_counts[c.outcome] = outcome_counts.get(c.outcome, 0) + 1
+            base_info = chain_base_info(c, df)
+            all_chain_rows.append(base_info)
 
             if c.outcome == "BOS2_CONFIRMED":
                 trade = _forward_trade(df, c.end_idx, c.retest_price, horizons)
                 if trade:
-                    trade.update({"symbol": symbol, "signal_date": df.index[c.end_idx],
-                                  "signal_price": df["Close"].values[c.end_idx]})
-                    all_trades_bos2.append(trade)
+                    row = dict(base_info)
+                    row.update({"signal_date": base_info["bos2_date"], "signal_price": base_info["bos2_price"]})
+                    row.update(trade)
+                    all_trades_bos2.append(row)
 
             if c.pre_bos2_ready_idx is not None:
                 trade = _forward_trade(df, c.pre_bos2_ready_idx, c.retest_price, horizons)
                 if trade:
-                    trade.update({"symbol": symbol, "signal_date": df.index[c.pre_bos2_ready_idx],
-                                  "signal_price": df["Close"].values[c.pre_bos2_ready_idx],
-                                  "eventually_confirmed": c.outcome == "BOS2_CONFIRMED"})
-                    all_trades_pre.append(trade)
+                    row = dict(base_info)
+                    row.update({
+                        "signal_date": base_info["pre_bos2_ready_date"],
+                        "signal_price": round(float(df["Close"].values[c.pre_bos2_ready_idx]), 2),
+                        "eventually_confirmed": c.outcome == "BOS2_CONFIRMED",
+                    })
+                    row.update(trade)
+                    all_trades_pre.append(row)
 
-    bos2_df = pd.DataFrame(all_trades_bos2)
-    pre_df = pd.DataFrame(all_trades_pre)
+    all_chains_df = pd.DataFrame(all_chain_rows)
+    bos2_df = _reorder(pd.DataFrame(all_trades_bos2))
+    pre_df = _reorder(pd.DataFrame(all_trades_pre))
 
     summary = _summarize(bos2_df, pre_df, outcome_counts, horizons)
-    return {"bos2_trades": bos2_df, "pre_bos2_trades": pre_df, "outcome_counts": outcome_counts, "summary": summary}
+    return {
+        "all_chains": all_chains_df,
+        "bos2_trades": bos2_df,
+        "pre_bos2_trades": pre_df,
+        "outcome_counts": outcome_counts,
+        "summary": summary,
+    }
 
 
 def _summarize(bos2_df, pre_df, outcome_counts, horizons) -> pd.DataFrame:
@@ -278,4 +349,7 @@ def render_markdown_report(result: dict, cfg) -> str:
     lines.append("- `PRE_BOS2_READY` entries include chains that *never* confirmed BOS2 (see "
                   "`eventually_confirmed` column in `backtest_pre_bos2_trades.csv`) - that's the real "
                   "cost of entering early, weigh it against the better average price.")
+    lines.append("- `results/backtest_all_chains.csv` / the 'All Chains' Excel sheet lists EVERY pattern "
+                  "instance found (including INVALIDATED/TIMEOUT/STILL_OPEN ones that never became a "
+                  "trade) with its full P0/BOS1/P1/Retest/BOS2 date-and-price trail.")
     return "\n".join(lines)

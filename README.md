@@ -154,6 +154,32 @@ longer horizons. **Re-tune `Config` (breakout buffer, volume multipliers,
 proximity %, min re-accum bars) against your own universe/holding-period
 before sizing real risk on this.**
 
+### Running it yourself in GitHub Actions
+
+Actions tab → **"Backtest"** → *Run workflow* (optionally set how many
+symbols from `data/backtest_universe_sample.txt` to use). It installs
+dependencies, runs the backtest via yfinance (no Dhan quota used), exports
+`results/backtest_results.xlsx`, commits everything back to the repo, and
+also uploads it as a downloadable workflow artifact.
+
+### Excel workbook contents
+
+`scripts/export_backtest_excel.py` turns the raw CSVs into
+`results/backtest_results.xlsx` with 7 sheets:
+
+| Sheet | Contents |
+|---|---|
+| Summary | headline stats + forward-return table by entry type & horizon |
+| Outcome Counts | BOS2_CONFIRMED / INVALIDATED / TIMEOUT / STILL_OPEN breakdown |
+| By Symbol | per-stock signal counts & average returns |
+| **All Chains** | **every single pattern instance found** (929 in the 80-symbol sample run), one row per chain, with its full stage trail: `symbol`, `outcome`, `p0_date`/`p0_price`, `bos1_date`/`bos1_price`, `p1_date`/`p1_price`, `retest_date`/`retest_price`, `reaccumulation_start_date`, `reaccum_bars`, `pre_bos2_ready_date`, `bos2_date`/`bos2_price` — includes chains that never became a trade (invalidated/timed out), for full transparency |
+| BOS2 Trades | the subset of "All Chains" that confirmed BOS2, plus entry price/date, stop, and 5/10/20/40/60-day forward returns |
+| PreBOS2 Trades | the anticipatory entry (first `PRE_BOS2_READY` day) version of the same, plus `eventually_confirmed` (did it actually break out later?) |
+| Notes | methodology & caveats, verbatim from `backtest_report.md` |
+
+Return columns are colour-scaled (red→yellow→green) and every sheet is a
+filterable/sortable Excel table.
+
 ## Tuning
 
 Everything lives in `src/smc_scanner/config.py`, most of it also overridable

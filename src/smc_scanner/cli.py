@@ -60,6 +60,8 @@ def cmd_backtest(args):
     elif args.symbols_file:
         with open(args.symbols_file) as f:
             symbols = [l.strip() for l in f if l.strip() and not l.startswith("#")]
+        if args.limit:
+            symbols = symbols[: args.limit]
     else:
         universe_df = get_universe(cfg)
         symbols = universe_df["symbol"].tolist()
@@ -73,6 +75,7 @@ def cmd_backtest(args):
 
     import os
     os.makedirs(cfg.results_dir, exist_ok=True)
+    result["all_chains"].to_csv(f"{cfg.results_dir}/backtest_all_chains.csv", index=False)
     result["bos2_trades"].to_csv(f"{cfg.results_dir}/backtest_bos2_trades.csv", index=False)
     result["pre_bos2_trades"].to_csv(f"{cfg.results_dir}/backtest_pre_bos2_trades.csv", index=False)
     result["summary"].to_csv(f"{cfg.results_dir}/backtest_summary.csv", index=False)

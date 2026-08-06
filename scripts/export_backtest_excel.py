@@ -65,6 +65,8 @@ def build_workbook(results_dir=RESULTS_DIR, out_path=None):
     summary = pd.read_csv(os.path.join(results_dir, "backtest_summary.csv"))
     bos2 = pd.read_csv(os.path.join(results_dir, "backtest_bos2_trades.csv"))
     pre = pd.read_csv(os.path.join(results_dir, "backtest_pre_bos2_trades.csv"))
+    all_chains_path = os.path.join(results_dir, "backtest_all_chains.csv")
+    all_chains = pd.read_csv(all_chains_path) if os.path.exists(all_chains_path) else pd.DataFrame()
 
     report_path = os.path.join(results_dir, "backtest_report.md")
     report_text = open(report_path).read() if os.path.exists(report_path) else ""
@@ -103,6 +105,7 @@ def build_workbook(results_dir=RESULTS_DIR, out_path=None):
             {"metric": "Report generated", "value": pd.Timestamp.now().isoformat(timespec="seconds")},
             {"metric": "Total resolved chains", "value": int(outcome_df["count"].sum()) if not outcome_df.empty else None},
             {"metric": "Pattern completion rate (%)", "value": completion_rate},
+            {"metric": "All pattern instances (incl. invalidated/timeout)", "value": len(all_chains)},
             {"metric": "BOS2-confirmed trades", "value": len(bos2)},
             {"metric": "PRE_BOS2_READY trades", "value": len(pre)},
         ]
@@ -113,8 +116,11 @@ def build_workbook(results_dir=RESULTS_DIR, out_path=None):
         outcome_df.to_excel(writer, sheet_name="Outcome Counts", index=False)
         if not by_symbol.empty:
             by_symbol.to_excel(writer, sheet_name="By Symbol", index=False)
+        if not all_chains.empty:
+            all_chains.to_excel(writer, sheet_name="All Chains", index=False)
         bos2.to_excel(writer, sheet_name="BOS2 Trades", index=False)
         pre.to_excel(writer, sheet_name="PreBOS2 Trades", index=False)
+
 
         notes_df = pd.DataFrame({"Backtest report (methodology & caveats)": report_text.split("\n")})
         notes_df.to_excel(writer, sheet_name="Notes", index=False)
@@ -148,6 +154,9 @@ def build_workbook(results_dir=RESULTS_DIR, out_path=None):
         ws2 = wb["By Symbol"]
         _style_sheet(ws2, by_symbol, table_name="BySymbol")
         _add_return_color_scale(ws2, by_symbol, [c for c in by_symbol.columns if c.endswith("_avg")])
+
+    if "All Chains" in wb.sheetnames and not all_chains.empty:
+        _style_sheet(wb["All Chains"], all_chains, table_name="AllChains")
 
     if not bos2.empty:
         ws3 = wb["BOS2 Trades"]

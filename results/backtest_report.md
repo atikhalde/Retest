@@ -1,6 +1,6 @@
 # SMC Structure Scanner - Backtest Report
 
-Generated: 2026-08-06T15:50:46
+Generated: 2026-08-06T15:58:47
 
 ## Pattern completion rate
 
@@ -30,3 +30,4 @@ Generated: 2026-08-06T15:50:46
 - Entries assume next-bar Open after the signal; stop = the chain's retest low.
 - No slippage, brokerage, or position sizing modeled.
 - `PRE_BOS2_READY` entries include chains that *never* confirmed BOS2 (see `eventually_confirmed` column in `backtest_pre_bos2_trades.csv`) - that's the real cost of entering early, weigh it against the better average price.
+- `results/backtest_all_chains.csv` / the 'All Chains' Excel sheet lists EVERY pattern instance found (including INVALIDATED/TIMEOUT/STILL_OPEN ones that never became a trade) with its full P0/BOS1/P1/Retest/BOS2 date-and-price trail.
