@@ -47,6 +47,119 @@ from .weekly import find_daily_bos1_candidates
 
 HORIZONS = (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 15, 20, 25, 30, 40, 60)
 
+# ------------------------------------------------------------------------
+# The ONE deliverable: results/backtest_results.xlsx (single file, single
+# worksheet). Per explicit user direction (2026-08-08): no more separate
+# CSVs/markdown/stop-loss-optimizer files cluttering the repo on every
+# backtest run - just this one workbook, built directly from the in-memory
+# `all_chains` DataFrame (no intermediate CSV round-trip required).
+# ------------------------------------------------------------------------
+RESULTS_XLSX_COLUMNS = [
+    "Symbol", "Quality Score", "Quality Grade", "Fresh Reversal Entry Date",
+    "Fresh Reversal Entry Price", "Re-Accumulation Date", "Retest Date",
+    "BOS1 Breakout Date", "PRE_BOS2_READY (Fresh-Entry) Date", "SL Level",
+    "Target Price",
+]
+RESULTS_XLSX_DATE_COLUMNS = [
+    "Fresh Reversal Entry Date", "Re-Accumulation Date", "Retest Date",
+    "BOS1 Breakout Date", "PRE_BOS2_READY (Fresh-Entry) Date",
+]
+
+
+def build_results_table(all_chains_df: pd.DataFrame, cfg=None) -> pd.DataFrame:
+    """Pure transform: raw chain rows (as returned in result["all_chains"],
+    or read back from backtest_all_chains.csv) -> the single formatted
+    table that goes into backtest_results.xlsx.
+
+    Only keeps chains that reached a confirmed fresh reversal (that's what
+    SL Level / Target Price are computed against), de-duped by (symbol,
+    reversal date), sorted most-recent-first.
+    """
+    target_reward_risk = getattr(cfg, "target_reward_risk", 1.0) if cfg is not None else 1.0
+
+    if all_chains_df is None or all_chains_df.empty:
+        return pd.DataFrame(columns=RESULTS_XLSX_COLUMNS)
+
+    df = all_chains_df.copy()
+    for col in ("bos1_date", "retest_date", "reaccumulation_start_date",
+                "reaccum_reversal_date", "pre_bos2_ready_date"):
+        if col in df.columns:
+            df[col] = pd.to_datetime(df[col], errors="coerce")
+
+    df = df[df["reaccum_reversal_date"].notna()].copy()
+    if df.empty:
+        return pd.DataFrame(columns=RESULTS_XLSX_COLUMNS)
+
+    sl_level = df["retest_price"]
+    target_price = (df["reaccum_reversal_price"] + target_reward_risk * (df["reaccum_reversal_price"] - sl_level)).round(2)
+
+    out = pd.DataFrame({
+        "Symbol": df["symbol"],
+        "Quality Score": df["quality_score"],
+        "Quality Grade": df["quality_grade"],
+        "Fresh Reversal Entry Date": df["reaccum_reversal_date"],
+        "Fresh Reversal Entry Price": df["reaccum_reversal_price"],
+        "Re-Accumulation Date": df["reaccumulation_start_date"],
+        "Retest Date": df["retest_date"],
+        "BOS1 Breakout Date": df["bos1_date"],
+        "PRE_BOS2_READY (Fresh-Entry) Date": df["pre_bos2_ready_date"],
+        "SL Level": sl_level,
+        "Target Price": target_price,
+    })[RESULTS_XLSX_COLUMNS]
+
+    out = out.drop_duplicates(subset=["Symbol", "Fresh Reversal Entry Date"], keep="first")
+    out = out.sort_values("Fresh Reversal Entry Date", ascending=False, na_position="last").reset_index(drop=True)
+
+    for col in RESULTS_XLSX_DATE_COLUMNS:
+        out[col] = pd.to_datetime(out[col]).dt.strftime("%Y-%m-%d").replace("NaT", "")
+
+    return out
+
+
+def write_results_excel(out: pd.DataFrame, out_path: str) -> str:
+    """Style + save the single-sheet workbook built by build_results_table()."""
+    from openpyxl.styles import Font, PatternFill, Alignment
+    from openpyxl.utils import get_column_letter
+    from openpyxl.worksheet.table import Table, TableStyleInfo
+    from openpyxl import load_workbook
+
+    header_fill = PatternFill(start_color="1F4E78", end_color="1F4E78", fill_type="solid")
+    header_font = Font(color="FFFFFF", bold=True)
+    quality_fill = {"A": "C6EFCE", "B": "DDEBF7", "C": "FFEB9C", "D": "FFC7CE"}
+
+    with pd.ExcelWriter(out_path, engine="openpyxl") as writer:
+        out.to_excel(writer, sheet_name="Backtest Results", index=False)
+
+    wb = load_workbook(out_path)
+    ws = wb["Backtest Results"]
+    ws.freeze_panes = "A2"
+
+    for col_idx, col in enumerate(out.columns, start=1):
+        cell = ws.cell(row=1, column=col_idx)
+        cell.fill = header_fill
+        cell.font = header_font
+        cell.alignment = Alignment(horizontal="center")
+        max_len = max([len(str(col))] + [len(str(v)) for v in out[col].astype(str).values[:1000]])
+        ws.column_dimensions[get_column_letter(col_idx)].width = min(max(max_len + 2, 12), 34)
+
+    if "Quality Grade" in out.columns and len(out):
+        quality_col_idx = out.columns.get_loc("Quality Grade") + 1
+        for row_idx in range(2, len(out) + 2):
+            val = ws.cell(row=row_idx, column=quality_col_idx).value
+            letter = str(val)[0] if val else None
+            fill_hex = quality_fill.get(letter)
+            if fill_hex:
+                ws.cell(row=row_idx, column=quality_col_idx).fill = PatternFill(
+                    start_color=fill_hex, end_color=fill_hex, fill_type="solid")
+
+    ref = f"A1:{get_column_letter(len(out.columns))}{max(len(out) + 1, 1)}"
+    tbl = Table(displayName="BacktestResults", ref=ref)
+    tbl.tableStyleInfo = TableStyleInfo(name="TableStyleMedium2", showRowStripes=True)
+    ws.add_table(tbl)
+
+    wb.save(out_path)
+    return out_path
+
 
 
 @dataclass
@@ -534,10 +647,10 @@ def render_markdown_report(result: dict, cfg) -> str:
     lines.append("## Notes / caveats")
     lines.append("- Entries assume next-bar Open after the signal; stop = the chain's retest low.")
     lines.append("- No slippage, brokerage, or position sizing modeled.")
-    lines.append("- `PRE_BOS2_READY` entries include chains that *never* confirmed BOS2 (see "
-                  "`eventually_confirmed` column in `backtest_pre_bos2_trades.csv`) - that's the real "
-                  "cost of entering early, weigh it against the better average price.")
-    lines.append("- `results/backtest_all_chains.csv` / the 'All Chains' Excel sheet lists EVERY pattern "
-                  "instance found (including INVALIDATED/TIMEOUT/STILL_OPEN ones that never became a "
-                  "trade) with its full P0/BOS1/P1/Retest/BOS2 date-and-price trail.")
+    lines.append("- `PRE_BOS2_READY` entries include chains that *never* confirmed BOS2 - that's the "
+                  "real cost of entering early, weigh it against the better average price.")
+    lines.append("- This console report is not written to disk - the one persisted deliverable is "
+                  "`results/backtest_results.xlsx` (single sheet: Symbol, Quality Score/Grade, Fresh "
+                  "Reversal Entry Date/Price, Re-Accumulation Date, Retest Date, BOS1 Breakout Date, "
+                  "PRE_BOS2_READY (Fresh-Entry) Date, SL Level, Target Price).")
     return "\n".join(lines)

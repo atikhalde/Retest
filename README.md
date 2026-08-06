@@ -97,23 +97,24 @@ src/smc_scanner/
 scripts/
   market_hours_guard.py     used by the intraday workflow to no-op outside NSE hours
   check_dhan_token.py       Option B daily reminder - alerts via Telegram if the static Dhan token is stale
-  export_backtest_excel.py  builds results/backtest_results.xlsx (single sheet, 11 columns - see "Backtest" below)
-  optimize_stop_loss.py     sweeps stop-loss methods across the best holding window
+  export_backtest_excel.py  standalone regenerator for backtest_results.xlsx from a saved CSV (the normal `backtest` command builds it in-memory directly and doesn't need this)
+  optimize_stop_loss.py     sweeps stop-loss methods across the best holding window - standalone, run manually (not part of the "Backtest" workflow)
 .github/workflows/
   update_universe.yml     weekly - rebuilds data/universe.csv
   check_dhan_token.yml    daily, ~08:45 IST (before market open) - Telegram alert if the static token is stale
   eod_scan.yml            daily, ~15:45 IST - confirmation scan after close
   intraday_scan.yml       every 15 min during market hours - catches PRE_BOS2_READY/FRESH_REVERSAL/FRESH_BOS2 live
-  backtest.yml            on-demand / monthly - historical edge report + both Excel exports
+  backtest.yml            on-demand / monthly - writes results/backtest_results.xlsx (the only file this workflow produces)
   tests.yml               runs pytest on every push
 data/
   universe.csv        scan universe (bootstrap sample checked in; rebuilt by the workflow)
   nse_holidays.txt    NSE holiday calendar (update yearly)
   backtest_universe_sample.txt   80-symbol curated sample - optional, pass via --symbols-file for a quick/small backtest run (default is the full market-cap-filtered universe)
 results/
-  latest_scan.csv, state.json, backtest_*.csv/md/xlsx, sl_optimization_*.csv/xlsx
+  latest_scan.csv, state.json, backtest_results.xlsx
   (committed back by the workflows)
 ```
+
 
 ## 1. Dhan API setup — you're using Option B (static access token)
 
@@ -295,11 +296,15 @@ average return (1.28-1.40%) at a moderate, technically-placed risk (~3.3%),
 beating both tighter fixed stops (1-2%, which get stopped out 44-75% of the
 time and collapse the win rate) and looser stops (5-10%/ATR, which risk
 1.5-3x more capital for the same or lower return). This is already the
-scanner's default - see `results/sl_optimization_summary.xlsx` for the full
-sweep. Re-run with `python scripts/optimize_stop_loss.py` any time.
+scanner's default (`SL Level` in `backtest_results.xlsx`, and the live
+scanner's `stop_loss`). This is a standalone research script, run manually
+(`python scripts/optimize_stop_loss.py`, writes its own
+`results/sl_optimization_*.csv`) - it is **not** run automatically by the
+"Backtest" GitHub workflow, to keep that workflow's output to the one file
+described below.
 
-Run it (`python -m smc_scanner.cli backtest`) and read
-`results/backtest_report.md` before trusting live alerts. **Re-tune
+Run `python -m smc_scanner.cli backtest` and check
+`results/backtest_results.xlsx` before trusting live alerts. **Re-tune
 `Config` (breakout buffer, volume multipliers, proximity %, min re-accum
 bars) against your own universe/holding-period before sizing real risk on
 this.**
@@ -309,19 +314,20 @@ this.**
 Actions tab → **"Backtest"** → *Run workflow* (optionally override `years`,
 `workers`, or `limit` - leave `limit` blank for the full >= min-market-cap
 universe, which is now the default). It installs dependencies, runs the
-backtest via yfinance (no Dhan quota used), exports
-`results/backtest_results.xlsx`, commits everything back to the repo, and
-also uploads it as a downloadable workflow artifact. The job has a 300-minute
-timeout since the default (full universe, 5y history) run is much larger
-than the old 150-symbol sample.
+backtest via yfinance (no Dhan quota used), writes
+`results/backtest_results.xlsx` (the only file this workflow produces or
+commits), pushes it back to the repo, and also uploads it as a downloadable
+workflow artifact. The job has a 300-minute timeout since the default (full
+universe, 5y history) run is much larger than the old 150-symbol sample.
 
 ### Excel workbook contents
 
-**`results/backtest_results.xlsx`** (via `scripts/export_backtest_excel.py`)
-is the only backtest workbook produced - **one file, one worksheet**, one
-row per historical pattern instance that reached a confirmed fresh
-reversal, de-duped and sorted by most recent Fresh Reversal Entry Date
-first:
+**`results/backtest_results.xlsx`** is the **only file** the `backtest`
+command (and the "Backtest" GitHub workflow) writes - **one file, one
+worksheet**, built directly in-memory from the backtest run (no
+intermediate CSVs, markdown report, or other files are generated). One row
+per historical pattern instance that reached a confirmed fresh reversal,
+de-duped and sorted by most recent Fresh Reversal Entry Date first:
 
 `Symbol | Quality Score | Quality Grade | Fresh Reversal Entry Date | Fresh Reversal Entry Price | Re-Accumulation Date | Retest Date | BOS1 Breakout Date | PRE_BOS2_READY (Fresh-Entry) Date | SL Level | Target Price`
 
@@ -343,16 +349,17 @@ first:
   (Fresh Reversal Entry Price - SL Level)`, i.e. the same 1:1 reward:risk
   math as the live scanner's trade plans (`config.target_reward_risk`).
 
-For raw per-chain data (every outcome including invalidated/timed-out
-chains, forward returns at every horizon, the full BOS2/PreBOS2/Reversal
-trade logs, and the stop-loss sweep), see the underlying CSVs in
-`results/` (`backtest_all_chains.csv`, `backtest_bos2_trades.csv`,
-`backtest_pre_bos2_trades.csv`, `backtest_reversal_trades.csv`,
-`backtest_summary.csv`, `sl_optimization_*.csv`) and `backtest_report.md` -
-`export_backtest_excel.py` intentionally distills all of that down to the
-single sheet above as the one deliverable meant for day-to-day review.
+The full run's console output (pattern completion rate, forward-return
+table by entry style/horizon, live-signals-right-now) is still printed to
+the terminal/workflow log for visibility - it's just not persisted to disk
+anymore. `scripts/export_backtest_excel.py` (`smc_scanner.backtest.
+build_results_table` / `write_results_excel` under the hood) is available
+standalone if you ever want to rebuild the workbook from a
+`backtest_all_chains.csv` you saved separately, but the normal `backtest`
+command no longer needs or writes that CSV.
 
 ## Tuning
+
 
 
 Everything lives in `src/smc_scanner/config.py`, most of it also overridable

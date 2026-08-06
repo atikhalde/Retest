@@ -16,7 +16,7 @@ from .config import Config
 from .universe import build_universe, get_universe
 from .data_sources import get_data_source
 from .scanner import run_scan
-from .backtest import run_backtest, render_markdown_report, HORIZONS
+from .backtest import run_backtest, render_markdown_report, HORIZONS, build_results_table, write_results_excel
 
 
 def cmd_build_universe(args):
@@ -93,21 +93,20 @@ def cmd_backtest(args):
     result = run_backtest(symbols, cfg, data_source, horizons=horizons or HORIZONS,
                            days=days, max_workers=args.workers)
 
-
+    # ONE deliverable: results/backtest_results.xlsx (single file, single
+    # worksheet), built directly from the in-memory chain data - no
+    # intermediate CSVs, markdown report, or other files written to disk
+    # (per explicit user direction 2026-08-08: just this one file).
     import os
     os.makedirs(cfg.results_dir, exist_ok=True)
-    result["all_chains"].to_csv(f"{cfg.results_dir}/backtest_all_chains.csv", index=False)
-    result["bos2_trades"].to_csv(f"{cfg.results_dir}/backtest_bos2_trades.csv", index=False)
-    result["pre_bos2_trades"].to_csv(f"{cfg.results_dir}/backtest_pre_bos2_trades.csv", index=False)
-    result["reversal_trades"].to_csv(f"{cfg.results_dir}/backtest_reversal_trades.csv", index=False)
-    result["live_signals"].to_csv(f"{cfg.results_dir}/backtest_live_signals.csv", index=False)
-    result["summary"].to_csv(f"{cfg.results_dir}/backtest_summary.csv", index=False)
+    out_path = os.path.join(cfg.results_dir, "backtest_results.xlsx")
+    out_table = build_results_table(result["all_chains"], cfg=cfg)
+    write_results_excel(out_table, out_path)
 
+    # console-only summary (not persisted) so the run's log is still useful
     report = render_markdown_report(result, cfg)
-    with open(f"{cfg.results_dir}/backtest_report.md", "w") as f:
-        f.write(report)
-
     print(report)
+    print(f"\n[backtest] wrote {out_path}  ({len(out_table)} rows, {len(out_table.columns)} columns, 1 sheet)")
 
     if not result["live_signals"].empty:
         pd.set_option("display.width", 220)
@@ -116,6 +115,7 @@ def cmd_backtest(args):
         print(result["live_signals"].to_string(index=False))
     else:
         print("\n=== LIVE SIGNALS RIGHT NOW ===\n(none of the scanned symbols are currently PRE_BOS2_READY/FRESH_BOS2)")
+
 
 
 
