@@ -13,7 +13,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: intraday-scan
+  group: repo-write
   cancel-in-progress: false
 
 jobs:
@@ -51,11 +51,23 @@ jobs:
           SCANNER_MODE: intraday
         run: python -m smc_scanner.cli scan --mode intraday --workers 4
 
-      - name: Commit state (dedupe future alerts) + latest snapshot
+      - name: Commit state (dedupe future alerts) + latest snapshot (retries on push race)
         if: steps.guard.outputs.open == 'true'
         run: |
           git config user.name "smc-scanner-bot"
           git config user.email "actions@users.noreply.github.com"
           git add results/latest_scan.csv results/state.json
-          git diff --cached --quiet || git commit -m "chore: intraday scan $(date -u +'%Y-%m-%dT%H:%M') [skip ci]"
-          git push
+          git diff --cached --quiet && echo "nothing to commit" && exit 0
+          git commit -m "chore: intraday scan $(date -u +'%Y-%m-%dT%H:%M') [skip ci]"
+          for i in 1 2 3 4 5; do
+            if git push; then
+              echo "push succeeded"
+              exit 0
+            fi
+            echo "push rejected (attempt $i) - fetching + rebasing and retrying..."
+            git fetch origin main
+            git rebase origin/main
+            sleep $((RANDOM % 5 + 2))
+          done
+          echo "push failed after retries" >&2
+          exit 1
