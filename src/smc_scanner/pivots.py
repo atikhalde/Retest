@@ -24,11 +24,16 @@ def find_reaccum_reversals(df: pd.DataFrame, start_idx: int, end_idx: int, left:
     """
     Within [start_idx, end_idx], find every "higher-low reversal" signal: a
     GREEN candle that closes back above the HIGH of a confirmed swing-low
-    candle (using the same fractal pivot-low logic as the rest of the
-    scanner, not just any 1-bar dip - that avoids flagging noisy 1-2 day
-    wiggles as if they were meaningful pullbacks). A tactical, earlier entry
-    style than waiting for a full resistance breakout - buying confirmation
-    that the latest real dip has reversed, right within the base.
+    candle (fractal pivot-low logic, not just any 1-bar dip - that avoids
+    flagging noisy 1-2 day wiggles as if they were meaningful pullbacks).
+
+    Every confirmed pivot low in the window is eligible, including ones that
+    dip BELOW an earlier pivot/retest low - that's a normal, often bullish
+    "spring" (a stop-hunt shakeout before the real move - e.g. PGIL dipping
+    to 1901 on 8 Jul then 1921 on 23 Jul, both below the 1971 retest; AUBANK
+    dipping to 960 on 23 Jul, well below the 1033 pivot from 8 Jul). Both
+    reverse cleanly and both are genuine signals, so a "must keep rising"
+    filter would wrongly reject them - don't add one here.
 
     Returns a list of (idx, date, price) tuples in chronological order, one
     per confirmed pivot low that got reversed within the window.
@@ -52,5 +57,8 @@ def find_reaccum_reversals(df: pd.DataFrame, start_idx: int, end_idx: int, left:
                 break
 
     return reversals
+
+
+
 
 
