@@ -152,14 +152,38 @@ def _d(df, idx):
 
 def chain_base_info(chain: Chain, df: pd.DataFrame, cfg=None) -> dict:
     """Every stage date/price for a chain, human-readable, regardless of outcome."""
+    from .indicators import confluence_score
+    from .scoring import compute_quality_score
+
     reaccum_end_idx = chain.end_idx if chain.outcome != "STILL_OPEN" else len(df) - 1
     left, right = (cfg.pivot_left, cfg.pivot_right) if cfg is not None else (3, 3)
     reversals = find_reaccum_reversals(df, chain.retest_idx, reaccum_end_idx, left, right)
     last_reversal = reversals[-1] if reversals else (None, None, None)
 
+    # score as-of the most relevant signal bar (the reversal if one formed,
+    # else the retest) so historical rows are graded the same way a live
+    # scan would have graded them at that point in time
+    signal_idx = last_reversal[0] if last_reversal[0] is not None else chain.retest_idx
+    conf = confluence_score(df.iloc[: signal_idx + 1], cfg) if cfg is not None else None
+    stage_equiv = {
+        "BOS2_CONFIRMED": "FRESH_BOS2", "INVALIDATED": "IN_RETEST",
+        "TIMEOUT": "BASING", "STILL_OPEN": "BASING",
+    }.get(chain.outcome, "BASING")
+    if last_reversal[0] is not None:
+        stage_equiv = "FRESH_REVERSAL" if chain.outcome != "BOS2_CONFIRMED" else "FRESH_BOS2"
+    quality = compute_quality_score(
+        stage=stage_equiv,
+        confluence_raw=conf["score"] if conf else None, confluence_max=conf["max_score"] if conf else 9,
+        num_reversals=len(reversals),
+        volatility_contracted=None,
+        reaccum_bars=(reaccum_end_idx - chain.retest_idx),
+    )
+
     info = {
         "symbol": chain.symbol,
         "outcome": chain.outcome,
+        "quality_score": quality["quality_score"],
+        "quality_grade": quality["quality_grade"],
         "p0_date": chain.p0_date,
         "p0_price": round(float(chain.p0_price), 2),
         "bos1_date": _d(df, chain.bos1_idx),
@@ -180,6 +204,7 @@ def chain_base_info(chain: Chain, df: pd.DataFrame, cfg=None) -> dict:
         "timeout_date": _d(df, chain.end_idx) if chain.outcome == "TIMEOUT" else None,
     }
     return info
+
 
 
 def _forward_trade(df: pd.DataFrame, entry_idx: int, stop_price: float, horizons=HORIZONS) -> Optional[dict]:
@@ -248,7 +273,7 @@ def _forward_trade(df: pd.DataFrame, entry_idx: int, stop_price: float, horizons
 
 # canonical column order for the trade-level exports
 TRADE_COLUMN_ORDER = [
-    "symbol", "outcome", "trade_status",
+    "symbol", "outcome", "quality_score", "quality_grade", "trade_status",
     "p0_date", "p0_price", "bos1_date", "bos1_price", "p1_date", "p1_price",
     "retest_date", "retest_price", "reaccumulation_start_date", "reaccum_bars",
     "reaccum_reversal_date", "reaccum_reversal_price", "num_reaccum_reversals",
@@ -271,6 +296,8 @@ def _reorder(df: pd.DataFrame) -> pd.DataFrame:
 
 def run_backtest(symbols: List[str], cfg, data_source, horizons=HORIZONS) -> dict:
     from .indicators import add_indicators, confluence_score
+    from .scoring import compute_quality_score
+
     from .pattern import detect_pattern
 
     all_chain_rows = []
@@ -300,8 +327,16 @@ def run_backtest(symbols: List[str], cfg, data_source, horizons=HORIZONS) -> dic
             live_match = detect_pattern(df, cfg, symbol)
             if live_match is not None and live_match.stage in ("FRESH_BOS2", "FRESH_REVERSAL", "PRE_BOS2_READY"):
                 conf = confluence_score(df, cfg)
+                quality = compute_quality_score(
+                    stage=live_match.stage,
+                    confluence_raw=conf["score"], confluence_max=conf["max_score"],
+                    num_reversals=live_match.num_reversals,
+                    volatility_contracted=live_match.volatility_contracted if not pd.isna(live_match.volatility_contracted) else None,
+                    reaccum_bars=live_match.reaccum_bars,
+                )
                 live_signals.append({
                     "symbol": symbol, "stage": live_match.stage,
+                    "quality_score": quality["quality_score"], "quality_grade": quality["quality_grade"],
                     "last_date": live_match.last_date, "last_close": round(float(live_match.last_close), 2),
                     "p0_price": round(float(live_match.p0_price), 2) if live_match.p0_price else None,
                     "bos1_date": live_match.bos1_date, "bos1_price": round(float(live_match.bos1_price), 2) if live_match.bos1_price else None,
@@ -316,6 +351,7 @@ def run_backtest(symbols: List[str], cfg, data_source, horizons=HORIZONS) -> dic
                 })
 
         except Exception as e:
+
             print(f"  [!] {symbol}: live-signal check failed: {e}")
 
         for c in chains:
@@ -370,7 +406,7 @@ def run_backtest(symbols: List[str], cfg, data_source, horizons=HORIZONS) -> dic
     if not live_signals_df.empty:
         stage_prio = {"FRESH_BOS2": 0, "FRESH_REVERSAL": 1, "PRE_BOS2_READY": 2}
         live_signals_df["_p"] = live_signals_df["stage"].map(stage_prio).fillna(9)
-        live_signals_df = live_signals_df.sort_values("_p").drop(columns="_p").reset_index(drop=True)
+        live_signals_df = live_signals_df.sort_values(["_p", "quality_score"], ascending=[True, False]).drop(columns="_p").reset_index(drop=True)
 
     summary = _summarize(bos2_df, pre_df, reversal_df, outcome_counts, horizons)
     return {

@@ -166,7 +166,18 @@ def build_workbook(results_dir=RESULTS_DIR, out_path=None):
         ws.conditional_formatting.add(rng, rule)
 
     if "Live Signals Now" in wb.sheetnames and not live_signals.empty:
-        _style_sheet(wb["Live Signals Now"], live_signals, table_name="LiveSignalsNow")
+        ws_live = wb["Live Signals Now"]
+        _style_sheet(ws_live, live_signals, table_name="LiveSignalsNow")
+        if "quality_grade" in live_signals.columns:
+            quality_fill = {"A": "C6EFCE", "B": "DDEBF7", "C": "FFEB9C", "D": "FFC7CE"}
+            qcol = live_signals.columns.get_loc("quality_grade") + 1
+            for row_idx in range(2, len(live_signals) + 2):
+                val = ws_live.cell(row=row_idx, column=qcol).value
+                letter = str(val)[0] if val else None
+                fill_hex = quality_fill.get(letter)
+                if fill_hex:
+                    ws_live.cell(row=row_idx, column=qcol).fill = PatternFill(
+                        start_color=fill_hex, end_color=fill_hex, fill_type="solid")
 
     if "Outcome Counts" in wb.sheetnames and not outcome_df.empty:
         _style_sheet(wb["Outcome Counts"], outcome_df, table_name="OutcomeCounts")

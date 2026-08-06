@@ -36,6 +36,7 @@ def format_alert(row: dict) -> str:
 
     lines = [
         f"{stage_emoji} *{row['symbol']}* — `{row['stage']}`",
+        f"Quality: *{row.get('quality_grade', 'N/A')}* ({row.get('quality_score', '?')}/100)",
         f"Close: {row['last_close']}  ({row['last_date']})",
         f"P0(base): {row.get('P0_base_level')}   P1(resistance): {row.get('P1_resistance')}",
     ]

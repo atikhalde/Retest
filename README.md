@@ -23,6 +23,31 @@ chasing.
 | 🟢 `FRESH_BOS2` | Continuation breakout just confirmed (within the last few bars) — actionable now |
 | ⚪ `STALE_BOS2` | Breakout already happened too long ago to be a fresh idea |
 
+## Setup Quality (A/B/C/D)
+
+Every signal also gets a composite 0-100 quality score and letter grade
+(`src/smc_scanner/scoring.py`), so signals aren't all treated equally - a
+`FRESH_REVERSAL` at 9/9 confluence with one clean pivot low is a very
+different bet than one at 2/9 confluence sitting 13% below resistance.
+
+| Component | Points | What it measures |
+|---|---|---|
+| Confluence | 40 | EMA trend/rising, RSI>threshold/rising, MACD histogram, volume vs average, green candle, near 52w high (scaled from the 0-9 confluence score) |
+| Structure cleanliness | 20 | Fewer confirmed pivot-low reversals in the re-accumulation window = a cleaner base (1 reversal scores highest, 5+ scores lowest) |
+| Volatility contraction | 15 | Has the range tightened up (coiled) ahead of the move |
+| Re-accumulation duration fit | 15 | ~10-40 trading days is the sweet spot; too short or too long scores lower |
+| Stage maturity | 10 | How confirmed the setup is right now (FRESH_BOS2 > FRESH_REVERSAL > PRE_BOS2_READY > BASING > IN_RETEST) |
+
+**Grades:** A (80-100, High-Quality) · B (65-79, Good) · C (50-64, Moderate/Watch) · D (<50, Weak/Low-Quality)
+
+Shown as `quality_score`/`quality_grade` in every scan result, in Telegram
+alerts, in the "Live Signals Now" sheet of `backtest_results.xlsx`, and as
+the "Setup Quality" column in `backtest_simple.xlsx`. Historical rows in the
+backtest are scored **as of the moment the signal fired** (not with today's
+hindsight), so a symbol's live grade today can differ from its grade back
+when that specific historical signal triggered - that's intentional, it
+avoids look-ahead bias in the backtest numbers.
+
 ## Repo layout
 
 ```

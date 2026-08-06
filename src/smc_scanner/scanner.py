@@ -9,6 +9,7 @@ import pandas as pd
 from .indicators import add_indicators, confluence_score
 from .pattern import detect_pattern
 from .notify import send_telegram, format_alert
+from .scoring import compute_quality_score
 
 STAGE_PRIORITY = {
     "FRESH_BOS2": 0,
@@ -45,6 +46,13 @@ def scan_symbol(row, data_source, cfg) -> dict:
         return None
 
     conf = confluence_score(df, cfg)
+    quality = compute_quality_score(
+        stage=match.stage,
+        confluence_raw=conf["score"], confluence_max=conf["max_score"],
+        num_reversals=match.num_reversals,
+        volatility_contracted=match.volatility_contracted if not pd.isna(match.volatility_contracted) else None,
+        reaccum_bars=match.reaccum_bars,
+    )
 
     def d(x):
         return x.date().isoformat() if x is not None and hasattr(x, "date") else None
@@ -52,6 +60,8 @@ def scan_symbol(row, data_source, cfg) -> dict:
     return {
         "symbol": symbol,
         "stage": match.stage,
+        "quality_score": quality["quality_score"],
+        "quality_grade": quality["quality_grade"],
         "last_close": round(float(match.last_close), 2),
         "last_date": d(match.last_date),
         "P0_base_level": round(float(match.p0_price), 2) if match.p0_price else None,
@@ -63,6 +73,7 @@ def scan_symbol(row, data_source, cfg) -> dict:
         "Reaccum_bars": match.reaccum_bars,
         "Reversal_date": d(match.reversal_date),
         "Reversal_price": round(float(match.reversal_price), 2) if match.reversal_price and not pd.isna(match.reversal_price) else None,
+        "num_reversals": match.num_reversals,
         "volatility_contracted": match.volatility_contracted,
         "atr_contraction_ratio": round(float(match.atr_contraction_ratio), 2) if not pd.isna(match.atr_contraction_ratio) else None,
         "distance_to_p1_pct": round(float(match.distance_to_p1_pct) * 100, 2) if not pd.isna(match.distance_to_p1_pct) else None,
@@ -73,6 +84,7 @@ def scan_symbol(row, data_source, cfg) -> dict:
         "confluence_raw": conf["score"],
         "notes": match.notes,
     }
+
 
 
 def _load_state(cfg) -> dict:
@@ -112,7 +124,7 @@ def run_scan(cfg, universe_df: pd.DataFrame, data_source, max_workers: int = 4,
 
     out = pd.DataFrame(rows)
     out["_prio"] = out["stage"].map(STAGE_PRIORITY).fillna(9)
-    out = out.sort_values(["_prio", "confluence_raw"], ascending=[True, False]).drop(columns=["_prio", "confluence_raw"])
+    out = out.sort_values(["_prio", "quality_score"], ascending=[True, False]).drop(columns=["_prio", "confluence_raw"])
     out = out.reset_index(drop=True)
 
     os.makedirs(cfg.results_dir, exist_ok=True)

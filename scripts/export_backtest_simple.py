@@ -1,12 +1,19 @@
 """
 Builds ONE simple worksheet from the backtest CSVs: results/backtest_simple.xlsx
 
-Exactly 5 columns, in the order things actually happen:
-    Symbol, BOS1 Breakout Date, Retest Date, Re-Accumulation Date, Reversal Date
+6 columns, in the order things actually happen:
+    Symbol, BOS1 Breakout Date, Retest Date, Re-Accumulation Date,
+    Reversal Date, Setup Quality
+
+Setup Quality is a composite A/B/C/D grade combining confluence (trend/
+momentum/volume), how clean the re-accumulation structure was (fewer
+confirmed pivot-low reversals = cleaner), volatility contraction, and
+re-accumulation duration fit - see src/smc_scanner/scoring.py.
 
 One row per pattern instance found, sorted by Reversal Date (most recent
 first). For every other detail (prices, outcome, entry/returns, full
-multi-sheet breakdown), see backtest_results.xlsx instead.
+multi-sheet breakdown, score component breakdown), see backtest_results.xlsx
+instead.
 """
 import os
 
@@ -26,11 +33,20 @@ COLUMN_RENAME = {
     "retest_date": "Retest Date",
     "reaccumulation_start_date": "Re-Accumulation Date",
     "reaccum_reversal_date": "Reversal Date",
+    "quality_grade": "Setup Quality",
 }
 
 FINAL_COLUMN_ORDER = [
     "Symbol", "BOS1 Breakout Date", "Retest Date", "Re-Accumulation Date", "Reversal Date",
+    "Setup Quality",
 ]
+
+QUALITY_FILL = {
+    "A": "C6EFCE",  # green
+    "B": "DDEBF7",  # light blue
+    "C": "FFEB9C",  # yellow
+    "D": "FFC7CE",  # red
+}
 
 DATE_COLS = ["BOS1 Breakout Date", "Retest Date", "Re-Accumulation Date", "Reversal Date"]
 
@@ -75,7 +91,16 @@ def build_simple_workbook(results_dir=RESULTS_DIR, out_path=None) -> str:
         cell.font = HEADER_FONT
         cell.alignment = Alignment(horizontal="center")
         max_len = max([len(str(col))] + [len(str(v)) for v in out[col].astype(str).values[:1000]])
-        ws.column_dimensions[get_column_letter(col_idx)].width = min(max(max_len + 2, 12), 24)
+        ws.column_dimensions[get_column_letter(col_idx)].width = min(max(max_len + 2, 12), 30)
+
+    quality_col_idx = out.columns.get_loc("Setup Quality") + 1
+    for row_idx in range(2, len(out) + 2):
+        val = ws.cell(row=row_idx, column=quality_col_idx).value
+        letter = str(val)[0] if val else None
+        fill_hex = QUALITY_FILL.get(letter)
+        if fill_hex:
+            ws.cell(row=row_idx, column=quality_col_idx).fill = PatternFill(
+                start_color=fill_hex, end_color=fill_hex, fill_type="solid")
 
     ref = f"A1:{get_column_letter(len(out.columns))}{len(out) + 1}"
     tbl = Table(displayName="BacktestResults", ref=ref)

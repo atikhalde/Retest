@@ -1,6 +1,6 @@
 # SMC Structure Scanner - Backtest Report
 
-Generated: 2026-08-06T18:04:37
+Generated: 2026-08-06T18:16:45
 
 ## Pattern completion rate
 
@@ -43,29 +43,29 @@ Generated: 2026-08-06T18:04:37
 | PRE_BOS2_READY entry   |              9 |        161 |           37.3 |            -0.14 |               -0.92 |      15.22 |       -8.49 |
 | PRE_BOS2_READY entry   |             10 |        161 |           41   |            -0.01 |               -0.86 |      12.15 |       -8.49 |
 | PRE_BOS2_READY entry   |             12 |        161 |           39.1 |            -0.16 |               -1.02 |      16.92 |       -8.49 |
-| PRE_BOS2_READY entry   |             15 |        160 |           37.5 |            -0.27 |               -1.04 |      17.76 |       -9.84 |
+| PRE_BOS2_READY entry   |             15 |        160 |           37.5 |            -0.26 |               -1.01 |      17.76 |       -9.84 |
 | PRE_BOS2_READY entry   |             20 |        158 |           35.4 |            -0.27 |               -1.69 |      17.81 |       -9.84 |
 | PRE_BOS2_READY entry   |             25 |        158 |           35.4 |            -0.17 |               -1.82 |      18.89 |      -10.07 |
 | PRE_BOS2_READY entry   |             30 |        157 |           29.3 |            -0.17 |               -2.12 |      29.83 |      -10.07 |
 | PRE_BOS2_READY entry   |             40 |        154 |           28.6 |             0.16 |               -2.5  |      23.54 |      -10.07 |
 | PRE_BOS2_READY entry   |             60 |        150 |           23.3 |            -0.06 |               -2.65 |      23.13 |      -10.07 |
-| Reaccum-Reversal entry |              1 |        196 |           55.1 |             0.6  |                0.2  |      12.54 |       -4.72 |
-| Reaccum-Reversal entry |              2 |        196 |           56.6 |             0.69 |                0.4  |      12.54 |       -7.89 |
-| Reaccum-Reversal entry |              3 |        194 |           66.5 |             1.11 |                0.98 |      12.54 |       -5.6  |
-| Reaccum-Reversal entry |              4 |        193 |           67.4 |             1.32 |                1.12 |      12.54 |       -5.75 |
-| Reaccum-Reversal entry |              5 |        193 |           64.8 |             1.41 |                1.19 |      12.54 |       -7.4  |
-| Reaccum-Reversal entry |              6 |        193 |           64.8 |             1.39 |                1.4  |      13.84 |       -7.93 |
-| Reaccum-Reversal entry |              7 |        190 |           64.7 |             1.48 |                1.41 |      13.1  |       -7.57 |
-| Reaccum-Reversal entry |              8 |        185 |           62.7 |             1.4  |                1.32 |      13.59 |       -6.67 |
-| Reaccum-Reversal entry |              9 |        184 |           59.8 |             1.3  |                1.32 |      14.5  |       -6.93 |
-| Reaccum-Reversal entry |             10 |        184 |           58.2 |             1.33 |                1.25 |      16.47 |       -7.81 |
-| Reaccum-Reversal entry |             12 |        184 |           55.4 |             1.36 |                1.16 |      18.12 |      -11.51 |
-| Reaccum-Reversal entry |             15 |        183 |           57.4 |             1.31 |                1.4  |      16.43 |      -11.51 |
-| Reaccum-Reversal entry |             20 |        183 |           52.5 |             1.17 |                0.61 |      14.7  |      -11.51 |
-| Reaccum-Reversal entry |             25 |        183 |           49.2 |             0.79 |               -0.03 |      16.67 |      -11.51 |
-| Reaccum-Reversal entry |             30 |        182 |           46.7 |             0.84 |               -0.28 |      28.4  |      -11.51 |
-| Reaccum-Reversal entry |             40 |        180 |           45.6 |             1.03 |               -0.61 |      26.59 |      -11.51 |
-| Reaccum-Reversal entry |             60 |        173 |           42.2 |             0.86 |               -1.11 |      21.29 |      -11.51 |
+| Reaccum-Reversal entry |              1 |        197 |           54.8 |             0.57 |                0.19 |      12.54 |       -5.79 |
+| Reaccum-Reversal entry |              2 |        197 |           56.3 |             0.65 |                0.38 |      12.54 |       -7.89 |
+| Reaccum-Reversal entry |              3 |        195 |           66.2 |             1.07 |                0.95 |      12.54 |       -5.79 |
+| Reaccum-Reversal entry |              4 |        194 |           67   |             1.28 |                1.1  |      12.54 |       -5.79 |
+| Reaccum-Reversal entry |              5 |        194 |           64.4 |             1.37 |                1.19 |      12.54 |       -7.4  |
+| Reaccum-Reversal entry |              6 |        194 |           64.4 |             1.36 |                1.36 |      13.84 |       -7.93 |
+| Reaccum-Reversal entry |              7 |        191 |           64.4 |             1.45 |                1.4  |      13.1  |       -7.57 |
+| Reaccum-Reversal entry |              8 |        186 |           62.4 |             1.36 |                1.3  |      13.59 |       -6.67 |
+| Reaccum-Reversal entry |              9 |        185 |           59.5 |             1.26 |                1.31 |      14.5  |       -6.93 |
+| Reaccum-Reversal entry |             10 |        185 |           57.8 |             1.29 |                1.19 |      16.47 |       -7.81 |
+| Reaccum-Reversal entry |             12 |        185 |           55.1 |             1.32 |                1.16 |      18.12 |      -11.51 |
+| Reaccum-Reversal entry |             15 |        184 |           57.1 |             1.27 |                1.36 |      16.43 |      -11.51 |
+| Reaccum-Reversal entry |             20 |        184 |           52.2 |             1.13 |                0.57 |      14.7  |      -11.51 |
+| Reaccum-Reversal entry |             25 |        184 |           48.9 |             0.75 |               -0.04 |      16.67 |      -11.51 |
+| Reaccum-Reversal entry |             30 |        183 |           46.4 |             0.8  |               -0.31 |      28.4  |      -11.51 |
+| Reaccum-Reversal entry |             40 |        181 |           45.3 |             0.99 |               -0.63 |      26.59 |      -11.51 |
+| Reaccum-Reversal entry |             60 |        174 |           42   |             0.83 |               -1.18 |      21.29 |      -11.51 |
 
 ## Notes / caveats
 - Entries assume next-bar Open after the signal; stop = the chain's retest low.
