@@ -70,8 +70,10 @@ def cmd_backtest(args):
         if args.limit:
             symbols = symbols[: args.limit]
 
-    print(f"[backtest] running on {len(symbols)} symbols")
-    result = run_backtest(symbols, cfg, data_source)
+    horizons = tuple(int(h.strip()) for h in args.horizons.split(",")) if args.horizons else None
+
+    print(f"[backtest] running on {len(symbols)} symbols" + (f", horizons={horizons}" if horizons else ""))
+    result = run_backtest(symbols, cfg, data_source, horizons=horizons) if horizons else run_backtest(symbols, cfg, data_source)
 
     import os
     os.makedirs(cfg.results_dir, exist_ok=True)
@@ -119,7 +121,11 @@ def main():
     p3.add_argument("--symbols", type=str, default=None)
     p3.add_argument("--symbols-file", type=str, default=None)
     p3.add_argument("--limit", type=int, default=100)
+    p3.add_argument("--horizons", type=str, default=None,
+                     help="Comma-separated forward-return horizons in trading days, "
+                          "e.g. '1,2,3,4,5,7,10,15,20,30'. Defaults to 5,10,20,40,60.")
     p3.set_defaults(func=cmd_backtest)
+
 
     args = ap.parse_args()
     args.func(args)

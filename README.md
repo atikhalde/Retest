@@ -143,17 +143,29 @@ scanner), classifying each into:
 - `STILL_OPEN` — ran into the end of available data (excluded from stats)
 
 For every chain it also finds the first day it would have flagged
-`PRE_BOS2_READY`, and back-tests **both** entry styles (confirmed breakout
-vs. anticipatory pre-breakout) at fixed forward horizons (5/10/20/40/60
-trading days), with a hard stop at the chain's retest low.
+`PRE_BOS2_READY` and the first "higher-low reversal" day, and back-tests
+**three** entry styles (confirmed breakout / anticipatory pre-breakout /
+reversal) at granular forward horizons (1,2,3,4,5,6,7,8,9,10,12,15,20,25,30,
+40,60 trading days), with a hard stop at the chain's retest low. Override
+via `--horizons "1,2,3,..."` on the CLI.
+
+### Best holding period found so far
+
+On an 80-symbol run, the **Reaccum-Reversal entry** (the best of the three
+styles) peaks at a **4-7 trading day hold**: win rate peaks at day 4
+(67.5%), average return peaks at day 7 (1.48%), and the whole 4-7 day
+window is a consistent plateau (64.9-67.5% win rate). Both win rate and
+average return decay steadily beyond day ~10-15, dropping to 47-53% win
+rate by day 20-30 - holding this entry style for weeks adds risk without
+added expected return. The other two entry styles (BOS2_CONFIRMED,
+PRE_BOS2_READY) never develop a comparably strong edge at any horizon in
+this sample - re-validate on your own universe before trusting this.
 
 Run it (`python -m smc_scanner.cli backtest`) and read
-`results/backtest_report.md` before trusting live alerts — on a first
-15-symbol large-cap smoke test the pattern completed only ~43% of the time
-it reached re-accumulation, and forward returns were mixed/negative at
-longer horizons. **Re-tune `Config` (breakout buffer, volume multipliers,
-proximity %, min re-accum bars) against your own universe/holding-period
-before sizing real risk on this.**
+`results/backtest_report.md` before trusting live alerts. **Re-tune
+`Config` (breakout buffer, volume multipliers, proximity %, min re-accum
+bars) against your own universe/holding-period before sizing real risk on
+this.**
 
 ### Running it yourself in GitHub Actions
 

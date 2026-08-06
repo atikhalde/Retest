@@ -45,7 +45,8 @@ import pandas as pd
 from .pivots import find_reaccum_reversals
 from .weekly import find_daily_bos1_candidates
 
-HORIZONS = (5, 10, 20, 40, 60)
+HORIZONS = (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 15, 20, 25, 30, 40, 60)
+
 
 
 @dataclass
@@ -253,7 +254,9 @@ TRADE_COLUMN_ORDER = [
     "reaccum_reversal_date", "reaccum_reversal_price", "num_reaccum_reversals",
     "pre_bos2_ready_date", "bos2_date", "bos2_price",
     "signal_date", "signal_price", "entry_date", "entry_price", "stop_price",
-    "ret_5d_pct", "ret_10d_pct", "ret_20d_pct", "ret_40d_pct", "ret_60d_pct",
+    "ret_1d_pct", "ret_2d_pct", "ret_3d_pct", "ret_4d_pct", "ret_5d_pct", "ret_6d_pct",
+    "ret_7d_pct", "ret_8d_pct", "ret_9d_pct", "ret_10d_pct", "ret_12d_pct", "ret_15d_pct",
+    "ret_20d_pct", "ret_25d_pct", "ret_30d_pct", "ret_40d_pct", "ret_60d_pct",
 
     "stopped_out", "stopped_out_within_days", "eventually_confirmed",
 ]
