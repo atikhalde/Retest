@@ -119,6 +119,19 @@ results/
 You said you already have a Dhan token + client ID. Two auth modes are
 supported (`src/smc_scanner/data_sources/dhan.py`):
 
+**Dhan is the primary data source, yfinance is the automatic fallback.**
+Every scan tries Dhan first for every symbol (your own broker account, more
+accurate/real-time NSE data). If Dhan fails - auth error, rate limit,
+network issue, or just insufficient data for one symbol - the scanner
+transparently falls back to yfinance **for that symbol only** and keeps
+going, logging why. If Dhan can't even authenticate at all (e.g. no
+credentials configured), the whole run just uses yfinance for everything
+instead of crashing. No extra config needed - this is `data_source: "dhan"`,
+the default. Use `--data-source dhan_only` if you ever want to disable the
+fallback (e.g. to debug Dhan itself), or `--data-source yfinance` to skip
+Dhan entirely (already the default for `backtest`, since it doesn't need
+your live broker quota).
+
 **Recommended for unattended cron (survives weekends without manual refresh):**
 1. On [web.dhan.co](https://web.dhan.co) → *My Profile → Access DhanHQ APIs → Setup TOTP*.
 2. Scan the QR with an authenticator app **and** save the base32 secret it shows you.

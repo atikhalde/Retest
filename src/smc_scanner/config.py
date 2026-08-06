@@ -33,7 +33,9 @@ def _b(name, default):
 @dataclass
 class Config:
     # ---------------- data source ----------------
-    data_source: str = "dhan"          # "dhan" or "yfinance"
+    data_source: str = "dhan"          # "dhan" (Dhan primary, auto-falls back to yfinance
+                                        # per-symbol on any failure), "dhan_only" (no fallback,
+                                        # for debugging Dhan itself), or "yfinance" (no Dhan at all)
     daily_history_days: int = 400      # how much daily history to keep/fetch
     intraday_interval_min: str = "5"   # Dhan intraday candle size used to build "today's" forming daily bar
     scan_mode: str = "eod"             # "eod" or "intraday" - controls whether today's partial candle is included

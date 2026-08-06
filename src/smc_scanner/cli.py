@@ -118,14 +118,14 @@ def main():
 
     p2 = sub.add_parser("scan", help="Run a scan")
     p2.add_argument("--mode", choices=["eod", "intraday"], default="eod")
-    p2.add_argument("--data-source", choices=["dhan", "yfinance"], default=None)
+    p2.add_argument("--data-source", choices=["dhan", "dhan_only", "yfinance"], default=None)
     p2.add_argument("--workers", type=int, default=4)
     p2.add_argument("--limit", type=int, default=None, help="Only scan first N symbols (debug)")
     p2.add_argument("--no-alerts", action="store_true")
     p2.set_defaults(func=cmd_scan)
 
     p3 = sub.add_parser("backtest", help="Run historical backtest")
-    p3.add_argument("--data-source", choices=["dhan", "yfinance"], default="yfinance")
+    p3.add_argument("--data-source", choices=["dhan", "dhan_only", "yfinance"], default="yfinance")
     p3.add_argument("--symbols", type=str, default=None)
     p3.add_argument("--symbols-file", type=str, default=None)
     p3.add_argument("--limit", type=int, default=100)
