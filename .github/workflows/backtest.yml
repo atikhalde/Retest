@@ -37,13 +37,15 @@ jobs:
             --limit ${{ github.event.inputs.limit || '150' }}
 
       - name: Export Excel workbook
-        run: python scripts/export_backtest_excel.py
+        run: |
+          python scripts/export_backtest_excel.py
+          python scripts/export_backtest_simple.py
 
       - name: Commit backtest report
         run: |
           git config user.name "smc-scanner-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add results/backtest_*.csv results/backtest_report.md results/backtest_results.xlsx
+          git add results/backtest_*.csv results/backtest_report.md results/backtest_results.xlsx results/backtest_simple.xlsx
           git diff --cached --quiet || git commit -m "chore: backtest report $(date -u +'%Y-%m-%d') [skip ci]"
           git push
 
@@ -55,4 +57,5 @@ jobs:
             results/backtest_*.csv
             results/backtest_report.md
             results/backtest_results.xlsx
+            results/backtest_simple.xlsx
           retention-days: 180

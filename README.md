@@ -164,19 +164,33 @@ also uploads it as a downloadable workflow artifact.
 
 ### Excel workbook contents
 
-`scripts/export_backtest_excel.py` turns the raw CSVs into
-`results/backtest_results.xlsx` with 8 sheets:
+Two workbooks get produced - start with the simple one:
+
+**`results/backtest_simple.xlsx`** (via `scripts/export_backtest_simple.py`) -
+**one plain-English sheet**, one row per pattern instance, sorted so the most
+recently active setups are on top:
+
+`Stock | Status | Base Date/Price | Breakout Date/Price | Peak Date/Price | Retest Date/Price | Re-Accumulation Start/Days | Pre-Breakout Alert Date | Confirmed Breakout Date/Price | Entry Date/Price | Stop Loss | Return 5D/10D/20D/40D/60D % | Trade Status`
+
+`Status` is colour-coded: green = Breakout Confirmed, red = Failed (support
+broke), yellow = Timed Out, blue = Still Forming. `Trade Status` tells you
+exactly why a row has blank returns - e.g. "Pending (triggered on latest
+bar - no return yet)" for a signal that fired today, like PGIL's current
+breakout.
+
+**`results/backtest_results.xlsx`** (via `scripts/export_backtest_excel.py`)
+- the full, multi-sheet breakdown for deeper analysis:
 
 | Sheet | Contents |
 |---|---|
-| **Live Signals Now** | **the "what looks like PGIL right now" view** - every symbol currently `FRESH_BOS2` or `PRE_BOS2_READY` as of the most recent bar fetched, independent of historical stats (e.g. on one run this listed PGIL, SBIN, BAJFINANCE, CHOLAFIN, PIDILITIND and 12 others all showing `FRESH_BOS2` the same day) |
+| Live Signals Now | symbols currently `FRESH_BOS2`/`PRE_BOS2_READY` as of the latest bar - independent of historical stats |
 | Summary | headline stats + forward-return table by entry type & horizon |
 | Outcome Counts | BOS2_CONFIRMED / INVALIDATED / TIMEOUT / STILL_OPEN breakdown |
 | By Symbol | per-stock signal counts & average returns |
-| All Chains | every single pattern instance found, one row per chain, with its full stage trail: `symbol`, `outcome`, `p0_date`/`p0_price`, `bos1_date`/`bos1_price`, `p1_date`/`p1_price`, `retest_date`/`retest_price`, `reaccumulation_start_date`, `reaccum_bars`, `pre_bos2_ready_date`, `bos2_date`/`bos2_price` — includes chains that never became a trade (invalidated/timed out), for full transparency |
-| BOS2 Trades | the subset of "All Chains" that confirmed BOS2, plus entry price/date, stop, `trade_status`, and 5/10/20/40/60-day forward returns |
-| PreBOS2 Trades | the anticipatory entry (first `PRE_BOS2_READY` day) version of the same, plus `eventually_confirmed` (did it actually break out later?) |
-| Notes | methodology & caveats, verbatim from `backtest_report.md` |
+| All Chains | every pattern instance, full stage trail, incl. invalidated/timed-out ones |
+| BOS2 Trades | confirmed-breakout entries, entry price/date, stop, `trade_status`, forward returns |
+| PreBOS2 Trades | anticipatory (pre-breakout) entries, plus `eventually_confirmed` |
+| Notes | methodology & caveats |
 
 `trade_status` on every trade row is one of:
 - `PENDING_ENTRY` — the signal fired on the very last available bar (i.e. **today**), so there's no next session's Open yet to simulate an entry on. This is why a just-fired signal (like PGIL's current breakout) shows up with blank returns instead of being silently dropped — it hasn't had a chance to move yet.
