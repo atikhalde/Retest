@@ -1,71 +1,71 @@
 # SMC Structure Scanner - Backtest Report
 
-Generated: 2026-08-06T22:26:35
+Generated: 2026-08-06T22:47:23
 
 ## Pattern completion rate
 
-- Total resolved retest/re-accumulation chains: **202**
-  - BOS2_CONFIRMED: 147
-  - INVALIDATED: 45
-  - TIMEOUT: 10
-  - STILL_OPEN: 13
-- **72.8%** of chains that reached re-accumulation went on to a confirmed BOS2 breakout.
+- Total resolved retest/re-accumulation chains: **346**
+  - BOS2_CONFIRMED: 255
+  - INVALIDATED: 88
+  - TIMEOUT: 3
+  - STILL_OPEN: 117
+- **73.7%** of chains that reached re-accumulation went on to a confirmed BOS2 breakout.
 
 ## Forward returns by entry type & horizon
 
 | entry_type             |   horizon_days |   n_trades |   win_rate_pct |   avg_return_pct |   median_return_pct |   best_pct |   worst_pct |
 |:-----------------------|---------------:|-----------:|---------------:|-----------------:|--------------------:|-----------:|------------:|
-| BOS2_CONFIRMED entry   |              1 |        143 |           41.3 |            -0.33 |               -0.4  |       6.25 |       -5.48 |
-| BOS2_CONFIRMED entry   |              2 |        143 |           44.1 |            -0.45 |               -0.13 |       6.28 |       -7.91 |
-| BOS2_CONFIRMED entry   |              3 |        141 |           45.4 |            -0.48 |               -0.32 |       5.97 |       -7.5  |
-| BOS2_CONFIRMED entry   |              4 |        140 |           50.7 |            -0.39 |                0.14 |       9.37 |      -10.28 |
-| BOS2_CONFIRMED entry   |              5 |        140 |           47.1 |            -0.5  |               -0.2  |       9.51 |      -10.28 |
-| BOS2_CONFIRMED entry   |              6 |        140 |           47.9 |            -0.76 |               -0.56 |      12.12 |      -10.28 |
-| BOS2_CONFIRMED entry   |              7 |        140 |           47.1 |            -0.67 |               -0.44 |      14.23 |      -10.28 |
-| BOS2_CONFIRMED entry   |              8 |        140 |           44.3 |            -0.88 |               -0.56 |      14.05 |      -10.28 |
-| BOS2_CONFIRMED entry   |              9 |        140 |           42.1 |            -0.64 |               -0.46 |      13.71 |      -10.28 |
-| BOS2_CONFIRMED entry   |             10 |        139 |           44.6 |            -0.64 |               -0.56 |      15.03 |      -10.28 |
-| BOS2_CONFIRMED entry   |             12 |        139 |           44.6 |            -0.57 |               -0.87 |      15.58 |      -11.51 |
-| BOS2_CONFIRMED entry   |             15 |        138 |           39.9 |            -1    |               -1.62 |      23.51 |      -11.51 |
-| BOS2_CONFIRMED entry   |             20 |        137 |           35   |            -1.4  |               -1.79 |      23.27 |      -11.82 |
-| BOS2_CONFIRMED entry   |             25 |        135 |           32.6 |            -1.55 |               -3.2  |      17.36 |      -12.82 |
-| BOS2_CONFIRMED entry   |             30 |        134 |           35.8 |            -1.49 |               -2.7  |      20.93 |      -12.82 |
-| BOS2_CONFIRMED entry   |             40 |        133 |           36.8 |            -1.22 |               -3.65 |      19.54 |      -13.99 |
-| BOS2_CONFIRMED entry   |             60 |        126 |           32.5 |            -1.44 |               -4.98 |      22.49 |      -13.99 |
-| PRE_BOS2_READY entry   |              1 |        164 |           45.1 |            -0.17 |               -0.12 |       5.68 |       -6.65 |
-| PRE_BOS2_READY entry   |              2 |        162 |           38.9 |            -0.23 |               -0.38 |       6.23 |       -6.65 |
-| PRE_BOS2_READY entry   |              3 |        162 |           46.9 |            -0.17 |               -0.26 |       7.26 |       -8.04 |
-| PRE_BOS2_READY entry   |              4 |        162 |           43.2 |             0.01 |               -0.28 |      11.07 |       -8.49 |
-| PRE_BOS2_READY entry   |              5 |        162 |           39.5 |            -0.07 |               -0.58 |      11.07 |       -8.49 |
-| PRE_BOS2_READY entry   |              6 |        162 |           42.6 |            -0.1  |               -0.75 |       9.72 |       -8.49 |
-| PRE_BOS2_READY entry   |              7 |        162 |           45.1 |            -0.05 |               -0.55 |      12.42 |       -8.49 |
-| PRE_BOS2_READY entry   |              8 |        161 |           41.6 |            -0.08 |               -0.86 |      15.39 |       -8.49 |
-| PRE_BOS2_READY entry   |              9 |        161 |           37.3 |            -0.14 |               -0.92 |      15.22 |       -8.49 |
-| PRE_BOS2_READY entry   |             10 |        161 |           41   |            -0.01 |               -0.86 |      12.15 |       -8.49 |
-| PRE_BOS2_READY entry   |             12 |        161 |           39.1 |            -0.16 |               -1.02 |      16.92 |       -8.49 |
-| PRE_BOS2_READY entry   |             15 |        160 |           37.5 |            -0.27 |               -1.04 |      17.76 |       -9.84 |
-| PRE_BOS2_READY entry   |             20 |        158 |           35.4 |            -0.27 |               -1.69 |      17.81 |       -9.84 |
-| PRE_BOS2_READY entry   |             25 |        157 |           35   |            -0.2  |               -1.83 |      18.89 |      -10.07 |
-| PRE_BOS2_READY entry   |             30 |        157 |           29.3 |            -0.16 |               -2.12 |      29.83 |      -10.07 |
-| PRE_BOS2_READY entry   |             40 |        154 |           28.6 |             0.16 |               -2.5  |      23.54 |      -10.07 |
-| PRE_BOS2_READY entry   |             60 |        150 |           23.3 |            -0.06 |               -2.65 |      23.13 |      -10.07 |
-| Reaccum-Reversal entry |              1 |        197 |           54.8 |             0.56 |                0.19 |      12.54 |       -5.79 |
-| Reaccum-Reversal entry |              2 |        196 |           56.1 |             0.65 |                0.34 |      12.54 |       -7.89 |
-| Reaccum-Reversal entry |              3 |        195 |           65.6 |             1.06 |                0.94 |      12.54 |       -5.79 |
-| Reaccum-Reversal entry |              4 |        195 |           67.7 |             1.3  |                1.12 |      12.54 |       -5.79 |
-| Reaccum-Reversal entry |              5 |        195 |           64.1 |             1.34 |                1.14 |      12.54 |       -7.4  |
-| Reaccum-Reversal entry |              6 |        195 |           64.6 |             1.32 |                1.33 |      13.84 |       -7.93 |
-| Reaccum-Reversal entry |              7 |        187 |           63.6 |             1.38 |                1.4  |      13.1  |       -7.57 |
-| Reaccum-Reversal entry |              8 |        186 |           62.4 |             1.33 |                1.27 |      13.59 |       -6.67 |
-| Reaccum-Reversal entry |              9 |        186 |           59.7 |             1.26 |                1.25 |      14.5  |       -6.93 |
-| Reaccum-Reversal entry |             10 |        186 |           58.1 |             1.29 |                1.19 |      16.47 |       -7.81 |
-| Reaccum-Reversal entry |             12 |        185 |           55.1 |             1.29 |                1.01 |      18.12 |      -11.51 |
-| Reaccum-Reversal entry |             15 |        185 |           57.3 |             1.27 |                1.32 |      16.43 |      -11.51 |
-| Reaccum-Reversal entry |             20 |        185 |           52.4 |             1.13 |                0.61 |      14.7  |      -11.51 |
-| Reaccum-Reversal entry |             25 |        185 |           49.2 |             0.75 |               -0.03 |      16.67 |      -11.51 |
-| Reaccum-Reversal entry |             30 |        184 |           46.7 |             0.8  |               -0.28 |      28.4  |      -11.51 |
-| Reaccum-Reversal entry |             40 |        182 |           45.6 |             0.99 |               -0.61 |      26.59 |      -11.51 |
-| Reaccum-Reversal entry |             60 |        175 |           42.3 |             0.82 |               -1.11 |      21.29 |      -11.51 |
+| BOS2_CONFIRMED entry   |              1 |        239 |           37.7 |            -0.81 |               -0.77 |      13.22 |      -15.37 |
+| BOS2_CONFIRMED entry   |              2 |        234 |           44.4 |            -0.6  |               -0.59 |      25.72 |      -15.37 |
+| BOS2_CONFIRMED entry   |              3 |        227 |           40.5 |            -0.71 |               -1.13 |      27.64 |      -15.37 |
+| BOS2_CONFIRMED entry   |              4 |        225 |           44.4 |            -0.6  |               -0.99 |      24.44 |      -15.37 |
+| BOS2_CONFIRMED entry   |              5 |        222 |           49.1 |            -0.32 |               -0.29 |      22.63 |      -16.45 |
+| BOS2_CONFIRMED entry   |              6 |        220 |           44.5 |            -0.36 |               -0.73 |      22.63 |      -16.45 |
+| BOS2_CONFIRMED entry   |              7 |        218 |           43.1 |            -0.15 |               -0.87 |      24.29 |      -16.45 |
+| BOS2_CONFIRMED entry   |              8 |        216 |           43.5 |            -0.18 |               -1.52 |      30.98 |      -16.45 |
+| BOS2_CONFIRMED entry   |              9 |        214 |           43   |            -0.24 |               -1.11 |      28.55 |      -18.81 |
+| BOS2_CONFIRMED entry   |             10 |        213 |           44.6 |            -0.08 |               -1.03 |      34.97 |      -20.45 |
+| BOS2_CONFIRMED entry   |             12 |        207 |           47.3 |            -0.02 |               -0.88 |      36.89 |      -23.35 |
+| BOS2_CONFIRMED entry   |             15 |        197 |           43.1 |            -0.31 |               -1.97 |      30.4  |      -19.5  |
+| BOS2_CONFIRMED entry   |             20 |        189 |           38.6 |            -0.37 |               -2.64 |      39.78 |      -26.06 |
+| BOS2_CONFIRMED entry   |             25 |        176 |           40.3 |            -0.34 |               -4.06 |      46.17 |      -29.47 |
+| BOS2_CONFIRMED entry   |             30 |        168 |           42.3 |             0.48 |               -5.51 |      40.42 |      -26.24 |
+| BOS2_CONFIRMED entry   |             40 |        134 |           32.1 |             0.32 |               -6.54 |      54.66 |      -17.61 |
+| BOS2_CONFIRMED entry   |             60 |        102 |           20.6 |            -2.06 |               -7.84 |      91.58 |      -17.61 |
+| PRE_BOS2_READY entry   |              1 |        236 |           39   |            -0.49 |               -0.69 |      23.93 |       -9.61 |
+| PRE_BOS2_READY entry   |              2 |        234 |           40.6 |            -0.38 |               -0.65 |      22.82 |       -9.61 |
+| PRE_BOS2_READY entry   |              3 |        233 |           39.5 |            -0.36 |               -1.02 |      24.58 |       -9.61 |
+| PRE_BOS2_READY entry   |              4 |        229 |           41   |            -0.41 |               -1.31 |      17.93 |      -12.63 |
+| PRE_BOS2_READY entry   |              5 |        226 |           41.6 |            -0.44 |               -1.38 |      21.48 |      -12.63 |
+| PRE_BOS2_READY entry   |              6 |        226 |           37.6 |            -0.5  |               -1.8  |      32.18 |      -12.63 |
+| PRE_BOS2_READY entry   |              7 |        224 |           37.5 |            -0.3  |               -2.17 |      25.92 |      -12.63 |
+| PRE_BOS2_READY entry   |              8 |        222 |           34.7 |            -0.5  |               -2.52 |      28.44 |      -12.63 |
+| PRE_BOS2_READY entry   |              9 |        221 |           33.9 |            -0.71 |               -2.57 |      36.69 |      -13.1  |
+| PRE_BOS2_READY entry   |             10 |        219 |           32.9 |            -0.64 |               -2.79 |      32.69 |      -13.1  |
+| PRE_BOS2_READY entry   |             12 |        218 |           33.5 |            -0.46 |               -2.9  |      32.15 |      -13.1  |
+| PRE_BOS2_READY entry   |             15 |        212 |           30.7 |            -0.55 |               -3.27 |      36.17 |      -14.64 |
+| PRE_BOS2_READY entry   |             20 |        205 |           29.3 |            -0.53 |               -3.69 |      40.99 |      -14.64 |
+| PRE_BOS2_READY entry   |             25 |        198 |           27.3 |            -0.91 |               -4.02 |      37.38 |      -14.64 |
+| PRE_BOS2_READY entry   |             30 |        195 |           25.6 |            -0.96 |               -4.08 |      45.06 |      -14.64 |
+| PRE_BOS2_READY entry   |             40 |        174 |           19   |            -1.59 |               -4.42 |      57.99 |      -14.64 |
+| PRE_BOS2_READY entry   |             60 |        152 |            7.9 |            -3.24 |               -4.96 |      79.24 |      -14.64 |
+| Reaccum-Reversal entry |              1 |        313 |           57.8 |             0.91 |                0.42 |      14.65 |      -12.57 |
+| Reaccum-Reversal entry |              2 |        305 |           61   |             1.03 |                0.61 |      16.88 |      -12.57 |
+| Reaccum-Reversal entry |              3 |        299 |           59.5 |             1.25 |                0.69 |      19.79 |      -12.57 |
+| Reaccum-Reversal entry |              4 |        295 |           60.7 |             1.46 |                0.99 |      27.95 |      -15.21 |
+| Reaccum-Reversal entry |              5 |        293 |           61.4 |             1.7  |                1.39 |      29.91 |      -16.04 |
+| Reaccum-Reversal entry |              6 |        290 |           61.7 |             1.69 |                1.44 |      26.64 |      -16.34 |
+| Reaccum-Reversal entry |              7 |        278 |           60.4 |             1.89 |                1.07 |      25.61 |      -16.04 |
+| Reaccum-Reversal entry |              8 |        276 |           57.2 |             1.79 |                0.8  |      30.54 |      -16.08 |
+| Reaccum-Reversal entry |              9 |        276 |           54.7 |             1.97 |                0.6  |      33.08 |      -17.61 |
+| Reaccum-Reversal entry |             10 |        276 |           56.5 |             2.06 |                0.6  |      33.9  |      -17.61 |
+| Reaccum-Reversal entry |             12 |        266 |           53   |             1.81 |                0.3  |      36.89 |      -17.61 |
+| Reaccum-Reversal entry |             15 |        264 |           51.5 |             1.83 |                0.16 |      33.29 |      -20.08 |
+| Reaccum-Reversal entry |             20 |        254 |           51.6 |             2.58 |                0.16 |      36.96 |      -19.41 |
+| Reaccum-Reversal entry |             25 |        246 |           50   |             2.38 |               -0.02 |      41.44 |      -25.16 |
+| Reaccum-Reversal entry |             30 |        241 |           48.5 |             2.51 |               -0.37 |      50.18 |      -28.7  |
+| Reaccum-Reversal entry |             40 |        223 |           44.8 |             2.36 |               -1.05 |      64.55 |      -17.61 |
+| Reaccum-Reversal entry |             60 |        190 |           37.9 |             0.83 |               -1.9  |      91.78 |      -17.61 |
 
 ## Notes / caveats
 - Entries assume next-bar Open after the signal; stop = the chain's retest low.
