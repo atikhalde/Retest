@@ -50,17 +50,26 @@ class Config:
     pivot_right: int = 4
 
     # ---------------- impulse / BOS #1 ----------------
+    # BOS1 must be a genuine breakout to a new N-week high (matching the
+    # original TradingView indicator's "close > 26W high" entry gate) - NOT
+    # just any minor local pivot. 130 trading days ~= 26 weeks.
+    bos1_lookback_weeks: int = 26
+    bos1_lookback_bars: int = 130
     breakout_buffer: float = 0.005
     vol_mult_impulse: float = 1.5
     lookback_bars: int = 150
 
     # ---------------- retest ----------------
-    max_undercut_pct: float = 0.05
-    retest_zone_pct: float = 0.06
+    # Real NSE mid/large-caps routinely see 7-10% intra-base drawdowns
+    # without the broader bullish structure actually being invalidated
+    # (e.g. AUBank dipped ~7.75% below its P0 during re-accumulation before
+    # continuing - a tighter 5% tolerance wrongly invalidated that chain).
+    max_undercut_pct: float = 0.10
+    retest_zone_pct: float = 0.10
 
     # ---------------- re-accumulation / pre-breakout ----------------
     min_reaccum_bars: int = 5          # min bars of basing before BOS2 is eligible / before PRE_BOS2_READY fires
-    max_reaccum_bars: int = 60
+    max_reaccum_bars: int = 90
     pre_bos2_proximity_pct: float = 0.03    # within 3% of P1 => PRE_BOS2_READY candidate
     pre_bos2_max_atr_ratio: float = 0.75    # ATR(reaccum) / ATR(impulse) must contract below this => "coiled"
 

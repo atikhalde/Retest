@@ -62,6 +62,7 @@ def make_synthetic_pattern():
 
 def test_detects_fresh_bos2_at_the_breakout_bar():
     cfg = Config()
+    cfg.bos1_lookback_weeks = 3  # short synthetic series - scale the weekly gate down
     df, bos2_break_idx = make_synthetic_pattern()
     df_indicators = add_indicators(df, cfg)
 
@@ -76,6 +77,7 @@ def test_detects_fresh_bos2_at_the_breakout_bar():
 
 def test_detects_pre_bos2_ready_before_the_breakout():
     cfg = Config()
+    cfg.bos1_lookback_weeks = 3  # short synthetic series - scale the weekly gate down
     df, bos2_break_idx = make_synthetic_pattern()
     df_indicators = add_indicators(df, cfg)
 

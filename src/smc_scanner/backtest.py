@@ -42,7 +42,8 @@ from typing import List, Optional
 import numpy as np
 import pandas as pd
 
-from .pivots import find_pivots, find_reaccum_reversals
+from .pivots import find_reaccum_reversals
+from .weekly import find_daily_bos1_candidates
 
 HORIZONS = (5, 10, 20, 40, 60)
 
@@ -50,7 +51,7 @@ HORIZONS = (5, 10, 20, 40, 60)
 @dataclass
 class Chain:
     symbol: str
-    p0_idx: int
+    p0_date: object
     p0_price: float
     bos1_idx: int
     bos1_price: float
@@ -64,8 +65,6 @@ class Chain:
 
 
 def enumerate_chains(df: pd.DataFrame, cfg, symbol: str) -> List[Chain]:
-    ph, _ = find_pivots(df, cfg.pivot_left, cfg.pivot_right)
-    piv_high_idx = [i for i, v in enumerate(ph) if v]
     n = len(df)
 
     close = df["Close"].values
@@ -77,18 +76,9 @@ def enumerate_chains(df: pd.DataFrame, cfg, symbol: str) -> List[Chain]:
     seen_keys = set()
     chains: List[Chain] = []
 
-    for i0 in piv_high_idx:
-        p0_price = high[i0]
+    bos1_candidates = find_daily_bos1_candidates(df, cfg)
 
-        bos1_idx = None
-        for j in range(i0 + cfg.pivot_right + 1, n):
-            vsma = vol_sma20[j] if not np.isnan(vol_sma20[j]) else np.inf
-            if close[j] > p0_price * (1 + cfg.breakout_buffer) and vol[j] >= cfg.vol_mult_impulse * vsma:
-                bos1_idx = j
-                break
-        if bos1_idx is None:
-            continue
-
+    for bos1_idx, p0_price, p0_date in bos1_candidates:
         run_max_idx, run_max, p1_idx = bos1_idx, high[bos1_idx], None
         k = bos1_idx + 1
         while k < n:
@@ -98,6 +88,7 @@ def enumerate_chains(df: pd.DataFrame, cfg, symbol: str) -> List[Chain]:
                 p1_idx = run_max_idx
                 break
             k += 1
+
         if p1_idx is None:
             continue
         p1_price = high[p1_idx]
@@ -146,7 +137,7 @@ def enumerate_chains(df: pd.DataFrame, cfg, symbol: str) -> List[Chain]:
                 outcome, end_idx = "TIMEOUT", min(latest_bos2, n) - 1
 
         chains.append(Chain(
-            symbol=symbol, p0_idx=i0, p0_price=p0_price, bos1_idx=bos1_idx, bos1_price=close[bos1_idx],
+            symbol=symbol, p0_date=p0_date, p0_price=p0_price, bos1_idx=bos1_idx, bos1_price=close[bos1_idx],
             p1_idx=p1_idx, p1_price=p1_price, retest_idx=retest_idx, retest_price=retest_price,
             outcome=outcome, end_idx=end_idx, pre_bos2_ready_idx=pre_ready_idx,
         ))
@@ -168,7 +159,7 @@ def chain_base_info(chain: Chain, df: pd.DataFrame, cfg=None) -> dict:
     info = {
         "symbol": chain.symbol,
         "outcome": chain.outcome,
-        "p0_date": _d(df, chain.p0_idx),
+        "p0_date": chain.p0_date,
         "p0_price": round(float(chain.p0_price), 2),
         "bos1_date": _d(df, chain.bos1_idx),
         "bos1_price": round(float(chain.bos1_price), 2),

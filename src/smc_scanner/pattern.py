@@ -25,7 +25,10 @@ from typing import Optional
 import numpy as np
 import pandas as pd
 
-from .pivots import find_pivots, find_reaccum_reversals
+from .pivots import find_reaccum_reversals
+from .weekly import find_daily_bos1_candidates
+
+
 
 
 @dataclass
@@ -55,12 +58,19 @@ class PatternMatch:
 
 
 def detect_pattern(df: pd.DataFrame, cfg, symbol: str) -> Optional[PatternMatch]:
+    full_df = df  # keep full history available for the weekly BOS1 gate
+    bos1_candidates_full = find_daily_bos1_candidates(full_df, cfg)
+
     df = df.tail(cfg.lookback_bars + cfg.pivot_right + 5).copy()
     if len(df) < 40:
         return None
 
-    ph, _ = find_pivots(df, cfg.pivot_left, cfg.pivot_right)
-    piv_high_idx = [i for i, v in enumerate(ph) if v]
+    offset = len(full_df) - len(df)
+    bos1_candidates = [
+        (idx - offset, p0_price, p0_date)
+        for idx, p0_price, p0_date in bos1_candidates_full
+        if 0 <= idx - offset < len(df)
+    ]
     n = len(df)
 
     close = df["Close"].values
@@ -73,24 +83,11 @@ def detect_pattern(df: pd.DataFrame, cfg, symbol: str) -> Optional[PatternMatch]
 
     best_match = None
 
-    for i0 in piv_high_idx:
-        p0_price = high[i0]
-        p0_date = dates[i0]
-
-        # ---- BOS1: first bar after i0 that closes decisively above P0 w/ volume kick ----
-        bos1_idx = None
-        search_start = i0 + cfg.pivot_right + 1
-        for j in range(search_start, n):
-            vsma = vol_sma20[j] if not np.isnan(vol_sma20[j]) else np.inf
-            if close[j] > p0_price * (1 + cfg.breakout_buffer) and vol[j] >= cfg.vol_mult_impulse * vsma:
-                bos1_idx = j
-                break
-        if bos1_idx is None:
-            continue
-
+    for bos1_idx, p0_price, p0_date in bos1_candidates:
         # ---- P1 = running high after BOS1 until a real pullback starts ----
         run_max_idx = bos1_idx
         run_max = high[bos1_idx]
+
         p1_idx = None
         k = bos1_idx + 1
         while k < n:
