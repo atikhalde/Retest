@@ -54,10 +54,9 @@ jobs:
       - name: Run stop-loss optimizer
         run: python scripts/optimize_stop_loss.py
 
-      - name: Export Excel workbooks
+      - name: Export Excel workbook (single file, single sheet)
         run: |
           python scripts/export_backtest_excel.py
-          python scripts/export_backtest_simple.py
           python - <<'EOF'
           import pandas as pd
           from openpyxl.styles import Font, PatternFill, Alignment
@@ -105,7 +104,7 @@ jobs:
         run: |
           git config user.name "smc-scanner-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add results/backtest_*.csv results/backtest_report.md results/backtest_results.xlsx results/backtest_simple.xlsx results/sl_optimization_*.csv results/sl_optimization_summary.xlsx
+          git add results/backtest_*.csv results/backtest_report.md results/backtest_results.xlsx results/sl_optimization_*.csv results/sl_optimization_summary.xlsx
           git diff --cached --quiet && echo "nothing to commit" && exit 0
           git commit -m "chore: backtest report $(date -u +'%Y-%m-%d') [skip ci]"
           for i in 1 2 3 4 5; do
@@ -129,7 +128,6 @@ jobs:
             results/backtest_*.csv
             results/backtest_report.md
             results/backtest_results.xlsx
-            results/backtest_simple.xlsx
             results/sl_optimization_*.csv
             results/sl_optimization_summary.xlsx
           retention-days: 180

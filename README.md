@@ -41,12 +41,12 @@ different bet than one at 2/9 confluence sitting 13% below resistance.
 **Grades:** A (80-100, High-Quality) · B (65-79, Good) · C (50-64, Moderate/Watch) · D (<50, Weak/Low-Quality)
 
 Shown as `quality_score`/`quality_grade` in every scan result, in Telegram
-alerts, in the "Live Signals Now" sheet of `backtest_results.xlsx`, and as
-the "Setup Quality" column in `backtest_simple.xlsx`. Historical rows in the
-backtest are scored **as of the moment the signal fired** (not with today's
-hindsight), so a symbol's live grade today can differ from its grade back
-when that specific historical signal triggered - that's intentional, it
-avoids look-ahead bias in the backtest numbers.
+alerts, and as the "Quality Score"/"Quality Grade" columns in
+`backtest_results.xlsx`. Historical rows in the backtest are scored **as of
+the moment the signal fired** (not with today's hindsight), so a symbol's
+live grade today can differ from its grade back when that specific
+historical signal triggered - that's intentional, it avoids look-ahead bias
+in the backtest numbers.
 
 ## Trade Plan (entry / stop / target / exit window)
 
@@ -97,8 +97,7 @@ src/smc_scanner/
 scripts/
   market_hours_guard.py     used by the intraday workflow to no-op outside NSE hours
   check_dhan_token.py       Option B daily reminder - alerts via Telegram if the static Dhan token is stale
-  export_backtest_excel.py  builds results/backtest_results.xlsx (full multi-sheet)
-  export_backtest_simple.py builds results/backtest_simple.xlsx (6-column summary)
+  export_backtest_excel.py  builds results/backtest_results.xlsx (single sheet, 11 columns - see "Backtest" below)
   optimize_stop_loss.py     sweeps stop-loss methods across the best holding window
 .github/workflows/
   update_universe.yml     weekly - rebuilds data/universe.csv
@@ -318,44 +317,43 @@ than the old 150-symbol sample.
 
 ### Excel workbook contents
 
-Two workbooks get produced - start with the simple one:
-
-**`results/backtest_simple.xlsx`** (via `scripts/export_backtest_simple.py`) -
-**one plain 6-column sheet**, one row per pattern instance that produced a
-reversal signal, de-duped and sorted by most recent Reversal Date first:
-
-`Symbol | BOS1 Breakout Date | Retest Date | Re-Accumulation Date | Reversal Date | Setup Quality`
-
-`Setup Quality` is the color-coded A/B/C/D grade (green=A, blue=B,
-yellow=C, red=D) - see "Setup Quality" section above. For prices, outcomes,
-entry/stop/target/returns and the full multi-sheet breakdown, use
-`backtest_results.xlsx` instead.
-
 **`results/backtest_results.xlsx`** (via `scripts/export_backtest_excel.py`)
-- the full, multi-sheet breakdown for deeper analysis:
+is the only backtest workbook produced - **one file, one worksheet**, one
+row per historical pattern instance that reached a confirmed fresh
+reversal, de-duped and sorted by most recent Fresh Reversal Entry Date
+first:
 
-| Sheet | Contents |
-|---|---|
-| Live Signals Now | symbols currently `FRESH_BOS2`/`FRESH_REVERSAL`/`PRE_BOS2_READY` as of the latest bar, with quality grade and full trade plan (entry/stop/target/exit window) - independent of historical stats |
-| Summary | headline stats + forward-return table by entry type & horizon (granular 1-60 trading days) |
-| Outcome Counts | BOS2_CONFIRMED / INVALIDATED / TIMEOUT / STILL_OPEN breakdown |
-| By Symbol | per-stock signal counts & average returns |
-| All Chains | every pattern instance, full stage trail + quality score/grade, incl. invalidated/timed-out ones |
-| BOS2 Trades | confirmed-breakout entries, entry price/date, stop, `trade_status`, forward returns |
-| PreBOS2 Trades | anticipatory (pre-breakout) entries, plus `eventually_confirmed` |
-| Reversal Trades | the higher-low reversal entries (the best-performing style) with the same detail |
-| Notes | methodology & caveats |
+`Symbol | Quality Score | Quality Grade | Fresh Reversal Entry Date | Fresh Reversal Entry Price | Re-Accumulation Date | Retest Date | BOS1 Breakout Date | PRE_BOS2_READY (Fresh-Entry) Date | SL Level | Target Price`
 
-`trade_status` on every trade row is one of:
-- `PENDING_ENTRY` — the signal fired on the very last available bar (i.e. **today**), so there's no next session's Open yet to simulate an entry on. This is why a just-fired signal (like PGIL's current breakout) shows up with blank returns instead of being silently dropped — it hasn't had a chance to move yet.
-- `STOPPED_OUT` — the stop (chain's retest low) was hit; every horizon reports that same locked-in exit return from then on, even without that many days of trailing data yet.
-- `OPEN` — still within the holding period, more horizons pending.
-- `COMPLETE` — ran the full horizon window without ever stopping out.
+- `Quality Score`/`Quality Grade` — the same 0-100 composite score & A/B/C/D
+  grade described above, color-coded (green=A, blue=B, yellow=C, red=D).
+- `Fresh Reversal Entry Date`/`Price` — the tactical reversal signal itself
+  (first green candle closing back above the last confirmed swing-low
+  candle's high).
+- `Re-Accumulation Date` — the day right after the retest low, i.e. when the
+  re-accumulation phase began.
+- `Retest Date`, `BOS1 Breakout Date` — the earlier stages of the same
+  chain, for full traceability back to the original breakout.
+- `PRE_BOS2_READY (Fresh-Entry) Date` — the day this chain first coiled
+  under resistance (re-accumulation minimum met + price near P1), if it
+  ever did.
+- `SL Level` — the chain's retest low (the same structural stop used
+  everywhere else in this project).
+- `Target Price` — `Fresh Reversal Entry Price + target_reward_risk *
+  (Fresh Reversal Entry Price - SL Level)`, i.e. the same 1:1 reward:risk
+  math as the live scanner's trade plans (`config.target_reward_risk`).
 
-Return columns are colour-scaled (red→yellow→green) and every sheet is a
-filterable/sortable Excel table.
+For raw per-chain data (every outcome including invalidated/timed-out
+chains, forward returns at every horizon, the full BOS2/PreBOS2/Reversal
+trade logs, and the stop-loss sweep), see the underlying CSVs in
+`results/` (`backtest_all_chains.csv`, `backtest_bos2_trades.csv`,
+`backtest_pre_bos2_trades.csv`, `backtest_reversal_trades.csv`,
+`backtest_summary.csv`, `sl_optimization_*.csv`) and `backtest_report.md` -
+`export_backtest_excel.py` intentionally distills all of that down to the
+single sheet above as the one deliverable meant for day-to-day review.
 
 ## Tuning
+
 
 Everything lives in `src/smc_scanner/config.py`, most of it also overridable
 via env vars (see `.env.example`): pivot window, breakout volume multiples,
