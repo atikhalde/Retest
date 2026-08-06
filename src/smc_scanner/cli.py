@@ -78,6 +78,7 @@ def cmd_backtest(args):
     result["all_chains"].to_csv(f"{cfg.results_dir}/backtest_all_chains.csv", index=False)
     result["bos2_trades"].to_csv(f"{cfg.results_dir}/backtest_bos2_trades.csv", index=False)
     result["pre_bos2_trades"].to_csv(f"{cfg.results_dir}/backtest_pre_bos2_trades.csv", index=False)
+    result["live_signals"].to_csv(f"{cfg.results_dir}/backtest_live_signals.csv", index=False)
     result["summary"].to_csv(f"{cfg.results_dir}/backtest_summary.csv", index=False)
 
     report = render_markdown_report(result, cfg)
@@ -85,6 +86,15 @@ def cmd_backtest(args):
         f.write(report)
 
     print(report)
+
+    if not result["live_signals"].empty:
+        pd.set_option("display.width", 220)
+        pd.set_option("display.max_columns", 30)
+        print("\n=== LIVE SIGNALS RIGHT NOW (as of latest available bar) ===")
+        print(result["live_signals"].to_string(index=False))
+    else:
+        print("\n=== LIVE SIGNALS RIGHT NOW ===\n(none of the scanned symbols are currently PRE_BOS2_READY/FRESH_BOS2)")
+
 
 
 def main():

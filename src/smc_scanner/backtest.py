@@ -184,9 +184,32 @@ def chain_base_info(chain: Chain, df: pd.DataFrame) -> dict:
 
 
 def _forward_trade(df: pd.DataFrame, entry_idx: int, stop_price: float, horizons=HORIZONS) -> Optional[dict]:
+    """
+    Simulates one trade: enter at the next bar's Open after `entry_idx`, hard
+    stop at `stop_price`, measure returns at each horizon in `horizons`.
+
+    Three possible outcomes per row, captured in `trade_status`:
+      PENDING_ENTRY - the signal fired on the most recent available bar, so
+                      there's no "next session" data yet to actually enter on
+                      (this is what a signal generated *today* looks like -
+                      it's still included in the export, just with entry/
+                      returns left blank until the next session's data exists)
+      STOPPED_OUT   - the stop was hit at some point; every horizon from
+                      then on reports that same locked-in exit return, even
+                      if we don't yet have that many days of trailing data
+                      (once stopped, the trade is closed - no more data needed)
+      OPEN/COMPLETE - never stopped; a horizon shows the mark-to-close return
+                      if we have that much trailing data yet, else blank
+    """
     n = len(df)
     if entry_idx >= n - 1:
-        return None
+        return {
+            "entry_date": None, "entry_price": None, "stop_price": round(float(stop_price), 2),
+            **{f"ret_{h}d_pct": None for h in horizons},
+            "stopped_out": None, "stopped_out_within_days": None,
+            "trade_status": "PENDING_ENTRY (signal is on the most recent bar - no next-session open yet)",
+        }
+
     entry_price = df["Open"].values[entry_idx + 1]
     if entry_price <= 0 or np.isnan(entry_price):
         return None
@@ -198,31 +221,40 @@ def _forward_trade(df: pd.DataFrame, entry_idx: int, stop_price: float, horizons
 
     stopped_at = None
     for h in horizons:
+        if stopped_at is not None:
+            # trade already closed at the stop earlier - that return is final
+            # regardless of whether `h` days of trailing data exist yet
+            result[f"ret_{h}d_pct"] = round(float((stop_price - entry_price) / entry_price * 100), 2)
+            continue
         end_i = entry_idx + 1 + h
         if end_i >= n:
             result[f"ret_{h}d_pct"] = None
             continue
         window_low = low[entry_idx + 1: end_i + 1].min()
-        if stopped_at is None and window_low <= stop_price:
+        if window_low <= stop_price:
             stopped_at = h
-        if stopped_at is not None:
             ret = (stop_price - entry_price) / entry_price * 100
         else:
             ret = (close[end_i] - entry_price) / entry_price * 100
         result[f"ret_{h}d_pct"] = round(float(ret), 2)
+
     result["stopped_out"] = stopped_at is not None
     result["stopped_out_within_days"] = stopped_at
+    last_horizon_available = entry_idx + 1 + horizons[-1] < n
+    result["trade_status"] = "STOPPED_OUT" if stopped_at is not None else (
+        "COMPLETE" if last_horizon_available else "OPEN (still within holding period, more horizons pending)")
     return result
 
 
 # canonical column order for the trade-level exports
 TRADE_COLUMN_ORDER = [
-    "symbol", "outcome",
+    "symbol", "outcome", "trade_status",
     "p0_date", "p0_price", "bos1_date", "bos1_price", "p1_date", "p1_price",
     "retest_date", "retest_price", "reaccumulation_start_date", "reaccum_bars",
     "pre_bos2_ready_date", "bos2_date", "bos2_price",
     "signal_date", "signal_price", "entry_date", "entry_price", "stop_price",
     "ret_5d_pct", "ret_10d_pct", "ret_20d_pct", "ret_40d_pct", "ret_60d_pct",
+
     "stopped_out", "stopped_out_within_days", "eventually_confirmed",
 ]
 
@@ -235,11 +267,13 @@ def _reorder(df: pd.DataFrame) -> pd.DataFrame:
 
 
 def run_backtest(symbols: List[str], cfg, data_source, horizons=HORIZONS) -> dict:
-    from .indicators import add_indicators
+    from .indicators import add_indicators, confluence_score
+    from .pattern import detect_pattern
 
     all_chain_rows = []
     all_trades_bos2 = []
     all_trades_pre = []
+    live_signals = []
     outcome_counts = {"BOS2_CONFIRMED": 0, "INVALIDATED": 0, "TIMEOUT": 0, "STILL_OPEN": 0}
 
     for symbol in symbols:
@@ -252,6 +286,29 @@ def run_backtest(symbols: List[str], cfg, data_source, horizons=HORIZONS) -> dic
             continue
         df = add_indicators(df, cfg)
         chains = enumerate_chains(df, cfg, symbol)
+
+        # Same-day cross-check with the live scanner's detector: is this
+        # symbol showing a PRE_BOS2_READY / FRESH_BOS2 setup as of the very
+        # last bar in the data we just fetched? This is what surfaces
+        # "PGIL-right-now"-type setups distinctly from the historical stats.
+        try:
+            live_match = detect_pattern(df, cfg, symbol)
+            if live_match is not None and live_match.stage in ("FRESH_BOS2", "PRE_BOS2_READY"):
+                conf = confluence_score(df, cfg)
+                live_signals.append({
+                    "symbol": symbol, "stage": live_match.stage,
+                    "last_date": live_match.last_date, "last_close": round(float(live_match.last_close), 2),
+                    "p0_price": round(float(live_match.p0_price), 2) if live_match.p0_price else None,
+                    "bos1_date": live_match.bos1_date, "bos1_price": round(float(live_match.bos1_price), 2) if live_match.bos1_price else None,
+                    "p1_resistance": round(float(live_match.p1_price), 2) if live_match.p1_price else None,
+                    "retest_date": live_match.retest_date, "retest_price": round(float(live_match.retest_price), 2) if live_match.retest_price else None,
+                    "reaccum_bars": live_match.reaccum_bars,
+                    "bos2_date": live_match.bos2_date, "bos2_price": round(float(live_match.bos2_price), 2) if live_match.bos2_price else None,
+                    "confluence_score": f"{conf['score']}/{conf['max_score']}",
+                    "notes": live_match.notes,
+                })
+        except Exception as e:
+            print(f"  [!] {symbol}: live-signal check failed: {e}")
 
         for c in chains:
             outcome_counts[c.outcome] = outcome_counts.get(c.outcome, 0) + 1
@@ -275,21 +332,29 @@ def run_backtest(symbols: List[str], cfg, data_source, horizons=HORIZONS) -> dic
                         "signal_price": round(float(df["Close"].values[c.pre_bos2_ready_idx]), 2),
                         "eventually_confirmed": c.outcome == "BOS2_CONFIRMED",
                     })
+
                     row.update(trade)
                     all_trades_pre.append(row)
 
     all_chains_df = pd.DataFrame(all_chain_rows)
     bos2_df = _reorder(pd.DataFrame(all_trades_bos2))
     pre_df = _reorder(pd.DataFrame(all_trades_pre))
+    live_signals_df = pd.DataFrame(live_signals)
+    if not live_signals_df.empty:
+        stage_prio = {"FRESH_BOS2": 0, "PRE_BOS2_READY": 1}
+        live_signals_df["_p"] = live_signals_df["stage"].map(stage_prio).fillna(9)
+        live_signals_df = live_signals_df.sort_values("_p").drop(columns="_p").reset_index(drop=True)
 
     summary = _summarize(bos2_df, pre_df, outcome_counts, horizons)
     return {
         "all_chains": all_chains_df,
         "bos2_trades": bos2_df,
         "pre_bos2_trades": pre_df,
+        "live_signals": live_signals_df,
         "outcome_counts": outcome_counts,
         "summary": summary,
     }
+
 
 
 def _summarize(bos2_df, pre_df, outcome_counts, horizons) -> pd.DataFrame:

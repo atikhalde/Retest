@@ -165,17 +165,24 @@ also uploads it as a downloadable workflow artifact.
 ### Excel workbook contents
 
 `scripts/export_backtest_excel.py` turns the raw CSVs into
-`results/backtest_results.xlsx` with 7 sheets:
+`results/backtest_results.xlsx` with 8 sheets:
 
 | Sheet | Contents |
 |---|---|
+| **Live Signals Now** | **the "what looks like PGIL right now" view** - every symbol currently `FRESH_BOS2` or `PRE_BOS2_READY` as of the most recent bar fetched, independent of historical stats (e.g. on one run this listed PGIL, SBIN, BAJFINANCE, CHOLAFIN, PIDILITIND and 12 others all showing `FRESH_BOS2` the same day) |
 | Summary | headline stats + forward-return table by entry type & horizon |
 | Outcome Counts | BOS2_CONFIRMED / INVALIDATED / TIMEOUT / STILL_OPEN breakdown |
 | By Symbol | per-stock signal counts & average returns |
-| **All Chains** | **every single pattern instance found** (929 in the 80-symbol sample run), one row per chain, with its full stage trail: `symbol`, `outcome`, `p0_date`/`p0_price`, `bos1_date`/`bos1_price`, `p1_date`/`p1_price`, `retest_date`/`retest_price`, `reaccumulation_start_date`, `reaccum_bars`, `pre_bos2_ready_date`, `bos2_date`/`bos2_price` — includes chains that never became a trade (invalidated/timed out), for full transparency |
-| BOS2 Trades | the subset of "All Chains" that confirmed BOS2, plus entry price/date, stop, and 5/10/20/40/60-day forward returns |
+| All Chains | every single pattern instance found, one row per chain, with its full stage trail: `symbol`, `outcome`, `p0_date`/`p0_price`, `bos1_date`/`bos1_price`, `p1_date`/`p1_price`, `retest_date`/`retest_price`, `reaccumulation_start_date`, `reaccum_bars`, `pre_bos2_ready_date`, `bos2_date`/`bos2_price` — includes chains that never became a trade (invalidated/timed out), for full transparency |
+| BOS2 Trades | the subset of "All Chains" that confirmed BOS2, plus entry price/date, stop, `trade_status`, and 5/10/20/40/60-day forward returns |
 | PreBOS2 Trades | the anticipatory entry (first `PRE_BOS2_READY` day) version of the same, plus `eventually_confirmed` (did it actually break out later?) |
 | Notes | methodology & caveats, verbatim from `backtest_report.md` |
+
+`trade_status` on every trade row is one of:
+- `PENDING_ENTRY` — the signal fired on the very last available bar (i.e. **today**), so there's no next session's Open yet to simulate an entry on. This is why a just-fired signal (like PGIL's current breakout) shows up with blank returns instead of being silently dropped — it hasn't had a chance to move yet.
+- `STOPPED_OUT` — the stop (chain's retest low) was hit; every horizon reports that same locked-in exit return from then on, even without that many days of trailing data yet.
+- `OPEN` — still within the holding period, more horizons pending.
+- `COMPLETE` — ran the full horizon window without ever stopping out.
 
 Return columns are colour-scaled (red→yellow→green) and every sheet is a
 filterable/sortable Excel table.

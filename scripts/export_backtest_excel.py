@@ -3,12 +3,16 @@ Exports the backtest CSV/markdown outputs into one polished, multi-sheet
 Excel workbook: results/backtest_results.xlsx
 
 Sheets:
-    Summary          headline stats + forward-return table by entry type/horizon
-    Outcome Counts    chain resolution breakdown (BOS2_CONFIRMED/INVALIDATED/...)
-    By Symbol         per-symbol chain counts & average confirmed-BOS2 returns
-    BOS2 Trades       full trade log for the confirmed-breakout entry style
-    PreBOS2 Trades    full trade log for the anticipatory pre-breakout entry style
-    Notes             caveats / methodology (verbatim from backtest_report.md)
+    Live Signals Now  symbols currently PRE_BOS2_READY / FRESH_BOS2 as of the
+                       most recent bar fetched - the "what looks like PGIL
+                       right now" view, independent of historical stats
+    Summary            headline stats + forward-return table by entry type/horizon
+    Outcome Counts     chain resolution breakdown (BOS2_CONFIRMED/INVALIDATED/...)
+    By Symbol          per-symbol chain counts & average confirmed-BOS2 returns
+    All Chains         every pattern instance found, full stage date/price trail
+    BOS2 Trades        full trade log for the confirmed-breakout entry style
+    PreBOS2 Trades     full trade log for the anticipatory pre-breakout entry style
+    Notes              caveats / methodology (verbatim from backtest_report.md)
 """
 import os
 import sys
@@ -67,6 +71,8 @@ def build_workbook(results_dir=RESULTS_DIR, out_path=None):
     pre = pd.read_csv(os.path.join(results_dir, "backtest_pre_bos2_trades.csv"))
     all_chains_path = os.path.join(results_dir, "backtest_all_chains.csv")
     all_chains = pd.read_csv(all_chains_path) if os.path.exists(all_chains_path) else pd.DataFrame()
+    live_path = os.path.join(results_dir, "backtest_live_signals.csv")
+    live_signals = pd.read_csv(live_path) if os.path.exists(live_path) else pd.DataFrame()
 
     report_path = os.path.join(results_dir, "backtest_report.md")
     report_text = open(report_path).read() if os.path.exists(report_path) else ""
@@ -100,6 +106,14 @@ def build_workbook(results_dir=RESULTS_DIR, out_path=None):
         by_symbol = pd.DataFrame(rows).sort_values("n_bos2_signals", ascending=False)
 
     with pd.ExcelWriter(out_path, engine="openpyxl") as writer:
+        # ---- Live Signals Now sheet (put first - this is the actionable view) ----
+        if not live_signals.empty:
+            live_signals.to_excel(writer, sheet_name="Live Signals Now", index=False)
+        else:
+            pd.DataFrame({"note": ["No symbols were PRE_BOS2_READY or FRESH_BOS2 as of the last "
+                                    "available bar in this run."]}).to_excel(
+                writer, sheet_name="Live Signals Now", index=False)
+
         # ---- Summary sheet ----
         meta_rows = [
             {"metric": "Report generated", "value": pd.Timestamp.now().isoformat(timespec="seconds")},
@@ -147,6 +161,9 @@ def build_workbook(results_dir=RESULTS_DIR, out_path=None):
                                end_type="max", end_color="63BE7B")
         ws.conditional_formatting.add(rng, rule)
 
+    if "Live Signals Now" in wb.sheetnames and not live_signals.empty:
+        _style_sheet(wb["Live Signals Now"], live_signals, table_name="LiveSignalsNow")
+
     if "Outcome Counts" in wb.sheetnames and not outcome_df.empty:
         _style_sheet(wb["Outcome Counts"], outcome_df, table_name="OutcomeCounts")
 
@@ -173,6 +190,9 @@ def build_workbook(results_dir=RESULTS_DIR, out_path=None):
     for row in ws5.iter_rows():
         for cell in row:
             cell.alignment = Alignment(wrap_text=True, vertical="top")
+
+    if "Live Signals Now" in wb.sheetnames:
+        wb.move_sheet("Live Signals Now", offset=-wb.sheetnames.index("Live Signals Now"))
 
     wb.save(out_path)
     print(f"Wrote {out_path}")
