@@ -42,7 +42,7 @@ from typing import List, Optional
 import numpy as np
 import pandas as pd
 
-from .pivots import find_pivots
+from .pivots import find_pivots, find_reaccum_reversals
 
 HORIZONS = (5, 10, 20, 40, 60)
 
@@ -158,9 +158,13 @@ def _d(df, idx):
     return df.index[idx] if idx is not None else None
 
 
-def chain_base_info(chain: Chain, df: pd.DataFrame) -> dict:
+def chain_base_info(chain: Chain, df: pd.DataFrame, cfg=None) -> dict:
     """Every stage date/price for a chain, human-readable, regardless of outcome."""
-    reaccum_end_idx = chain.end_idx if chain.outcome != "STILL_OPEN" else None
+    reaccum_end_idx = chain.end_idx if chain.outcome != "STILL_OPEN" else len(df) - 1
+    left, right = (cfg.pivot_left, cfg.pivot_right) if cfg is not None else (3, 3)
+    reversals = find_reaccum_reversals(df, chain.retest_idx, reaccum_end_idx, left, right)
+    last_reversal = reversals[-1] if reversals else (None, None, None)
+
     info = {
         "symbol": chain.symbol,
         "outcome": chain.outcome,
@@ -173,8 +177,11 @@ def chain_base_info(chain: Chain, df: pd.DataFrame) -> dict:
         "retest_date": _d(df, chain.retest_idx),
         "retest_price": round(float(chain.retest_price), 2),
         "reaccumulation_start_date": _d(df, chain.retest_idx + 1) if chain.retest_idx + 1 < len(df) else None,
+        "reaccum_reversal_date": last_reversal[1],
+        "reaccum_reversal_price": last_reversal[2],
+        "num_reaccum_reversals": len(reversals),
         "pre_bos2_ready_date": _d(df, chain.pre_bos2_ready_idx),
-        "reaccum_bars": (reaccum_end_idx - chain.retest_idx) if reaccum_end_idx is not None else None,
+        "reaccum_bars": (chain.end_idx - chain.retest_idx) if chain.outcome != "STILL_OPEN" else None,
         "bos2_date": _d(df, chain.end_idx) if chain.outcome == "BOS2_CONFIRMED" else None,
         "bos2_price": round(float(df["Close"].values[chain.end_idx]), 2) if chain.outcome == "BOS2_CONFIRMED" else None,
         "invalidated_date": _d(df, chain.end_idx) if chain.outcome == "INVALIDATED" else None,
@@ -184,6 +191,7 @@ def chain_base_info(chain: Chain, df: pd.DataFrame) -> dict:
 
 
 def _forward_trade(df: pd.DataFrame, entry_idx: int, stop_price: float, horizons=HORIZONS) -> Optional[dict]:
+
     """
     Simulates one trade: enter at the next bar's Open after `entry_idx`, hard
     stop at `stop_price`, measure returns at each horizon in `horizons`.
@@ -251,6 +259,7 @@ TRADE_COLUMN_ORDER = [
     "symbol", "outcome", "trade_status",
     "p0_date", "p0_price", "bos1_date", "bos1_price", "p1_date", "p1_price",
     "retest_date", "retest_price", "reaccumulation_start_date", "reaccum_bars",
+    "reaccum_reversal_date", "reaccum_reversal_price", "num_reaccum_reversals",
     "pre_bos2_ready_date", "bos2_date", "bos2_price",
     "signal_date", "signal_price", "entry_date", "entry_price", "stop_price",
     "ret_5d_pct", "ret_10d_pct", "ret_20d_pct", "ret_40d_pct", "ret_60d_pct",
@@ -273,7 +282,9 @@ def run_backtest(symbols: List[str], cfg, data_source, horizons=HORIZONS) -> dic
     all_chain_rows = []
     all_trades_bos2 = []
     all_trades_pre = []
+    all_trades_reversal = []
     live_signals = []
+
     outcome_counts = {"BOS2_CONFIRMED": 0, "INVALIDATED": 0, "TIMEOUT": 0, "STILL_OPEN": 0}
 
     for symbol in symbols:
@@ -312,7 +323,7 @@ def run_backtest(symbols: List[str], cfg, data_source, horizons=HORIZONS) -> dic
 
         for c in chains:
             outcome_counts[c.outcome] = outcome_counts.get(c.outcome, 0) + 1
-            base_info = chain_base_info(c, df)
+            base_info = chain_base_info(c, df, cfg)
             all_chain_rows.append(base_info)
 
             if c.outcome == "BOS2_CONFIRMED":
@@ -336,20 +347,40 @@ def run_backtest(symbols: List[str], cfg, data_source, horizons=HORIZONS) -> dic
                     row.update(trade)
                     all_trades_pre.append(row)
 
+            # Tactical "higher-low reversal" entry: first green candle closing
+            # back above the most recent swing-low candle's high, inside the
+            # re-accumulation window - an earlier/tighter entry than waiting
+            # for the full P1 breakout.
+            if base_info.get("reaccum_reversal_date") is not None:
+                rev_idx = df.index.get_loc(base_info["reaccum_reversal_date"])
+                trade = _forward_trade(df, rev_idx, c.retest_price, horizons)
+                if trade:
+                    row = dict(base_info)
+                    row.update({
+                        "signal_date": base_info["reaccum_reversal_date"],
+                        "signal_price": base_info["reaccum_reversal_price"],
+                        "eventually_confirmed": c.outcome == "BOS2_CONFIRMED",
+                    })
+                    row.update(trade)
+                    all_trades_reversal.append(row)
+
     all_chains_df = pd.DataFrame(all_chain_rows)
     bos2_df = _reorder(pd.DataFrame(all_trades_bos2))
     pre_df = _reorder(pd.DataFrame(all_trades_pre))
+    reversal_df = _reorder(pd.DataFrame(all_trades_reversal))
+
     live_signals_df = pd.DataFrame(live_signals)
     if not live_signals_df.empty:
         stage_prio = {"FRESH_BOS2": 0, "PRE_BOS2_READY": 1}
         live_signals_df["_p"] = live_signals_df["stage"].map(stage_prio).fillna(9)
         live_signals_df = live_signals_df.sort_values("_p").drop(columns="_p").reset_index(drop=True)
 
-    summary = _summarize(bos2_df, pre_df, outcome_counts, horizons)
+    summary = _summarize(bos2_df, pre_df, reversal_df, outcome_counts, horizons)
     return {
         "all_chains": all_chains_df,
         "bos2_trades": bos2_df,
         "pre_bos2_trades": pre_df,
+        "reversal_trades": reversal_df,
         "live_signals": live_signals_df,
         "outcome_counts": outcome_counts,
         "summary": summary,
@@ -357,12 +388,15 @@ def run_backtest(symbols: List[str], cfg, data_source, horizons=HORIZONS) -> dic
 
 
 
-def _summarize(bos2_df, pre_df, outcome_counts, horizons) -> pd.DataFrame:
+def _summarize(bos2_df, pre_df, reversal_df, outcome_counts, horizons) -> pd.DataFrame:
     rows = []
+
     total_resolved = sum(v for k, v in outcome_counts.items() if k != "STILL_OPEN")
     confirm_rate = outcome_counts.get("BOS2_CONFIRMED", 0) / total_resolved * 100 if total_resolved else float("nan")
 
-    for label, tdf in (("BOS2_CONFIRMED entry", bos2_df), ("PRE_BOS2_READY entry", pre_df)):
+    for label, tdf in (("BOS2_CONFIRMED entry", bos2_df), ("PRE_BOS2_READY entry", pre_df),
+                       ("Reaccum-Reversal entry", reversal_df)):
+
         if tdf is None or tdf.empty:
             continue
         for h in horizons:

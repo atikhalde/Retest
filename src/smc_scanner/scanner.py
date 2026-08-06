@@ -60,6 +60,8 @@ def scan_symbol(row, data_source, cfg) -> dict:
         "Retest_date": d(match.retest_date),
         "Retest_price": round(float(match.retest_price), 2) if match.retest_price else None,
         "Reaccum_bars": match.reaccum_bars,
+        "Reversal_date": d(match.reversal_date),
+        "Reversal_price": round(float(match.reversal_price), 2) if match.reversal_price and not pd.isna(match.reversal_price) else None,
         "volatility_contracted": match.volatility_contracted,
         "atr_contraction_ratio": round(float(match.atr_contraction_ratio), 2) if not pd.isna(match.atr_contraction_ratio) else None,
         "distance_to_p1_pct": round(float(match.distance_to_p1_pct) * 100, 2) if not pd.isna(match.distance_to_p1_pct) else None,

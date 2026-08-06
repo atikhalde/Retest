@@ -20,7 +20,7 @@ from typing import Optional
 import numpy as np
 import pandas as pd
 
-from .pivots import find_pivots
+from .pivots import find_pivots, find_reaccum_reversals
 
 
 @dataclass
@@ -36,6 +36,8 @@ class PatternMatch:
     retest_date: Optional[pd.Timestamp] = None
     retest_price: float = np.nan
     reaccum_bars: int = 0
+    reversal_date: Optional[pd.Timestamp] = None
+    reversal_price: float = np.nan
     volatility_contracted: bool = False
     atr_contraction_ratio: float = np.nan
     distance_to_p1_pct: float = np.nan
@@ -149,6 +151,10 @@ def detect_pattern(df: pd.DataFrame, cfg, symbol: str) -> Optional[PatternMatch]
         atr_ratio = (reaccum_atr / impulse_atr) if impulse_atr and not np.isnan(impulse_atr) and impulse_atr > 0 else np.nan
         vol_contracted = bool(atr_ratio <= cfg.pre_bos2_max_atr_ratio) if not np.isnan(atr_ratio) else False
 
+        reaccum_end_for_reversal = bos2_idx if bos2_idx is not None else last_idx
+        reversals = find_reaccum_reversals(df, retest_idx, reaccum_end_for_reversal, cfg.pivot_left, cfg.pivot_right)
+        last_reversal = reversals[-1] if reversals else (None, None, None)
+
         if bos2_idx is not None:
             bars_since = last_idx - bos2_idx
             stage = "FRESH_BOS2" if bars_since <= cfg.recency_bars else "STALE_BOS2"
@@ -163,6 +169,7 @@ def detect_pattern(df: pd.DataFrame, cfg, symbol: str) -> Optional[PatternMatch]
                 distance_to_p1_pct=0.0,
                 bos2_date=dates[bos2_idx], bos2_price=close[bos2_idx],
                 bars_since_bos2=bars_since,
+                reversal_date=last_reversal[1], reversal_price=last_reversal[2],
                 last_close=close[last_idx], last_date=dates[last_idx],
                 notes="Continuation breakout confirmed" if stage == "FRESH_BOS2"
                       else "Breakout already played out (beyond recency window)",
@@ -189,6 +196,7 @@ def detect_pattern(df: pd.DataFrame, cfg, symbol: str) -> Optional[PatternMatch]
                 p1_date=p1_date, p1_price=p1_price,
                 retest_date=retest_date, retest_price=retest_price,
                 reaccum_bars=bars_in_reaccum,
+                reversal_date=last_reversal[1], reversal_price=last_reversal[2],
                 volatility_contracted=vol_contracted, atr_contraction_ratio=atr_ratio,
                 distance_to_p1_pct=dist_to_p1,
                 last_close=close[last_idx], last_date=dates[last_idx],

@@ -78,6 +78,7 @@ def cmd_backtest(args):
     result["all_chains"].to_csv(f"{cfg.results_dir}/backtest_all_chains.csv", index=False)
     result["bos2_trades"].to_csv(f"{cfg.results_dir}/backtest_bos2_trades.csv", index=False)
     result["pre_bos2_trades"].to_csv(f"{cfg.results_dir}/backtest_pre_bos2_trades.csv", index=False)
+    result["reversal_trades"].to_csv(f"{cfg.results_dir}/backtest_reversal_trades.csv", index=False)
     result["live_signals"].to_csv(f"{cfg.results_dir}/backtest_live_signals.csv", index=False)
     result["summary"].to_csv(f"{cfg.results_dir}/backtest_summary.csv", index=False)
 

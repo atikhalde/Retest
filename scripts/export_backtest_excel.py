@@ -69,6 +69,8 @@ def build_workbook(results_dir=RESULTS_DIR, out_path=None):
     summary = pd.read_csv(os.path.join(results_dir, "backtest_summary.csv"))
     bos2 = pd.read_csv(os.path.join(results_dir, "backtest_bos2_trades.csv"))
     pre = pd.read_csv(os.path.join(results_dir, "backtest_pre_bos2_trades.csv"))
+    reversal_path = os.path.join(results_dir, "backtest_reversal_trades.csv")
+    reversal = pd.read_csv(reversal_path) if os.path.exists(reversal_path) else pd.DataFrame()
     all_chains_path = os.path.join(results_dir, "backtest_all_chains.csv")
     all_chains = pd.read_csv(all_chains_path) if os.path.exists(all_chains_path) else pd.DataFrame()
     live_path = os.path.join(results_dir, "backtest_live_signals.csv")
@@ -134,6 +136,8 @@ def build_workbook(results_dir=RESULTS_DIR, out_path=None):
             all_chains.to_excel(writer, sheet_name="All Chains", index=False)
         bos2.to_excel(writer, sheet_name="BOS2 Trades", index=False)
         pre.to_excel(writer, sheet_name="PreBOS2 Trades", index=False)
+        if not reversal.empty:
+            reversal.to_excel(writer, sheet_name="Reversal Trades", index=False)
 
 
         notes_df = pd.DataFrame({"Backtest report (methodology & caveats)": report_text.split("\n")})
@@ -184,6 +188,11 @@ def build_workbook(results_dir=RESULTS_DIR, out_path=None):
         ws4 = wb["PreBOS2 Trades"]
         _style_sheet(ws4, pre, table_name="PreBOS2Trades")
         _add_return_color_scale(ws4, pre, [c for c in pre.columns if c.startswith("ret_")])
+
+    if not reversal.empty and "Reversal Trades" in wb.sheetnames:
+        ws4b = wb["Reversal Trades"]
+        _style_sheet(ws4b, reversal, table_name="ReversalTrades")
+        _add_return_color_scale(ws4b, reversal, [c for c in reversal.columns if c.startswith("ret_")])
 
     ws5 = wb["Notes"]
     ws5.column_dimensions["A"].width = 110

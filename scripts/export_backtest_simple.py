@@ -60,6 +60,8 @@ COLUMN_RENAME = {
     "retest_price": "Retest Price",
     "reaccumulation_start_date": "Re-Accumulation Start",
     "reaccum_bars": "Re-Accumulation Days",
+    "reaccum_reversal_date": "Reversal Entry Date",
+    "reaccum_reversal_price": "Reversal Entry Price",
     "pre_bos2_ready_date": "Pre-Breakout Alert Date",
     "bos2_date": "Confirmed Breakout Date",
     "bos2_price": "Confirmed Breakout Price",
@@ -80,6 +82,7 @@ FINAL_COLUMN_ORDER = [
     "Peak Date", "Peak Price",
     "Retest Date", "Retest Price",
     "Re-Accumulation Start", "Re-Accumulation Days",
+    "Reversal Entry Date", "Reversal Entry Price",
     "Pre-Breakout Alert Date",
     "Confirmed Breakout Date", "Confirmed Breakout Price",
     "Entry Date", "Entry Price", "Stop Loss",
@@ -104,8 +107,8 @@ def build_simple_workbook(results_dir=RESULTS_DIR, out_path=None) -> str:
 
     all_chains = pd.read_csv(os.path.join(results_dir, "backtest_all_chains.csv"),
                               parse_dates=["p0_date", "bos1_date", "p1_date", "retest_date",
-                                           "reaccumulation_start_date", "pre_bos2_ready_date",
-                                           "bos2_date"])
+                                           "reaccumulation_start_date", "reaccum_reversal_date",
+                                           "pre_bos2_ready_date", "bos2_date"])
     bos2_path = os.path.join(results_dir, "backtest_bos2_trades.csv")
     bos2 = pd.read_csv(bos2_path, parse_dates=["p0_date", "bos1_date", "retest_date", "entry_date"]) if os.path.exists(bos2_path) else pd.DataFrame()
 
@@ -135,7 +138,7 @@ def build_simple_workbook(results_dir=RESULTS_DIR, out_path=None) -> str:
     out = out.sort_values("_sort_date", ascending=False).drop(columns="_sort_date").reset_index(drop=True)
 
     for col in ["Base Date", "Breakout Date", "Peak Date", "Retest Date", "Re-Accumulation Start",
-                "Pre-Breakout Alert Date", "Confirmed Breakout Date", "Entry Date"]:
+                "Reversal Entry Date", "Pre-Breakout Alert Date", "Confirmed Breakout Date", "Entry Date"]:
         out[col] = pd.to_datetime(out[col]).dt.strftime("%Y-%m-%d").replace("NaT", "")
 
     with pd.ExcelWriter(out_path, engine="openpyxl") as writer:
