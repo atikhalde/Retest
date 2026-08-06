@@ -1,0 +1,61 @@
+name: Intraday scan (catch PRE_BOS2_READY / FRESH_BOS2 live)
+
+on:
+  schedule:
+    # every 15 min, 03:30-10:00 UTC = ~09:00-15:30 IST, Mon-Fri.
+    # The Python guard below double-checks exact market hours + holidays,
+    # so slightly loose cron bounds here are fine.
+    - cron: "*/15 3-9 * * 1-5"
+    - cron: "0,15,30 10 * * 1-5"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: intraday-scan
+  cancel-in-progress: false
+
+jobs:
+  intraday-scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Check market is actually open right now
+        id: guard
+        run: |
+          if python scripts/market_hours_guard.py; then
+            echo "open=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "open=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Run intraday scan
+        if: steps.guard.outputs.open == 'true'
+        env:
+          PYTHONPATH: src
+          DHAN_CLIENT_ID: ${{ secrets.DHAN_CLIENT_ID }}
+          DHAN_PIN: ${{ secrets.DHAN_PIN }}
+          DHAN_TOTP_SECRET: ${{ secrets.DHAN_TOTP_SECRET }}
+          DHAN_ACCESS_TOKEN: ${{ secrets.DHAN_ACCESS_TOKEN }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          SCANNER_MODE: intraday
+        run: python -m smc_scanner.cli scan --mode intraday --workers 4
+
+      - name: Commit state (dedupe future alerts) + latest snapshot
+        if: steps.guard.outputs.open == 'true'
+        run: |
+          git config user.name "smc-scanner-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add results/latest_scan.csv results/state.json
+          git diff --cached --quiet || git commit -m "chore: intraday scan $(date -u +'%Y-%m-%dT%H:%M') [skip ci]"
+          git push

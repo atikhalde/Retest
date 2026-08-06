@@ -1,0 +1,53 @@
+name: Backtest
+
+on:
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: "Max number of symbols to backtest"
+        required: false
+        default: "150"
+  schedule:
+    # Optional monthly re-validation, 1st of month, 04:00 UTC
+    - cron: "0 4 1 * *"
+
+permissions:
+  contents: write
+
+jobs:
+  backtest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run backtest (yfinance history, no Dhan quota used)
+        env:
+          PYTHONPATH: src
+        run: |
+          python -m smc_scanner.cli backtest \
+            --data-source yfinance \
+            --limit ${{ github.event.inputs.limit || '150' }}
+
+      - name: Commit backtest report
+        run: |
+          git config user.name "smc-scanner-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add results/backtest_*.csv results/backtest_report.md
+          git diff --cached --quiet || git commit -m "chore: backtest report $(date -u +'%Y-%m-%d') [skip ci]"
+          git push
+
+      - name: Upload backtest artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: backtest-${{ github.run_id }}
+          path: |
+            results/backtest_*.csv
+            results/backtest_report.md
+          retention-days: 180

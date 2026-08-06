@@ -1,0 +1,36 @@
+name: Update universe (weekly)
+
+on:
+  schedule:
+    # 03:00 UTC every Sunday (~08:30 IST) - well outside market hours
+    - cron: "0 3 * * 0"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  build-universe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Build universe (Dhan scrip master + yfinance market caps)
+        env:
+          PYTHONPATH: src
+        run: python -m smc_scanner.cli build-universe --workers 16
+
+      - name: Commit updated universe
+        run: |
+          git config user.name "smc-scanner-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/universe.csv
+          git diff --cached --quiet || git commit -m "chore: weekly universe refresh [skip ci]"
+          git push
