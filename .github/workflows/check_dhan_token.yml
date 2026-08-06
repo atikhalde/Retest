@@ -1,0 +1,34 @@
+name: Check Dhan token (Option B reminder)
+
+on:
+  schedule:
+    # 03:15 UTC = 08:45 IST, ~30 min before market open - Mon-Fri
+    - cron: "15 3 * * 1-5"
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+jobs:
+  check-token:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Check Dhan token validity
+        env:
+          PYTHONPATH: src
+          DHAN_CLIENT_ID: ${{ secrets.DHAN_CLIENT_ID }}
+          DHAN_ACCESS_TOKEN: ${{ secrets.DHAN_ACCESS_TOKEN }}
+          DHAN_PIN: ${{ secrets.DHAN_PIN }}
+          DHAN_TOTP_SECRET: ${{ secrets.DHAN_TOTP_SECRET }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python scripts/check_dhan_token.py

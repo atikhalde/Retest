@@ -96,11 +96,13 @@ src/smc_scanner/
   cli.py              `python -m smc_scanner.cli {build-universe,scan,backtest}`
 scripts/
   market_hours_guard.py     used by the intraday workflow to no-op outside NSE hours
+  check_dhan_token.py       Option B daily reminder - alerts via Telegram if the static Dhan token is stale
   export_backtest_excel.py  builds results/backtest_results.xlsx (full multi-sheet)
   export_backtest_simple.py builds results/backtest_simple.xlsx (6-column summary)
   optimize_stop_loss.py     sweeps stop-loss methods across the best holding window
 .github/workflows/
   update_universe.yml     weekly - rebuilds data/universe.csv
+  check_dhan_token.yml    daily, ~08:45 IST (before market open) - Telegram alert if the static token is stale
   eod_scan.yml            daily, ~15:45 IST - confirmation scan after close
   intraday_scan.yml       every 15 min during market hours - catches PRE_BOS2_READY/FRESH_REVERSAL/FRESH_BOS2 live
   backtest.yml            on-demand / monthly - historical edge report + both Excel exports
@@ -114,35 +116,43 @@ results/
   (committed back by the workflows)
 ```
 
-## 1. Dhan API setup
-
-You said you already have a Dhan token + client ID. Two auth modes are
-supported (`src/smc_scanner/data_sources/dhan.py`):
+## 1. Dhan API setup — you're using Option B (static access token)
 
 **Dhan is the primary data source, yfinance is the automatic fallback.**
 Every scan tries Dhan first for every symbol (your own broker account, more
 accurate/real-time NSE data). If Dhan fails - auth error, rate limit,
 network issue, or just insufficient data for one symbol - the scanner
 transparently falls back to yfinance **for that symbol only** and keeps
-going, logging why. If Dhan can't even authenticate at all (e.g. no
-credentials configured), the whole run just uses yfinance for everything
-instead of crashing. No extra config needed - this is `data_source: "dhan"`,
-the default. Use `--data-source dhan_only` if you ever want to disable the
+going, logging why. If Dhan can't even authenticate at all (e.g. token
+expired), the whole run just uses yfinance for everything instead of
+crashing. No extra config needed - this is `data_source: "dhan"`, the
+default. Use `--data-source dhan_only` if you ever want to disable the
 fallback (e.g. to debug Dhan itself), or `--data-source yfinance` to skip
 Dhan entirely (already the default for `backtest`, since it doesn't need
 your live broker quota).
 
-**Recommended for unattended cron (survives weekends without manual refresh):**
-1. On [web.dhan.co](https://web.dhan.co) → *My Profile → Access DhanHQ APIs → Setup TOTP*.
-2. Scan the QR with an authenticator app **and** save the base32 secret it shows you.
-3. Set repo secrets: `DHAN_CLIENT_ID`, `DHAN_PIN`, `DHAN_TOTP_SECRET`.
-4. Every workflow run mints a brand-new 24h access token itself via
-   `POST https://auth.dhan.co/app/generateAccessToken` — nothing to rotate.
-
-**Simplest, but needs daily manual refresh:**
+**Your setup (Option B - simplest, but the token expires every 24h):**
 1. `web.dhan.co → My Profile → Access DhanHQ APIs → Generate Access Token` (valid 24h).
-2. Set repo secrets: `DHAN_CLIENT_ID`, `DHAN_ACCESS_TOKEN`.
-3. You must update `DHAN_ACCESS_TOKEN` yourself every day (or the daily/intraday runs will fail after ~24h).
+2. Set repo secrets: `DHAN_CLIENT_ID`, `DHAN_ACCESS_TOKEN`. Do **not** set `DHAN_PIN`/`DHAN_TOTP_SECRET` - their presence would switch the scanner into Option A's auto-refresh mode instead.
+3. **You must repeat step 1 and update the `DHAN_ACCESS_TOKEN` secret yourself every day** before market open, or Dhan calls will start failing with an auth error (401/DH-901) once the token expires - the scanner will silently keep working on the yfinance fallback, but you'll be missing Dhan's more accurate data until you refresh it.
+
+**Daily refresh checklist:**
+1. Log in to [web.dhan.co](https://web.dhan.co)
+2. My Profile → Access DhanHQ APIs → Generate Access Token → copy it
+3. Repo → Settings → Secrets and variables → Actions → `DHAN_ACCESS_TOKEN` → Update → paste → Save
+
+**You don't have to remember this on your own** - the **"Check Dhan token"**
+workflow (`.github/workflows/check_dhan_token.yml`) runs automatically every
+weekday at 08:45 IST (30 min before market open), tries a real Dhan API call,
+and sends you a Telegram alert if the token is missing/expired/invalid, with
+the exact refresh steps above. It never fails the build - purely a reminder.
+Trigger it manually anytime via Actions → "Check Dhan token" → Run workflow
+to test it right after you've set up secrets.
+
+If you ever want to switch to Option A instead (auto-refreshing via TOTP,
+no more daily manual step): also set `DHAN_PIN` and `DHAN_TOTP_SECRET` (from
+web.dhan.co → Access DhanHQ APIs → Setup TOTP) - the scanner checks for
+`DHAN_TOTP_SECRET` first and will automatically switch modes.
 
 Rate limits (per Dhan's docs): 5 data requests/sec, 100k/day — the client
 throttles to 4/sec automatically, and the universe is capped by your market
