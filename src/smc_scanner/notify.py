@@ -49,6 +49,16 @@ def format_alert(row: dict) -> str:
     if row.get("BOS2_date"):
         lines.append(f"BOS2: {row['BOS2_date']} @ {row['BOS2_price']} ({row.get('bars_since_bos2')} bars ago)")
     lines.append(f"Confluence: {row.get('confluence_score')}")
+
+    # --- Trade plan: entry / stop / target / exit window ---
+    if row.get("entry_date"):
+        lines.append("")
+        lines.append("📋 *Trade Plan*")
+        lines.append(f"Entry: *{row.get('entry_date')}* (next session open), ref price {row.get('entry_price_ref')}")
+        lines.append(f"Stop Loss: *{row.get('stop_loss')}* (-{row.get('risk_pct')}%, structural/retest low)")
+        lines.append(f"Target: *{row.get('target_price')}* (+{row.get('target_pct')}%, {row.get('reward_risk')}:1 reward:risk)")
+        lines.append(f"Exit by: *{row.get('exit_by_min_date')}* to *{row.get('exit_by_max_date')}* "
+                     f"(hold 4-7 trading days regardless of target, per backtest)")
+
     lines.append(f"_{row.get('notes','')}_")
     return "\n".join(lines)
-

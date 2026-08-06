@@ -48,6 +48,33 @@ hindsight), so a symbol's live grade today can differ from its grade back
 when that specific historical signal triggered - that's intentional, it
 avoids look-ahead bias in the backtest numbers.
 
+## Trade Plan (entry / stop / target / exit window)
+
+For actionable stages (`FRESH_BOS2`, `FRESH_REVERSAL`) the scanner also
+computes a concrete trade plan (`src/smc_scanner/trade_plan.py`), wiring
+together everything found in this analysis:
+
+- **Entry**: next NSE trading session's open (uses the real trading
+  calendar - `data/nse_holidays.txt` + weekends, not just calendar days)
+- **Stop Loss**: the chain's retest low (the *structural* stop) - validated
+  in `scripts/optimize_stop_loss.py` as the best-performing stop at every
+  point in the 4-7 day holding window, beating fixed-% and ATR stops
+- **Target**: entry +/- `target_reward_risk` (default 1.0, i.e. 1:1) x the
+  stop distance - backtested average risk (~3.33%) and average
+  winning-trade return (~3.39%) over a 5-7 day hold are almost exactly 1:1
+- **Exit window**: `entry_date` + 4 to + 7 trading days - hold this long
+  regardless of whether the target is hit (win rate peaks at day 4 ~67.5%,
+  average return peaks at day 7 ~1.48%, edge decays steadily after day ~10)
+
+Exposed as `entry_date`, `entry_price_ref`, `stop_loss`, `risk_pct`,
+`target_price`, `target_pct`, `reward_risk`, `exit_by_min_date`,
+`exit_by_max_date` in every scan result, printed in a dedicated "TRADE
+PLANS" section by `smc_scanner scan`, in the "Live Signals Now" sheet of
+`backtest_results.xlsx`, and as a full 📋 *Trade Plan* block in every
+Telegram alert. Tune `target_reward_risk`, `hold_days_min`/`hold_days_max`
+in `Config` if you re-validate on your own universe and get a different
+optimum.
+
 ## Repo layout
 
 ```

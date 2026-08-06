@@ -44,9 +44,17 @@ def cmd_scan(args):
 
     pd.set_option("display.width", 220)
     pd.set_option("display.max_columns", 30)
-    key_stages = results[results["stage"].isin(["FRESH_BOS2", "PRE_BOS2_READY"])]
-    print("\n=== ACTIONABLE (FRESH_BOS2 / PRE_BOS2_READY) ===")
+    key_stages = results[results["stage"].isin(["FRESH_BOS2", "PRE_BOS2_READY", "FRESH_REVERSAL"])]
+    print("\n=== ACTIONABLE (FRESH_BOS2 / FRESH_REVERSAL / PRE_BOS2_READY) ===")
     print(key_stages.to_string(index=False) if not key_stages.empty else "(none this run)")
+
+    tradeable = results[results["entry_date"].notna()]
+    if not tradeable.empty:
+        print("\n=== TRADE PLANS (entry/stop/target/exit window) ===")
+        print(tradeable[["symbol", "stage", "quality_grade", "entry_date", "entry_price_ref",
+                          "stop_loss", "risk_pct", "target_price", "target_pct",
+                          "exit_by_min_date", "exit_by_max_date"]].to_string(index=False))
+
     print(f"\nFull results -> {cfg.results_dir}/latest_scan.csv  ({len(results)} rows)")
 
 

@@ -297,8 +297,10 @@ def _reorder(df: pd.DataFrame) -> pd.DataFrame:
 def run_backtest(symbols: List[str], cfg, data_source, horizons=HORIZONS) -> dict:
     from .indicators import add_indicators, confluence_score
     from .scoring import compute_quality_score
+    from .trade_plan import compute_trade_plan
 
     from .pattern import detect_pattern
+
 
     all_chain_rows = []
     all_trades_bos2 = []
@@ -334,6 +336,8 @@ def run_backtest(symbols: List[str], cfg, data_source, horizons=HORIZONS) -> dic
                     volatility_contracted=live_match.volatility_contracted if not pd.isna(live_match.volatility_contracted) else None,
                     reaccum_bars=live_match.reaccum_bars,
                 )
+                trigger_price = live_match.reversal_price if live_match.stage == "FRESH_REVERSAL" and not pd.isna(live_match.reversal_price) else live_match.last_close
+                plan = compute_trade_plan(live_match.stage, trigger_price, live_match.last_date, live_match.retest_price, cfg)
                 live_signals.append({
                     "symbol": symbol, "stage": live_match.stage,
                     "quality_score": quality["quality_score"], "quality_grade": quality["quality_grade"],
@@ -346,11 +350,21 @@ def run_backtest(symbols: List[str], cfg, data_source, horizons=HORIZONS) -> dic
                     "reversal_date": live_match.reversal_date,
                     "reversal_price": round(float(live_match.reversal_price), 2) if live_match.reversal_price and not pd.isna(live_match.reversal_price) else None,
                     "bos2_date": live_match.bos2_date, "bos2_price": round(float(live_match.bos2_price), 2) if live_match.bos2_price else None,
+                    "entry_date": plan["entry_date"] if plan else None,
+                    "entry_price_ref": plan["entry_price_ref"] if plan else None,
+                    "stop_loss": plan["stop_loss"] if plan else None,
+                    "risk_pct": plan["risk_pct"] if plan else None,
+                    "target_price": plan["target_price"] if plan else None,
+                    "target_pct": plan["target_pct"] if plan else None,
+                    "reward_risk": plan["reward_risk"] if plan else None,
+                    "exit_by_min_date": plan["exit_by_min_date"] if plan else None,
+                    "exit_by_max_date": plan["exit_by_max_date"] if plan else None,
                     "confluence_score": f"{conf['score']}/{conf['max_score']}",
                     "notes": live_match.notes,
                 })
 
         except Exception as e:
+
 
             print(f"  [!] {symbol}: live-signal check failed: {e}")
 

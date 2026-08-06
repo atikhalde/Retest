@@ -10,6 +10,8 @@ from .indicators import add_indicators, confluence_score
 from .pattern import detect_pattern
 from .notify import send_telegram, format_alert
 from .scoring import compute_quality_score
+from .trade_plan import compute_trade_plan
+
 
 STAGE_PRIORITY = {
     "FRESH_BOS2": 0,
@@ -53,8 +55,13 @@ def scan_symbol(row, data_source, cfg) -> dict:
         volatility_contracted=match.volatility_contracted if not pd.isna(match.volatility_contracted) else None,
         reaccum_bars=match.reaccum_bars,
     )
+    # entry/stop/target reference to whichever level is the actual trigger:
+    # the reversal price for FRESH_REVERSAL, else last_close for FRESH_BOS2
+    trigger_price = match.reversal_price if match.stage == "FRESH_REVERSAL" and not pd.isna(match.reversal_price) else match.last_close
+    plan = compute_trade_plan(match.stage, trigger_price, match.last_date, match.retest_price, cfg)
 
     def d(x):
+
         return x.date().isoformat() if x is not None and hasattr(x, "date") else None
 
     return {
@@ -82,8 +89,18 @@ def scan_symbol(row, data_source, cfg) -> dict:
         "bars_since_bos2": match.bars_since_bos2,
         "confluence_score": f"{conf['score']}/{conf['max_score']}",
         "confluence_raw": conf["score"],
+        "entry_date": plan["entry_date"] if plan else None,
+        "entry_price_ref": plan["entry_price_ref"] if plan else None,
+        "stop_loss": plan["stop_loss"] if plan else None,
+        "risk_pct": plan["risk_pct"] if plan else None,
+        "target_price": plan["target_price"] if plan else None,
+        "target_pct": plan["target_pct"] if plan else None,
+        "reward_risk": plan["reward_risk"] if plan else None,
+        "exit_by_min_date": plan["exit_by_min_date"] if plan else None,
+        "exit_by_max_date": plan["exit_by_max_date"] if plan else None,
         "notes": match.notes,
     }
+
 
 
 

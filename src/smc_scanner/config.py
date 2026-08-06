@@ -77,6 +77,15 @@ class Config:
     vol_mult_bos2: float = 1.3
     recency_bars: int = 5              # how many bars back a BOS2 still counts as FRESH
 
+    # ---------------- trade plan (entry/stop/target) ----------------
+    # Backtested avg risk (~3.33%) and avg winning-trade return (~3.39%)
+    # over the best 5-7 day hold are almost exactly 1:1 - see
+    # scripts/optimize_stop_loss.py and README "Best stop-loss..." section.
+    target_reward_risk: float = 1.0
+    hold_days_min: int = 4
+    hold_days_max: int = 7
+
+
     # ---------------- confluence / quality ----------------
     ema_fast: int = 20
     ema_slow: int = 50
