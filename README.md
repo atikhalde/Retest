@@ -110,7 +110,7 @@ scripts/
 data/
   universe.csv        scan universe (bootstrap sample checked in; rebuilt by the workflow)
   nse_holidays.txt    NSE holiday calendar (update yearly)
-  backtest_universe_sample.txt   80-symbol sample list used by the backtest workflow
+  backtest_universe_sample.txt   80-symbol curated sample - optional, pass via --symbols-file for a quick/small backtest run (default is the full market-cap-filtered universe)
 results/
   latest_scan.csv, state.json, backtest_*.csv/md/xlsx, sl_optimization_*.csv/xlsx
   (committed back by the workflows)
@@ -227,7 +227,7 @@ export PYTHONPATH=src
 python -m smc_scanner.cli build-universe
 python -m smc_scanner.cli scan --mode eod
 python -m smc_scanner.cli scan --mode intraday   # includes today's in-progress candle via Dhan intraday API
-python -m smc_scanner.cli backtest --data-source yfinance --limit 150
+python -m smc_scanner.cli backtest --data-source yfinance   # defaults: all symbols >= min_market_cap_cr (ex-ETF), 5y history
 ```
 
 Testing without Dhan credentials at all (yfinance fallback):
@@ -237,9 +237,29 @@ python -m smc_scanner.cli scan --data-source yfinance --mode eod
 
 ## Backtest: what it actually measures
 
-`backtest.py` walks each symbol's **entire** history once and enumerates
-*every* retest → re-accumulation chain (not just the latest, unlike the live
-scanner), classifying each into:
+By default `backtest` runs against **every symbol in `data/universe.csv`
+that passes the market-cap filter** (`>= min_market_cap_cr`, currently
+1000 cr, ETFs already excluded via `exclude_instrument_types`) - not a
+curated sample. Override with `--symbols "A,B,C"` or `--symbols-file
+path.txt`, and cap it for a quick/debug run with `--limit N`.
+
+History depth defaults to **5 years** per symbol
+(`config.backtest_history_years`), overridable per-run with `--years`, e.g.
+`--years 3` or `--years 10`. This is independent of the live scanner's
+history window (`daily_history_days`, ~2y) - a live scan only needs enough
+bars to run its 26-week BOS1 gate + one active pattern chain, while a
+backtest wants as many historical chains as possible for the stats to mean
+something.
+
+Symbols are fetched/processed in parallel threads (`--workers`, default 8)
+since the default universe is now hundreds of symbols rather than a small
+sample - a full run against yfinance can still take a while (I/O bound on
+one HTTP call per symbol); reduce `--workers` if you hit Yahoo rate limits,
+or use `--limit`/`--symbols-file` for a faster iteration loop while tuning.
+
+`backtest.py` walks each symbol's **entire** fetched history once and
+enumerates *every* retest → re-accumulation chain (not just the latest,
+unlike the live scanner), classifying each into:
 
 - `BOS2_CONFIRMED` — broke back above P1 with a volume kick
 - `INVALIDATED` — closed back below P0 first (structure failed)
@@ -287,11 +307,14 @@ this.**
 
 ### Running it yourself in GitHub Actions
 
-Actions tab → **"Backtest"** → *Run workflow* (optionally set how many
-symbols from `data/backtest_universe_sample.txt` to use). It installs
-dependencies, runs the backtest via yfinance (no Dhan quota used), exports
+Actions tab → **"Backtest"** → *Run workflow* (optionally override `years`,
+`workers`, or `limit` - leave `limit` blank for the full >= min-market-cap
+universe, which is now the default). It installs dependencies, runs the
+backtest via yfinance (no Dhan quota used), exports
 `results/backtest_results.xlsx`, commits everything back to the repo, and
-also uploads it as a downloadable workflow artifact.
+also uploads it as a downloadable workflow artifact. The job has a 300-minute
+timeout since the default (full universe, 5y history) run is much larger
+than the old 150-symbol sample.
 
 ### Excel workbook contents
 

@@ -294,122 +294,164 @@ def _reorder(df: pd.DataFrame) -> pd.DataFrame:
     return df[cols]
 
 
-def run_backtest(symbols: List[str], cfg, data_source, horizons=HORIZONS) -> dict:
+def _process_symbol(symbol: str, cfg, data_source, horizons, days: int = None) -> Optional[dict]:
+    """Fetch + fully process one symbol's backtest chains and live-signal check.
+    Pure function (no shared state) so it's safe to run across threads."""
     from .indicators import add_indicators, confluence_score
     from .scoring import compute_quality_score
     from .trade_plan import compute_trade_plan
-
     from .pattern import detect_pattern
 
+    try:
+        df = data_source.fetch_ohlc(symbol, days=days)
+    except Exception as e:
+        print(f"  [!] {symbol}: {e}")
+        return None
+    if df is None or df.empty or len(df) < 80:
+        return None
+    df = add_indicators(df, cfg)
+    chains = enumerate_chains(df, cfg, symbol)
+
+    out = {"chain_rows": [], "trades_bos2": [], "trades_pre": [], "trades_reversal": [],
+           "live_signal": None, "outcomes": {}}
+
+    # Same-day cross-check with the live scanner's detector: is this
+    # symbol showing a PRE_BOS2_READY / FRESH_BOS2 setup as of the very
+    # last bar in the data we just fetched? This is what surfaces
+    # "PGIL-right-now"-type setups distinctly from the historical stats.
+    try:
+        live_match = detect_pattern(df, cfg, symbol)
+        if live_match is not None and live_match.stage in ("FRESH_BOS2", "FRESH_REVERSAL", "PRE_BOS2_READY"):
+            conf = confluence_score(df, cfg)
+            quality = compute_quality_score(
+                stage=live_match.stage,
+                confluence_raw=conf["score"], confluence_max=conf["max_score"],
+                num_reversals=live_match.num_reversals,
+                volatility_contracted=live_match.volatility_contracted if not pd.isna(live_match.volatility_contracted) else None,
+                reaccum_bars=live_match.reaccum_bars,
+            )
+            trigger_price = live_match.reversal_price if live_match.stage == "FRESH_REVERSAL" and not pd.isna(live_match.reversal_price) else live_match.last_close
+            plan = compute_trade_plan(live_match.stage, trigger_price, live_match.last_date, live_match.retest_price, cfg)
+            out["live_signal"] = {
+                "symbol": symbol, "stage": live_match.stage,
+                "quality_score": quality["quality_score"], "quality_grade": quality["quality_grade"],
+                "last_date": live_match.last_date, "last_close": round(float(live_match.last_close), 2),
+                "p0_price": round(float(live_match.p0_price), 2) if live_match.p0_price else None,
+                "bos1_date": live_match.bos1_date, "bos1_price": round(float(live_match.bos1_price), 2) if live_match.bos1_price else None,
+                "p1_resistance": round(float(live_match.p1_price), 2) if live_match.p1_price else None,
+                "retest_date": live_match.retest_date, "retest_price": round(float(live_match.retest_price), 2) if live_match.retest_price else None,
+                "reaccum_bars": live_match.reaccum_bars,
+                "reversal_date": live_match.reversal_date,
+                "reversal_price": round(float(live_match.reversal_price), 2) if live_match.reversal_price and not pd.isna(live_match.reversal_price) else None,
+                "bos2_date": live_match.bos2_date, "bos2_price": round(float(live_match.bos2_price), 2) if live_match.bos2_price else None,
+                "entry_date": plan["entry_date"] if plan else None,
+                "entry_price_ref": plan["entry_price_ref"] if plan else None,
+                "stop_loss": plan["stop_loss"] if plan else None,
+                "risk_pct": plan["risk_pct"] if plan else None,
+                "target_price": plan["target_price"] if plan else None,
+                "target_pct": plan["target_pct"] if plan else None,
+                "reward_risk": plan["reward_risk"] if plan else None,
+                "exit_by_min_date": plan["exit_by_min_date"] if plan else None,
+                "exit_by_max_date": plan["exit_by_max_date"] if plan else None,
+                "confluence_score": f"{conf['score']}/{conf['max_score']}",
+                "notes": live_match.notes,
+            }
+    except Exception as e:
+        print(f"  [!] {symbol}: live-signal check failed: {e}")
+
+    for c in chains:
+        out["outcomes"][c.outcome] = out["outcomes"].get(c.outcome, 0) + 1
+        base_info = chain_base_info(c, df, cfg)
+        out["chain_rows"].append(base_info)
+
+        if c.outcome == "BOS2_CONFIRMED":
+            trade = _forward_trade(df, c.end_idx, c.retest_price, horizons)
+            if trade:
+                row = dict(base_info)
+                row.update({"signal_date": base_info["bos2_date"], "signal_price": base_info["bos2_price"]})
+                row.update(trade)
+                out["trades_bos2"].append(row)
+
+        if c.pre_bos2_ready_idx is not None:
+            trade = _forward_trade(df, c.pre_bos2_ready_idx, c.retest_price, horizons)
+            if trade:
+                row = dict(base_info)
+                row.update({
+                    "signal_date": base_info["pre_bos2_ready_date"],
+                    "signal_price": round(float(df["Close"].values[c.pre_bos2_ready_idx]), 2),
+                    "eventually_confirmed": c.outcome == "BOS2_CONFIRMED",
+                })
+                row.update(trade)
+                out["trades_pre"].append(row)
+
+        # Tactical "higher-low reversal" entry: first green candle closing
+        # back above the most recent swing-low candle's high, inside the
+        # re-accumulation window - an earlier/tighter entry than waiting
+        # for the full P1 breakout.
+        if base_info.get("reaccum_reversal_date") is not None:
+            rev_idx = df.index.get_loc(base_info["reaccum_reversal_date"])
+            trade = _forward_trade(df, rev_idx, c.retest_price, horizons)
+            if trade:
+                row = dict(base_info)
+                row.update({
+                    "signal_date": base_info["reaccum_reversal_date"],
+                    "signal_price": base_info["reaccum_reversal_price"],
+                    "eventually_confirmed": c.outcome == "BOS2_CONFIRMED",
+                })
+                row.update(trade)
+                out["trades_reversal"].append(row)
+
+    return out
+
+
+def run_backtest(symbols: List[str], cfg, data_source, horizons=HORIZONS, days: int = None,
+                  max_workers: int = 8) -> dict:
+    """Run the full historical backtest across `symbols`.
+
+    `days`: how many calendar days of history to fetch per symbol. Defaults
+    to `cfg.backtest_history_years` (5 years) when not explicitly given -
+    see the CLI's `--years` flag.
+    `max_workers`: symbols are fetched/processed in parallel threads (I/O
+    bound - mostly waiting on Dhan/yfinance) since the default universe is
+    now "every symbol >= min_market_cap_cr", not a small curated sample.
+    """
+    import concurrent.futures as cf
+
+    if days is None:
+        days = int(cfg.backtest_history_years * 365.25)
 
     all_chain_rows = []
     all_trades_bos2 = []
     all_trades_pre = []
     all_trades_reversal = []
     live_signals = []
-
     outcome_counts = {"BOS2_CONFIRMED": 0, "INVALIDATED": 0, "TIMEOUT": 0, "STILL_OPEN": 0}
 
-    for symbol in symbols:
-        try:
-            df = data_source.fetch_ohlc(symbol)
-        except Exception as e:
-            print(f"  [!] {symbol}: {e}")
-            continue
-        if df is None or df.empty or len(df) < 80:
-            continue
-        df = add_indicators(df, cfg)
-        chains = enumerate_chains(df, cfg, symbol)
+    total = len(symbols)
+    done = 0
+    with cf.ThreadPoolExecutor(max_workers=max_workers) as ex:
+        futures = {ex.submit(_process_symbol, sym, cfg, data_source, horizons, days): sym for sym in symbols}
+        for fut in cf.as_completed(futures):
+            sym = futures[fut]
+            done += 1
+            try:
+                res = fut.result()
+            except Exception as e:
+                print(f"  [!] {sym}: {e}")
+                res = None
+            if done % 50 == 0 or done == total:
+                print(f"[backtest] processed {done}/{total}")
+            if res is None:
+                continue
+            all_chain_rows.extend(res["chain_rows"])
+            all_trades_bos2.extend(res["trades_bos2"])
+            all_trades_pre.extend(res["trades_pre"])
+            all_trades_reversal.extend(res["trades_reversal"])
+            if res["live_signal"] is not None:
+                live_signals.append(res["live_signal"])
+            for k, v in res["outcomes"].items():
+                outcome_counts[k] = outcome_counts.get(k, 0) + v
 
-        # Same-day cross-check with the live scanner's detector: is this
-        # symbol showing a PRE_BOS2_READY / FRESH_BOS2 setup as of the very
-        # last bar in the data we just fetched? This is what surfaces
-        # "PGIL-right-now"-type setups distinctly from the historical stats.
-        try:
-            live_match = detect_pattern(df, cfg, symbol)
-            if live_match is not None and live_match.stage in ("FRESH_BOS2", "FRESH_REVERSAL", "PRE_BOS2_READY"):
-                conf = confluence_score(df, cfg)
-                quality = compute_quality_score(
-                    stage=live_match.stage,
-                    confluence_raw=conf["score"], confluence_max=conf["max_score"],
-                    num_reversals=live_match.num_reversals,
-                    volatility_contracted=live_match.volatility_contracted if not pd.isna(live_match.volatility_contracted) else None,
-                    reaccum_bars=live_match.reaccum_bars,
-                )
-                trigger_price = live_match.reversal_price if live_match.stage == "FRESH_REVERSAL" and not pd.isna(live_match.reversal_price) else live_match.last_close
-                plan = compute_trade_plan(live_match.stage, trigger_price, live_match.last_date, live_match.retest_price, cfg)
-                live_signals.append({
-                    "symbol": symbol, "stage": live_match.stage,
-                    "quality_score": quality["quality_score"], "quality_grade": quality["quality_grade"],
-                    "last_date": live_match.last_date, "last_close": round(float(live_match.last_close), 2),
-                    "p0_price": round(float(live_match.p0_price), 2) if live_match.p0_price else None,
-                    "bos1_date": live_match.bos1_date, "bos1_price": round(float(live_match.bos1_price), 2) if live_match.bos1_price else None,
-                    "p1_resistance": round(float(live_match.p1_price), 2) if live_match.p1_price else None,
-                    "retest_date": live_match.retest_date, "retest_price": round(float(live_match.retest_price), 2) if live_match.retest_price else None,
-                    "reaccum_bars": live_match.reaccum_bars,
-                    "reversal_date": live_match.reversal_date,
-                    "reversal_price": round(float(live_match.reversal_price), 2) if live_match.reversal_price and not pd.isna(live_match.reversal_price) else None,
-                    "bos2_date": live_match.bos2_date, "bos2_price": round(float(live_match.bos2_price), 2) if live_match.bos2_price else None,
-                    "entry_date": plan["entry_date"] if plan else None,
-                    "entry_price_ref": plan["entry_price_ref"] if plan else None,
-                    "stop_loss": plan["stop_loss"] if plan else None,
-                    "risk_pct": plan["risk_pct"] if plan else None,
-                    "target_price": plan["target_price"] if plan else None,
-                    "target_pct": plan["target_pct"] if plan else None,
-                    "reward_risk": plan["reward_risk"] if plan else None,
-                    "exit_by_min_date": plan["exit_by_min_date"] if plan else None,
-                    "exit_by_max_date": plan["exit_by_max_date"] if plan else None,
-                    "confluence_score": f"{conf['score']}/{conf['max_score']}",
-                    "notes": live_match.notes,
-                })
-
-        except Exception as e:
-
-
-            print(f"  [!] {symbol}: live-signal check failed: {e}")
-
-        for c in chains:
-            outcome_counts[c.outcome] = outcome_counts.get(c.outcome, 0) + 1
-            base_info = chain_base_info(c, df, cfg)
-            all_chain_rows.append(base_info)
-
-            if c.outcome == "BOS2_CONFIRMED":
-                trade = _forward_trade(df, c.end_idx, c.retest_price, horizons)
-                if trade:
-                    row = dict(base_info)
-                    row.update({"signal_date": base_info["bos2_date"], "signal_price": base_info["bos2_price"]})
-                    row.update(trade)
-                    all_trades_bos2.append(row)
-
-            if c.pre_bos2_ready_idx is not None:
-                trade = _forward_trade(df, c.pre_bos2_ready_idx, c.retest_price, horizons)
-                if trade:
-                    row = dict(base_info)
-                    row.update({
-                        "signal_date": base_info["pre_bos2_ready_date"],
-                        "signal_price": round(float(df["Close"].values[c.pre_bos2_ready_idx]), 2),
-                        "eventually_confirmed": c.outcome == "BOS2_CONFIRMED",
-                    })
-
-                    row.update(trade)
-                    all_trades_pre.append(row)
-
-            # Tactical "higher-low reversal" entry: first green candle closing
-            # back above the most recent swing-low candle's high, inside the
-            # re-accumulation window - an earlier/tighter entry than waiting
-            # for the full P1 breakout.
-            if base_info.get("reaccum_reversal_date") is not None:
-                rev_idx = df.index.get_loc(base_info["reaccum_reversal_date"])
-                trade = _forward_trade(df, rev_idx, c.retest_price, horizons)
-                if trade:
-                    row = dict(base_info)
-                    row.update({
-                        "signal_date": base_info["reaccum_reversal_date"],
-                        "signal_price": base_info["reaccum_reversal_price"],
-                        "eventually_confirmed": c.outcome == "BOS2_CONFIRMED",
-                    })
-                    row.update(trade)
-                    all_trades_reversal.append(row)
 
     all_chains_df = pd.DataFrame(all_chain_rows)
     bos2_df = _reorder(pd.DataFrame(all_trades_bos2))

@@ -5,6 +5,7 @@ Command-line entrypoints.
     python -m smc_scanner.cli scan --mode eod
     python -m smc_scanner.cli scan --mode intraday
     python -m smc_scanner.cli backtest --years 3
+    python -m smc_scanner.cli backtest                     # defaults: all symbols >= min_market_cap_cr (ex-ETF), 5y history
 """
 import argparse
 import sys
@@ -15,7 +16,7 @@ from .config import Config
 from .universe import build_universe, get_universe
 from .data_sources import get_data_source
 from .scanner import run_scan
-from .backtest import run_backtest, render_markdown_report
+from .backtest import run_backtest, render_markdown_report, HORIZONS
 
 
 def cmd_build_universe(args):
@@ -61,6 +62,8 @@ def cmd_scan(args):
 def cmd_backtest(args):
     cfg = Config.from_env()
     cfg.data_source = args.data_source
+    if args.years:
+        cfg.backtest_history_years = args.years
     data_source = get_data_source(cfg)
 
     if args.symbols:
@@ -71,6 +74,9 @@ def cmd_backtest(args):
         if args.limit:
             symbols = symbols[: args.limit]
     else:
+        # Default universe: EVERY symbol passing the market-cap/ETF filter
+        # already baked into data/universe.csv (>= cfg.min_market_cap_cr,
+        # ETFs excluded via exclude_instrument_types) - not a curated sample.
         universe_df = get_universe(cfg)
         symbols = universe_df["symbol"].tolist()
         if args.data_source == "yfinance":
@@ -79,9 +85,14 @@ def cmd_backtest(args):
             symbols = symbols[: args.limit]
 
     horizons = tuple(int(h.strip()) for h in args.horizons.split(",")) if args.horizons else None
+    days = int(cfg.backtest_history_years * 365.25)
 
-    print(f"[backtest] running on {len(symbols)} symbols" + (f", horizons={horizons}" if horizons else ""))
-    result = run_backtest(symbols, cfg, data_source, horizons=horizons) if horizons else run_backtest(symbols, cfg, data_source)
+    print(f"[backtest] running on {len(symbols)} symbols, "
+          f"history={cfg.backtest_history_years:g}y (~{days}d), workers={args.workers}"
+          + (f", horizons={horizons}" if horizons else ""))
+    result = run_backtest(symbols, cfg, data_source, horizons=horizons or HORIZONS,
+                           days=days, max_workers=args.workers)
+
 
     import os
     os.makedirs(cfg.results_dir, exist_ok=True)
@@ -126,9 +137,20 @@ def main():
 
     p3 = sub.add_parser("backtest", help="Run historical backtest")
     p3.add_argument("--data-source", choices=["dhan", "dhan_only", "yfinance"], default="yfinance")
-    p3.add_argument("--symbols", type=str, default=None)
-    p3.add_argument("--symbols-file", type=str, default=None)
-    p3.add_argument("--limit", type=int, default=100)
+    p3.add_argument("--symbols", type=str, default=None,
+                     help="Comma-separated symbols to backtest instead of the default universe")
+    p3.add_argument("--symbols-file", type=str, default=None,
+                     help="Path to a newline-separated symbols file instead of the default universe")
+    p3.add_argument("--limit", type=int, default=None,
+                     help="Cap the number of symbols (debug/quick runs). Default: no cap - "
+                          "backtests every symbol in data/universe.csv that passes the "
+                          "market-cap filter (>= min_market_cap_cr, ETFs excluded).")
+    p3.add_argument("--years", type=float, default=None,
+                     help="Years of daily history to fetch per symbol. Default: 5.0 "
+                          "(config.backtest_history_years) - overridable per-run, e.g. --years 3 "
+                          "or --years 10.")
+    p3.add_argument("--workers", type=int, default=8,
+                     help="Parallel symbol fetch/process threads (I/O bound). Default: 8.")
     p3.add_argument("--horizons", type=str, default=None,
                      help="Comma-separated forward-return horizons in trading days, "
                           "e.g. '1,2,3,4,5,7,10,15,20,30'. Defaults to "

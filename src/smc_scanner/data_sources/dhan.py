@@ -196,9 +196,10 @@ class DhanDataSource(DataSource):
         }
 
     def fetch_ohlc(self, symbol: str, security_id: str = None, exchange_segment: str = "NSE_EQ",
-                    instrument: str = "EQUITY") -> pd.DataFrame:
+                    instrument: str = "EQUITY", days: int = None) -> pd.DataFrame:
         to_date = datetime.now().strftime("%Y-%m-%d")
-        from_date = (datetime.now() - timedelta(days=self.cfg.daily_history_days)).strftime("%Y-%m-%d")
+        n_days = days if days else self.cfg.daily_history_days
+        from_date = (datetime.now() - timedelta(days=n_days)).strftime("%Y-%m-%d")
         df = self.fetch_daily(security_id, exchange_segment, instrument, from_date, to_date)
         if df.empty:
             return df

@@ -4,9 +4,17 @@ on:
   workflow_dispatch:
     inputs:
       limit:
-        description: "Max number of symbols to backtest"
+        description: "Max number of symbols to backtest (blank = every symbol >= min market cap, ETFs excluded)"
         required: false
-        default: "150"
+        default: ""
+      years:
+        description: "Years of daily history per symbol"
+        required: false
+        default: "5"
+      workers:
+        description: "Parallel fetch/process threads"
+        required: false
+        default: "8"
   schedule:
     # Optional monthly re-validation, 1st of month, 04:00 UTC
     - cron: "0 4 1 * *"
@@ -21,6 +29,7 @@ concurrency:
 jobs:
   backtest:
     runs-on: ubuntu-latest
+    timeout-minutes: 300
     steps:
       - uses: actions/checkout@v4
 
@@ -37,8 +46,10 @@ jobs:
         run: |
           python -m smc_scanner.cli backtest \
             --data-source yfinance \
-            --symbols-file data/backtest_universe_sample.txt \
-            --limit ${{ github.event.inputs.limit || '150' }}
+            --years "${{ github.event.inputs.years || '5' }}" \
+            --workers "${{ github.event.inputs.workers || '8' }}" \
+            ${{ github.event.inputs.limit && format('--limit {0}', github.event.inputs.limit) || '' }}
+
 
       - name: Run stop-loss optimizer
         run: python scripts/optimize_stop_loss.py

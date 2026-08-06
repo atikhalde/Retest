@@ -36,9 +36,14 @@ class Config:
     data_source: str = "dhan"          # "dhan" (Dhan primary, auto-falls back to yfinance
                                         # per-symbol on any failure), "dhan_only" (no fallback,
                                         # for debugging Dhan itself), or "yfinance" (no Dhan at all)
-    daily_history_days: int = 400      # how much daily history to keep/fetch
+    daily_history_days: int = 400      # how much daily history to keep/fetch for LIVE scans
     intraday_interval_min: str = "5"   # Dhan intraday candle size used to build "today's" forming daily bar
     scan_mode: str = "eod"             # "eod" or "intraday" - controls whether today's partial candle is included
+
+    # `backtest` is research tooling and wants much deeper history than a
+    # live scan needs (more chains -> more statistically meaningful stats).
+    # Overridable per-run via `--years` on the CLI.
+    backtest_history_years: float = 5.0
 
     # ---------------- universe ----------------
     universe_file: str = "data/universe.csv"     # symbol,security_id,exchange_segment,market_cap_cr
@@ -116,6 +121,7 @@ class Config:
         c.scan_mode = _s("SCANNER_MODE", c.scan_mode)
         c.min_market_cap_cr = _f("MIN_MARKET_CAP_CR", c.min_market_cap_cr)
         c.min_price = _f("MIN_PRICE", c.min_price)
+        c.backtest_history_years = _f("BACKTEST_HISTORY_YEARS", c.backtest_history_years)
         c.recency_bars = _i("RECENCY_BARS", c.recency_bars)
         c.min_reaccum_bars = _i("MIN_REACCUM_BARS", c.min_reaccum_bars)
         c.pre_bos2_proximity_pct = _f("PRE_BOS2_PROXIMITY_PCT", c.pre_bos2_proximity_pct)

@@ -42,11 +42,12 @@ class FallbackDataSource(DataSource):
             )
 
     def fetch_ohlc(self, symbol: str, security_id: str = None, exchange_segment: str = "NSE_EQ",
-                    instrument: str = "EQUITY") -> pd.DataFrame:
+                    instrument: str = "EQUITY", days: int = None) -> pd.DataFrame:
         if self.primary is not None:
             try:
                 df = self.primary.fetch_ohlc(symbol, security_id=security_id,
-                                              exchange_segment=exchange_segment, instrument=instrument)
+                                              exchange_segment=exchange_segment, instrument=instrument,
+                                              days=days)
                 if df is not None and not df.empty and len(df) >= 60:
                     return df
                 print(f"  [data_source] Dhan returned insufficient data for {symbol} "
@@ -56,8 +57,9 @@ class FallbackDataSource(DataSource):
 
         if self.secondary is not None:
             try:
-                return self.secondary.fetch_ohlc(symbol)
+                return self.secondary.fetch_ohlc(symbol, days=days)
             except Exception as e:
                 print(f"  [data_source] yfinance also failed for {symbol}: {e}")
 
         return pd.DataFrame(columns=["Open", "High", "Low", "Close", "Volume"])
+
