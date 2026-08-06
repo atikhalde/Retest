@@ -131,7 +131,8 @@ def main():
     p3.add_argument("--limit", type=int, default=100)
     p3.add_argument("--horizons", type=str, default=None,
                      help="Comma-separated forward-return horizons in trading days, "
-                          "e.g. '1,2,3,4,5,7,10,15,20,30'. Defaults to 5,10,20,40,60.")
+                          "e.g. '1,2,3,4,5,7,10,15,20,30'. Defaults to "
+                          "1,2,3,4,5,6,7,8,9,10,12,15,20,25,30,40,60.")
     p3.set_defaults(func=cmd_backtest)
 
 

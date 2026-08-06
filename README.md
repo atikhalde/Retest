@@ -81,8 +81,11 @@ optimum.
 src/smc_scanner/
   config.py         tunable parameters (env-var overridable)
   indicators.py      EMA/RSI/MACD/ATR + confluence scoreboard
-  pivots.py           fractal swing-high/low detection
-  pattern.py          the core Base->Impulse->Retest->Reaccum->BOS2 detector
+  pivots.py           fractal swing-high/low + higher-low reversal detection
+  weekly.py           weekly-timeframe BOS1 gate (genuine new N-week-high breakout)
+  pattern.py          the core Base->Impulse->Retest->Reaccum->Reversal->BOS2 detector
+  scoring.py          composite A/B/C/D setup-quality scoring
+  trade_plan.py       entry/stop/target/exit-window generator for actionable signals
   scanner.py          orchestration: universe -> data -> pattern -> alerts
   backtest.py         historical edge test (win rate / forward returns)
   universe.py         builds & loads the scan universe (NSE cash equities, mkt cap filter)
@@ -92,18 +95,23 @@ src/smc_scanner/
     yfinance_source.py  fallback source, used for local testing & backtests
   cli.py              `python -m smc_scanner.cli {build-universe,scan,backtest}`
 scripts/
-  market_hours_guard.py   used by the intraday workflow to no-op outside NSE hours
+  market_hours_guard.py     used by the intraday workflow to no-op outside NSE hours
+  export_backtest_excel.py  builds results/backtest_results.xlsx (full multi-sheet)
+  export_backtest_simple.py builds results/backtest_simple.xlsx (6-column summary)
+  optimize_stop_loss.py     sweeps stop-loss methods across the best holding window
 .github/workflows/
   update_universe.yml     weekly - rebuilds data/universe.csv
   eod_scan.yml            daily, ~15:45 IST - confirmation scan after close
-  intraday_scan.yml       every 15 min during market hours - catches PRE_BOS2_READY/FRESH_BOS2 live
-  backtest.yml            on-demand / monthly - historical edge report
+  intraday_scan.yml       every 15 min during market hours - catches PRE_BOS2_READY/FRESH_REVERSAL/FRESH_BOS2 live
+  backtest.yml            on-demand / monthly - historical edge report + both Excel exports
   tests.yml               runs pytest on every push
 data/
   universe.csv        scan universe (bootstrap sample checked in; rebuilt by the workflow)
   nse_holidays.txt    NSE holiday calendar (update yearly)
+  backtest_universe_sample.txt   80-symbol sample list used by the backtest workflow
 results/
-  latest_scan.csv, state.json, backtest_*.csv/md   (committed back by the workflows)
+  latest_scan.csv, state.json, backtest_*.csv/md/xlsx, sl_optimization_*.csv/xlsx
+  (committed back by the workflows)
 ```
 
 ## 1. Dhan API setup
@@ -246,29 +254,29 @@ also uploads it as a downloadable workflow artifact.
 Two workbooks get produced - start with the simple one:
 
 **`results/backtest_simple.xlsx`** (via `scripts/export_backtest_simple.py`) -
-**one plain-English sheet**, one row per pattern instance, sorted so the most
-recently active setups are on top:
+**one plain 6-column sheet**, one row per pattern instance that produced a
+reversal signal, de-duped and sorted by most recent Reversal Date first:
 
-`Stock | Status | Base Date/Price | Breakout Date/Price | Peak Date/Price | Retest Date/Price | Re-Accumulation Start/Days | Pre-Breakout Alert Date | Confirmed Breakout Date/Price | Entry Date/Price | Stop Loss | Return 5D/10D/20D/40D/60D % | Trade Status`
+`Symbol | BOS1 Breakout Date | Retest Date | Re-Accumulation Date | Reversal Date | Setup Quality`
 
-`Status` is colour-coded: green = Breakout Confirmed, red = Failed (support
-broke), yellow = Timed Out, blue = Still Forming. `Trade Status` tells you
-exactly why a row has blank returns - e.g. "Pending (triggered on latest
-bar - no return yet)" for a signal that fired today, like PGIL's current
-breakout.
+`Setup Quality` is the color-coded A/B/C/D grade (green=A, blue=B,
+yellow=C, red=D) - see "Setup Quality" section above. For prices, outcomes,
+entry/stop/target/returns and the full multi-sheet breakdown, use
+`backtest_results.xlsx` instead.
 
 **`results/backtest_results.xlsx`** (via `scripts/export_backtest_excel.py`)
 - the full, multi-sheet breakdown for deeper analysis:
 
 | Sheet | Contents |
 |---|---|
-| Live Signals Now | symbols currently `FRESH_BOS2`/`PRE_BOS2_READY` as of the latest bar - independent of historical stats |
-| Summary | headline stats + forward-return table by entry type & horizon |
+| Live Signals Now | symbols currently `FRESH_BOS2`/`FRESH_REVERSAL`/`PRE_BOS2_READY` as of the latest bar, with quality grade and full trade plan (entry/stop/target/exit window) - independent of historical stats |
+| Summary | headline stats + forward-return table by entry type & horizon (granular 1-60 trading days) |
 | Outcome Counts | BOS2_CONFIRMED / INVALIDATED / TIMEOUT / STILL_OPEN breakdown |
 | By Symbol | per-stock signal counts & average returns |
-| All Chains | every pattern instance, full stage trail, incl. invalidated/timed-out ones |
+| All Chains | every pattern instance, full stage trail + quality score/grade, incl. invalidated/timed-out ones |
 | BOS2 Trades | confirmed-breakout entries, entry price/date, stop, `trade_status`, forward returns |
 | PreBOS2 Trades | anticipatory (pre-breakout) entries, plus `eventually_confirmed` |
+| Reversal Trades | the higher-low reversal entries (the best-performing style) with the same detail |
 | Notes | methodology & caveats |
 
 `trade_status` on every trade row is one of:
