@@ -24,10 +24,10 @@
     "stage": "FRESH_BOS2"
   },
   "NAHARSPING": {
-    "stage": "IN_RETEST"
+    "stage": "FRESH_BOS2"
   },
   "ASTERDM": {
-    "stage": "FRESH_BOS2"
+    "stage": "IN_RETEST"
   },
   "EMIL": {
     "stage": "FRESH_BOS2"
@@ -206,7 +206,7 @@
     "stage": "BASING"
   },
   "CARYSIL": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "NETWEB": {
     "stage": "PRE_BOS2_READY"
@@ -454,7 +454,7 @@
     "stage": "STALE_BOS2"
   },
   "NGLFINE": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "CNL": {
     "stage": "IN_RETEST"
@@ -541,7 +541,7 @@
     "stage": "STALE_BOS2"
   },
   "FEDERALBNK": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "LINDEINDIA": {
     "stage": "STALE_BOS2"
