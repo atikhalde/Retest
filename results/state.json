@@ -215,7 +215,7 @@
     "stage": "FRESH_BOS2"
   },
   "INDHOTEL": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "TEXINFRA": {
     "stage": "PRE_BOS2_READY"
@@ -227,7 +227,7 @@
     "stage": "PRE_BOS2_READY"
   },
   "MUTHOOTMF": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "STYRENIX": {
     "stage": "BASING"
@@ -254,7 +254,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "NITINSPIN": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "DIVGIITTS": {
     "stage": "PRE_BOS2_READY"
@@ -338,13 +338,14 @@
     "stage": "BASING"
   },
   "JSWENERGY": {
-    "stage": "FRESH_REVERSAL"
+    "stage": "BASING"
   },
   "ITDC": {
     "stage": "BASING"
   },
   "GRANULES": {
-    "stage": "BASING"
+    "stage": "FRESH_REVERSAL",
+    "last_reversal_alerted": "2026-08-07"
   },
   "GANESHHOU": {
     "stage": "BASING"
@@ -368,7 +369,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "UJJIVANSFB": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "VOLTAMP": {
     "stage": "BASING"
@@ -452,7 +453,7 @@
     "stage": "STALE_BOS2"
   },
   "NGLFINE": {
-    "stage": "IN_RETEST"
+    "stage": "STALE_BOS2"
   },
   "CNL": {
     "stage": "IN_RETEST"
@@ -743,6 +744,15 @@
     "stage": "IN_RETEST"
   },
   "THEJO": {
+    "stage": "IN_RETEST"
+  },
+  "VSSL": {
+    "stage": "IN_RETEST"
+  },
+  "63MOONS": {
+    "stage": "IN_RETEST"
+  },
+  "VIMTALABS": {
     "stage": "IN_RETEST"
   }
 }
