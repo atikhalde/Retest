@@ -1,6 +1,22 @@
 """Telegram alerting."""
 import os
+import math
 import requests
+
+
+def _present(x) -> bool:
+    """True only if x is a real, meaningful value - not None, not NaN.
+    bool(float('nan')) is True in Python, so a plain `if row.get(...):`
+    check treats a NaN field as present - that was silently letting
+    "nan"-filled BOS2/Trade-Plan sections through into Telegram alerts for
+    stages (like PRE_BOS2_READY) that never had those fields computed
+    (2026-08-08 fix, paired with the num()-helper fix in scanner.py that
+    stops those fields from becoming NaN in the first place)."""
+    if x is None:
+        return False
+    if isinstance(x, float) and math.isnan(x):
+        return False
+    return True
 
 
 def send_telegram(text: str, parse_mode: str = "Markdown") -> bool:
@@ -46,12 +62,16 @@ def format_alert(row: dict) -> str:
     if row["stage"] == "FRESH_REVERSAL":
         lines.append(f"Reversal entry: {row.get('Reversal_date')} @ {row.get('Reversal_price')}")
         lines.append(f"Distance to full breakout (P1): {row.get('distance_to_p1_pct')}%")
-    if row.get("BOS2_date"):
+    if _present(row.get("BOS2_date")):
         lines.append(f"BOS2: {row['BOS2_date']} @ {row['BOS2_price']} ({row.get('bars_since_bos2')} bars ago)")
     lines.append(f"Confluence: {row.get('confluence_score')}")
 
     # --- Trade plan: entry / stop / target / exit window ---
-    if row.get("entry_date"):
+    # Only shown for actionable stages that actually got a computed plan
+    # (FRESH_REVERSAL / FRESH_BOS2) - PRE_BOS2_READY etc. never have one
+    # (compute_trade_plan returns None for them), so entry_date is None -
+    # _present() correctly treats that as absent instead of a truthy NaN.
+    if _present(row.get("entry_date")):
         lines.append("")
         lines.append("📋 *Trade Plan*")
         lines.append(f"Entry: *{row.get('entry_date')}* (next session open), ref price {row.get('entry_price_ref')}")

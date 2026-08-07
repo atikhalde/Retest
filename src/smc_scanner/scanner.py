@@ -83,6 +83,19 @@ def scan_symbol(row, data_source, cfg) -> dict:
 
         return x.date().isoformat() if x is not None and hasattr(x, "date") else None
 
+    def num(x, ndigits=2):
+        """NaN-safe numeric formatter. Several PatternMatch fields default to
+        np.nan (not None) when unset (e.g. bos2_price, p0_price) - `if x else
+        None` treats NaN as truthy (bool(float('nan')) is True in Python!),
+        so it was silently emitting a literal NaN instead of None for every
+        non-actionable row. That NaN then survives into the scan CSV/Telegram
+        alert row as a real float, which downstream "if row.get(...)" gates
+        (also truthy for NaN) treat as present - producing garbled "nan"
+        values in Telegram alerts (2026-08-08 fix)."""
+        if x is None or (isinstance(x, float) and pd.isna(x)):
+            return None
+        return round(float(x), ndigits)
+
     return {
         "symbol": symbol,
         "stage": match.stage,
@@ -90,24 +103,25 @@ def scan_symbol(row, data_source, cfg) -> dict:
         "quality_grade": quality["quality_grade"],
         "last_close": round(float(match.last_close), 2),
         "last_date": d(match.last_date),
-        "P0_base_level": round(float(match.p0_price), 2) if match.p0_price else None,
+        "P0_base_level": num(match.p0_price),
         "BOS1_date": d(match.bos1_date),
-        "BOS1_price": round(float(match.bos1_price), 2) if match.bos1_price else None,
-        "P1_resistance": round(float(match.p1_price), 2) if match.p1_price else None,
+        "BOS1_price": num(match.bos1_price),
+        "P1_resistance": num(match.p1_price),
         "Retest_date": d(match.retest_date),
-        "Retest_price": round(float(match.retest_price), 2) if match.retest_price else None,
+        "Retest_price": num(match.retest_price),
         "Reaccum_bars": match.reaccum_bars,
         "Reversal_date": d(match.reversal_date),
-        "Reversal_price": round(float(match.reversal_price), 2) if match.reversal_price and not pd.isna(match.reversal_price) else None,
+        "Reversal_price": num(match.reversal_price),
         "num_reversals": match.num_reversals,
         "volatility_contracted": match.volatility_contracted,
-        "atr_contraction_ratio": round(float(match.atr_contraction_ratio), 2) if not pd.isna(match.atr_contraction_ratio) else None,
-        "distance_to_p1_pct": round(float(match.distance_to_p1_pct) * 100, 2) if not pd.isna(match.distance_to_p1_pct) else None,
+        "atr_contraction_ratio": num(match.atr_contraction_ratio),
+        "distance_to_p1_pct": num(match.distance_to_p1_pct * 100) if not pd.isna(match.distance_to_p1_pct) else None,
         "BOS2_date": d(match.bos2_date),
-        "BOS2_price": round(float(match.bos2_price), 2) if match.bos2_price else None,
+        "BOS2_price": num(match.bos2_price),
         "bars_since_bos2": match.bars_since_bos2,
         "confluence_score": f"{conf['score']}/{conf['max_score']}",
         "confluence_raw": conf["score"],
+
         "entry_date": plan["entry_date"] if plan else None,
         "entry_price_ref": plan["entry_price_ref"] if plan else None,
         "stop_loss": plan["stop_loss"] if plan else None,

@@ -467,18 +467,27 @@ def _process_symbol(symbol: str, cfg, data_source, horizons, days: int = None) -
             )
             trigger_price = live_match.reversal_price if live_match.stage == "FRESH_REVERSAL" and not pd.isna(live_match.reversal_price) else live_match.last_close
             plan = compute_trade_plan(live_match.stage, trigger_price, live_match.last_date, live_match.retest_price, cfg)
+
+            def _num(x, ndigits=2):
+                # NaN-safe: several PatternMatch fields default to np.nan
+                # (not None), and `if x else None` treats NaN as truthy
+                # (2026-08-08 fix, same root cause as scanner.py's num()).
+                if x is None or (isinstance(x, float) and pd.isna(x)):
+                    return None
+                return round(float(x), ndigits)
+
             out["live_signal"] = {
                 "symbol": symbol, "stage": live_match.stage,
                 "quality_score": quality["quality_score"], "quality_grade": quality["quality_grade"],
                 "last_date": live_match.last_date, "last_close": round(float(live_match.last_close), 2),
-                "p0_price": round(float(live_match.p0_price), 2) if live_match.p0_price else None,
-                "bos1_date": live_match.bos1_date, "bos1_price": round(float(live_match.bos1_price), 2) if live_match.bos1_price else None,
-                "p1_resistance": round(float(live_match.p1_price), 2) if live_match.p1_price else None,
-                "retest_date": live_match.retest_date, "retest_price": round(float(live_match.retest_price), 2) if live_match.retest_price else None,
+                "p0_price": _num(live_match.p0_price),
+                "bos1_date": live_match.bos1_date, "bos1_price": _num(live_match.bos1_price),
+                "p1_resistance": _num(live_match.p1_price),
+                "retest_date": live_match.retest_date, "retest_price": _num(live_match.retest_price),
                 "reaccum_bars": live_match.reaccum_bars,
                 "reversal_date": live_match.reversal_date,
-                "reversal_price": round(float(live_match.reversal_price), 2) if live_match.reversal_price and not pd.isna(live_match.reversal_price) else None,
-                "bos2_date": live_match.bos2_date, "bos2_price": round(float(live_match.bos2_price), 2) if live_match.bos2_price else None,
+                "reversal_price": _num(live_match.reversal_price),
+                "bos2_date": live_match.bos2_date, "bos2_price": _num(live_match.bos2_price),
                 "entry_date": plan["entry_date"] if plan else None,
                 "entry_price_ref": plan["entry_price_ref"] if plan else None,
                 "stop_loss": plan["stop_loss"] if plan else None,
@@ -489,6 +498,7 @@ def _process_symbol(symbol: str, cfg, data_source, horizons, days: int = None) -
                 "exit_by_min_date": plan["exit_by_min_date"] if plan else None,
                 "exit_by_max_date": plan["exit_by_max_date"] if plan else None,
                 "confluence_score": f"{conf['score']}/{conf['max_score']}",
+
                 "notes": live_match.notes,
             }
     except Exception as e:
