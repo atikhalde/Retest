@@ -9,7 +9,7 @@
     "stage": "FRESH_BOS2"
   },
   "KERNEX": {
-    "stage": "FRESH_BOS2"
+    "stage": "IN_RETEST"
   },
   "TALBROAUTO": {
     "stage": "FRESH_BOS2"
@@ -27,7 +27,7 @@
     "stage": "IN_RETEST"
   },
   "ASTERDM": {
-    "stage": "IN_RETEST"
+    "stage": "FRESH_BOS2"
   },
   "EMIL": {
     "stage": "FRESH_BOS2"
@@ -36,7 +36,7 @@
     "stage": "FRESH_BOS2"
   },
   "CRAFTSMAN": {
-    "stage": "FRESH_BOS2"
+    "stage": "STALE_BOS2"
   },
   "GLAND": {
     "stage": "STALE_BOS2"
@@ -66,13 +66,13 @@
     "stage": "STALE_BOS2"
   },
   "ARVIND": {
-    "stage": "FRESH_BOS2"
+    "stage": "STALE_BOS2"
   },
   "IGPL": {
     "stage": "FRESH_BOS2"
   },
   "GRASIM": {
-    "stage": "IN_RETEST"
+    "stage": "FRESH_BOS2"
   },
   "LLOYDSME": {
     "stage": "FRESH_BOS2"
@@ -90,7 +90,7 @@
     "stage": "FRESH_BOS2"
   },
   "NESTLEIND": {
-    "stage": "STALE_BOS2"
+    "stage": "FRESH_BOS2"
   },
   "XPROINDIA": {
     "stage": "FRESH_BOS2"
@@ -194,7 +194,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "POWERGRID": {
-    "stage": "BASING"
+    "stage": "FRESH_REVERSAL"
   },
   "SANGHVIMOV": {
     "stage": "BASING"
@@ -254,7 +254,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "NITINSPIN": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "DIVGIITTS": {
     "stage": "PRE_BOS2_READY"
@@ -284,7 +284,7 @@
     "stage": "BASING"
   },
   "SSWL": {
-    "stage": "BASING"
+    "stage": "STALE_BOS2"
   },
   "HIRECT": {
     "stage": "BASING"
@@ -320,7 +320,7 @@
     "stage": "BASING"
   },
   "QUADFUTURE": {
-    "stage": "BASING"
+    "stage": "FRESH_REVERSAL"
   },
   "SUYOG": {
     "stage": "BASING"
@@ -400,7 +400,8 @@
     "stage": "FRESH_REVERSAL"
   },
   "BIOCON": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "FRESH_REVERSAL",
+    "last_reversal_alerted": "2026-08-06"
   },
   "KSB": {
     "stage": "BASING"
@@ -421,7 +422,7 @@
     "stage": "IN_RETEST"
   },
   "RADICO": {
-    "stage": "FRESH_BOS2"
+    "stage": "IN_RETEST"
   },
   "MANAPPURAM": {
     "stage": "IN_RETEST"
@@ -454,7 +455,7 @@
     "stage": "STALE_BOS2"
   },
   "NGLFINE": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "CNL": {
     "stage": "IN_RETEST"
@@ -511,7 +512,7 @@
     "stage": "STALE_BOS2"
   },
   "KABRAEXTRU": {
-    "stage": "IN_RETEST"
+    "stage": "STALE_BOS2"
   },
   "LAURUSLABS": {
     "stage": "STALE_BOS2"
@@ -541,7 +542,7 @@
     "stage": "STALE_BOS2"
   },
   "FEDERALBNK": {
-    "stage": "IN_RETEST"
+    "stage": "STALE_BOS2"
   },
   "LINDEINDIA": {
     "stage": "STALE_BOS2"
@@ -767,5 +768,8 @@
   },
   "WESTLIFE": {
     "stage": "IN_RETEST"
+  },
+  "JKTYRE": {
+    "stage": "STALE_BOS2"
   }
 }
