@@ -194,7 +194,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "POWERGRID": {
-    "stage": "BASING"
+    "stage": "FRESH_REVERSAL"
   },
   "SANGHVIMOV": {
     "stage": "BASING"
@@ -203,7 +203,7 @@
     "stage": "FRESH_BOS2"
   },
   "EVEREADY": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "CARYSIL": {
     "stage": "PRE_BOS2_READY"
@@ -757,6 +757,9 @@
     "stage": "IN_RETEST"
   },
   "M&MFIN": {
+    "stage": "IN_RETEST"
+  },
+  "TI": {
     "stage": "IN_RETEST"
   }
 }
