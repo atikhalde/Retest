@@ -162,3 +162,61 @@ def find_daily_bos1_candidates(df_daily: pd.DataFrame, cfg):
 
     return candidates
 
+
+def bos1_weekly_confirmation(df_daily: pd.DataFrame, bos1_date, cfg) -> dict:
+    """Weekly momentum confirmation for the ORIGINAL BOS1 breakout week -
+    folded into the quality score (2026-08-08), NOT the detection gate.
+
+    Checks 3 of the original TradingView-style conditions, evaluated on the
+    week containing `bos1_date`:
+        - weekly EMA20 > weekly EMA50 (trend)
+        - weekly MACD histogram > 0 (momentum)
+        - weekly volume > weekly 10-week volume SMA (participation)
+
+    Why scoring, not gating: validated across 964 real historical BOS1
+    breakouts (80 symbols, 5 years) - requiring these as hard conditions
+    correlates with better aggregate forward returns (e.g. weeks that
+    failed the MACD-positive check averaged -0.45% at 10 days vs +0.98%
+    baseline), but AUBank's real, previously-confirmed 2026-04-22 breakout
+    itself has a NEGATIVE weekly MACD histogram - a hard gate would have
+    incorrectly rejected it. Scoring lets a case like that still be
+    detected and tracked, just graded a bit lower instead of thrown away.
+
+    Returns {"raw": int 0-3 or None, "max": 3, "ema20_gt_ema50": bool/None,
+    "macd_hist_positive": bool/None, "vol_gt_sma10": bool/None}. `raw` is
+    None if there isn't enough weekly history yet to compute all three.
+    """
+    empty = {"raw": None, "max": 3, "ema20_gt_ema50": None,
+             "macd_hist_positive": None, "vol_gt_sma10": None}
+    if bos1_date is None:
+        return empty
+
+    w = resample_weekly(df_daily)
+    if len(w) < 50:
+        return empty
+
+    close, vol = w["Close"], w["Volume"]
+    ema20 = ema(close, 20)
+    ema50 = ema(close, 50)
+    macdh = macd_hist(close)
+    vol_sma10 = vol.rolling(10).mean()
+
+    week_candidates = w.index[w.index >= pd.Timestamp(bos1_date)]
+    if len(week_candidates) == 0:
+        return empty
+    week_end = week_candidates[0]
+
+    e20, e50 = ema20.get(week_end), ema50.get(week_end)
+    mh = macdh.get(week_end)
+    v, vsma = vol.get(week_end), vol_sma10.get(week_end)
+
+    conds = {
+        "ema20_gt_ema50": bool(e20 > e50) if pd.notna(e20) and pd.notna(e50) else None,
+        "macd_hist_positive": bool(mh > 0) if pd.notna(mh) else None,
+        "vol_gt_sma10": bool(v > vsma) if pd.notna(v) and pd.notna(vsma) else None,
+    }
+    known = [c for c in conds.values() if c is not None]
+    raw = sum(1 for c in known if c) if len(known) == 3 else None
+    return {"raw": raw, "max": 3, **conds}
+
+

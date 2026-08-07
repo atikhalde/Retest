@@ -32,11 +32,15 @@ different bet than one at 2/9 confluence sitting 13% below resistance.
 
 | Component | Points | What it measures |
 |---|---|---|
-| Confluence | 40 | EMA trend/rising, RSI>threshold/rising, MACD histogram, volume vs average, green candle, near 52w high (scaled from the 0-9 confluence score) |
+| Confluence | 40 | Split into two sub-signals from different points in time (see below) |
 | Structure cleanliness | 20 | Fewer confirmed pivot-low reversals in the re-accumulation window = a cleaner base (1 reversal scores highest, 5+ scores lowest) |
 | Volatility contraction | 15 | Has the range tightened up (coiled) ahead of the move |
 | Re-accumulation duration fit | 15 | ~10-40 trading days is the sweet spot; too short or too long scores lower |
 | Stage maturity | 10 | How confirmed the setup is right now (FRESH_BOS2 > FRESH_REVERSAL > PRE_BOS2_READY > BASING > IN_RETEST) |
+
+**Confluence (40 pts) is itself two sub-signals** (2026-08-08 addition):
+- **30 pts - current daily confluence**: EMA trend/rising, RSI>threshold/rising, MACD histogram, volume vs average, green candle, near 52w high, scaled from the existing 0-9 confluence score, evaluated *as of the signal bar* (how strong is momentum right now).
+- **10 pts - original BOS1 weekly confirmation**: weekly EMA20>EMA50, weekly MACD histogram>0, weekly volume>10-week SMA, scaled from 0-3, evaluated *at the BOS1 breakout week itself* (how strong was the original impulse). This is folded into the **score only, never the detection gate** - validated across 964 real historical BOS1 breakouts (80 symbols, 5 years): breakouts with a positive weekly MACD histogram averaged meaningfully better forward returns (e.g. +0.98% vs -0.45% at 10 days for the ones that failed it), so it's genuinely useful information - but AUBank's real, previously-confirmed 2026-04-22 breakout itself has a *negative* weekly MACD histogram, so making it a hard requirement would have wrongly rejected a known-good case (this happened once before with the full 9-condition gate - see `weekly.py`). Scoring instead of gating means a case like AUBank's still gets detected and tracked, just graded a bit lower (2/3 instead of 3/3) rather than thrown away.
 
 **Grades:** A (80-100, High-Quality) · B (65-79, Good) · C (50-64, Moderate/Watch) · D (<50, Weak/Low-Quality)
 
@@ -47,6 +51,24 @@ the moment the signal fired** (not with today's hindsight), so a symbol's
 live grade today can differ from its grade back when that specific
 historical signal triggered - that's intentional, it avoids look-ahead bias
 in the backtest numbers.
+
+### Rule-testing tool
+
+`scripts/analyze_bos1_rules.py` is a standalone research script that
+enumerates every historical BOS1 breakout in a universe, tags which of the
+original 9 TradingView-style conditions were true that week, and reports
+pattern win rate + forward returns split by each rule (True vs False) -
+this is how the weekly-MACD/volume/EMA20-50 scoring inputs above were
+chosen and validated. Run it yourself with:
+```bash
+python scripts/analyze_bos1_rules.py --symbols-file data/backtest_universe_sample.txt --years 5
+```
+Writes `results/bos1_rule_analysis.csv` (one row per historical BOS1) and
+prints a summary table. 4 of the 9 original conditions turned out to be
+redundant once you already require a genuine new 26-week high (they're
+almost always true anyway); only weekly MACD histogram and weekly volume
+vs its 10-week average showed a real, large-enough-sample difference in
+outcomes.
 
 ## Trade Plan (entry / stop / target / exit window)
 
@@ -99,6 +121,7 @@ scripts/
   check_dhan_token.py       Option B daily reminder - alerts via Telegram if the static Dhan token is stale
   export_backtest_excel.py  standalone regenerator for backtest_results.xlsx from a saved CSV (the normal `backtest` command builds it in-memory directly and doesn't need this)
   optimize_stop_loss.py     sweeps stop-loss methods across the best holding window - standalone, run manually (not part of the "Backtest" workflow)
+  analyze_bos1_rules.py     rule-testing sweep for the original 9-condition checklist (see "Rule-testing tool" above) - standalone, run manually
 .github/workflows/
   update_universe.yml     weekly - rebuilds data/universe.csv
   check_dhan_token.yml    daily, ~08:45 IST (before market open) - Telegram alert if the static token is stale

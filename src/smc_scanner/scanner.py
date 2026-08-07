@@ -73,6 +73,7 @@ def scan_symbol(row, data_source, cfg) -> dict:
         num_reversals=match.num_reversals,
         volatility_contracted=match.volatility_contracted if not pd.isna(match.volatility_contracted) else None,
         reaccum_bars=match.reaccum_bars,
+        bos1_weekly_raw=match.bos1_weekly_raw, bos1_weekly_max=match.bos1_weekly_max,
     )
     # entry/stop/target reference to whichever level is the actual trigger:
     # the reversal price for FRESH_REVERSAL, else last_close for FRESH_BOS2
@@ -120,6 +121,8 @@ def scan_symbol(row, data_source, cfg) -> dict:
         "BOS2_price": num(match.bos2_price),
         "bars_since_bos2": match.bars_since_bos2,
         "confluence_score": f"{conf['score']}/{conf['max_score']}",
+        "bos1_weekly_confluence": (f"{match.bos1_weekly_raw}/{match.bos1_weekly_max}"
+                                    if match.bos1_weekly_raw is not None else "unknown"),
         "confluence_raw": conf["score"],
 
         "entry_date": plan["entry_date"] if plan else None,

@@ -43,7 +43,7 @@ import numpy as np
 import pandas as pd
 
 from .pivots import find_reaccum_reversals
-from .weekly import find_daily_bos1_candidates
+from .weekly import find_daily_bos1_candidates, bos1_weekly_confirmation
 
 HORIZONS = (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 15, 20, 25, 30, 40, 60)
 
@@ -306,13 +306,20 @@ def chain_base_info(chain: Chain, df: pd.DataFrame, cfg=None) -> dict:
     }.get(chain.outcome, "BASING")
     if last_reversal[0] is not None:
         stage_equiv = "FRESH_REVERSAL" if chain.outcome != "BOS2_CONFIRMED" else "FRESH_BOS2"
+
+    bos1_conf = bos1_weekly_confirmation(df, df.index[chain.bos1_idx], cfg) if cfg is not None else {"raw": None, "max": 3}
+
+
+
     quality = compute_quality_score(
         stage=stage_equiv,
         confluence_raw=conf["score"] if conf else None, confluence_max=conf["max_score"] if conf else 9,
         num_reversals=len(reversals),
         volatility_contracted=None,
         reaccum_bars=(reaccum_end_idx - chain.retest_idx),
+        bos1_weekly_raw=bos1_conf["raw"], bos1_weekly_max=bos1_conf["max"],
     )
+
 
     info = {
         "symbol": chain.symbol,
@@ -464,6 +471,7 @@ def _process_symbol(symbol: str, cfg, data_source, horizons, days: int = None) -
                 num_reversals=live_match.num_reversals,
                 volatility_contracted=live_match.volatility_contracted if not pd.isna(live_match.volatility_contracted) else None,
                 reaccum_bars=live_match.reaccum_bars,
+                bos1_weekly_raw=live_match.bos1_weekly_raw, bos1_weekly_max=live_match.bos1_weekly_max,
             )
             trigger_price = live_match.reversal_price if live_match.stage == "FRESH_REVERSAL" and not pd.isna(live_match.reversal_price) else live_match.last_close
             plan = compute_trade_plan(live_match.stage, trigger_price, live_match.last_date, live_match.retest_price, cfg)

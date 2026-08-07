@@ -26,7 +26,7 @@ import numpy as np
 import pandas as pd
 
 from .pivots import find_reaccum_reversals
-from .weekly import find_daily_bos1_candidates
+from .weekly import find_daily_bos1_candidates, bos1_weekly_confirmation
 
 
 
@@ -56,6 +56,11 @@ class PatternMatch:
     last_close: float = np.nan
     last_date: Optional[pd.Timestamp] = None
     notes: str = ""
+    # Weekly confirmation of the ORIGINAL BOS1 breakout (weekly EMA20>EMA50,
+    # MACD histogram>0, volume>10w SMA) - scoring input only, see
+    # weekly.bos1_weekly_confirmation for why this isn't a detection gate.
+    bos1_weekly_raw: Optional[int] = None
+    bos1_weekly_max: int = 3
 
 
 def detect_pattern(df: pd.DataFrame, cfg, symbol: str) -> Optional[PatternMatch]:
@@ -219,5 +224,10 @@ def detect_pattern(df: pd.DataFrame, cfg, symbol: str) -> Optional[PatternMatch]
             and (best_match.bos1_date is None or match.bos1_date > best_match.bos1_date)
         ):
             best_match = match
+
+    if best_match is not None and best_match.bos1_date is not None:
+        conf = bos1_weekly_confirmation(full_df, best_match.bos1_date, cfg)
+        best_match.bos1_weekly_raw = conf["raw"]
+        best_match.bos1_weekly_max = conf["max"]
 
     return best_match
