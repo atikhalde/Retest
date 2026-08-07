@@ -103,7 +103,10 @@ class Config:
     # ---------------- Dhan API ----------------
     dhan_base_url: str = "https://api.dhan.co/v2"
     dhan_auth_url: str = "https://auth.dhan.co"
-    dhan_requests_per_sec: float = 4.0     # keep under the documented 5 req/sec limit
+    dhan_requests_per_sec: float = 3.0     # documented limit is 5/sec, but a real production
+                                            # run got rate-limited (DH-904) on ~100% of requests
+                                            # at 4/sec - more headroom + the fallback.py circuit
+                                            # breaker (2026-08-08) handle this together
     dhan_scrip_master_url: str = "https://images.dhan.co/api-data/api-scrip-master.csv"
     dhan_scrip_master_cache: str = "data/cache/scrip_master.csv"
     dhan_scrip_master_max_age_hours: int = 24
