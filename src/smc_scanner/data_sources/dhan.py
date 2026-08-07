@@ -20,6 +20,19 @@ Rate limiting
 Dhan's documented limit for Data APIs is 5 requests/second (100,000/day).
 `_throttle()` sleeps just enough to stay under that regardless of how the
 scanner is parallelized.
+
+Failure handling: fail fast, no sleep-and-retry backoff (2026-08-08).
+FallbackDataSource already falls back to yfinance per-symbol the instant
+Dhan raises - that fallback IS the retry, so Dhan itself never sleeps and
+retries on rate-limit/generic errors, it just raises immediately. The one
+exception is a stale token in TOTP auto-refresh mode, which gets a single
+immediate retry with a freshly minted token (a stale STATIC/Option-B token
+would fail identically every time, so that mode doesn't retry at all -
+straight to the yfinance fallback). This was a real production issue: a
+12m38s intraday-scan run had 111/643 symbols each burning ~4.5s of pure
+`time.sleep()` before giving up on Dhan anyway, pushing the run past the
+15-minute cron interval and triggering GitHub Actions' concurrency queue
+to cancel piled-up runs.
 """
 import os
 import time
@@ -115,23 +128,46 @@ class DhanDataSource(DataSource):
                 time.sleep(wait)
             self._last_call_ts = time.time()
 
-    def _post(self, path: str, payload: dict, retries: int = 3) -> dict:
+    def _post(self, path: str, payload: dict) -> dict:
+        """Fail fast, no sleep-and-retry backoff (2026-08-08 fix).
+
+        Real evidence from a production intraday-scan run: 111/643 symbols
+        hit Dhan rate-limit-type responses on every one of 3 attempts, each
+        one burning ~4.5s of pure `time.sleep()` backoff (1.5s + 3.0s)
+        before finally giving up and falling back to yfinance anyway - that
+        alone accounted for ~8+ minutes of a 12m38s scan, pushing it past
+        the 15-minute intraday cron interval and causing GitHub Actions'
+        `concurrency` queue to cancel piled-up runs.
+
+        FallbackDataSource already falls back to yfinance per-symbol the
+        moment Dhan raises - there is no benefit to Dhan retrying/sleeping
+        here, since the fallback IS the retry. The one exception: a stale
+        token in TOTP auto-refresh mode is worth a single immediate retry
+        (with a freshly minted token) - but a stale STATIC token (Option B)
+        will fail identically every time, so don't bother retrying that
+        either, just fail straight to the fallback.
+        """
         url = f"{self.cfg.dhan_base_url}{path}"
-        for attempt in range(retries):
+        last_exc = None
+        attempts = 2 if self._totp_secret else 1  # only TOTP mode can mint a genuinely new token
+        for attempt in range(attempts):
             self._throttle()
-            r = requests.post(url, json=payload, headers=self._headers(), timeout=20)
+            try:
+                r = requests.post(url, json=payload, headers=self._headers(), timeout=20)
+            except requests.RequestException as e:
+                raise RuntimeError(f"Dhan request failed on {path}: {e}") from e
             if r.status_code == 200:
                 return r.json()
-            if r.status_code in (429, 805, 904) or "DH-904" in r.text:
-                time.sleep(1.5 * (attempt + 1))
-                continue
-            if r.status_code in (401, 807, 808, 809) and attempt == 0:
-                # token likely stale - force refresh once
+            if r.status_code in (401, 807, 808, 809) and attempt < attempts - 1:
+                # stale token AND we can mint a fresh one (TOTP mode) - retry
+                # immediately, no sleep
                 with self._lock:
                     self._access_token = None
                 continue
-            raise RuntimeError(f"Dhan API error {r.status_code} on {path}: {r.text[:300]}")
-        raise RuntimeError(f"Dhan API failed after {retries} retries on {path}")
+            last_exc = RuntimeError(f"Dhan API error {r.status_code} on {path}: {r.text[:300]}")
+            break
+        raise last_exc
+
 
     # ----------------------------------------------------------------- data
     def fetch_daily(self, security_id: str, exchange_segment: str, instrument: str,
