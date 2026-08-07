@@ -11,17 +11,19 @@ or a temporary Dhan outage never kills the whole scan.
 If Dhan can't even be initialized at all (e.g. no credentials configured),
 the whole run falls back to yfinance for every symbol instead of crashing.
 
-Circuit breaker (2026-08-08): a real production run saw Dhan reject
-~100% of requests with rate-limit errors (DH-904 "Too many requests on
-server from single user") - almost certainly residual account-level
-throttling from a burst of prior scans, not something a per-request
-backoff can fix. Once Dhan has failed with a rate-limit error
-`CIRCUIT_BREAKER_THRESHOLD` times in a row (with no successes in between),
-this class stops even trying Dhan for the rest of the run and goes
-straight to yfinance for every remaining symbol - no point hammering an
-API that's actively telling us to back off, and it means the scan doesn't
-waste one HTTP round-trip per symbol on a call that's already proven
-doomed for this run.
+Circuit breaker (2026-08-08, tightened same day per user request): a real
+production run saw Dhan reject ~100% of requests with rate-limit errors
+(DH-904 "Too many requests on server from single user") - almost
+certainly residual account-level throttling from a burst of prior scans,
+not something a per-request backoff can fix. Once Dhan has failed with a
+rate-limit error `CIRCUIT_BREAKER_THRESHOLD` times in a row (with no
+successes in between - currently 3, tightened down from an initial 8
+since even that many wasted attempts felt too slow to fail over), this
+class stops even trying Dhan for the rest of the run and goes straight to
+yfinance for every remaining symbol - no point hammering an API that's
+actively telling us to back off, and it means the scan doesn't waste one
+HTTP round-trip per symbol on a call that's already proven doomed for
+this run.
 """
 import threading
 
@@ -34,7 +36,7 @@ from .yfinance_source import YFinanceDataSource
 
 class FallbackDataSource(DataSource):
     RATE_LIMIT_MARKERS = ("429", "DH-904", "DH-805", "Rate_Limit")
-    CIRCUIT_BREAKER_THRESHOLD = 8
+    CIRCUIT_BREAKER_THRESHOLD = 3
 
     def __init__(self, cfg):
         self.cfg = cfg
