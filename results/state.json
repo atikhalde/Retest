@@ -9,7 +9,7 @@
     "stage": "FRESH_BOS2"
   },
   "KERNEX": {
-    "stage": "IN_RETEST"
+    "stage": "FRESH_BOS2"
   },
   "TALBROAUTO": {
     "stage": "FRESH_BOS2"
@@ -18,13 +18,13 @@
     "stage": "IN_RETEST"
   },
   "KDDL": {
-    "stage": "IN_RETEST"
+    "stage": "FRESH_BOS2"
   },
   "MARINE": {
     "stage": "FRESH_BOS2"
   },
   "NAHARSPING": {
-    "stage": "IN_RETEST"
+    "stage": "FRESH_BOS2"
   },
   "ASTERDM": {
     "stage": "FRESH_BOS2"
@@ -36,7 +36,7 @@
     "stage": "FRESH_BOS2"
   },
   "CRAFTSMAN": {
-    "stage": "FRESH_BOS2"
+    "stage": "STALE_BOS2"
   },
   "GLAND": {
     "stage": "STALE_BOS2"
@@ -206,7 +206,7 @@
     "stage": "BASING"
   },
   "CARYSIL": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "NETWEB": {
     "stage": "PRE_BOS2_READY"
@@ -254,10 +254,10 @@
     "stage": "FRESH_REVERSAL"
   },
   "NITINSPIN": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "DIVGIITTS": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "DATAMATICS": {
     "stage": "BASING"
@@ -275,7 +275,7 @@
     "stage": "BASING"
   },
   "MPSLTD": {
-    "stage": "IN_RETEST"
+    "stage": "BASING"
   },
   "SHREEPUSHK": {
     "stage": "BASING"
@@ -284,7 +284,7 @@
     "stage": "BASING"
   },
   "SSWL": {
-    "stage": "STALE_BOS2"
+    "stage": "BASING"
   },
   "HIRECT": {
     "stage": "BASING"
@@ -302,7 +302,7 @@
     "stage": "BASING"
   },
   "ESAFSFB": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "PAGEIND": {
     "stage": "BASING"
@@ -338,7 +338,7 @@
     "stage": "BASING"
   },
   "JSWENERGY": {
-    "stage": "FRESH_REVERSAL"
+    "stage": "BASING"
   },
   "ITDC": {
     "stage": "BASING"
@@ -416,7 +416,7 @@
     "stage": "BASING"
   },
   "GABRIEL": {
-    "stage": "IN_RETEST"
+    "stage": "BASING"
   },
   "UNIPARTS": {
     "stage": "IN_RETEST"
@@ -455,7 +455,7 @@
     "stage": "STALE_BOS2"
   },
   "NGLFINE": {
-    "stage": "IN_RETEST"
+    "stage": "STALE_BOS2"
   },
   "CNL": {
     "stage": "IN_RETEST"
