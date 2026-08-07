@@ -24,7 +24,7 @@
     "stage": "FRESH_BOS2"
   },
   "NAHARSPING": {
-    "stage": "FRESH_BOS2"
+    "stage": "IN_RETEST"
   },
   "ASTERDM": {
     "stage": "IN_RETEST"
@@ -36,7 +36,7 @@
     "stage": "FRESH_BOS2"
   },
   "CRAFTSMAN": {
-    "stage": "STALE_BOS2"
+    "stage": "FRESH_BOS2"
   },
   "GLAND": {
     "stage": "STALE_BOS2"
@@ -206,7 +206,7 @@
     "stage": "BASING"
   },
   "CARYSIL": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "NETWEB": {
     "stage": "PRE_BOS2_READY"
@@ -320,7 +320,7 @@
     "stage": "BASING"
   },
   "QUADFUTURE": {
-    "stage": "FRESH_REVERSAL"
+    "stage": "BASING"
   },
   "SUYOG": {
     "stage": "BASING"
@@ -400,7 +400,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "BIOCON": {
-    "stage": "FRESH_REVERSAL"
+    "stage": "PRE_BOS2_READY"
   },
   "KSB": {
     "stage": "BASING"
@@ -421,7 +421,7 @@
     "stage": "IN_RETEST"
   },
   "RADICO": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "FRESH_BOS2"
   },
   "MANAPPURAM": {
     "stage": "IN_RETEST"
@@ -454,7 +454,7 @@
     "stage": "STALE_BOS2"
   },
   "NGLFINE": {
-    "stage": "IN_RETEST"
+    "stage": "STALE_BOS2"
   },
   "CNL": {
     "stage": "IN_RETEST"
@@ -511,7 +511,7 @@
     "stage": "STALE_BOS2"
   },
   "KABRAEXTRU": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "LAURUSLABS": {
     "stage": "STALE_BOS2"
@@ -764,5 +764,8 @@
   },
   "PTC": {
     "stage": "STALE_BOS2"
+  },
+  "WESTLIFE": {
+    "stage": "IN_RETEST"
   }
 }
