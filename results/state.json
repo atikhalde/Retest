@@ -24,7 +24,7 @@
     "stage": "FRESH_BOS2"
   },
   "NAHARSPING": {
-    "stage": "FRESH_BOS2"
+    "stage": "IN_RETEST"
   },
   "ASTERDM": {
     "stage": "FRESH_BOS2"
@@ -254,7 +254,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "NITINSPIN": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "DIVGIITTS": {
     "stage": "PRE_BOS2_READY"
@@ -390,7 +390,8 @@
     "stage": "BASING"
   },
   "GMRAIRPORT": {
-    "stage": "BASING"
+    "stage": "FRESH_REVERSAL",
+    "last_reversal_alerted": "2026-08-07"
   },
   "TCPLPACK": {
     "stage": "FRESH_REVERSAL"
@@ -453,7 +454,7 @@
     "stage": "STALE_BOS2"
   },
   "NGLFINE": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "CNL": {
     "stage": "IN_RETEST"
@@ -753,6 +754,9 @@
     "stage": "IN_RETEST"
   },
   "VIMTALABS": {
+    "stage": "IN_RETEST"
+  },
+  "M&MFIN": {
     "stage": "IN_RETEST"
   }
 }
