@@ -9,7 +9,7 @@
     "stage": "FRESH_BOS2"
   },
   "KERNEX": {
-    "stage": "FRESH_BOS2"
+    "stage": "IN_RETEST"
   },
   "TALBROAUTO": {
     "stage": "FRESH_BOS2"
@@ -72,7 +72,7 @@
     "stage": "FRESH_BOS2"
   },
   "GRASIM": {
-    "stage": "FRESH_BOS2"
+    "stage": "IN_RETEST"
   },
   "LLOYDSME": {
     "stage": "FRESH_BOS2"
@@ -227,7 +227,7 @@
     "stage": "PRE_BOS2_READY"
   },
   "MUTHOOTMF": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "STYRENIX": {
     "stage": "BASING"
@@ -344,7 +344,7 @@
     "stage": "BASING"
   },
   "GRANULES": {
-    "stage": "FRESH_REVERSAL",
+    "stage": "BASING",
     "last_reversal_alerted": "2026-08-07"
   },
   "GANESHHOU": {
@@ -390,7 +390,7 @@
     "stage": "BASING"
   },
   "GMRAIRPORT": {
-    "stage": "FRESH_REVERSAL",
+    "stage": "BASING",
     "last_reversal_alerted": "2026-08-07"
   },
   "TCPLPACK": {
@@ -454,7 +454,7 @@
     "stage": "STALE_BOS2"
   },
   "NGLFINE": {
-    "stage": "IN_RETEST"
+    "stage": "STALE_BOS2"
   },
   "CNL": {
     "stage": "IN_RETEST"
@@ -541,7 +541,7 @@
     "stage": "STALE_BOS2"
   },
   "FEDERALBNK": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "LINDEINDIA": {
     "stage": "STALE_BOS2"
