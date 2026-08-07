@@ -344,7 +344,7 @@
     "stage": "BASING"
   },
   "GRANULES": {
-    "stage": "BASING",
+    "stage": "FRESH_REVERSAL",
     "last_reversal_alerted": "2026-08-07"
   },
   "GANESHHOU": {
@@ -390,7 +390,7 @@
     "stage": "BASING"
   },
   "GMRAIRPORT": {
-    "stage": "BASING",
+    "stage": "FRESH_REVERSAL",
     "last_reversal_alerted": "2026-08-07"
   },
   "TCPLPACK": {
@@ -415,7 +415,7 @@
     "stage": "BASING"
   },
   "GABRIEL": {
-    "stage": "BASING"
+    "stage": "IN_RETEST"
   },
   "UNIPARTS": {
     "stage": "IN_RETEST"
