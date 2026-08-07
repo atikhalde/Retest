@@ -9,7 +9,7 @@
     "stage": "FRESH_BOS2"
   },
   "KERNEX": {
-    "stage": "IN_RETEST"
+    "stage": "FRESH_BOS2"
   },
   "TALBROAUTO": {
     "stage": "FRESH_BOS2"
@@ -203,10 +203,10 @@
     "stage": "FRESH_BOS2"
   },
   "EVEREADY": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "CARYSIL": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "NETWEB": {
     "stage": "PRE_BOS2_READY"
@@ -302,7 +302,7 @@
     "stage": "BASING"
   },
   "ESAFSFB": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "PAGEIND": {
     "stage": "BASING"
@@ -390,7 +390,7 @@
     "stage": "BASING"
   },
   "GMRAIRPORT": {
-    "stage": "FRESH_REVERSAL",
+    "stage": "BASING",
     "last_reversal_alerted": "2026-08-07"
   },
   "TCPLPACK": {
@@ -415,7 +415,7 @@
     "stage": "BASING"
   },
   "GABRIEL": {
-    "stage": "IN_RETEST"
+    "stage": "BASING"
   },
   "UNIPARTS": {
     "stage": "IN_RETEST"
@@ -541,7 +541,7 @@
     "stage": "STALE_BOS2"
   },
   "FEDERALBNK": {
-    "stage": "IN_RETEST"
+    "stage": "STALE_BOS2"
   },
   "LINDEINDIA": {
     "stage": "STALE_BOS2"
