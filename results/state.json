@@ -36,7 +36,7 @@
     "stage": "FRESH_BOS2"
   },
   "CRAFTSMAN": {
-    "stage": "STALE_BOS2"
+    "stage": "FRESH_BOS2"
   },
   "GLAND": {
     "stage": "STALE_BOS2"
@@ -308,7 +308,7 @@
     "stage": "BASING"
   },
   "WELSPUNLIV": {
-    "stage": "FRESH_REVERSAL"
+    "stage": "BASING"
   },
   "LUPIN": {
     "stage": "BASING"
@@ -338,13 +338,13 @@
     "stage": "BASING"
   },
   "JSWENERGY": {
-    "stage": "BASING"
+    "stage": "FRESH_REVERSAL"
   },
   "ITDC": {
     "stage": "BASING"
   },
   "GRANULES": {
-    "stage": "FRESH_REVERSAL",
+    "stage": "BASING",
     "last_reversal_alerted": "2026-08-07"
   },
   "GANESHHOU": {
@@ -369,7 +369,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "UJJIVANSFB": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "VOLTAMP": {
     "stage": "BASING"
@@ -397,7 +397,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "HSCL": {
-    "stage": "FRESH_REVERSAL"
+    "stage": "BASING"
   },
   "BIOCON": {
     "stage": "FRESH_REVERSAL",
@@ -416,7 +416,7 @@
     "stage": "BASING"
   },
   "GABRIEL": {
-    "stage": "BASING"
+    "stage": "IN_RETEST"
   },
   "UNIPARTS": {
     "stage": "IN_RETEST"
@@ -437,7 +437,7 @@
     "stage": "IN_RETEST"
   },
   "REDINGTON": {
-    "stage": "BASING"
+    "stage": "IN_RETEST"
   },
   "KRISHANA": {
     "stage": "BASING"
