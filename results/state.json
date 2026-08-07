@@ -194,7 +194,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "POWERGRID": {
-    "stage": "FRESH_REVERSAL"
+    "stage": "BASING"
   },
   "SANGHVIMOV": {
     "stage": "BASING"
@@ -215,7 +215,7 @@
     "stage": "FRESH_BOS2"
   },
   "INDHOTEL": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "TEXINFRA": {
     "stage": "PRE_BOS2_READY"
@@ -415,7 +415,7 @@
     "stage": "BASING"
   },
   "GABRIEL": {
-    "stage": "IN_RETEST"
+    "stage": "BASING"
   },
   "UNIPARTS": {
     "stage": "IN_RETEST"
@@ -761,5 +761,8 @@
   },
   "TI": {
     "stage": "IN_RETEST"
+  },
+  "PTC": {
+    "stage": "STALE_BOS2"
   }
 }
