@@ -335,7 +335,7 @@
     "stage": "BASING"
   },
   "TMB": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "JSWENERGY": {
     "stage": "BASING"
@@ -509,7 +509,7 @@
     "stage": "STALE_BOS2"
   },
   "FILATEX": {
-    "stage": "IN_RETEST"
+    "stage": "STALE_BOS2"
   },
   "KABRAEXTRU": {
     "stage": "STALE_BOS2"
@@ -800,7 +800,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "RAYMOND": {
-    "stage": "FRESH_BOS2"
+    "stage": "FRESH_REVERSAL"
   },
   "STOVEKRAFT": {
     "stage": "FRESH_BOS2"
