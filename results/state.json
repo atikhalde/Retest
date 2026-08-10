@@ -115,7 +115,7 @@
     "stage": "BASING"
   },
   "AZAD": {
-    "stage": "FRESH_REVERSAL",
+    "stage": "FRESH_BOS2",
     "last_reversal_alerted": "2026-08-05"
   },
   "RISHABH": {
@@ -848,7 +848,7 @@
     "stage": "BASING"
   },
   "RPEL": {
-    "stage": "FRESH_BOS2",
+    "stage": "FRESH_REVERSAL",
     "last_reversal_alerted": "2026-08-10"
   },
   "JSFB": {
