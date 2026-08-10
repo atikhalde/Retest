@@ -218,7 +218,7 @@
     "stage": "BASING"
   },
   "TEXINFRA": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "IKS": {
     "stage": "BASING"
@@ -394,7 +394,7 @@
     "last_reversal_alerted": "2026-08-07"
   },
   "TCPLPACK": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "HSCL": {
     "stage": "FRESH_REVERSAL"
@@ -1050,5 +1050,8 @@
   },
   "MCX": {
     "stage": "STALE_BOS2"
+  },
+  "HLEGLAS": {
+    "stage": "IN_RETEST"
   }
 }
