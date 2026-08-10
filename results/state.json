@@ -69,7 +69,7 @@
     "stage": "STALE_BOS2"
   },
   "IGPL": {
-    "stage": "FRESH_BOS2"
+    "stage": "IN_RETEST"
   },
   "GRASIM": {
     "stage": "IN_RETEST"
@@ -137,7 +137,7 @@
     "stage": "BASING"
   },
   "ASTRAMICRO": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "BHARATSE": {
     "stage": "BASING"
@@ -248,7 +248,7 @@
     "stage": "FRESH_BOS2"
   },
   "ACE": {
-    "stage": "BASING"
+    "stage": "IN_RETEST"
   },
   "ALKYLAMINE": {
     "stage": "FRESH_REVERSAL"
@@ -311,7 +311,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "LUPIN": {
-    "stage": "BASING"
+    "stage": "STALE_BOS2"
   },
   "AIAENG": {
     "stage": "BASING"
@@ -509,7 +509,7 @@
     "stage": "STALE_BOS2"
   },
   "FILATEX": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "KABRAEXTRU": {
     "stage": "STALE_BOS2"
@@ -830,7 +830,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "LMW": {
-    "stage": "BASING"
+    "stage": "FRESH_BOS2"
   },
   "MUFIN": {
     "stage": "PRE_BOS2_READY"
@@ -948,7 +948,7 @@
     "stage": "STALE_BOS2"
   },
   "ABCAPITAL": {
-    "stage": "STALE_BOS2"
+    "stage": "FRESH_BOS2"
   },
   "SEAMECLTD": {
     "stage": "STALE_BOS2"
@@ -1057,5 +1057,8 @@
   },
   "TRENT": {
     "stage": "BASING"
+  },
+  "BASF": {
+    "stage": "IN_RETEST"
   }
 }
