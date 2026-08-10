@@ -137,7 +137,7 @@
     "stage": "BASING"
   },
   "ASTRAMICRO": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "BHARATSE": {
     "stage": "BASING"
@@ -203,7 +203,7 @@
     "stage": "FRESH_BOS2"
   },
   "EVEREADY": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "CARYSIL": {
     "stage": "PRE_BOS2_READY"
@@ -311,7 +311,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "LUPIN": {
-    "stage": "STALE_BOS2"
+    "stage": "BASING"
   },
   "AIAENG": {
     "stage": "BASING"
@@ -335,7 +335,7 @@
     "stage": "BASING"
   },
   "TMB": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "JSWENERGY": {
     "stage": "BASING"
@@ -509,7 +509,7 @@
     "stage": "STALE_BOS2"
   },
   "FILATEX": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "KABRAEXTRU": {
     "stage": "STALE_BOS2"
@@ -800,10 +800,10 @@
     "stage": "FRESH_REVERSAL"
   },
   "RAYMOND": {
-    "stage": "FRESH_REVERSAL"
+    "stage": "FRESH_BOS2"
   },
   "STOVEKRAFT": {
-    "stage": "FRESH_REVERSAL"
+    "stage": "FRESH_BOS2"
   },
   "GOODLUCK": {
     "stage": "FRESH_REVERSAL"
@@ -1062,6 +1062,9 @@
     "stage": "IN_RETEST"
   },
   "JGCHEM": {
+    "stage": "IN_RETEST"
+  },
+  "SHRIRAMFIN": {
     "stage": "IN_RETEST"
   }
 }
