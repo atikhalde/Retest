@@ -33,7 +33,7 @@
     "stage": "FRESH_BOS2"
   },
   "AVALON": {
-    "stage": "IN_RETEST"
+    "stage": "STALE_BOS2"
   },
   "CRAFTSMAN": {
     "stage": "STALE_BOS2"
@@ -54,7 +54,7 @@
     "stage": "FRESH_BOS2"
   },
   "MINDACORP": {
-    "stage": "STALE_BOS2"
+    "stage": "FRESH_BOS2"
   },
   "AEROENTER": {
     "stage": "FRESH_BOS2"
@@ -106,7 +106,7 @@
     "last_reversal_alerted": "2026-08-05"
   },
   "ADOR": {
-    "stage": "BASING"
+    "stage": "FRESH_REVERSAL"
   },
   "MMFL": {
     "stage": "FRESH_BOS2"
@@ -119,16 +119,16 @@
     "last_reversal_alerted": "2026-08-05"
   },
   "RISHABH": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "FRESH_REVERSAL"
   },
   "GNA": {
     "stage": "BASING"
   },
   "GODREJIND": {
-    "stage": "BASING"
+    "stage": "FRESH_REVERSAL"
   },
   "AADHARHFC": {
-    "stage": "BASING"
+    "stage": "FRESH_REVERSAL"
   },
   "ABB": {
     "stage": "PRE_BOS2_READY"
@@ -149,16 +149,16 @@
     "stage": "BASING"
   },
   "MOTILALOFS": {
-    "stage": "BASING"
+    "stage": "FRESH_REVERSAL"
   },
   "YESBANK": {
     "stage": "BASING"
   },
   "SENORES": {
-    "stage": "FRESH_BOS2"
+    "stage": "FRESH_REVERSAL"
   },
   "RML": {
-    "stage": "STALE_BOS2"
+    "stage": "FRESH_BOS2"
   },
   "HARSHA": {
     "stage": "FRESH_REVERSAL"
@@ -191,7 +191,7 @@
     "stage": "FRESH_BOS2"
   },
   "CIEINDIA": {
-    "stage": "BASING"
+    "stage": "FRESH_REVERSAL"
   },
   "POWERGRID": {
     "stage": "BASING"
@@ -257,7 +257,7 @@
     "stage": "PRE_BOS2_READY"
   },
   "DIVGIITTS": {
-    "stage": "BASING"
+    "stage": "FRESH_BOS2"
   },
   "DATAMATICS": {
     "stage": "BASING"
@@ -284,7 +284,7 @@
     "stage": "BASING"
   },
   "SSWL": {
-    "stage": "BASING"
+    "stage": "STALE_BOS2"
   },
   "HIRECT": {
     "stage": "BASING"
@@ -293,7 +293,7 @@
     "stage": "BASING"
   },
   "SHAREINDIA": {
-    "stage": "BASING"
+    "stage": "FRESH_REVERSAL"
   },
   "STEL": {
     "stage": "BASING"
@@ -320,7 +320,7 @@
     "stage": "BASING"
   },
   "QUADFUTURE": {
-    "stage": "BASING"
+    "stage": "FRESH_REVERSAL"
   },
   "SUYOG": {
     "stage": "BASING"
@@ -366,7 +366,7 @@
     "stage": "BASING"
   },
   "FLUOROCHEM": {
-    "stage": "BASING"
+    "stage": "FRESH_REVERSAL"
   },
   "UJJIVANSFB": {
     "stage": "FRESH_REVERSAL"
@@ -419,7 +419,7 @@
     "stage": "BASING"
   },
   "UNIPARTS": {
-    "stage": "BASING"
+    "stage": "IN_RETEST"
   },
   "RADICO": {
     "stage": "BASING"
@@ -428,7 +428,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "SPORTKING": {
-    "stage": "BASING"
+    "stage": "FRESH_REVERSAL"
   },
   "JLHL": {
     "stage": "BASING"
@@ -746,7 +746,7 @@
     "stage": "IN_RETEST"
   },
   "THEJO": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "IN_RETEST"
   },
   "VSSL": {
     "stage": "IN_RETEST"
@@ -797,19 +797,19 @@
     "stage": "FRESH_REVERSAL"
   },
   "GANDHAR": {
-    "stage": "BASING"
+    "stage": "FRESH_REVERSAL"
   },
   "RAYMOND": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "FRESH_REVERSAL"
   },
   "STOVEKRAFT": {
-    "stage": "FRESH_BOS2"
+    "stage": "FRESH_REVERSAL"
   },
   "GOODLUCK": {
     "stage": "STALE_BOS2"
   },
   "BFINVEST": {
-    "stage": "BASING"
+    "stage": "FRESH_REVERSAL"
   },
   "KIRLOSENG": {
     "stage": "BASING"
@@ -818,19 +818,19 @@
     "stage": "FRESH_REVERSAL"
   },
   "OBEROIRLTY": {
-    "stage": "BASING"
+    "stage": "FRESH_REVERSAL"
   },
   "ACUTAAS": {
     "stage": "FRESH_REVERSAL"
   },
   "DSSL": {
-    "stage": "BASING"
+    "stage": "FRESH_REVERSAL"
   },
   "MAHSEAMLES": {
     "stage": "BASING"
   },
   "LMW": {
-    "stage": "FRESH_BOS2"
+    "stage": "BASING"
   },
   "MUFIN": {
     "stage": "PRE_BOS2_READY"
@@ -848,7 +848,7 @@
     "stage": "BASING"
   },
   "RPEL": {
-    "stage": "FRESH_REVERSAL"
+    "stage": "BASING"
   },
   "JSFB": {
     "stage": "BASING"
@@ -923,10 +923,10 @@
     "stage": "IN_RETEST"
   },
   "SMLMAH": {
-    "stage": "BASING"
+    "stage": "IN_RETEST"
   },
   "GPTHEALTH": {
-    "stage": "BASING"
+    "stage": "IN_RETEST"
   },
   "KICL": {
     "stage": "STALE_BOS2"
@@ -1046,7 +1046,7 @@
     "stage": "STALE_BOS2"
   },
   "NACLIND": {
-    "stage": "BASING"
+    "stage": "STALE_BOS2"
   },
   "MCX": {
     "stage": "STALE_BOS2"
