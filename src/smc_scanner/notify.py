@@ -57,9 +57,15 @@ def format_alert(row: dict) -> str:
         # request: "show something special on the header so we can't
         # miss"). NSE-confirmed vs our own volume-vs-20d-average fallback
         # (when NSE itself couldn't be reached) are labeled differently so
-        # it's clear which one triggered it.
+        # it's clear which one triggered it. Also shows the surge multiple
+        # itself (2026-08-12 addition, "show how big the volume surge is")
+        # - NSE's own reported multiple when sourced from NSE, or our
+        # locally-computed volume/20d-average ratio for the fallback path.
         src = row.get("volume_gainer_source") or ""
-        label = "🔥🔥🔥 NSE VOLUME GAINER 🔥🔥🔥" if src == "nse" else f"🔥🔥🔥 HIGH VOLUME ({src}) 🔥🔥🔥"
+        surge = row.get("volume_surge_multiple")
+        surge_txt = f" ({surge:g}x avg volume)" if _present(surge) else ""
+        label = (f"🔥🔥🔥 NSE VOLUME GAINER{surge_txt} 🔥🔥🔥" if src == "nse"
+                 else f"🔥🔥🔥 HIGH VOLUME{surge_txt} ({src}) 🔥🔥🔥")
         lines.append(f"*{label}*")
     lines.extend([
         f"{stage_emoji} *{row['symbol']}* — `{row['stage']}`",

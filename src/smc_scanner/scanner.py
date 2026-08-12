@@ -85,15 +85,21 @@ def scan_symbol(row, data_source, cfg, nse_gainers=None) -> dict:
     # nse_gainers is None when: not intraday mode, OR NSE couldn't be reached
     # this run (fetched once per run, not per-symbol) - either way we fall
     # back to our own already-computed volume-vs-20d-average check.
+    # 2026-08-12: also surfaces the surge multiple ("how big"), not just a
+    # yes/no flag - the membership/threshold logic itself is unchanged.
     is_gainer = False
     gainer_source = None
+    surge_multiple = None
     if cfg.scan_mode == "intraday":
         if nse_gainers is not None:
             is_gainer = symbol in nse_gainers
             gainer_source = "nse" if is_gainer else None
+            surge_multiple = nse_gainers.get(symbol) if is_gainer else None
         else:
-            is_gainer = is_volume_gainer_fallback(df, cfg)
+            is_gainer, surge_multiple = is_volume_gainer_fallback(df, cfg)
             gainer_source = "fallback (volume vs 20d avg)" if is_gainer else None
+            if not is_gainer:
+                surge_multiple = None
 
     def d(x):
 
@@ -141,6 +147,8 @@ def scan_symbol(row, data_source, cfg, nse_gainers=None) -> dict:
         "confluence_raw": conf["score"],
         "nse_volume_gainer": is_gainer,
         "volume_gainer_source": gainer_source,
+        "volume_surge_multiple": round(surge_multiple, 2) if surge_multiple is not None else None,
+
 
 
         "entry_date": plan["entry_date"] if plan else None,

@@ -34,10 +34,19 @@ _HEADERS = {
 
 
 def fetch_nse_volume_gainers(timeout: int = 10):
-    """Returns a set of NSE trading symbols currently on the live Volume
-    Gainers list, or None if the fetch failed for any reason (network
-    error, non-200, blocked/challenged, malformed response). Never raises -
-    a failure here should never take down the rest of the scan.
+    """Returns a dict of {symbol: surge_multiple} for every symbol currently
+    on NSE's live Volume Gainers list, or None if the fetch failed for any
+    reason (network error, non-200, blocked/challenged, malformed
+    response). Never raises - a failure here should never take down the
+    rest of the scan.
+
+    `surge_multiple` is NSE's own `week1volChange` field, i.e. today's
+    volume divided by the symbol's trailing 1-week average volume (verified
+    against NSE's own `volume`/`week1AvgVolume` columns - they match
+    exactly). 2026-08-12 addition: this used to just be a plain set of
+    symbols; now it also carries the multiple so alerts can show "how big"
+    the surge is, not just that one exists - the membership check itself
+    (which symbols count as "gainers") is unchanged.
     """
     try:
         session = requests.Session()
@@ -52,25 +61,34 @@ def fetch_nse_volume_gainers(timeout: int = 10):
             return None
         data = r.json()
         rows = data.get("data", [])
-        symbols = {row["symbol"] for row in rows if "symbol" in row}
-        print(f"[nse_data] fetched {len(symbols)} symbols from NSE's live Volume Gainers list")
-        return symbols
+        gainers = {row["symbol"]: float(row["week1volChange"])
+                   for row in rows if "symbol" in row and "week1volChange" in row}
+        print(f"[nse_data] fetched {len(gainers)} symbols from NSE's live Volume Gainers list")
+        return gainers
     except Exception as e:
         print(f"[nse_data] volume-gainers fetch failed ({e}) - "
               f"falling back to our own volume-vs-average check")
         return None
 
 
-def is_volume_gainer_fallback(df: pd.DataFrame, cfg) -> bool:
+def is_volume_gainer_fallback(df: pd.DataFrame, cfg):
     """Self-contained fallback when NSE itself couldn't be reached: flags
     "today's volume is at least `volume_gainer_fallback_multiple` times its
     20-day average" using data the scanner already fetched for this symbol
     - no extra network calls, same underlying intent as NSE's own list.
+
+    Returns (is_gainer: bool, surge_multiple: float or None). The pass/fail
+    threshold logic is unchanged from before (2026-08-12) - this just also
+    returns the actual computed ratio for display, whether or not it
+    passed the threshold.
     """
     if df is None or df.empty or "VOL_SMA20" not in df.columns:
-        return False
+        return False, None
     last_vol = df["Volume"].values[-1]
     vol_sma20 = df["VOL_SMA20"].values[-1]
     if pd.isna(last_vol) or pd.isna(vol_sma20) or vol_sma20 <= 0:
-        return False
-    return bool(last_vol >= cfg.volume_gainer_fallback_multiple * vol_sma20)
+        return False, None
+    ratio = float(last_vol / vol_sma20)
+    is_gainer = bool(last_vol >= cfg.volume_gainer_fallback_multiple * vol_sma20)
+    return is_gainer, ratio
+

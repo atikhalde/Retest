@@ -31,12 +31,17 @@ against NSE's own live "Volume Gainers" list
 `src/smc_scanner/nse_data.py`). If a stock we're alerting on is *also*
 independently showing up on NSE's own unusual-volume list right now,
 that's a real extra confluence signal - the Telegram alert gets a
-prominent `🔥🔥🔥 NSE VOLUME GAINER 🔥🔥🔥` line above everything else so
-it's impossible to miss while skimming.
+prominent `🔥🔥🔥 NSE VOLUME GAINER (4.97x avg volume) 🔥🔥🔥` line above
+everything else so it's impossible to miss while skimming - including the
+actual surge multiple, not just a yes/no flag (2026-08-12 addition).
 
 - Fetched **once per run** (not once per symbol) to keep this cheap.
 - **EOD scans are completely untouched** - this only runs when
   `SCANNER_MODE=intraday`.
+- The surge multiple shown is NSE's own `week1volChange` field (verified
+  against their `volume`/`week1AvgVolume` columns - it's exactly
+  `today's volume / 1-week average volume`) when sourced from NSE, or our
+  own `today's volume / 20-day average` ratio for the fallback path below.
 - NSE's site is known to challenge/block automated requests, especially
   from cloud datacenter IPs (which is exactly what GitHub Actions runners
   are) - if the fetch fails for any reason, it fails soft: every symbol
