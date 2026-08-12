@@ -12,7 +12,7 @@
     "stage": "IN_RETEST"
   },
   "TALBROAUTO": {
-    "stage": "IN_RETEST"
+    "stage": "FRESH_BOS2"
   },
   "RBA": {
     "stage": "IN_RETEST"
@@ -45,7 +45,7 @@
     "stage": "STALE_BOS2"
   },
   "RRKABEL": {
-    "stage": "BASING"
+    "stage": "FRESH_BOS2"
   },
   "HAPPYFORGE": {
     "stage": "FRESH_BOS2"
@@ -263,13 +263,13 @@
     "stage": "BASING"
   },
   "LANDMARK": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "YATHARTH": {
     "stage": "FRESH_BOS2"
   },
   "ICIL": {
-    "stage": "FRESH_BOS2"
+    "stage": "PRE_BOS2_READY"
   },
   "CERA": {
     "stage": "BASING"
@@ -284,7 +284,7 @@
     "stage": "BASING"
   },
   "SSWL": {
-    "stage": "STALE_BOS2"
+    "stage": "BASING"
   },
   "HIRECT": {
     "stage": "BASING"
@@ -401,7 +401,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "BIOCON": {
-    "stage": "PRE_BOS2_READY",
+    "stage": "FRESH_REVERSAL",
     "last_reversal_alerted": "2026-08-06"
   },
   "KSB": {
@@ -423,7 +423,7 @@
     "stage": "BASING"
   },
   "RADICO": {
-    "stage": "FRESH_BOS2"
+    "stage": "BASING"
   },
   "MANAPPURAM": {
     "stage": "FRESH_REVERSAL"
@@ -513,7 +513,7 @@
     "stage": "IN_RETEST"
   },
   "KABRAEXTRU": {
-    "stage": "BASING"
+    "stage": "STALE_BOS2"
   },
   "LAURUSLABS": {
     "stage": "STALE_BOS2"
@@ -783,7 +783,7 @@
     "stage": "STALE_BOS2"
   },
   "ASKAUTOLTD": {
-    "stage": "BASING"
+    "stage": "FRESH_BOS2"
   },
   "RANEHOLDIN": {
     "stage": "STALE_BOS2"
@@ -849,7 +849,7 @@
     "stage": "BASING"
   },
   "RPEL": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "FRESH_REVERSAL"
   },
   "JSFB": {
     "stage": "BASING"
