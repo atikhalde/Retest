@@ -45,7 +45,7 @@
     "stage": "STALE_BOS2"
   },
   "RRKABEL": {
-    "stage": "FRESH_BOS2"
+    "stage": "PRE_BOS2_READY"
   },
   "HAPPYFORGE": {
     "stage": "FRESH_BOS2"
@@ -119,7 +119,7 @@
     "last_reversal_alerted": "2026-08-05"
   },
   "RISHABH": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "GNA": {
     "stage": "BASING"
@@ -170,7 +170,7 @@
     "stage": "BASING"
   },
   "INGERRAND": {
-    "stage": "BASING"
+    "stage": "FRESH_REVERSAL"
   },
   "GOKULAGRO": {
     "stage": "BASING"
@@ -209,7 +209,7 @@
     "stage": "FRESH_BOS2"
   },
   "NETWEB": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "PGIL": {
     "stage": "FRESH_BOS2"
@@ -284,7 +284,7 @@
     "stage": "BASING"
   },
   "SSWL": {
-    "stage": "STALE_BOS2"
+    "stage": "BASING"
   },
   "HIRECT": {
     "stage": "BASING"
@@ -360,13 +360,13 @@
     "stage": "BASING"
   },
   "POWERMECH": {
-    "stage": "BASING"
+    "stage": "STALE_BOS2"
   },
   "TVSSCS": {
     "stage": "BASING"
   },
   "FLUOROCHEM": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "UJJIVANSFB": {
     "stage": "FRESH_REVERSAL"
@@ -939,10 +939,10 @@
     "stage": "STALE_BOS2"
   },
   "MACPOWER": {
-    "stage": "IN_RETEST"
+    "stage": "STALE_BOS2"
   },
   "LLOYDSENT": {
-    "stage": "STALE_BOS2"
+    "stage": "FRESH_BOS2"
   },
   "GULPOLY": {
     "stage": "STALE_BOS2"
@@ -975,7 +975,7 @@
     "stage": "STALE_BOS2"
   },
   "UFBL": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "PANAMAPET": {
     "stage": "STALE_BOS2"
@@ -1071,6 +1071,9 @@
     "stage": "STALE_BOS2"
   },
   "AARTIPHARM": {
+    "stage": "IN_RETEST"
+  },
+  "ANANTRAJ": {
     "stage": "IN_RETEST"
   }
 }
