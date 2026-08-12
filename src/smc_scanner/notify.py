@@ -73,6 +73,19 @@ def format_alert(row: dict) -> str:
         f"Close: {row['last_close']}  ({row['last_date']})",
         f"P0(base): {row.get('P0_base_level')}   P1(resistance): {row.get('P1_resistance')}",
     ])
+    # Always-present volume detail on every intraday alert (2026-08-12, per
+    # user request: "volume details should be in all stock alert not just
+    # in nse volume gainer") - shown regardless of whether this symbol
+    # happens to be flagged as a gainer above; that flag/threshold logic is
+    # untouched. Not present at all for EOD alerts (those fields are None
+    # there since the NSE/volume enrichment only runs in intraday mode).
+    if _present(row.get("volume_vs_avg_multiple")):
+        vol = row.get("today_volume")
+        avg = row.get("avg_volume_20d")
+        mult = row.get("volume_vs_avg_multiple")
+        vol_txt = f"{vol:,.0f}" if _present(vol) else "?"
+        avg_txt = f"{avg:,.0f}" if _present(avg) else "?"
+        lines.append(f"Volume: {vol_txt} ({mult:g}x 20d avg of {avg_txt})")
     if row["stage"] == "PRE_BOS2_READY":
         lines.append(f"Distance to breakout: {row.get('distance_to_p1_pct')}%")
 

@@ -53,6 +53,12 @@ actual surge multiple, not just a yes/no flag (2026-08-12 addition).
 - The score/grade themselves are **not** changed by this - it's a visible
   tag, not a scoring input, so it never silently reclassifies a setup's
   underlying quality.
+- **Every** intraday alert also shows a plain `Volume: 108,038 (0.48x 20d
+  avg of 226,674)` line in the body regardless of gainer status (2026-08-12
+  addition, per user request) - so you can see the actual volume context
+  for every stock, not just the ones that happen to cross the gainer
+  threshold. This is separate from, and doesn't affect, the special
+  `🔥🔥🔥` gainer tag above.
 
 ## Setup Quality (A/B/C/D)
 

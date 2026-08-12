@@ -71,6 +71,24 @@ def fetch_nse_volume_gainers(timeout: int = 10):
         return None
 
 
+def volume_vs_average(df: pd.DataFrame):
+    """Returns (today_volume, avg_volume_20d, ratio), or (None, None, None)
+    if not computable. Pure/shared helper (2026-08-12): used both by
+    is_volume_gainer_fallback() below (its threshold check is unchanged)
+    AND directly by the scanner to show "volume today vs its own average"
+    in the body of every intraday alert, not just ones that happen to
+    cross the gainer threshold - per explicit user request ("volume
+    details should be in all stock alert not just in nse volume gainer").
+    """
+    if df is None or df.empty or "VOL_SMA20" not in df.columns:
+        return None, None, None
+    today_vol = df["Volume"].values[-1]
+    avg_vol = df["VOL_SMA20"].values[-1]
+    if pd.isna(today_vol) or pd.isna(avg_vol) or avg_vol <= 0:
+        return None, None, None
+    return float(today_vol), float(avg_vol), float(today_vol / avg_vol)
+
+
 def is_volume_gainer_fallback(df: pd.DataFrame, cfg):
     """Self-contained fallback when NSE itself couldn't be reached: flags
     "today's volume is at least `volume_gainer_fallback_multiple` times its
@@ -82,13 +100,11 @@ def is_volume_gainer_fallback(df: pd.DataFrame, cfg):
     returns the actual computed ratio for display, whether or not it
     passed the threshold.
     """
-    if df is None or df.empty or "VOL_SMA20" not in df.columns:
+    today_vol, avg_vol, ratio = volume_vs_average(df)
+    if ratio is None:
         return False, None
-    last_vol = df["Volume"].values[-1]
-    vol_sma20 = df["VOL_SMA20"].values[-1]
-    if pd.isna(last_vol) or pd.isna(vol_sma20) or vol_sma20 <= 0:
-        return False, None
-    ratio = float(last_vol / vol_sma20)
-    is_gainer = bool(last_vol >= cfg.volume_gainer_fallback_multiple * vol_sma20)
+
+    is_gainer = bool(today_vol >= cfg.volume_gainer_fallback_multiple * avg_vol)
     return is_gainer, ratio
+
 

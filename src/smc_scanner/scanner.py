@@ -11,7 +11,7 @@ from .pattern import detect_pattern
 from .notify import send_telegram, format_alert
 from .scoring import compute_quality_score
 from .trade_plan import compute_trade_plan
-from .nse_data import fetch_nse_volume_gainers, is_volume_gainer_fallback
+from .nse_data import fetch_nse_volume_gainers, is_volume_gainer_fallback, volume_vs_average
 
 
 STAGE_PRIORITY = {
@@ -101,6 +101,19 @@ def scan_symbol(row, data_source, cfg, nse_gainers=None) -> dict:
             if not is_gainer:
                 surge_multiple = None
 
+    # Always-present volume detail for every intraday alert (2026-08-12,
+    # per user request: "volume details should be in all stock alert not
+    # just in nse volume gainer, intact all") - independent of the
+    # gainer flag/threshold above, which is completely unchanged. Uses the
+    # same shared helper as is_volume_gainer_fallback() so the numbers are
+    # always consistent with each other.
+    today_volume = None
+    avg_volume_20d = None
+    volume_vs_avg_multiple = None
+    if cfg.scan_mode == "intraday":
+        today_volume, avg_volume_20d, ratio = volume_vs_average(df)
+        volume_vs_avg_multiple = round(ratio, 2) if ratio is not None else None
+
     def d(x):
 
         return x.date().isoformat() if x is not None and hasattr(x, "date") else None
@@ -148,6 +161,10 @@ def scan_symbol(row, data_source, cfg, nse_gainers=None) -> dict:
         "nse_volume_gainer": is_gainer,
         "volume_gainer_source": gainer_source,
         "volume_surge_multiple": round(surge_multiple, 2) if surge_multiple is not None else None,
+        "today_volume": today_volume,
+        "avg_volume_20d": round(avg_volume_20d, 0) if avg_volume_20d is not None else None,
+        "volume_vs_avg_multiple": volume_vs_avg_multiple,
+
 
 
 
