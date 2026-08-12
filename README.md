@@ -23,6 +23,32 @@ chasing.
 | 🟢 `FRESH_BOS2` | Continuation breakout just confirmed (within the last few bars) — actionable now |
 | ⚪ `STALE_BOS2` | Breakout already happened too long ago to be a fresh idea |
 
+## NSE Volume Gainer cross-check (intraday scan only)
+
+Since 2026-08-12, every **intraday** scan cross-references its results
+against NSE's own live "Volume Gainers" list
+(https://www.nseindia.com/market-data/volume-gainers-spurts,
+`src/smc_scanner/nse_data.py`). If a stock we're alerting on is *also*
+independently showing up on NSE's own unusual-volume list right now,
+that's a real extra confluence signal - the Telegram alert gets a
+prominent `🔥🔥🔥 NSE VOLUME GAINER 🔥🔥🔥` line above everything else so
+it's impossible to miss while skimming.
+
+- Fetched **once per run** (not once per symbol) to keep this cheap.
+- **EOD scans are completely untouched** - this only runs when
+  `SCANNER_MODE=intraday`.
+- NSE's site is known to challenge/block automated requests, especially
+  from cloud datacenter IPs (which is exactly what GitHub Actions runners
+  are) - if the fetch fails for any reason, it fails soft: every symbol
+  falls back to a self-contained check using data the scan already
+  fetched (`today's volume >= config.volume_gainer_fallback_multiple`,
+  default 5x, times its own 20-day average) - no extra network calls, same
+  underlying intent as NSE's own list. The alert clearly labels which
+  source triggered it (`NSE VOLUME GAINER` vs `HIGH VOLUME (fallback...)`).
+- The score/grade themselves are **not** changed by this - it's a visible
+  tag, not a scoring input, so it never silently reclassifies a setup's
+  underlying quality.
+
 ## Setup Quality (A/B/C/D)
 
 Every signal also gets a composite 0-100 quality score and letter grade
@@ -112,6 +138,7 @@ src/smc_scanner/
   backtest.py         historical edge test (win rate / forward returns)
   universe.py         builds & loads the scan universe (NSE cash equities, mkt cap filter)
   notify.py           Telegram alerting
+  nse_data.py         NSE live Volume Gainers cross-check (intraday scan only) + self-contained fallback
   data_sources/
     dhan.py           Dhan HQ v2 API client (auth, historical+intraday candles)
     yfinance_source.py  fallback source, used for local testing & backtests

@@ -50,14 +50,26 @@ def format_alert(row: dict) -> str:
         "IN_RETEST": "🔵",
     }.get(row["stage"], "⚫")
 
-    lines = [
+    lines = []
+    if row.get("nse_volume_gainer"):
+        # Deliberately its own line, above everything else, so it's
+        # impossible to miss when skimming Telegram (2026-08-12, per user
+        # request: "show something special on the header so we can't
+        # miss"). NSE-confirmed vs our own volume-vs-20d-average fallback
+        # (when NSE itself couldn't be reached) are labeled differently so
+        # it's clear which one triggered it.
+        src = row.get("volume_gainer_source") or ""
+        label = "🔥🔥🔥 NSE VOLUME GAINER 🔥🔥🔥" if src == "nse" else f"🔥🔥🔥 HIGH VOLUME ({src}) 🔥🔥🔥"
+        lines.append(f"*{label}*")
+    lines.extend([
         f"{stage_emoji} *{row['symbol']}* — `{row['stage']}`",
         f"Quality: *{row.get('quality_grade', 'N/A')}* ({row.get('quality_score', '?')}/100)",
         f"Close: {row['last_close']}  ({row['last_date']})",
         f"P0(base): {row.get('P0_base_level')}   P1(resistance): {row.get('P1_resistance')}",
-    ]
+    ])
     if row["stage"] == "PRE_BOS2_READY":
         lines.append(f"Distance to breakout: {row.get('distance_to_p1_pct')}%")
+
         lines.append(f"Volatility contracted: {row.get('volatility_contracted')}")
     if row["stage"] == "FRESH_REVERSAL":
         lines.append(f"Reversal entry: {row.get('Reversal_date')} @ {row.get('Reversal_price')}")

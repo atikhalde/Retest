@@ -11,6 +11,7 @@ from .pattern import detect_pattern
 from .notify import send_telegram, format_alert
 from .scoring import compute_quality_score
 from .trade_plan import compute_trade_plan
+from .nse_data import fetch_nse_volume_gainers, is_volume_gainer_fallback
 
 
 STAGE_PRIORITY = {
@@ -44,7 +45,7 @@ ALERTABLE_STAGES = {"FRESH_REVERSAL", "PRE_BOS2_READY"}
 ALERT_QUALITY_GRADES = ("A", "B")  # first letter of quality_grade, e.g. "B - Good Setup"
 
 
-def scan_symbol(row, data_source, cfg) -> dict:
+def scan_symbol(row, data_source, cfg, nse_gainers=None) -> dict:
     symbol = row["symbol"]
     security_id = row.get("security_id")
     exchange_segment = row.get("exchange_segment", "NSE_EQ")
@@ -79,6 +80,20 @@ def scan_symbol(row, data_source, cfg) -> dict:
     # the reversal price for FRESH_REVERSAL, else last_close for FRESH_BOS2
     trigger_price = match.reversal_price if match.stage == "FRESH_REVERSAL" and not pd.isna(match.reversal_price) else match.last_close
     plan = compute_trade_plan(match.stage, trigger_price, match.last_date, match.retest_price, cfg)
+
+    # NSE live Volume Gainers cross-check (intraday scan only, see nse_data.py).
+    # nse_gainers is None when: not intraday mode, OR NSE couldn't be reached
+    # this run (fetched once per run, not per-symbol) - either way we fall
+    # back to our own already-computed volume-vs-20d-average check.
+    is_gainer = False
+    gainer_source = None
+    if cfg.scan_mode == "intraday":
+        if nse_gainers is not None:
+            is_gainer = symbol in nse_gainers
+            gainer_source = "nse" if is_gainer else None
+        else:
+            is_gainer = is_volume_gainer_fallback(df, cfg)
+            gainer_source = "fallback (volume vs 20d avg)" if is_gainer else None
 
     def d(x):
 
@@ -124,6 +139,9 @@ def scan_symbol(row, data_source, cfg) -> dict:
         "bos1_weekly_confluence": (f"{match.bos1_weekly_raw}/{match.bos1_weekly_max}"
                                     if match.bos1_weekly_raw is not None else "unknown"),
         "confluence_raw": conf["score"],
+        "nse_volume_gainer": is_gainer,
+        "volume_gainer_source": gainer_source,
+
 
         "entry_date": plan["entry_date"] if plan else None,
         "entry_price_ref": plan["entry_price_ref"] if plan else None,
@@ -158,8 +176,16 @@ def run_scan(cfg, universe_df: pd.DataFrame, data_source, max_workers: int = 4,
     rows = []
     records = universe_df.to_dict("records")
 
+    # NSE Volume Gainers cross-check (intraday scan only) - fetched ONCE for
+    # the whole run, not per-symbol. None if not intraday mode or if NSE
+    # couldn't be reached (each symbol falls back to its own volume-vs-
+    # average check in that case - see nse_data.py).
+    nse_gainers = None
+    if cfg.scan_mode == "intraday":
+        nse_gainers = fetch_nse_volume_gainers()
+
     with cf.ThreadPoolExecutor(max_workers=max_workers) as ex:
-        futures = {ex.submit(scan_symbol, r, data_source, cfg): r["symbol"] for r in records}
+        futures = {ex.submit(scan_symbol, r, data_source, cfg, nse_gainers): r["symbol"] for r in records}
         for i, fut in enumerate(cf.as_completed(futures)):
             sym = futures[fut]
             try:
@@ -179,6 +205,7 @@ def run_scan(cfg, universe_df: pd.DataFrame, data_source, max_workers: int = 4,
     out["_prio"] = out["stage"].map(STAGE_PRIORITY).fillna(9)
     out = out.sort_values(["_prio", "quality_score"], ascending=[True, False]).drop(columns=["_prio", "confluence_raw"])
     out = out.reset_index(drop=True)
+
 
     os.makedirs(cfg.results_dir, exist_ok=True)
     ts = datetime.now().strftime("%Y%m%d_%H%M%S")

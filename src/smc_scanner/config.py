@@ -100,6 +100,15 @@ class Config:
     rsi_min: float = 55.0
     vol_sma_period: int = 10
 
+    # ---------------- NSE volume-gainers enrichment (intraday scan only) ----------------
+    # Cross-references intraday alerts against NSE's live Volume Gainers
+    # list (nse_data.py). If NSE itself can't be reached (common from cloud
+    # IPs like GitHub Actions runners), falls back to flagging today's
+    # volume >= this many times the symbol's own 20-day average, using data
+    # the scan already fetched - no extra network calls needed for the
+    # fallback path.
+    volume_gainer_fallback_multiple: float = 5.0
+
     # ---------------- Dhan API ----------------
     dhan_base_url: str = "https://api.dhan.co/v2"
     dhan_auth_url: str = "https://auth.dhan.co"
