@@ -45,7 +45,7 @@
     "stage": "STALE_BOS2"
   },
   "RRKABEL": {
-    "stage": "FRESH_BOS2"
+    "stage": "BASING"
   },
   "HAPPYFORGE": {
     "stage": "FRESH_BOS2"
@@ -69,10 +69,10 @@
     "stage": "STALE_BOS2"
   },
   "IGPL": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "GRASIM": {
-    "stage": "BASING"
+    "stage": "FRESH_BOS2"
   },
   "LLOYDSME": {
     "stage": "STALE_BOS2"
@@ -182,7 +182,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "LINCOLN": {
-    "stage": "FRESH_REVERSAL"
+    "stage": "BASING"
   },
   "RELIGARE": {
     "stage": "FRESH_REVERSAL"
@@ -269,7 +269,7 @@
     "stage": "FRESH_BOS2"
   },
   "ICIL": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "FRESH_BOS2"
   },
   "CERA": {
     "stage": "BASING"
@@ -367,7 +367,7 @@
     "stage": "BASING"
   },
   "FLUOROCHEM": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "UJJIVANSFB": {
     "stage": "FRESH_REVERSAL"
@@ -385,7 +385,7 @@
     "stage": "FRESH_BOS2"
   },
   "GIPCL": {
-    "stage": "FRESH_BOS2"
+    "stage": "PRE_BOS2_READY"
   },
   "CUMMINSIND": {
     "stage": "BASING"
@@ -401,7 +401,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "BIOCON": {
-    "stage": "FRESH_REVERSAL",
+    "stage": "PRE_BOS2_READY",
     "last_reversal_alerted": "2026-08-06"
   },
   "KSB": {
@@ -423,7 +423,7 @@
     "stage": "BASING"
   },
   "RADICO": {
-    "stage": "BASING"
+    "stage": "FRESH_BOS2"
   },
   "MANAPPURAM": {
     "stage": "FRESH_REVERSAL"
@@ -435,7 +435,7 @@
     "stage": "BASING"
   },
   "NELCO": {
-    "stage": "IN_RETEST"
+    "stage": "BASING"
   },
   "REDINGTON": {
     "stage": "BASING"
@@ -510,7 +510,7 @@
     "stage": "STALE_BOS2"
   },
   "FILATEX": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "KABRAEXTRU": {
     "stage": "BASING"
@@ -747,7 +747,7 @@
     "stage": "IN_RETEST"
   },
   "THEJO": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "VSSL": {
     "stage": "IN_RETEST"
@@ -783,7 +783,7 @@
     "stage": "STALE_BOS2"
   },
   "ASKAUTOLTD": {
-    "stage": "FRESH_BOS2"
+    "stage": "BASING"
   },
   "RANEHOLDIN": {
     "stage": "STALE_BOS2"
@@ -849,8 +849,7 @@
     "stage": "BASING"
   },
   "RPEL": {
-    "stage": "FRESH_REVERSAL",
-    "last_reversal_alerted": "2026-08-10"
+    "stage": "PRE_BOS2_READY"
   },
   "JSFB": {
     "stage": "BASING"
@@ -922,7 +921,7 @@
     "stage": "IN_RETEST"
   },
   "ASIANENE": {
-    "stage": "IN_RETEST"
+    "stage": "BASING"
   },
   "SMLMAH": {
     "stage": "BASING"
