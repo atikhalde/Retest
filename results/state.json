@@ -9,7 +9,7 @@
     "stage": "IN_RETEST"
   },
   "KERNEX": {
-    "stage": "FRESH_BOS2"
+    "stage": "IN_RETEST"
   },
   "TALBROAUTO": {
     "stage": "FRESH_BOS2"
@@ -69,7 +69,7 @@
     "stage": "STALE_BOS2"
   },
   "IGPL": {
-    "stage": "IN_RETEST"
+    "stage": "STALE_BOS2"
   },
   "GRASIM": {
     "stage": "BASING"
@@ -146,7 +146,7 @@
     "stage": "BASING"
   },
   "SKYGOLD": {
-    "stage": "BASING"
+    "stage": "FRESH_BOS2"
   },
   "MOTILALOFS": {
     "stage": "BASING"
@@ -236,7 +236,7 @@
     "stage": "BASING"
   },
   "PVRINOX": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "KIRLOSBROS": {
     "stage": "BASING"
@@ -251,7 +251,7 @@
     "stage": "IN_RETEST"
   },
   "ALKYLAMINE": {
-    "stage": "BASING"
+    "stage": "FRESH_REVERSAL"
   },
   "NITINSPIN": {
     "stage": "PRE_BOS2_READY"
@@ -367,7 +367,7 @@
     "stage": "BASING"
   },
   "FLUOROCHEM": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "UJJIVANSFB": {
     "stage": "FRESH_REVERSAL"
