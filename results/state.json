@@ -119,7 +119,7 @@
     "last_reversal_alerted": "2026-08-05"
   },
   "RISHABH": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "GNA": {
     "stage": "BASING"
@@ -236,7 +236,7 @@
     "stage": "BASING"
   },
   "PVRINOX": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "KIRLOSBROS": {
     "stage": "BASING"
@@ -367,7 +367,7 @@
     "stage": "BASING"
   },
   "FLUOROCHEM": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "UJJIVANSFB": {
     "stage": "FRESH_REVERSAL"
@@ -382,7 +382,7 @@
     "stage": "BASING"
   },
   "PITTIENG": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "FRESH_BOS2"
   },
   "GIPCL": {
     "stage": "FRESH_BOS2"
@@ -513,7 +513,7 @@
     "stage": "STALE_BOS2"
   },
   "KABRAEXTRU": {
-    "stage": "STALE_BOS2"
+    "stage": "BASING"
   },
   "LAURUSLABS": {
     "stage": "STALE_BOS2"
@@ -522,7 +522,7 @@
     "stage": "STALE_BOS2"
   },
   "MEDANTA": {
-    "stage": "IN_RETEST"
+    "stage": "BASING"
   },
   "CHENNPETRO": {
     "stage": "STALE_BOS2"
@@ -747,7 +747,7 @@
     "stage": "IN_RETEST"
   },
   "THEJO": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "VSSL": {
     "stage": "IN_RETEST"
@@ -822,7 +822,7 @@
     "stage": "BASING"
   },
   "ACUTAAS": {
-    "stage": "FRESH_REVERSAL"
+    "stage": "BASING"
   },
   "DSSL": {
     "stage": "BASING"
