@@ -9,7 +9,7 @@
     "stage": "IN_RETEST"
   },
   "KERNEX": {
-    "stage": "IN_RETEST"
+    "stage": "FRESH_BOS2"
   },
   "TALBROAUTO": {
     "stage": "FRESH_BOS2"
@@ -36,13 +36,13 @@
     "stage": "IN_RETEST"
   },
   "CRAFTSMAN": {
-    "stage": "IN_RETEST"
+    "stage": "STALE_BOS2"
   },
   "GLAND": {
     "stage": "STALE_BOS2"
   },
   "LLOYDSENGG": {
-    "stage": "STALE_BOS2"
+    "stage": "FRESH_BOS2"
   },
   "RRKABEL": {
     "stage": "FRESH_BOS2"
@@ -51,13 +51,13 @@
     "stage": "FRESH_BOS2"
   },
   "RAIN": {
-    "stage": "STALE_BOS2"
+    "stage": "FRESH_BOS2"
   },
   "MINDACORP": {
-    "stage": "IN_RETEST"
+    "stage": "STALE_BOS2"
   },
   "AEROENTER": {
-    "stage": "STALE_BOS2"
+    "stage": "FRESH_BOS2"
   },
   "BLUEJET": {
     "stage": "STALE_BOS2"
@@ -72,7 +72,7 @@
     "stage": "IN_RETEST"
   },
   "GRASIM": {
-    "stage": "FRESH_BOS2"
+    "stage": "BASING"
   },
   "LLOYDSME": {
     "stage": "STALE_BOS2"
@@ -87,7 +87,7 @@
     "stage": "STALE_BOS2"
   },
   "KAPSTON": {
-    "stage": "STALE_BOS2"
+    "stage": "FRESH_BOS2"
   },
   "NESTLEIND": {
     "stage": "STALE_BOS2"
@@ -164,7 +164,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "KPIL": {
-    "stage": "FRESH_REVERSAL"
+    "stage": "BASING"
   },
   "ZYDUSWELL": {
     "stage": "BASING"
@@ -182,7 +182,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "LINCOLN": {
-    "stage": "BASING"
+    "stage": "FRESH_REVERSAL"
   },
   "RELIGARE": {
     "stage": "FRESH_REVERSAL"
@@ -236,7 +236,7 @@
     "stage": "BASING"
   },
   "PVRINOX": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "KIRLOSBROS": {
     "stage": "BASING"
@@ -254,7 +254,7 @@
     "stage": "BASING"
   },
   "NITINSPIN": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "DIVGIITTS": {
     "stage": "FRESH_BOS2"
@@ -263,13 +263,13 @@
     "stage": "BASING"
   },
   "LANDMARK": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "YATHARTH": {
     "stage": "FRESH_BOS2"
   },
   "ICIL": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "CERA": {
     "stage": "BASING"
@@ -308,7 +308,7 @@
     "stage": "BASING"
   },
   "WELSPUNLIV": {
-    "stage": "BASING"
+    "stage": "FRESH_REVERSAL"
   },
   "LUPIN": {
     "stage": "BASING"
@@ -341,7 +341,7 @@
     "stage": "BASING"
   },
   "ITDC": {
-    "stage": "FRESH_REVERSAL",
+    "stage": "BASING",
     "last_reversal_alerted": "2026-08-12"
   },
   "GRANULES": {
@@ -361,13 +361,13 @@
     "stage": "BASING"
   },
   "POWERMECH": {
-    "stage": "STALE_BOS2"
+    "stage": "BASING"
   },
   "TVSSCS": {
     "stage": "BASING"
   },
   "FLUOROCHEM": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "UJJIVANSFB": {
     "stage": "FRESH_REVERSAL"
@@ -382,10 +382,10 @@
     "stage": "BASING"
   },
   "PITTIENG": {
-    "stage": "FRESH_BOS2"
+    "stage": "BASING"
   },
   "GIPCL": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "CUMMINSIND": {
     "stage": "BASING"
@@ -435,7 +435,7 @@
     "stage": "BASING"
   },
   "NELCO": {
-    "stage": "BASING"
+    "stage": "IN_RETEST"
   },
   "REDINGTON": {
     "stage": "BASING"
@@ -489,7 +489,7 @@
     "stage": "STALE_BOS2"
   },
   "NAVINFLUOR": {
-    "stage": "IN_RETEST"
+    "stage": "STALE_BOS2"
   },
   "KARURVYSYA": {
     "stage": "STALE_BOS2"
@@ -510,7 +510,7 @@
     "stage": "STALE_BOS2"
   },
   "FILATEX": {
-    "stage": "IN_RETEST"
+    "stage": "STALE_BOS2"
   },
   "KABRAEXTRU": {
     "stage": "STALE_BOS2"
@@ -522,7 +522,7 @@
     "stage": "STALE_BOS2"
   },
   "MEDANTA": {
-    "stage": "BASING"
+    "stage": "IN_RETEST"
   },
   "CHENNPETRO": {
     "stage": "STALE_BOS2"
@@ -780,7 +780,7 @@
     "stage": "FRESH_BOS2"
   },
   "MOREPENLAB": {
-    "stage": "STALE_BOS2"
+    "stage": "FRESH_BOS2"
   },
   "ASKAUTOLTD": {
     "stage": "FRESH_BOS2"
@@ -798,7 +798,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "GANDHAR": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "RAYMOND": {
     "stage": "PRE_BOS2_READY"
@@ -822,7 +822,7 @@
     "stage": "BASING"
   },
   "ACUTAAS": {
-    "stage": "BASING"
+    "stage": "FRESH_REVERSAL"
   },
   "DSSL": {
     "stage": "BASING"
@@ -837,7 +837,7 @@
     "stage": "PRE_BOS2_READY"
   },
   "VMART": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "EXIDEIND": {
     "stage": "BASING"
@@ -921,7 +921,7 @@
     "stage": "IN_RETEST"
   },
   "ASIANENE": {
-    "stage": "BASING"
+    "stage": "IN_RETEST"
   },
   "SMLMAH": {
     "stage": "BASING"
