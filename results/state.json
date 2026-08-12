@@ -45,7 +45,7 @@
     "stage": "STALE_BOS2"
   },
   "RRKABEL": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "FRESH_BOS2"
   },
   "HAPPYFORGE": {
     "stage": "FRESH_BOS2"
@@ -119,7 +119,7 @@
     "last_reversal_alerted": "2026-08-05"
   },
   "RISHABH": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "GNA": {
     "stage": "BASING"
@@ -170,7 +170,7 @@
     "stage": "BASING"
   },
   "INGERRAND": {
-    "stage": "FRESH_REVERSAL"
+    "stage": "BASING"
   },
   "GOKULAGRO": {
     "stage": "BASING"
@@ -182,7 +182,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "LINCOLN": {
-    "stage": "FRESH_REVERSAL"
+    "stage": "BASING"
   },
   "RELIGARE": {
     "stage": "FRESH_REVERSAL"
@@ -209,7 +209,7 @@
     "stage": "FRESH_BOS2"
   },
   "NETWEB": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "PGIL": {
     "stage": "FRESH_BOS2"
@@ -434,7 +434,7 @@
     "stage": "BASING"
   },
   "NELCO": {
-    "stage": "IN_RETEST"
+    "stage": "BASING"
   },
   "REDINGTON": {
     "stage": "BASING"
@@ -521,7 +521,7 @@
     "stage": "STALE_BOS2"
   },
   "MEDANTA": {
-    "stage": "IN_RETEST"
+    "stage": "BASING"
   },
   "CHENNPETRO": {
     "stage": "STALE_BOS2"
@@ -821,7 +821,7 @@
     "stage": "BASING"
   },
   "ACUTAAS": {
-    "stage": "FRESH_REVERSAL"
+    "stage": "BASING"
   },
   "DSSL": {
     "stage": "BASING"
@@ -921,7 +921,7 @@
     "stage": "IN_RETEST"
   },
   "ASIANENE": {
-    "stage": "IN_RETEST"
+    "stage": "BASING"
   },
   "SMLMAH": {
     "stage": "BASING"
@@ -942,7 +942,7 @@
     "stage": "STALE_BOS2"
   },
   "LLOYDSENT": {
-    "stage": "FRESH_BOS2"
+    "stage": "STALE_BOS2"
   },
   "GULPOLY": {
     "stage": "STALE_BOS2"
