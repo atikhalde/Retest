@@ -96,7 +96,7 @@
     "stage": "STALE_BOS2"
   },
   "ARMANFIN": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "OLECTRA": {
     "stage": "BASING"
@@ -182,7 +182,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "LINCOLN": {
-    "stage": "BASING"
+    "stage": "FRESH_REVERSAL"
   },
   "RELIGARE": {
     "stage": "FRESH_REVERSAL"
@@ -284,7 +284,7 @@
     "stage": "BASING"
   },
   "SSWL": {
-    "stage": "BASING"
+    "stage": "STALE_BOS2"
   },
   "HIRECT": {
     "stage": "BASING"
@@ -434,7 +434,7 @@
     "stage": "BASING"
   },
   "NELCO": {
-    "stage": "BASING"
+    "stage": "IN_RETEST"
   },
   "REDINGTON": {
     "stage": "BASING"
@@ -521,7 +521,7 @@
     "stage": "STALE_BOS2"
   },
   "MEDANTA": {
-    "stage": "BASING"
+    "stage": "IN_RETEST"
   },
   "CHENNPETRO": {
     "stage": "STALE_BOS2"
@@ -821,7 +821,7 @@
     "stage": "BASING"
   },
   "ACUTAAS": {
-    "stage": "BASING"
+    "stage": "FRESH_REVERSAL"
   },
   "DSSL": {
     "stage": "BASING"
@@ -921,7 +921,7 @@
     "stage": "IN_RETEST"
   },
   "ASIANENE": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "IN_RETEST"
   },
   "SMLMAH": {
     "stage": "BASING"
