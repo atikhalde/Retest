@@ -3,7 +3,7 @@
     "stage": "FRESH_BOS2"
   },
   "PNBHOUSING": {
-    "stage": "STALE_BOS2"
+    "stage": "FRESH_BOS2"
   },
   "SUPRAJIT": {
     "stage": "IN_RETEST"
@@ -30,7 +30,7 @@
     "stage": "IN_RETEST"
   },
   "EMIL": {
-    "stage": "FRESH_BOS2"
+    "stage": "STALE_BOS2"
   },
   "AVALON": {
     "stage": "IN_RETEST"
@@ -102,7 +102,7 @@
     "stage": "BASING"
   },
   "SUVEN": {
-    "stage": "FRESH_REVERSAL"
+    "stage": "PRE_BOS2_READY"
   },
   "ADOR": {
     "stage": "BASING"
@@ -274,7 +274,7 @@
     "stage": "BASING"
   },
   "MPSLTD": {
-    "stage": "BASING"
+    "stage": "IN_RETEST"
   },
   "SHREEPUSHK": {
     "stage": "BASING"
@@ -422,7 +422,7 @@
     "stage": "BASING"
   },
   "RADICO": {
-    "stage": "STALE_BOS2"
+    "stage": "BASING"
   },
   "MANAPPURAM": {
     "stage": "FRESH_REVERSAL"
@@ -740,7 +740,7 @@
     "stage": "IN_RETEST"
   },
   "KALYANKJIL": {
-    "stage": "IN_RETEST"
+    "stage": "FRESH_REVERSAL"
   },
   "CONCORDBIO": {
     "stage": "IN_RETEST"
@@ -908,7 +908,7 @@
     "stage": "IN_RETEST"
   },
   "AVADHSUGAR": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "IN_RETEST"
   },
   "RPTECH": {
     "stage": "IN_RETEST"
