@@ -1,6 +1,6 @@
 {
   "SHILPAMED": {
-    "stage": "STALE_BOS2"
+    "stage": "FRESH_BOS2"
   },
   "PNBHOUSING": {
     "stage": "STALE_BOS2"
@@ -45,7 +45,7 @@
     "stage": "STALE_BOS2"
   },
   "RRKABEL": {
-    "stage": "STALE_BOS2"
+    "stage": "BASING"
   },
   "HAPPYFORGE": {
     "stage": "STALE_BOS2"
@@ -160,7 +160,7 @@
     "stage": "STALE_BOS2"
   },
   "HARSHA": {
-    "stage": "BASING"
+    "stage": "FRESH_REVERSAL"
   },
   "KPIL": {
     "stage": "FRESH_REVERSAL"
@@ -268,13 +268,13 @@
     "stage": "FRESH_BOS2"
   },
   "ICIL": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "CERA": {
     "stage": "BASING"
   },
   "MPSLTD": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "IN_RETEST"
   },
   "SHREEPUSHK": {
     "stage": "BASING"
@@ -283,7 +283,7 @@
     "stage": "BASING"
   },
   "SSWL": {
-    "stage": "BASING"
+    "stage": "STALE_BOS2"
   },
   "HIRECT": {
     "stage": "BASING"
@@ -366,7 +366,7 @@
     "stage": "BASING"
   },
   "FLUOROCHEM": {
-    "stage": "FRESH_BOS2"
+    "stage": "PRE_BOS2_READY"
   },
   "UJJIVANSFB": {
     "stage": "FRESH_REVERSAL"
@@ -488,7 +488,7 @@
     "stage": "STALE_BOS2"
   },
   "NAVINFLUOR": {
-    "stage": "IN_RETEST"
+    "stage": "STALE_BOS2"
   },
   "KARURVYSYA": {
     "stage": "STALE_BOS2"
@@ -773,7 +773,7 @@
     "stage": "STALE_BOS2"
   },
   "BOSCHLTD": {
-    "stage": "STALE_BOS2"
+    "stage": "FRESH_BOS2"
   },
   "IOLCP": {
     "stage": "FRESH_BOS2"
@@ -836,7 +836,7 @@
     "stage": "PRE_BOS2_READY"
   },
   "VMART": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "EXIDEIND": {
     "stage": "BASING"
@@ -941,7 +941,7 @@
     "stage": "IN_RETEST"
   },
   "LLOYDSENT": {
-    "stage": "STALE_BOS2"
+    "stage": "FRESH_BOS2"
   },
   "GULPOLY": {
     "stage": "STALE_BOS2"
