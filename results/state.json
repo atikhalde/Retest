@@ -1,9 +1,9 @@
 {
   "SHILPAMED": {
-    "stage": "STALE_BOS2"
+    "stage": "FRESH_BOS2"
   },
   "PNBHOUSING": {
-    "stage": "STALE_BOS2"
+    "stage": "FRESH_BOS2"
   },
   "SUPRAJIT": {
     "stage": "IN_RETEST"
@@ -18,7 +18,7 @@
     "stage": "BASING"
   },
   "KDDL": {
-    "stage": "BASING"
+    "stage": "IN_RETEST"
   },
   "MARINE": {
     "stage": "STALE_BOS2"
@@ -105,7 +105,7 @@
     "stage": "PRE_BOS2_READY"
   },
   "ADOR": {
-    "stage": "FRESH_REVERSAL"
+    "stage": "BASING"
   },
   "MMFL": {
     "stage": "IN_RETEST"
@@ -145,7 +145,7 @@
     "stage": "BASING"
   },
   "SKYGOLD": {
-    "stage": "FRESH_BOS2"
+    "stage": "BASING"
   },
   "MOTILALOFS": {
     "stage": "BASING"
@@ -160,7 +160,7 @@
     "stage": "STALE_BOS2"
   },
   "HARSHA": {
-    "stage": "BASING"
+    "stage": "FRESH_REVERSAL"
   },
   "KPIL": {
     "stage": "FRESH_REVERSAL"
@@ -274,7 +274,7 @@
     "stage": "BASING"
   },
   "MPSLTD": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "IN_RETEST"
   },
   "SHREEPUSHK": {
     "stage": "BASING"
@@ -283,7 +283,7 @@
     "stage": "BASING"
   },
   "SSWL": {
-    "stage": "BASING"
+    "stage": "STALE_BOS2"
   },
   "HIRECT": {
     "stage": "BASING"
@@ -400,7 +400,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "BIOCON": {
-    "stage": "FRESH_REVERSAL",
+    "stage": "BASING",
     "last_reversal_alerted": "2026-08-06"
   },
   "KSB": {
@@ -413,7 +413,7 @@
     "stage": "BASING"
   },
   "JINDALPOLY": {
-    "stage": "FRESH_REVERSAL"
+    "stage": "BASING"
   },
   "GABRIEL": {
     "stage": "PRE_BOS2_READY"
@@ -668,7 +668,7 @@
     "stage": "STALE_BOS2"
   },
   "CYIENTDLM": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "JASH": {
     "stage": "STALE_BOS2"
@@ -773,7 +773,7 @@
     "stage": "STALE_BOS2"
   },
   "BOSCHLTD": {
-    "stage": "STALE_BOS2"
+    "stage": "FRESH_BOS2"
   },
   "IOLCP": {
     "stage": "FRESH_BOS2"
@@ -908,13 +908,13 @@
     "stage": "PRE_BOS2_READY"
   },
   "AVADHSUGAR": {
-    "stage": "BASING"
+    "stage": "IN_RETEST"
   },
   "RPTECH": {
-    "stage": "BASING"
+    "stage": "IN_RETEST"
   },
   "UNIVCABLES": {
-    "stage": "FRESH_REVERSAL"
+    "stage": "IN_RETEST"
   },
   "UNIMECH": {
     "stage": "IN_RETEST"
