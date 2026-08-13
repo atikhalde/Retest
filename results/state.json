@@ -15,7 +15,7 @@
     "stage": "IN_RETEST"
   },
   "RBA": {
-    "stage": "BASING"
+    "stage": "FRESH_BOS2"
   },
   "KDDL": {
     "stage": "BASING"
@@ -114,11 +114,11 @@
     "stage": "PRE_BOS2_READY"
   },
   "AZAD": {
-    "stage": "FRESH_BOS2",
+    "stage": "IN_RETEST",
     "last_reversal_alerted": "2026-08-05"
   },
   "RISHABH": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "GNA": {
     "stage": "BASING"
@@ -202,7 +202,7 @@
     "stage": "FRESH_BOS2"
   },
   "EVEREADY": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "CARYSIL": {
     "stage": "FRESH_BOS2"
@@ -400,7 +400,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "BIOCON": {
-    "stage": "FRESH_REVERSAL",
+    "stage": "BASING",
     "last_reversal_alerted": "2026-08-06"
   },
   "KSB": {
@@ -458,7 +458,7 @@
     "stage": "IN_RETEST"
   },
   "CNL": {
-    "stage": "IN_RETEST"
+    "stage": "BASING"
   },
   "APOLLOPIPE": {
     "stage": "STALE_BOS2"
@@ -836,7 +836,7 @@
     "stage": "PRE_BOS2_READY"
   },
   "VMART": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "EXIDEIND": {
     "stage": "BASING"
@@ -851,7 +851,7 @@
     "stage": "FRESH_BOS2"
   },
   "JSFB": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "JUSTDIAL": {
     "stage": "BASING"
@@ -920,7 +920,7 @@
     "stage": "IN_RETEST"
   },
   "ASIANENE": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "SMLMAH": {
     "stage": "BASING"
