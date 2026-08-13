@@ -114,7 +114,7 @@
     "stage": "PRE_BOS2_READY"
   },
   "AZAD": {
-    "stage": "IN_RETEST",
+    "stage": "FRESH_BOS2",
     "last_reversal_alerted": "2026-08-05"
   },
   "RISHABH": {
@@ -268,7 +268,7 @@
     "stage": "FRESH_BOS2"
   },
   "ICIL": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "CERA": {
     "stage": "BASING"
@@ -458,7 +458,7 @@
     "stage": "IN_RETEST"
   },
   "CNL": {
-    "stage": "BASING"
+    "stage": "IN_RETEST"
   },
   "APOLLOPIPE": {
     "stage": "STALE_BOS2"
@@ -920,7 +920,7 @@
     "stage": "IN_RETEST"
   },
   "ASIANENE": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "SMLMAH": {
     "stage": "BASING"
