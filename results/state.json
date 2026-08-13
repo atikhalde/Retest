@@ -1,9 +1,9 @@
 {
   "SHILPAMED": {
-    "stage": "FRESH_BOS2"
+    "stage": "STALE_BOS2"
   },
   "PNBHOUSING": {
-    "stage": "FRESH_BOS2"
+    "stage": "STALE_BOS2"
   },
   "SUPRAJIT": {
     "stage": "IN_RETEST"
@@ -18,7 +18,7 @@
     "stage": "BASING"
   },
   "KDDL": {
-    "stage": "IN_RETEST"
+    "stage": "BASING"
   },
   "MARINE": {
     "stage": "STALE_BOS2"
@@ -39,16 +39,16 @@
     "stage": "IN_RETEST"
   },
   "GLAND": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "LLOYDSENGG": {
     "stage": "STALE_BOS2"
   },
   "RRKABEL": {
-    "stage": "BASING"
+    "stage": "STALE_BOS2"
   },
   "HAPPYFORGE": {
-    "stage": "FRESH_BOS2"
+    "stage": "STALE_BOS2"
   },
   "RAIN": {
     "stage": "STALE_BOS2"
@@ -75,7 +75,7 @@
     "stage": "FRESH_BOS2"
   },
   "LLOYDSME": {
-    "stage": "IN_RETEST"
+    "stage": "STALE_BOS2"
   },
   "TORNTPHARM": {
     "stage": "STALE_BOS2"
@@ -105,7 +105,7 @@
     "stage": "PRE_BOS2_READY"
   },
   "ADOR": {
-    "stage": "BASING"
+    "stage": "FRESH_REVERSAL"
   },
   "MMFL": {
     "stage": "FRESH_BOS2"
@@ -145,7 +145,7 @@
     "stage": "BASING"
   },
   "SKYGOLD": {
-    "stage": "BASING"
+    "stage": "FRESH_BOS2"
   },
   "MOTILALOFS": {
     "stage": "BASING"
@@ -160,7 +160,7 @@
     "stage": "STALE_BOS2"
   },
   "HARSHA": {
-    "stage": "FRESH_REVERSAL"
+    "stage": "BASING"
   },
   "KPIL": {
     "stage": "FRESH_REVERSAL"
@@ -172,7 +172,7 @@
     "stage": "BASING"
   },
   "GOKULAGRO": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "PHOENIXLTD": {
     "stage": "BASING"
@@ -223,7 +223,7 @@
     "stage": "BASING"
   },
   "INDIGO": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "MUTHOOTMF": {
     "stage": "BASING"
@@ -274,7 +274,7 @@
     "stage": "BASING"
   },
   "MPSLTD": {
-    "stage": "IN_RETEST"
+    "stage": "PRE_BOS2_READY"
   },
   "SHREEPUSHK": {
     "stage": "BASING"
@@ -301,7 +301,7 @@
     "stage": "BASING"
   },
   "ESAFSFB": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "PAGEIND": {
     "stage": "BASING"
@@ -400,7 +400,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "BIOCON": {
-    "stage": "BASING",
+    "stage": "FRESH_REVERSAL",
     "last_reversal_alerted": "2026-08-06"
   },
   "KSB": {
@@ -413,7 +413,7 @@
     "stage": "BASING"
   },
   "JINDALPOLY": {
-    "stage": "BASING"
+    "stage": "FRESH_REVERSAL"
   },
   "GABRIEL": {
     "stage": "BASING"
@@ -434,7 +434,7 @@
     "stage": "BASING"
   },
   "NELCO": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "REDINGTON": {
     "stage": "BASING"
@@ -452,7 +452,7 @@
     "stage": "STALE_BOS2"
   },
   "WSTCSTPAPR": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "NGLFINE": {
     "stage": "IN_RETEST"
@@ -509,10 +509,10 @@
     "stage": "STALE_BOS2"
   },
   "FILATEX": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "KABRAEXTRU": {
-    "stage": "BASING"
+    "stage": "STALE_BOS2"
   },
   "LAURUSLABS": {
     "stage": "STALE_BOS2"
@@ -569,7 +569,7 @@
     "stage": "STALE_BOS2"
   },
   "APOLLOHOSP": {
-    "stage": "IN_RETEST"
+    "stage": "STALE_BOS2"
   },
   "VEDL": {
     "stage": "STALE_BOS2"
@@ -773,7 +773,7 @@
     "stage": "STALE_BOS2"
   },
   "BOSCHLTD": {
-    "stage": "FRESH_BOS2"
+    "stage": "STALE_BOS2"
   },
   "IOLCP": {
     "stage": "FRESH_BOS2"
@@ -782,7 +782,7 @@
     "stage": "STALE_BOS2"
   },
   "ASKAUTOLTD": {
-    "stage": "BASING"
+    "stage": "FRESH_BOS2"
   },
   "RANEHOLDIN": {
     "stage": "STALE_BOS2"
@@ -848,7 +848,7 @@
     "stage": "BASING"
   },
   "RPEL": {
-    "stage": "BASING"
+    "stage": "FRESH_BOS2"
   },
   "JSFB": {
     "stage": "PRE_BOS2_READY"
@@ -908,13 +908,13 @@
     "stage": "PRE_BOS2_READY"
   },
   "AVADHSUGAR": {
-    "stage": "IN_RETEST"
+    "stage": "BASING"
   },
   "RPTECH": {
-    "stage": "IN_RETEST"
+    "stage": "BASING"
   },
   "UNIVCABLES": {
-    "stage": "IN_RETEST"
+    "stage": "FRESH_REVERSAL"
   },
   "UNIMECH": {
     "stage": "IN_RETEST"
@@ -938,10 +938,10 @@
     "stage": "STALE_BOS2"
   },
   "MACPOWER": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "LLOYDSENT": {
-    "stage": "FRESH_BOS2"
+    "stage": "STALE_BOS2"
   },
   "GULPOLY": {
     "stage": "STALE_BOS2"
@@ -1085,6 +1085,9 @@
     "stage": "IN_RETEST"
   },
   "SUDARSCHEM": {
+    "stage": "IN_RETEST"
+  },
+  "ALLCARGO": {
     "stage": "IN_RETEST"
   }
 }
