@@ -139,7 +139,7 @@
     "stage": "BASING"
   },
   "BHARATSE": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "ARKADE": {
     "stage": "BASING"
@@ -169,7 +169,7 @@
     "stage": "BASING"
   },
   "INGERRAND": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "GOKULAGRO": {
     "stage": "BASING"
@@ -196,7 +196,7 @@
     "stage": "BASING"
   },
   "SANGHVIMOV": {
-    "stage": "FRESH_BOS2"
+    "stage": "STALE_BOS2"
   },
   "GARFIBRES": {
     "stage": "STALE_BOS2"
@@ -244,7 +244,7 @@
     "stage": "BASING"
   },
   "WELCORP": {
-    "stage": "FRESH_BOS2"
+    "stage": "STALE_BOS2"
   },
   "ACE": {
     "stage": "IN_RETEST"
@@ -283,7 +283,7 @@
     "stage": "BASING"
   },
   "SSWL": {
-    "stage": "BASING"
+    "stage": "STALE_BOS2"
   },
   "HIRECT": {
     "stage": "BASING"
@@ -397,10 +397,10 @@
     "stage": "FRESH_BOS2"
   },
   "HSCL": {
-    "stage": "FRESH_REVERSAL"
+    "stage": "BASING"
   },
   "BIOCON": {
-    "stage": "FRESH_REVERSAL",
+    "stage": "BASING",
     "last_reversal_alerted": "2026-08-06"
   },
   "KSB": {
@@ -437,7 +437,7 @@
     "stage": "FRESH_BOS2"
   },
   "REDINGTON": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "KRISHANA": {
     "stage": "BASING"
@@ -512,7 +512,7 @@
     "stage": "IN_RETEST"
   },
   "KABRAEXTRU": {
-    "stage": "STALE_BOS2"
+    "stage": "BASING"
   },
   "LAURUSLABS": {
     "stage": "STALE_BOS2"
@@ -791,7 +791,7 @@
     "stage": "STALE_BOS2"
   },
   "AUBANK": {
-    "stage": "FRESH_BOS2"
+    "stage": "STALE_BOS2"
   },
   "HONASA": {
     "stage": "FRESH_BOS2"
@@ -836,7 +836,7 @@
     "stage": "PRE_BOS2_READY"
   },
   "VMART": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "EXIDEIND": {
     "stage": "BASING"
@@ -905,10 +905,10 @@
     "stage": "BASING"
   },
   "EMCURE": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "AVADHSUGAR": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "RPTECH": {
     "stage": "BASING"
