@@ -24,10 +24,10 @@
     "stage": "STALE_BOS2"
   },
   "NAHARSPING": {
-    "stage": "IN_RETEST"
+    "stage": "BASING"
   },
   "ASTERDM": {
-    "stage": "IN_RETEST"
+    "stage": "BASING"
   },
   "EMIL": {
     "stage": "STALE_BOS2"
@@ -39,16 +39,16 @@
     "stage": "IN_RETEST"
   },
   "GLAND": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "LLOYDSENGG": {
     "stage": "IN_RETEST"
   },
   "RRKABEL": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "STALE_BOS2"
   },
   "HAPPYFORGE": {
-    "stage": "FRESH_BOS2"
+    "stage": "STALE_BOS2"
   },
   "RAIN": {
     "stage": "STALE_BOS2"
@@ -75,7 +75,7 @@
     "stage": "FRESH_BOS2"
   },
   "LLOYDSME": {
-    "stage": "IN_RETEST"
+    "stage": "STALE_BOS2"
   },
   "TORNTPHARM": {
     "stage": "STALE_BOS2"
@@ -108,7 +108,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "MMFL": {
-    "stage": "FRESH_BOS2"
+    "stage": "IN_RETEST"
   },
   "OFSS": {
     "stage": "BASING"
@@ -151,7 +151,7 @@
     "stage": "BASING"
   },
   "YESBANK": {
-    "stage": "BASING"
+    "stage": "FRESH_REVERSAL"
   },
   "SENORES": {
     "stage": "FRESH_BOS2"
@@ -211,7 +211,7 @@
     "stage": "FRESH_BOS2"
   },
   "PGIL": {
-    "stage": "FRESH_BOS2"
+    "stage": "STALE_BOS2"
   },
   "INDHOTEL": {
     "stage": "BASING"
@@ -244,7 +244,7 @@
     "stage": "BASING"
   },
   "WELCORP": {
-    "stage": "FRESH_BOS2"
+    "stage": "STALE_BOS2"
   },
   "ACE": {
     "stage": "IN_RETEST"
@@ -310,7 +310,7 @@
     "stage": "PRE_BOS2_READY"
   },
   "LUPIN": {
-    "stage": "STALE_BOS2"
+    "stage": "BASING"
   },
   "AIAENG": {
     "stage": "BASING"
@@ -328,7 +328,7 @@
     "stage": "BASING"
   },
   "IPCALAB": {
-    "stage": "FRESH_REVERSAL"
+    "stage": "BASING"
   },
   "NDRAUTO": {
     "stage": "BASING"
@@ -369,7 +369,7 @@
     "stage": "FRESH_BOS2"
   },
   "UJJIVANSFB": {
-    "stage": "FRESH_REVERSAL"
+    "stage": "PRE_BOS2_READY"
   },
   "VOLTAMP": {
     "stage": "BASING"
@@ -416,7 +416,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "GABRIEL": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "UNIPARTS": {
     "stage": "BASING"
@@ -434,7 +434,7 @@
     "stage": "BASING"
   },
   "NELCO": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "FRESH_BOS2"
   },
   "REDINGTON": {
     "stage": "PRE_BOS2_READY"
@@ -455,7 +455,7 @@
     "stage": "STALE_BOS2"
   },
   "NGLFINE": {
-    "stage": "IN_RETEST"
+    "stage": "PRE_BOS2_READY"
   },
   "CNL": {
     "stage": "BASING"
@@ -512,7 +512,7 @@
     "stage": "IN_RETEST"
   },
   "KABRAEXTRU": {
-    "stage": "BASING"
+    "stage": "STALE_BOS2"
   },
   "LAURUSLABS": {
     "stage": "STALE_BOS2"
@@ -542,7 +542,7 @@
     "stage": "STALE_BOS2"
   },
   "FEDERALBNK": {
-    "stage": "IN_RETEST"
+    "stage": "BASING"
   },
   "LINDEINDIA": {
     "stage": "STALE_BOS2"
@@ -668,7 +668,7 @@
     "stage": "STALE_BOS2"
   },
   "CYIENTDLM": {
-    "stage": "IN_RETEST"
+    "stage": "STALE_BOS2"
   },
   "JASH": {
     "stage": "STALE_BOS2"
@@ -743,7 +743,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "CONCORDBIO": {
-    "stage": "IN_RETEST"
+    "stage": "FRESH_REVERSAL"
   },
   "THEJO": {
     "stage": "BASING"
@@ -755,19 +755,19 @@
     "stage": "IN_RETEST"
   },
   "VIMTALABS": {
-    "stage": "IN_RETEST"
+    "stage": "BASING"
   },
   "M&MFIN": {
-    "stage": "IN_RETEST"
+    "stage": "FRESH_REVERSAL"
   },
   "TI": {
-    "stage": "IN_RETEST"
+    "stage": "FRESH_BOS2"
   },
   "PTC": {
     "stage": "STALE_BOS2"
   },
   "WESTLIFE": {
-    "stage": "IN_RETEST"
+    "stage": "PRE_BOS2_READY"
   },
   "JKTYRE": {
     "stage": "STALE_BOS2"
@@ -782,7 +782,7 @@
     "stage": "STALE_BOS2"
   },
   "ASKAUTOLTD": {
-    "stage": "BASING"
+    "stage": "STALE_BOS2"
   },
   "RANEHOLDIN": {
     "stage": "STALE_BOS2"
@@ -794,7 +794,7 @@
     "stage": "STALE_BOS2"
   },
   "HONASA": {
-    "stage": "FRESH_REVERSAL"
+    "stage": "PRE_BOS2_READY"
   },
   "GANDHAR": {
     "stage": "BASING"
@@ -905,7 +905,7 @@
     "stage": "BASING"
   },
   "EMCURE": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "AVADHSUGAR": {
     "stage": "PRE_BOS2_READY"
@@ -941,7 +941,7 @@
     "stage": "IN_RETEST"
   },
   "LLOYDSENT": {
-    "stage": "FRESH_BOS2"
+    "stage": "STALE_BOS2"
   },
   "GULPOLY": {
     "stage": "STALE_BOS2"
@@ -1058,10 +1058,10 @@
     "stage": "BASING"
   },
   "BASF": {
-    "stage": "IN_RETEST"
+    "stage": "PRE_BOS2_READY"
   },
   "JGCHEM": {
-    "stage": "IN_RETEST"
+    "stage": "BASING"
   },
   "SHRIRAMFIN": {
     "stage": "IN_RETEST"
