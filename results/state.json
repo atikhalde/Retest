@@ -118,7 +118,7 @@
     "last_reversal_alerted": "2026-08-05"
   },
   "RISHABH": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "GNA": {
     "stage": "BASING"
@@ -187,7 +187,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "SUMICHEM": {
-    "stage": "FRESH_BOS2"
+    "stage": "IN_RETEST"
   },
   "CIEINDIA": {
     "stage": "BASING"
@@ -283,7 +283,7 @@
     "stage": "BASING"
   },
   "SSWL": {
-    "stage": "BASING"
+    "stage": "STALE_BOS2"
   },
   "HIRECT": {
     "stage": "BASING"
@@ -761,7 +761,7 @@
     "stage": "IN_RETEST"
   },
   "TI": {
-    "stage": "IN_RETEST"
+    "stage": "FRESH_BOS2"
   },
   "PTC": {
     "stage": "STALE_BOS2"
@@ -851,7 +851,7 @@
     "stage": "FRESH_BOS2"
   },
   "JSFB": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "JUSTDIAL": {
     "stage": "BASING"
