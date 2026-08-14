@@ -139,7 +139,7 @@
     "stage": "BASING"
   },
   "BHARATSE": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "ARKADE": {
     "stage": "BASING"
@@ -274,7 +274,7 @@
     "stage": "BASING"
   },
   "MPSLTD": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "SHREEPUSHK": {
     "stage": "BASING"
@@ -416,7 +416,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "GABRIEL": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "UNIPARTS": {
     "stage": "BASING"
@@ -438,7 +438,7 @@
     "last_reversal_alerted": "2026-08-14"
   },
   "REDINGTON": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "KRISHANA": {
     "stage": "BASING"
