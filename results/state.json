@@ -36,7 +36,7 @@
     "stage": "IN_RETEST"
   },
   "CRAFTSMAN": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "GLAND": {
     "stage": "IN_RETEST"
@@ -275,7 +275,7 @@
     "stage": "BASING"
   },
   "MPSLTD": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "SHREEPUSHK": {
     "stage": "BASING"
@@ -852,7 +852,7 @@
     "stage": "FRESH_BOS2"
   },
   "JSFB": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "JUSTDIAL": {
     "stage": "FRESH_REVERSAL"
@@ -967,7 +967,7 @@
     "stage": "STALE_BOS2"
   },
   "INNOVACAP": {
-    "stage": "IN_RETEST"
+    "stage": "STALE_BOS2"
   },
   "COALINDIA": {
     "stage": "STALE_BOS2"
