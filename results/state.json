@@ -45,7 +45,7 @@
     "stage": "IN_RETEST"
   },
   "RRKABEL": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "STALE_BOS2"
   },
   "HAPPYFORGE": {
     "stage": "STALE_BOS2"
@@ -75,7 +75,7 @@
     "stage": "FRESH_BOS2"
   },
   "LLOYDSME": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "TORNTPHARM": {
     "stage": "STALE_BOS2"
@@ -130,7 +130,8 @@
     "stage": "BASING"
   },
   "ABB": {
-    "stage": "FRESH_REVERSAL"
+    "stage": "FRESH_REVERSAL",
+    "last_reversal_alerted": "2026-08-17"
   },
   "ANTELOPUS": {
     "stage": "BASING"
@@ -196,7 +197,7 @@
     "stage": "BASING"
   },
   "SANGHVIMOV": {
-    "stage": "STALE_BOS2"
+    "stage": "FRESH_BOS2"
   },
   "GARFIBRES": {
     "stage": "STALE_BOS2"
@@ -241,7 +242,7 @@
     "stage": "BASING"
   },
   "RBLBANK": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "WELCORP": {
     "stage": "STALE_BOS2"
@@ -328,7 +329,7 @@
     "stage": "BASING"
   },
   "IPCALAB": {
-    "stage": "FRESH_REVERSAL"
+    "stage": "BASING"
   },
   "NDRAUTO": {
     "stage": "BASING"
@@ -437,7 +438,7 @@
     "stage": "FRESH_BOS2"
   },
   "REDINGTON": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "KRISHANA": {
     "stage": "BASING"
@@ -767,7 +768,7 @@
     "stage": "STALE_BOS2"
   },
   "WESTLIFE": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "JKTYRE": {
     "stage": "STALE_BOS2"
@@ -833,7 +834,7 @@
     "stage": "FRESH_BOS2"
   },
   "MUFIN": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "VMART": {
     "stage": "PRE_BOS2_READY"
