@@ -6,7 +6,7 @@
     "stage": "STALE_BOS2"
   },
   "SUPRAJIT": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "KERNEX": {
     "stage": "STALE_BOS2"
@@ -45,7 +45,7 @@
     "stage": "IN_RETEST"
   },
   "RRKABEL": {
-    "stage": "STALE_BOS2"
+    "stage": "PRE_BOS2_READY"
   },
   "HAPPYFORGE": {
     "stage": "STALE_BOS2"
@@ -149,7 +149,7 @@
     "stage": "FRESH_BOS2"
   },
   "MOTILALOFS": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "YESBANK": {
     "stage": "BASING"
@@ -197,7 +197,7 @@
     "stage": "BASING"
   },
   "SANGHVIMOV": {
-    "stage": "FRESH_BOS2"
+    "stage": "IN_RETEST"
   },
   "GARFIBRES": {
     "stage": "STALE_BOS2"
@@ -275,7 +275,7 @@
     "stage": "BASING"
   },
   "MPSLTD": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "SHREEPUSHK": {
     "stage": "BASING"
@@ -284,7 +284,7 @@
     "stage": "BASING"
   },
   "SSWL": {
-    "stage": "BASING"
+    "stage": "STALE_BOS2"
   },
   "HIRECT": {
     "stage": "BASING"
@@ -308,7 +308,7 @@
     "stage": "BASING"
   },
   "WELSPUNLIV": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "LUPIN": {
     "stage": "STALE_BOS2"
@@ -329,7 +329,7 @@
     "stage": "BASING"
   },
   "IPCALAB": {
-    "stage": "BASING"
+    "stage": "FRESH_REVERSAL"
   },
   "NDRAUTO": {
     "stage": "BASING"
@@ -423,7 +423,7 @@
     "stage": "BASING"
   },
   "RADICO": {
-    "stage": "BASING"
+    "stage": "STALE_BOS2"
   },
   "MANAPPURAM": {
     "stage": "BASING"
@@ -513,7 +513,7 @@
     "stage": "IN_RETEST"
   },
   "KABRAEXTRU": {
-    "stage": "STALE_BOS2"
+    "stage": "BASING"
   },
   "LAURUSLABS": {
     "stage": "STALE_BOS2"
@@ -768,7 +768,7 @@
     "stage": "STALE_BOS2"
   },
   "WESTLIFE": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "JKTYRE": {
     "stage": "STALE_BOS2"
@@ -819,7 +819,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "OBEROIRLTY": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "ACUTAAS": {
     "stage": "BASING"
@@ -909,7 +909,7 @@
     "stage": "BASING"
   },
   "AVADHSUGAR": {
-    "stage": "BASING"
+    "stage": "FRESH_BOS2"
   },
   "RPTECH": {
     "stage": "BASING"
@@ -1066,7 +1066,7 @@
     "stage": "BASING"
   },
   "SHRIRAMFIN": {
-    "stage": "IN_RETEST"
+    "stage": "PRE_BOS2_READY"
   },
   "SUMEETINDS": {
     "stage": "STALE_BOS2"
@@ -1114,7 +1114,7 @@
     "stage": "IN_RETEST"
   },
   "ONIDA": {
-    "stage": "BASING"
+    "stage": "FRESH_REVERSAL"
   },
   "INDOTECH": {
     "stage": "BASING"
