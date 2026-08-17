@@ -75,7 +75,7 @@
     "stage": "FRESH_BOS2"
   },
   "LLOYDSME": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "TORNTPHARM": {
     "stage": "STALE_BOS2"
@@ -232,7 +232,7 @@
     "stage": "BASING"
   },
   "LALPATHLAB": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "PVRINOX": {
     "stage": "BASING"
@@ -283,7 +283,7 @@
     "stage": "BASING"
   },
   "SSWL": {
-    "stage": "STALE_BOS2"
+    "stage": "BASING"
   },
   "HIRECT": {
     "stage": "BASING"
@@ -381,7 +381,7 @@
     "stage": "BASING"
   },
   "PITTIENG": {
-    "stage": "IN_RETEST"
+    "stage": "FRESH_BOS2"
   },
   "GIPCL": {
     "stage": "FRESH_REVERSAL"
@@ -437,7 +437,7 @@
     "stage": "FRESH_BOS2"
   },
   "REDINGTON": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "KRISHANA": {
     "stage": "BASING"
@@ -452,10 +452,10 @@
     "stage": "STALE_BOS2"
   },
   "WSTCSTPAPR": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "NGLFINE": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "CNL": {
     "stage": "BASING"
@@ -467,7 +467,7 @@
     "stage": "STALE_BOS2"
   },
   "ENTERO": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "HINDALCO": {
     "stage": "STALE_BOS2"
@@ -626,7 +626,7 @@
     "stage": "STALE_BOS2"
   },
   "KINGFA": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "APARINDS": {
     "stage": "STALE_BOS2"
@@ -767,7 +767,7 @@
     "stage": "STALE_BOS2"
   },
   "WESTLIFE": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "JKTYRE": {
     "stage": "STALE_BOS2"
@@ -851,7 +851,7 @@
     "stage": "FRESH_BOS2"
   },
   "JSFB": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "JUSTDIAL": {
     "stage": "FRESH_REVERSAL"
@@ -1064,7 +1064,7 @@
     "stage": "BASING"
   },
   "SHRIRAMFIN": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "IN_RETEST"
   },
   "SUMEETINDS": {
     "stage": "STALE_BOS2"
@@ -1073,7 +1073,7 @@
     "stage": "IN_RETEST"
   },
   "ANANTRAJ": {
-    "stage": "IN_RETEST"
+    "stage": "FRESH_REVERSAL"
   },
   "WINDLAS": {
     "stage": "IN_RETEST"
@@ -1134,5 +1134,8 @@
   },
   "BHAGYANGR": {
     "stage": "STALE_BOS2"
+  },
+  "UNOMINDA": {
+    "stage": "IN_RETEST"
   }
 }
