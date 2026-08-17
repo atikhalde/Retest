@@ -45,7 +45,7 @@
     "stage": "IN_RETEST"
   },
   "RRKABEL": {
-    "stage": "STALE_BOS2"
+    "stage": "PRE_BOS2_READY"
   },
   "HAPPYFORGE": {
     "stage": "STALE_BOS2"
@@ -118,7 +118,7 @@
     "last_reversal_alerted": "2026-08-05"
   },
   "RISHABH": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "FRESH_BOS2"
   },
   "GNA": {
     "stage": "BASING"
@@ -329,7 +329,7 @@
     "stage": "BASING"
   },
   "IPCALAB": {
-    "stage": "BASING"
+    "stage": "FRESH_REVERSAL"
   },
   "NDRAUTO": {
     "stage": "BASING"
@@ -352,7 +352,7 @@
     "stage": "BASING"
   },
   "KIRLOSIND": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "AURUM": {
     "stage": "BASING"
@@ -513,7 +513,7 @@
     "stage": "IN_RETEST"
   },
   "KABRAEXTRU": {
-    "stage": "STALE_BOS2"
+    "stage": "BASING"
   },
   "LAURUSLABS": {
     "stage": "STALE_BOS2"
@@ -921,10 +921,10 @@
     "stage": "FRESH_BOS2"
   },
   "ASIANENE": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "SMLMAH": {
-    "stage": "BASING",
+    "stage": "FRESH_REVERSAL",
     "last_reversal_alerted": "2026-08-17"
   },
   "GPTHEALTH": {
@@ -1114,7 +1114,7 @@
     "stage": "IN_RETEST"
   },
   "ONIDA": {
-    "stage": "BASING"
+    "stage": "FRESH_REVERSAL"
   },
   "INDOTECH": {
     "stage": "BASING"
