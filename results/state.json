@@ -118,7 +118,7 @@
     "last_reversal_alerted": "2026-08-05"
   },
   "RISHABH": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "GNA": {
     "stage": "BASING"
@@ -130,7 +130,7 @@
     "stage": "BASING"
   },
   "ABB": {
-    "stage": "FRESH_REVERSAL",
+    "stage": "PRE_BOS2_READY",
     "last_reversal_alerted": "2026-08-17"
   },
   "ANTELOPUS": {
@@ -852,7 +852,7 @@
     "stage": "FRESH_BOS2"
   },
   "JSFB": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "JUSTDIAL": {
     "stage": "FRESH_REVERSAL"
@@ -924,7 +924,8 @@
     "stage": "BASING"
   },
   "SMLMAH": {
-    "stage": "BASING"
+    "stage": "FRESH_REVERSAL",
+    "last_reversal_alerted": "2026-08-17"
   },
   "GPTHEALTH": {
     "stage": "BASING"
@@ -1059,7 +1060,7 @@
     "stage": "BASING"
   },
   "BASF": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "JGCHEM": {
     "stage": "BASING"
