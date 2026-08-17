@@ -45,7 +45,7 @@
     "stage": "IN_RETEST"
   },
   "RRKABEL": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "STALE_BOS2"
   },
   "HAPPYFORGE": {
     "stage": "STALE_BOS2"
@@ -75,10 +75,10 @@
     "stage": "FRESH_BOS2"
   },
   "LLOYDSME": {
-    "stage": "IN_RETEST"
+    "stage": "STALE_BOS2"
   },
   "TORNTPHARM": {
-    "stage": "IN_RETEST"
+    "stage": "STALE_BOS2"
   },
   "INDORAMA": {
     "stage": "BASING"
@@ -248,7 +248,7 @@
     "stage": "STALE_BOS2"
   },
   "ACE": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "ALKYLAMINE": {
     "stage": "BASING"
@@ -311,7 +311,7 @@
     "stage": "PRE_BOS2_READY"
   },
   "LUPIN": {
-    "stage": "BASING"
+    "stage": "STALE_BOS2"
   },
   "AIAENG": {
     "stage": "BASING"
@@ -352,7 +352,7 @@
     "stage": "BASING"
   },
   "KIRLOSIND": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "AURUM": {
     "stage": "BASING"
@@ -967,7 +967,7 @@
     "stage": "STALE_BOS2"
   },
   "INNOVACAP": {
-    "stage": "IN_RETEST"
+    "stage": "STALE_BOS2"
   },
   "COALINDIA": {
     "stage": "STALE_BOS2"
@@ -1066,7 +1066,7 @@
     "stage": "BASING"
   },
   "SHRIRAMFIN": {
-    "stage": "IN_RETEST"
+    "stage": "PRE_BOS2_READY"
   },
   "SUMEETINDS": {
     "stage": "STALE_BOS2"
