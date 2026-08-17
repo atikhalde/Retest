@@ -75,7 +75,7 @@
     "stage": "FRESH_BOS2"
   },
   "LLOYDSME": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "TORNTPHARM": {
     "stage": "STALE_BOS2"
@@ -149,7 +149,7 @@
     "stage": "FRESH_BOS2"
   },
   "MOTILALOFS": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "YESBANK": {
     "stage": "BASING"
@@ -284,7 +284,7 @@
     "stage": "BASING"
   },
   "SSWL": {
-    "stage": "STALE_BOS2"
+    "stage": "BASING"
   },
   "HIRECT": {
     "stage": "BASING"
@@ -308,7 +308,7 @@
     "stage": "BASING"
   },
   "WELSPUNLIV": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "LUPIN": {
     "stage": "STALE_BOS2"
@@ -819,7 +819,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "OBEROIRLTY": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "ACUTAAS": {
     "stage": "BASING"
@@ -924,7 +924,7 @@
     "stage": "BASING"
   },
   "SMLMAH": {
-    "stage": "FRESH_REVERSAL",
+    "stage": "BASING",
     "last_reversal_alerted": "2026-08-17"
   },
   "GPTHEALTH": {
@@ -967,7 +967,7 @@
     "stage": "STALE_BOS2"
   },
   "INNOVACAP": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "COALINDIA": {
     "stage": "STALE_BOS2"
@@ -1066,7 +1066,7 @@
     "stage": "BASING"
   },
   "SHRIRAMFIN": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "IN_RETEST"
   },
   "SUMEETINDS": {
     "stage": "STALE_BOS2"
