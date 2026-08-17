@@ -45,7 +45,7 @@
     "stage": "IN_RETEST"
   },
   "RRKABEL": {
-    "stage": "STALE_BOS2"
+    "stage": "PRE_BOS2_READY"
   },
   "HAPPYFORGE": {
     "stage": "STALE_BOS2"
@@ -121,7 +121,7 @@
     "stage": "FRESH_BOS2"
   },
   "GNA": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "GODREJIND": {
     "stage": "BASING"
@@ -248,7 +248,7 @@
     "stage": "STALE_BOS2"
   },
   "ACE": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "ALKYLAMINE": {
     "stage": "BASING"
@@ -284,7 +284,7 @@
     "stage": "BASING"
   },
   "SSWL": {
-    "stage": "BASING"
+    "stage": "STALE_BOS2"
   },
   "HIRECT": {
     "stage": "BASING"
@@ -747,7 +747,7 @@
     "stage": "FRESH_BOS2"
   },
   "THEJO": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "VSSL": {
     "stage": "FRESH_BOS2"
@@ -768,7 +768,7 @@
     "stage": "STALE_BOS2"
   },
   "WESTLIFE": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "JKTYRE": {
     "stage": "STALE_BOS2"
@@ -912,7 +912,7 @@
     "stage": "FRESH_BOS2"
   },
   "RPTECH": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "UNIVCABLES": {
     "stage": "FRESH_REVERSAL"
@@ -967,7 +967,7 @@
     "stage": "STALE_BOS2"
   },
   "INNOVACAP": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "COALINDIA": {
     "stage": "STALE_BOS2"
@@ -1114,7 +1114,7 @@
     "stage": "IN_RETEST"
   },
   "ONIDA": {
-    "stage": "BASING"
+    "stage": "FRESH_REVERSAL"
   },
   "INDOTECH": {
     "stage": "BASING"
@@ -1138,6 +1138,9 @@
     "stage": "STALE_BOS2"
   },
   "UNOMINDA": {
+    "stage": "IN_RETEST"
+  },
+  "FOSECOIND": {
     "stage": "IN_RETEST"
   }
 }
