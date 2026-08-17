@@ -36,7 +36,7 @@
     "stage": "IN_RETEST"
   },
   "CRAFTSMAN": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "GLAND": {
     "stage": "IN_RETEST"
@@ -45,7 +45,7 @@
     "stage": "IN_RETEST"
   },
   "RRKABEL": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "STALE_BOS2"
   },
   "HAPPYFORGE": {
     "stage": "STALE_BOS2"
@@ -118,7 +118,7 @@
     "last_reversal_alerted": "2026-08-05"
   },
   "RISHABH": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "FRESH_BOS2"
   },
   "GNA": {
     "stage": "BASING"
@@ -149,7 +149,7 @@
     "stage": "FRESH_BOS2"
   },
   "MOTILALOFS": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "YESBANK": {
     "stage": "BASING"
@@ -197,7 +197,7 @@
     "stage": "BASING"
   },
   "SANGHVIMOV": {
-    "stage": "STALE_BOS2"
+    "stage": "FRESH_BOS2"
   },
   "GARFIBRES": {
     "stage": "STALE_BOS2"
@@ -242,7 +242,7 @@
     "stage": "BASING"
   },
   "RBLBANK": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "WELCORP": {
     "stage": "STALE_BOS2"
@@ -284,7 +284,7 @@
     "stage": "BASING"
   },
   "SSWL": {
-    "stage": "STALE_BOS2"
+    "stage": "BASING"
   },
   "HIRECT": {
     "stage": "BASING"
@@ -329,7 +329,7 @@
     "stage": "BASING"
   },
   "IPCALAB": {
-    "stage": "FRESH_REVERSAL"
+    "stage": "BASING"
   },
   "NDRAUTO": {
     "stage": "BASING"
@@ -423,7 +423,7 @@
     "stage": "BASING"
   },
   "RADICO": {
-    "stage": "STALE_BOS2"
+    "stage": "BASING"
   },
   "MANAPPURAM": {
     "stage": "BASING"
@@ -513,7 +513,7 @@
     "stage": "IN_RETEST"
   },
   "KABRAEXTRU": {
-    "stage": "BASING"
+    "stage": "STALE_BOS2"
   },
   "LAURUSLABS": {
     "stage": "STALE_BOS2"
@@ -768,7 +768,7 @@
     "stage": "STALE_BOS2"
   },
   "WESTLIFE": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "JKTYRE": {
     "stage": "STALE_BOS2"
@@ -819,7 +819,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "OBEROIRLTY": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "ACUTAAS": {
     "stage": "BASING"
@@ -852,7 +852,7 @@
     "stage": "FRESH_BOS2"
   },
   "JSFB": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "JUSTDIAL": {
     "stage": "FRESH_REVERSAL"
@@ -1066,7 +1066,7 @@
     "stage": "BASING"
   },
   "SHRIRAMFIN": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "IN_RETEST"
   },
   "SUMEETINDS": {
     "stage": "STALE_BOS2"
@@ -1114,7 +1114,7 @@
     "stage": "IN_RETEST"
   },
   "ONIDA": {
-    "stage": "FRESH_REVERSAL"
+    "stage": "BASING"
   },
   "INDOTECH": {
     "stage": "BASING"
