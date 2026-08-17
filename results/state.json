@@ -6,7 +6,7 @@
     "stage": "STALE_BOS2"
   },
   "SUPRAJIT": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "KERNEX": {
     "stage": "STALE_BOS2"
@@ -45,7 +45,7 @@
     "stage": "IN_RETEST"
   },
   "RRKABEL": {
-    "stage": "STALE_BOS2"
+    "stage": "PRE_BOS2_READY"
   },
   "HAPPYFORGE": {
     "stage": "STALE_BOS2"
@@ -75,7 +75,7 @@
     "stage": "FRESH_BOS2"
   },
   "LLOYDSME": {
-    "stage": "IN_RETEST"
+    "stage": "STALE_BOS2"
   },
   "TORNTPHARM": {
     "stage": "STALE_BOS2"
@@ -121,7 +121,7 @@
     "stage": "BASING"
   },
   "GNA": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "GODREJIND": {
     "stage": "BASING"
@@ -130,7 +130,7 @@
     "stage": "BASING"
   },
   "ABB": {
-    "stage": "FRESH_REVERSAL",
+    "stage": "PRE_BOS2_READY",
     "last_reversal_alerted": "2026-08-17"
   },
   "ANTELOPUS": {
@@ -197,7 +197,7 @@
     "stage": "BASING"
   },
   "SANGHVIMOV": {
-    "stage": "FRESH_BOS2"
+    "stage": "STALE_BOS2"
   },
   "GARFIBRES": {
     "stage": "STALE_BOS2"
@@ -329,7 +329,7 @@
     "stage": "BASING"
   },
   "IPCALAB": {
-    "stage": "BASING"
+    "stage": "FRESH_REVERSAL"
   },
   "NDRAUTO": {
     "stage": "BASING"
@@ -744,7 +744,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "CONCORDBIO": {
-    "stage": "FRESH_REVERSAL"
+    "stage": "FRESH_BOS2"
   },
   "THEJO": {
     "stage": "BASING"
@@ -768,7 +768,7 @@
     "stage": "STALE_BOS2"
   },
   "WESTLIFE": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "JKTYRE": {
     "stage": "STALE_BOS2"
@@ -834,7 +834,7 @@
     "stage": "FRESH_BOS2"
   },
   "MUFIN": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "VMART": {
     "stage": "PRE_BOS2_READY"
@@ -882,7 +882,7 @@
     "stage": "BASING"
   },
   "J&KBANK": {
-    "stage": "BASING"
+    "stage": "STALE_BOS2"
   },
   "MANGLMCEM": {
     "stage": "BASING"
@@ -1059,7 +1059,7 @@
     "stage": "BASING"
   },
   "BASF": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "JGCHEM": {
     "stage": "BASING"
