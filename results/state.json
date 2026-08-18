@@ -33,10 +33,10 @@
     "stage": "STALE_BOS2"
   },
   "AVALON": {
-    "stage": "BASING"
+    "stage": "FRESH_BOS2"
   },
   "CRAFTSMAN": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "GLAND": {
     "stage": "IN_RETEST"
@@ -130,7 +130,7 @@
     "stage": "BASING"
   },
   "ABB": {
-    "stage": "PRE_BOS2_READY",
+    "stage": "BASING",
     "last_reversal_alerted": "2026-08-17"
   },
   "ANTELOPUS": {
@@ -429,7 +429,7 @@
     "stage": "BASING"
   },
   "SPORTKING": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "JLHL": {
     "stage": "BASING"
@@ -438,7 +438,7 @@
     "stage": "FRESH_BOS2"
   },
   "REDINGTON": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "KRISHANA": {
     "stage": "BASING"
@@ -522,7 +522,7 @@
     "stage": "STALE_BOS2"
   },
   "MEDANTA": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "CHENNPETRO": {
     "stage": "STALE_BOS2"
@@ -852,7 +852,7 @@
     "stage": "FRESH_BOS2"
   },
   "JSFB": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "JUSTDIAL": {
     "stage": "FRESH_REVERSAL"
