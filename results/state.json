@@ -45,7 +45,7 @@
     "stage": "IN_RETEST"
   },
   "RRKABEL": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "HAPPYFORGE": {
     "stage": "STALE_BOS2"
@@ -54,7 +54,7 @@
     "stage": "STALE_BOS2"
   },
   "MINDACORP": {
-    "stage": "IN_RETEST"
+    "stage": "PRE_BOS2_READY"
   },
   "AEROENTER": {
     "stage": "STALE_BOS2"
@@ -102,10 +102,10 @@
     "stage": "BASING"
   },
   "SUVEN": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "ADOR": {
-    "stage": "FRESH_REVERSAL"
+    "stage": "BASING"
   },
   "MMFL": {
     "stage": "IN_RETEST"
@@ -118,7 +118,7 @@
     "last_reversal_alerted": "2026-08-05"
   },
   "RISHABH": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "FRESH_BOS2"
   },
   "GNA": {
     "stage": "FRESH_REVERSAL",
@@ -131,20 +131,20 @@
     "stage": "BASING"
   },
   "ABB": {
-    "stage": "BASING",
+    "stage": "PRE_BOS2_READY",
     "last_reversal_alerted": "2026-08-17"
   },
   "ANTELOPUS": {
     "stage": "BASING"
   },
   "ASTRAMICRO": {
-    "stage": "BASING"
+    "stage": "FRESH_REVERSAL"
   },
   "BHARATSE": {
     "stage": "BASING"
   },
   "ARKADE": {
-    "stage": "BASING"
+    "stage": "FRESH_REVERSAL"
   },
   "SKYGOLD": {
     "stage": "FRESH_BOS2"
@@ -156,7 +156,7 @@
     "stage": "BASING"
   },
   "SENORES": {
-    "stage": "FRESH_BOS2"
+    "stage": "STALE_BOS2"
   },
   "RML": {
     "stage": "STALE_BOS2"
@@ -222,7 +222,7 @@
     "stage": "BASING"
   },
   "IKS": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "INDIGO": {
     "stage": "FRESH_REVERSAL"
@@ -243,7 +243,7 @@
     "stage": "BASING"
   },
   "RBLBANK": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "WELCORP": {
     "stage": "STALE_BOS2"
@@ -276,7 +276,7 @@
     "stage": "BASING"
   },
   "MPSLTD": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "SHREEPUSHK": {
     "stage": "BASING"
@@ -285,7 +285,7 @@
     "stage": "BASING"
   },
   "SSWL": {
-    "stage": "BASING"
+    "stage": "STALE_BOS2"
   },
   "HIRECT": {
     "stage": "BASING"
@@ -294,7 +294,7 @@
     "stage": "BASING"
   },
   "SHAREINDIA": {
-    "stage": "BASING"
+    "stage": "FRESH_REVERSAL"
   },
   "STEL": {
     "stage": "FRESH_REVERSAL"
@@ -330,7 +330,7 @@
     "stage": "BASING"
   },
   "IPCALAB": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "FRESH_REVERSAL"
   },
   "NDRAUTO": {
     "stage": "BASING"
@@ -430,7 +430,7 @@
     "stage": "BASING"
   },
   "SPORTKING": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "JLHL": {
     "stage": "BASING"
@@ -442,7 +442,7 @@
     "stage": "BASING"
   },
   "KRISHANA": {
-    "stage": "BASING"
+    "stage": "IN_RETEST"
   },
   "APCOTEXIND": {
     "stage": "BASING"
@@ -469,7 +469,7 @@
     "stage": "STALE_BOS2"
   },
   "ENTERO": {
-    "stage": "IN_RETEST"
+    "stage": "STALE_BOS2"
   },
   "HINDALCO": {
     "stage": "STALE_BOS2"
@@ -514,7 +514,7 @@
     "stage": "IN_RETEST"
   },
   "KABRAEXTRU": {
-    "stage": "STALE_BOS2"
+    "stage": "BASING"
   },
   "LAURUSLABS": {
     "stage": "STALE_BOS2"
@@ -805,7 +805,7 @@
     "stage": "FRESH_BOS2"
   },
   "STOVEKRAFT": {
-    "stage": "FRESH_BOS2"
+    "stage": "STALE_BOS2"
   },
   "GOODLUCK": {
     "stage": "STALE_BOS2"
@@ -832,7 +832,7 @@
     "stage": "BASING"
   },
   "LMW": {
-    "stage": "FRESH_BOS2"
+    "stage": "STALE_BOS2"
   },
   "MUFIN": {
     "stage": "PRE_BOS2_READY"
@@ -944,7 +944,7 @@
     "stage": "IN_RETEST"
   },
   "LLOYDSENT": {
-    "stage": "IN_RETEST"
+    "stage": "STALE_BOS2"
   },
   "GULPOLY": {
     "stage": "STALE_BOS2"
@@ -968,7 +968,7 @@
     "stage": "STALE_BOS2"
   },
   "INNOVACAP": {
-    "stage": "IN_RETEST"
+    "stage": "STALE_BOS2"
   },
   "COALINDIA": {
     "stage": "STALE_BOS2"
@@ -1067,7 +1067,7 @@
     "stage": "BASING"
   },
   "SHRIRAMFIN": {
-    "stage": "IN_RETEST"
+    "stage": "BASING"
   },
   "SUMEETINDS": {
     "stage": "STALE_BOS2"
@@ -1115,7 +1115,7 @@
     "stage": "IN_RETEST"
   },
   "ONIDA": {
-    "stage": "FRESH_REVERSAL"
+    "stage": "BASING"
   },
   "INDOTECH": {
     "stage": "BASING"
