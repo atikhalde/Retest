@@ -3,7 +3,7 @@
     "stage": "STALE_BOS2"
   },
   "PNBHOUSING": {
-    "stage": "BASING"
+    "stage": "STALE_BOS2"
   },
   "SUPRAJIT": {
     "stage": "BASING"
@@ -285,7 +285,7 @@
     "stage": "BASING"
   },
   "SSWL": {
-    "stage": "BASING"
+    "stage": "STALE_BOS2"
   },
   "HIRECT": {
     "stage": "BASING"
@@ -330,7 +330,7 @@
     "stage": "BASING"
   },
   "IPCALAB": {
-    "stage": "FRESH_REVERSAL"
+    "stage": "BASING"
   },
   "NDRAUTO": {
     "stage": "BASING"
@@ -439,7 +439,7 @@
     "stage": "FRESH_BOS2"
   },
   "REDINGTON": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "KRISHANA": {
     "stage": "BASING"
@@ -523,7 +523,7 @@
     "stage": "STALE_BOS2"
   },
   "MEDANTA": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "CHENNPETRO": {
     "stage": "STALE_BOS2"
@@ -784,7 +784,7 @@
     "stage": "STALE_BOS2"
   },
   "ASKAUTOLTD": {
-    "stage": "BASING"
+    "stage": "STALE_BOS2"
   },
   "RANEHOLDIN": {
     "stage": "STALE_BOS2"
@@ -886,7 +886,7 @@
     "stage": "STALE_BOS2"
   },
   "MANGLMCEM": {
-    "stage": "STALE_BOS2"
+    "stage": "BASING"
   },
   "GANECOS": {
     "stage": "BASING"
@@ -944,7 +944,7 @@
     "stage": "IN_RETEST"
   },
   "LLOYDSENT": {
-    "stage": "IN_RETEST"
+    "stage": "STALE_BOS2"
   },
   "GULPOLY": {
     "stage": "STALE_BOS2"
@@ -1067,7 +1067,7 @@
     "stage": "BASING"
   },
   "SHRIRAMFIN": {
-    "stage": "IN_RETEST"
+    "stage": "BASING"
   },
   "SUMEETINDS": {
     "stage": "STALE_BOS2"
