@@ -45,7 +45,7 @@
     "stage": "IN_RETEST"
   },
   "RRKABEL": {
-    "stage": "STALE_BOS2"
+    "stage": "BASING"
   },
   "HAPPYFORGE": {
     "stage": "STALE_BOS2"
@@ -162,7 +162,7 @@
     "stage": "STALE_BOS2"
   },
   "HARSHA": {
-    "stage": "BASING"
+    "stage": "FRESH_REVERSAL"
   },
   "KPIL": {
     "stage": "BASING"
@@ -171,13 +171,13 @@
     "stage": "BASING"
   },
   "INGERRAND": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "GOKULAGRO": {
     "stage": "BASING"
   },
   "PHOENIXLTD": {
-    "stage": "FRESH_REVERSAL"
+    "stage": "BASING"
   },
   "IONEXCHANG": {
     "stage": "FRESH_REVERSAL"
@@ -207,7 +207,7 @@
     "stage": "BASING"
   },
   "CARYSIL": {
-    "stage": "FRESH_BOS2"
+    "stage": "STALE_BOS2"
   },
   "NETWEB": {
     "stage": "FRESH_BOS2"
@@ -276,7 +276,7 @@
     "stage": "BASING"
   },
   "MPSLTD": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "SHREEPUSHK": {
     "stage": "BASING"
@@ -330,7 +330,7 @@
     "stage": "BASING"
   },
   "IPCALAB": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "NDRAUTO": {
     "stage": "BASING"
@@ -439,7 +439,7 @@
     "stage": "FRESH_BOS2"
   },
   "REDINGTON": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "KRISHANA": {
     "stage": "BASING"
@@ -469,7 +469,7 @@
     "stage": "STALE_BOS2"
   },
   "ENTERO": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "HINDALCO": {
     "stage": "STALE_BOS2"
@@ -853,7 +853,7 @@
     "stage": "FRESH_BOS2"
   },
   "JSFB": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "FRESH_REVERSAL"
   },
   "JUSTDIAL": {
     "stage": "FRESH_REVERSAL"
@@ -944,7 +944,7 @@
     "stage": "IN_RETEST"
   },
   "LLOYDSENT": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "GULPOLY": {
     "stage": "STALE_BOS2"
@@ -1061,13 +1061,13 @@
     "stage": "BASING"
   },
   "BASF": {
-    "stage": "FRESH_REVERSAL"
+    "stage": "BASING"
   },
   "JGCHEM": {
     "stage": "BASING"
   },
   "SHRIRAMFIN": {
-    "stage": "BASING"
+    "stage": "IN_RETEST"
   },
   "SUMEETINDS": {
     "stage": "STALE_BOS2"
@@ -1115,7 +1115,7 @@
     "stage": "IN_RETEST"
   },
   "ONIDA": {
-    "stage": "BASING"
+    "stage": "FRESH_REVERSAL"
   },
   "INDOTECH": {
     "stage": "BASING"
@@ -1148,6 +1148,9 @@
     "stage": "IN_RETEST"
   },
   "YUKEN": {
+    "stage": "IN_RETEST"
+  },
+  "COFORGE": {
     "stage": "IN_RETEST"
   }
 }
