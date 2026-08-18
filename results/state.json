@@ -6,7 +6,7 @@
     "stage": "STALE_BOS2"
   },
   "SUPRAJIT": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "KERNEX": {
     "stage": "STALE_BOS2"
@@ -36,7 +36,7 @@
     "stage": "FRESH_BOS2"
   },
   "CRAFTSMAN": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "GLAND": {
     "stage": "IN_RETEST"
@@ -45,7 +45,7 @@
     "stage": "IN_RETEST"
   },
   "RRKABEL": {
-    "stage": "BASING"
+    "stage": "STALE_BOS2"
   },
   "HAPPYFORGE": {
     "stage": "STALE_BOS2"
@@ -121,7 +121,8 @@
     "stage": "PRE_BOS2_READY"
   },
   "GNA": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "FRESH_REVERSAL",
+    "last_reversal_alerted": "2026-08-18"
   },
   "GODREJIND": {
     "stage": "BASING"
@@ -284,7 +285,7 @@
     "stage": "BASING"
   },
   "SSWL": {
-    "stage": "STALE_BOS2"
+    "stage": "BASING"
   },
   "HIRECT": {
     "stage": "BASING"
@@ -329,7 +330,7 @@
     "stage": "BASING"
   },
   "IPCALAB": {
-    "stage": "FRESH_REVERSAL"
+    "stage": "BASING"
   },
   "NDRAUTO": {
     "stage": "BASING"
@@ -423,13 +424,13 @@
     "stage": "BASING"
   },
   "RADICO": {
-    "stage": "STALE_BOS2"
+    "stage": "BASING"
   },
   "MANAPPURAM": {
     "stage": "BASING"
   },
   "SPORTKING": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "JLHL": {
     "stage": "BASING"
@@ -438,7 +439,7 @@
     "stage": "FRESH_BOS2"
   },
   "REDINGTON": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "KRISHANA": {
     "stage": "BASING"
@@ -513,7 +514,7 @@
     "stage": "IN_RETEST"
   },
   "KABRAEXTRU": {
-    "stage": "BASING"
+    "stage": "STALE_BOS2"
   },
   "LAURUSLABS": {
     "stage": "STALE_BOS2"
@@ -852,7 +853,7 @@
     "stage": "FRESH_BOS2"
   },
   "JSFB": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "JUSTDIAL": {
     "stage": "FRESH_REVERSAL"
@@ -1114,7 +1115,7 @@
     "stage": "IN_RETEST"
   },
   "ONIDA": {
-    "stage": "FRESH_REVERSAL"
+    "stage": "BASING"
   },
   "INDOTECH": {
     "stage": "BASING"
