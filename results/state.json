@@ -36,7 +36,7 @@
     "stage": "BASING"
   },
   "CRAFTSMAN": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "GLAND": {
     "stage": "IN_RETEST"
@@ -45,7 +45,7 @@
     "stage": "IN_RETEST"
   },
   "RRKABEL": {
-    "stage": "STALE_BOS2"
+    "stage": "BASING"
   },
   "HAPPYFORGE": {
     "stage": "STALE_BOS2"
@@ -121,8 +121,7 @@
     "stage": "PRE_BOS2_READY"
   },
   "GNA": {
-    "stage": "FRESH_REVERSAL",
-    "last_reversal_alerted": "2026-08-18"
+    "stage": "PRE_BOS2_READY"
   },
   "GODREJIND": {
     "stage": "BASING"
@@ -249,7 +248,7 @@
     "stage": "STALE_BOS2"
   },
   "ACE": {
-    "stage": "BASING"
+    "stage": "FRESH_BOS2"
   },
   "ALKYLAMINE": {
     "stage": "BASING"
@@ -330,7 +329,7 @@
     "stage": "BASING"
   },
   "IPCALAB": {
-    "stage": "BASING"
+    "stage": "FRESH_REVERSAL"
   },
   "NDRAUTO": {
     "stage": "BASING"
@@ -368,7 +367,7 @@
     "stage": "BASING"
   },
   "FLUOROCHEM": {
-    "stage": "IN_RETEST"
+    "stage": "FRESH_BOS2"
   },
   "UJJIVANSFB": {
     "stage": "PRE_BOS2_READY"
@@ -424,7 +423,7 @@
     "stage": "BASING"
   },
   "RADICO": {
-    "stage": "BASING"
+    "stage": "STALE_BOS2"
   },
   "MANAPPURAM": {
     "stage": "BASING"
@@ -439,7 +438,7 @@
     "stage": "FRESH_BOS2"
   },
   "REDINGTON": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "KRISHANA": {
     "stage": "BASING"
@@ -514,7 +513,7 @@
     "stage": "IN_RETEST"
   },
   "KABRAEXTRU": {
-    "stage": "STALE_BOS2"
+    "stage": "BASING"
   },
   "LAURUSLABS": {
     "stage": "STALE_BOS2"
@@ -523,7 +522,7 @@
     "stage": "STALE_BOS2"
   },
   "MEDANTA": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "CHENNPETRO": {
     "stage": "STALE_BOS2"
@@ -784,7 +783,7 @@
     "stage": "STALE_BOS2"
   },
   "ASKAUTOLTD": {
-    "stage": "STALE_BOS2"
+    "stage": "BASING"
   },
   "RANEHOLDIN": {
     "stage": "STALE_BOS2"
@@ -853,7 +852,7 @@
     "stage": "FRESH_BOS2"
   },
   "JSFB": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "JUSTDIAL": {
     "stage": "FRESH_REVERSAL"
