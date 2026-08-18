@@ -3,7 +3,7 @@
     "stage": "STALE_BOS2"
   },
   "PNBHOUSING": {
-    "stage": "STALE_BOS2"
+    "stage": "BASING"
   },
   "SUPRAJIT": {
     "stage": "BASING"
@@ -45,7 +45,7 @@
     "stage": "IN_RETEST"
   },
   "RRKABEL": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "STALE_BOS2"
   },
   "HAPPYFORGE": {
     "stage": "STALE_BOS2"
@@ -121,7 +121,8 @@
     "stage": "PRE_BOS2_READY"
   },
   "GNA": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "FRESH_REVERSAL",
+    "last_reversal_alerted": "2026-08-18"
   },
   "GODREJIND": {
     "stage": "BASING"
@@ -248,7 +249,7 @@
     "stage": "STALE_BOS2"
   },
   "ACE": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "ALKYLAMINE": {
     "stage": "BASING"
@@ -284,7 +285,7 @@
     "stage": "BASING"
   },
   "SSWL": {
-    "stage": "STALE_BOS2"
+    "stage": "BASING"
   },
   "HIRECT": {
     "stage": "BASING"
@@ -367,7 +368,7 @@
     "stage": "BASING"
   },
   "FLUOROCHEM": {
-    "stage": "FRESH_BOS2"
+    "stage": "IN_RETEST"
   },
   "UJJIVANSFB": {
     "stage": "PRE_BOS2_READY"
@@ -417,13 +418,13 @@
     "stage": "FRESH_REVERSAL"
   },
   "GABRIEL": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "UNIPARTS": {
     "stage": "BASING"
   },
   "RADICO": {
-    "stage": "STALE_BOS2"
+    "stage": "BASING"
   },
   "MANAPPURAM": {
     "stage": "BASING"
@@ -513,7 +514,7 @@
     "stage": "IN_RETEST"
   },
   "KABRAEXTRU": {
-    "stage": "BASING"
+    "stage": "STALE_BOS2"
   },
   "LAURUSLABS": {
     "stage": "STALE_BOS2"
@@ -747,7 +748,7 @@
     "stage": "FRESH_BOS2"
   },
   "THEJO": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "VSSL": {
     "stage": "FRESH_BOS2"
@@ -885,7 +886,7 @@
     "stage": "STALE_BOS2"
   },
   "MANGLMCEM": {
-    "stage": "BASING"
+    "stage": "STALE_BOS2"
   },
   "GANECOS": {
     "stage": "BASING"
@@ -943,7 +944,7 @@
     "stage": "IN_RETEST"
   },
   "LLOYDSENT": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "GULPOLY": {
     "stage": "STALE_BOS2"
@@ -1066,7 +1067,7 @@
     "stage": "BASING"
   },
   "SHRIRAMFIN": {
-    "stage": "BASING"
+    "stage": "IN_RETEST"
   },
   "SUMEETINDS": {
     "stage": "STALE_BOS2"
@@ -1141,6 +1142,12 @@
     "stage": "IN_RETEST"
   },
   "FOSECOIND": {
+    "stage": "IN_RETEST"
+  },
+  "INDGN": {
+    "stage": "IN_RETEST"
+  },
+  "YUKEN": {
     "stage": "IN_RETEST"
   }
 }
