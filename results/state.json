@@ -45,7 +45,7 @@
     "stage": "BASING"
   },
   "RRKABEL": {
-    "stage": "STALE_BOS2"
+    "stage": "BASING"
   },
   "HAPPYFORGE": {
     "stage": "STALE_BOS2"
@@ -284,7 +284,7 @@
     "stage": "BASING"
   },
   "SSWL": {
-    "stage": "BASING"
+    "stage": "STALE_BOS2"
   },
   "HIRECT": {
     "stage": "BASING"
@@ -423,7 +423,7 @@
     "stage": "BASING"
   },
   "RADICO": {
-    "stage": "BASING"
+    "stage": "STALE_BOS2"
   },
   "MANAPPURAM": {
     "stage": "BASING"
