@@ -118,10 +118,10 @@
     "last_reversal_alerted": "2026-08-05"
   },
   "RISHABH": {
-    "stage": "FRESH_BOS2"
+    "stage": "IN_RETEST"
   },
   "GNA": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "GODREJIND": {
     "stage": "BASING"
@@ -212,7 +212,7 @@
     "stage": "FRESH_BOS2"
   },
   "PGIL": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "INDHOTEL": {
     "stage": "BASING"
@@ -285,7 +285,7 @@
     "stage": "BASING"
   },
   "SSWL": {
-    "stage": "BASING"
+    "stage": "STALE_BOS2"
   },
   "HIRECT": {
     "stage": "BASING"
@@ -424,7 +424,7 @@
     "stage": "BASING"
   },
   "RADICO": {
-    "stage": "BASING"
+    "stage": "STALE_BOS2"
   },
   "MANAPPURAM": {
     "stage": "BASING"
