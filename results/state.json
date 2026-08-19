@@ -33,10 +33,10 @@
     "stage": "STALE_BOS2"
   },
   "AVALON": {
-    "stage": "IN_RETEST"
+    "stage": "FRESH_BOS2"
   },
   "CRAFTSMAN": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "GLAND": {
     "stage": "IN_RETEST"
@@ -45,7 +45,7 @@
     "stage": "BASING"
   },
   "RRKABEL": {
-    "stage": "BASING"
+    "stage": "STALE_BOS2"
   },
   "HAPPYFORGE": {
     "stage": "STALE_BOS2"
@@ -176,7 +176,7 @@
     "stage": "BASING"
   },
   "PHOENIXLTD": {
-    "stage": "FRESH_REVERSAL"
+    "stage": "BASING"
   },
   "IONEXCHANG": {
     "stage": "FRESH_REVERSAL"
@@ -285,7 +285,7 @@
     "stage": "BASING"
   },
   "SSWL": {
-    "stage": "BASING"
+    "stage": "STALE_BOS2"
   },
   "HIRECT": {
     "stage": "BASING"
@@ -330,7 +330,7 @@
     "stage": "BASING"
   },
   "IPCALAB": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "NDRAUTO": {
     "stage": "BASING"
@@ -443,7 +443,7 @@
     "stage": "PRE_BOS2_READY"
   },
   "KRISHANA": {
-    "stage": "IN_RETEST"
+    "stage": "BASING"
   },
   "APCOTEXIND": {
     "stage": "FRESH_REVERSAL"
@@ -515,7 +515,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "KABRAEXTRU": {
-    "stage": "BASING"
+    "stage": "STALE_BOS2"
   },
   "LAURUSLABS": {
     "stage": "STALE_BOS2"
@@ -668,7 +668,7 @@
     "stage": "STALE_BOS2"
   },
   "MBAPL": {
-    "stage": "IN_RETEST"
+    "stage": "STALE_BOS2"
   },
   "CYIENTDLM": {
     "stage": "STALE_BOS2"
@@ -785,7 +785,7 @@
     "stage": "STALE_BOS2"
   },
   "ASKAUTOLTD": {
-    "stage": "BASING"
+    "stage": "STALE_BOS2"
   },
   "RANEHOLDIN": {
     "stage": "STALE_BOS2"
