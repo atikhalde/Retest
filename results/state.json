@@ -33,7 +33,7 @@
     "stage": "STALE_BOS2"
   },
   "AVALON": {
-    "stage": "FRESH_BOS2"
+    "stage": "IN_RETEST"
   },
   "CRAFTSMAN": {
     "stage": "BASING"
@@ -69,13 +69,13 @@
     "stage": "STALE_BOS2"
   },
   "IGPL": {
-    "stage": "IN_RETEST"
+    "stage": "BASING"
   },
   "GRASIM": {
     "stage": "FRESH_BOS2"
   },
   "LLOYDSME": {
-    "stage": "STALE_BOS2"
+    "stage": "BASING"
   },
   "TORNTPHARM": {
     "stage": "IN_RETEST"
@@ -114,14 +114,14 @@
     "stage": "BASING"
   },
   "AZAD": {
-    "stage": "IN_RETEST",
+    "stage": "BASING",
     "last_reversal_alerted": "2026-08-05"
   },
   "RISHABH": {
     "stage": "FRESH_BOS2"
   },
   "GNA": {
-    "stage": "FRESH_BOS2"
+    "stage": "PRE_BOS2_READY"
   },
   "GODREJIND": {
     "stage": "BASING"
@@ -176,7 +176,7 @@
     "stage": "BASING"
   },
   "PHOENIXLTD": {
-    "stage": "BASING"
+    "stage": "FRESH_REVERSAL"
   },
   "IONEXCHANG": {
     "stage": "FRESH_REVERSAL"
@@ -257,7 +257,7 @@
     "stage": "FRESH_BOS2"
   },
   "DIVGIITTS": {
-    "stage": "FRESH_BOS2"
+    "stage": "STALE_BOS2"
   },
   "DATAMATICS": {
     "stage": "BASING"
@@ -275,7 +275,8 @@
     "stage": "BASING"
   },
   "MPSLTD": {
-    "stage": "BASING"
+    "stage": "FRESH_REVERSAL",
+    "last_reversal_alerted": "2026-08-19"
   },
   "SHREEPUSHK": {
     "stage": "BASING"
@@ -395,7 +396,7 @@
     "last_reversal_alerted": "2026-08-07"
   },
   "TCPLPACK": {
-    "stage": "FRESH_BOS2"
+    "stage": "STALE_BOS2"
   },
   "HSCL": {
     "stage": "BASING"
@@ -442,7 +443,7 @@
     "stage": "PRE_BOS2_READY"
   },
   "KRISHANA": {
-    "stage": "BASING"
+    "stage": "IN_RETEST"
   },
   "APCOTEXIND": {
     "stage": "FRESH_REVERSAL"
@@ -511,10 +512,10 @@
     "stage": "IN_RETEST"
   },
   "FILATEX": {
-    "stage": "IN_RETEST"
+    "stage": "FRESH_REVERSAL"
   },
   "KABRAEXTRU": {
-    "stage": "STALE_BOS2"
+    "stage": "BASING"
   },
   "LAURUSLABS": {
     "stage": "STALE_BOS2"
@@ -523,7 +524,7 @@
     "stage": "STALE_BOS2"
   },
   "MEDANTA": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "CHENNPETRO": {
     "stage": "STALE_BOS2"
@@ -571,7 +572,7 @@
     "stage": "STALE_BOS2"
   },
   "APOLLOHOSP": {
-    "stage": "IN_RETEST"
+    "stage": "FRESH_REVERSAL"
   },
   "VEDL": {
     "stage": "STALE_BOS2"
@@ -667,7 +668,7 @@
     "stage": "STALE_BOS2"
   },
   "MBAPL": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "CYIENTDLM": {
     "stage": "STALE_BOS2"
@@ -691,7 +692,7 @@
     "stage": "STALE_BOS2"
   },
   "SOLARINDS": {
-    "stage": "IN_RETEST"
+    "stage": "STALE_BOS2"
   },
   "PSPPROJECT": {
     "stage": "STALE_BOS2"
@@ -748,13 +749,13 @@
     "stage": "FRESH_BOS2"
   },
   "THEJO": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "VSSL": {
     "stage": "FRESH_BOS2"
   },
   "63MOONS": {
-    "stage": "IN_RETEST"
+    "stage": "BASING"
   },
   "VIMTALABS": {
     "stage": "BASING"
@@ -886,7 +887,7 @@
     "stage": "STALE_BOS2"
   },
   "MANGLMCEM": {
-    "stage": "BASING"
+    "stage": "STALE_BOS2"
   },
   "GANECOS": {
     "stage": "BASING"
@@ -1079,7 +1080,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "WINDLAS": {
-    "stage": "IN_RETEST"
+    "stage": "FRESH_BOS2"
   },
   "FIEMIND": {
     "stage": "IN_RETEST"
@@ -1118,7 +1119,7 @@
     "stage": "BASING"
   },
   "INDOTECH": {
-    "stage": "BASING"
+    "stage": "FRESH_REVERSAL"
   },
   "SIGMAADV": {
     "stage": "BASING"
@@ -1163,6 +1164,12 @@
     "stage": "FRESH_REVERSAL"
   },
   "TVSSRICHAK": {
+    "stage": "IN_RETEST"
+  },
+  "IIFL": {
+    "stage": "IN_RETEST"
+  },
+  "AVTNPL": {
     "stage": "IN_RETEST"
   }
 }
