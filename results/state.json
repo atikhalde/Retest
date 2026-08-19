@@ -33,7 +33,7 @@
     "stage": "STALE_BOS2"
   },
   "AVALON": {
-    "stage": "FRESH_BOS2"
+    "stage": "IN_RETEST"
   },
   "CRAFTSMAN": {
     "stage": "PRE_BOS2_READY"
@@ -45,7 +45,7 @@
     "stage": "BASING"
   },
   "RRKABEL": {
-    "stage": "BASING"
+    "stage": "STALE_BOS2"
   },
   "HAPPYFORGE": {
     "stage": "STALE_BOS2"
@@ -221,7 +221,7 @@
     "stage": "BASING"
   },
   "IKS": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "INDIGO": {
     "stage": "FRESH_REVERSAL"
@@ -284,7 +284,7 @@
     "stage": "BASING"
   },
   "SSWL": {
-    "stage": "STALE_BOS2"
+    "stage": "BASING"
   },
   "HIRECT": {
     "stage": "BASING"
@@ -513,7 +513,7 @@
     "stage": "IN_RETEST"
   },
   "KABRAEXTRU": {
-    "stage": "BASING"
+    "stage": "STALE_BOS2"
   },
   "LAURUSLABS": {
     "stage": "STALE_BOS2"
