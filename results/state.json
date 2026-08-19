@@ -36,7 +36,7 @@
     "stage": "FRESH_BOS2"
   },
   "CRAFTSMAN": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "GLAND": {
     "stage": "IN_RETEST"
@@ -105,7 +105,7 @@
     "stage": "PRE_BOS2_READY"
   },
   "ADOR": {
-    "stage": "BASING"
+    "stage": "FRESH_BOS2"
   },
   "MMFL": {
     "stage": "IN_RETEST"
@@ -121,7 +121,7 @@
     "stage": "FRESH_BOS2"
   },
   "GNA": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "FRESH_BOS2"
   },
   "GODREJIND": {
     "stage": "BASING"
@@ -176,7 +176,7 @@
     "stage": "BASING"
   },
   "PHOENIXLTD": {
-    "stage": "FRESH_REVERSAL"
+    "stage": "BASING"
   },
   "IONEXCHANG": {
     "stage": "FRESH_REVERSAL"
@@ -748,7 +748,7 @@
     "stage": "FRESH_BOS2"
   },
   "THEJO": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "VSSL": {
     "stage": "FRESH_BOS2"
