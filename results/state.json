@@ -102,7 +102,7 @@
     "stage": "BASING"
   },
   "SUVEN": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "ADOR": {
     "stage": "BASING"
@@ -121,7 +121,7 @@
     "stage": "FRESH_BOS2"
   },
   "GNA": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "FRESH_BOS2"
   },
   "GODREJIND": {
     "stage": "BASING"
@@ -513,7 +513,7 @@
     "stage": "IN_RETEST"
   },
   "KABRAEXTRU": {
-    "stage": "STALE_BOS2"
+    "stage": "BASING"
   },
   "LAURUSLABS": {
     "stage": "STALE_BOS2"
