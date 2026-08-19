@@ -18,7 +18,7 @@
     "stage": "FRESH_BOS2"
   },
   "KDDL": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "MARINE": {
     "stage": "STALE_BOS2"
@@ -45,7 +45,7 @@
     "stage": "BASING"
   },
   "RRKABEL": {
-    "stage": "BASING"
+    "stage": "STALE_BOS2"
   },
   "HAPPYFORGE": {
     "stage": "STALE_BOS2"
@@ -75,7 +75,7 @@
     "stage": "FRESH_BOS2"
   },
   "LLOYDSME": {
-    "stage": "BASING"
+    "stage": "STALE_BOS2"
   },
   "TORNTPHARM": {
     "stage": "IN_RETEST"
@@ -102,7 +102,7 @@
     "stage": "BASING"
   },
   "SUVEN": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "ADOR": {
     "stage": "BASING"
@@ -221,7 +221,7 @@
     "stage": "BASING"
   },
   "IKS": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "INDIGO": {
     "stage": "FRESH_REVERSAL"
@@ -269,13 +269,13 @@
     "stage": "STALE_BOS2"
   },
   "ICIL": {
-    "stage": "BASING"
+    "stage": "FRESH_BOS2"
   },
   "CERA": {
     "stage": "BASING"
   },
   "MPSLTD": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "SHREEPUSHK": {
     "stage": "BASING"
@@ -382,7 +382,7 @@
     "stage": "BASING"
   },
   "PITTIENG": {
-    "stage": "FRESH_BOS2"
+    "stage": "IN_RETEST"
   },
   "GIPCL": {
     "stage": "PRE_BOS2_READY"
@@ -417,7 +417,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "GABRIEL": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "UNIPARTS": {
     "stage": "BASING"
@@ -438,7 +438,7 @@
     "stage": "FRESH_BOS2"
   },
   "REDINGTON": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "KRISHANA": {
     "stage": "BASING"
@@ -513,7 +513,7 @@
     "stage": "IN_RETEST"
   },
   "KABRAEXTRU": {
-    "stage": "BASING"
+    "stage": "STALE_BOS2"
   },
   "LAURUSLABS": {
     "stage": "STALE_BOS2"
@@ -690,7 +690,7 @@
     "stage": "STALE_BOS2"
   },
   "SOLARINDS": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "PSPPROJECT": {
     "stage": "STALE_BOS2"
@@ -885,7 +885,7 @@
     "stage": "STALE_BOS2"
   },
   "MANGLMCEM": {
-    "stage": "STALE_BOS2"
+    "stage": "BASING"
   },
   "GANECOS": {
     "stage": "BASING"
@@ -1150,6 +1150,9 @@
     "stage": "IN_RETEST"
   },
   "COFORGE": {
+    "stage": "IN_RETEST"
+  },
+  "MANORAMA": {
     "stage": "IN_RETEST"
   }
 }
