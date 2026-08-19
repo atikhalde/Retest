@@ -75,7 +75,7 @@
     "stage": "FRESH_BOS2"
   },
   "LLOYDSME": {
-    "stage": "STALE_BOS2"
+    "stage": "BASING"
   },
   "TORNTPHARM": {
     "stage": "IN_RETEST"
@@ -176,7 +176,7 @@
     "stage": "PRE_BOS2_READY"
   },
   "PHOENIXLTD": {
-    "stage": "FRESH_REVERSAL"
+    "stage": "BASING"
   },
   "IONEXCHANG": {
     "stage": "FRESH_REVERSAL"
@@ -285,7 +285,7 @@
     "stage": "BASING"
   },
   "SSWL": {
-    "stage": "STALE_BOS2"
+    "stage": "BASING"
   },
   "HIRECT": {
     "stage": "BASING"
@@ -424,7 +424,7 @@
     "stage": "BASING"
   },
   "RADICO": {
-    "stage": "STALE_BOS2"
+    "stage": "BASING"
   },
   "MANAPPURAM": {
     "stage": "BASING"
@@ -515,7 +515,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "KABRAEXTRU": {
-    "stage": "BASING"
+    "stage": "STALE_BOS2"
   },
   "LAURUSLABS": {
     "stage": "STALE_BOS2"
