@@ -121,7 +121,7 @@
     "stage": "IN_RETEST"
   },
   "GNA": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "GODREJIND": {
     "stage": "BASING"
@@ -173,7 +173,7 @@
     "stage": "PRE_BOS2_READY"
   },
   "GOKULAGRO": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "PHOENIXLTD": {
     "stage": "FRESH_REVERSAL"
@@ -749,7 +749,7 @@
     "stage": "FRESH_BOS2"
   },
   "THEJO": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "VSSL": {
     "stage": "FRESH_BOS2"
@@ -1080,7 +1080,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "WINDLAS": {
-    "stage": "FRESH_BOS2"
+    "stage": "PRE_BOS2_READY"
   },
   "FIEMIND": {
     "stage": "IN_RETEST"
