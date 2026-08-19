@@ -45,7 +45,7 @@
     "stage": "BASING"
   },
   "RRKABEL": {
-    "stage": "BASING"
+    "stage": "STALE_BOS2"
   },
   "HAPPYFORGE": {
     "stage": "STALE_BOS2"
@@ -173,7 +173,7 @@
     "stage": "PRE_BOS2_READY"
   },
   "GOKULAGRO": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "PHOENIXLTD": {
     "stage": "FRESH_REVERSAL"
@@ -284,7 +284,7 @@
     "stage": "BASING"
   },
   "SSWL": {
-    "stage": "STALE_BOS2"
+    "stage": "BASING"
   },
   "HIRECT": {
     "stage": "BASING"
@@ -423,13 +423,13 @@
     "stage": "BASING"
   },
   "RADICO": {
-    "stage": "STALE_BOS2"
+    "stage": "BASING"
   },
   "MANAPPURAM": {
     "stage": "BASING"
   },
   "SPORTKING": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "JLHL": {
     "stage": "BASING"
@@ -468,7 +468,7 @@
     "stage": "STALE_BOS2"
   },
   "ENTERO": {
-    "stage": "IN_RETEST"
+    "stage": "STALE_BOS2"
   },
   "HINDALCO": {
     "stage": "STALE_BOS2"
