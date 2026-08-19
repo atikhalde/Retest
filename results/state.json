@@ -75,7 +75,7 @@
     "stage": "FRESH_BOS2"
   },
   "LLOYDSME": {
-    "stage": "STALE_BOS2"
+    "stage": "BASING"
   },
   "TORNTPHARM": {
     "stage": "IN_RETEST"
@@ -251,7 +251,7 @@
     "stage": "FRESH_BOS2"
   },
   "ALKYLAMINE": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "NITINSPIN": {
     "stage": "FRESH_BOS2"
@@ -423,7 +423,7 @@
     "stage": "BASING"
   },
   "RADICO": {
-    "stage": "STALE_BOS2"
+    "stage": "BASING"
   },
   "MANAPPURAM": {
     "stage": "BASING"
@@ -441,7 +441,7 @@
     "stage": "BASING"
   },
   "KRISHANA": {
-    "stage": "BASING"
+    "stage": "IN_RETEST"
   },
   "APCOTEXIND": {
     "stage": "FRESH_REVERSAL"
@@ -513,7 +513,7 @@
     "stage": "IN_RETEST"
   },
   "KABRAEXTRU": {
-    "stage": "BASING"
+    "stage": "STALE_BOS2"
   },
   "LAURUSLABS": {
     "stage": "STALE_BOS2"
@@ -783,7 +783,7 @@
     "stage": "STALE_BOS2"
   },
   "ASKAUTOLTD": {
-    "stage": "BASING"
+    "stage": "STALE_BOS2"
   },
   "RANEHOLDIN": {
     "stage": "STALE_BOS2"
@@ -1156,6 +1156,12 @@
     "stage": "IN_RETEST"
   },
   "GMMPFAUDLR": {
+    "stage": "IN_RETEST"
+  },
+  "CASTROLIND": {
+    "stage": "FRESH_REVERSAL"
+  },
+  "TVSSRICHAK": {
     "stage": "IN_RETEST"
   }
 }
