@@ -12,7 +12,7 @@
     "stage": "STALE_BOS2"
   },
   "TALBROAUTO": {
-    "stage": "IN_RETEST"
+    "stage": "BASING"
   },
   "RBA": {
     "stage": "FRESH_BOS2"
@@ -36,16 +36,16 @@
     "stage": "FRESH_BOS2"
   },
   "CRAFTSMAN": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "GLAND": {
     "stage": "IN_RETEST"
   },
   "LLOYDSENGG": {
-    "stage": "IN_RETEST"
+    "stage": "BASING"
   },
   "RRKABEL": {
-    "stage": "STALE_BOS2"
+    "stage": "BASING"
   },
   "HAPPYFORGE": {
     "stage": "STALE_BOS2"
@@ -75,7 +75,7 @@
     "stage": "FRESH_BOS2"
   },
   "LLOYDSME": {
-    "stage": "IN_RETEST"
+    "stage": "BASING"
   },
   "TORNTPHARM": {
     "stage": "IN_RETEST"
@@ -121,8 +121,7 @@
     "stage": "FRESH_BOS2"
   },
   "GNA": {
-    "stage": "FRESH_BOS2",
-    "last_reversal_alerted": "2026-08-18"
+    "stage": "PRE_BOS2_READY"
   },
   "GODREJIND": {
     "stage": "BASING"
@@ -270,7 +269,7 @@
     "stage": "STALE_BOS2"
   },
   "ICIL": {
-    "stage": "FRESH_BOS2"
+    "stage": "BASING"
   },
   "CERA": {
     "stage": "BASING"
@@ -285,7 +284,7 @@
     "stage": "BASING"
   },
   "SSWL": {
-    "stage": "STALE_BOS2"
+    "stage": "BASING"
   },
   "HIRECT": {
     "stage": "BASING"
@@ -330,7 +329,7 @@
     "stage": "BASING"
   },
   "IPCALAB": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "NDRAUTO": {
     "stage": "BASING"
@@ -439,13 +438,13 @@
     "stage": "FRESH_BOS2"
   },
   "REDINGTON": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "KRISHANA": {
-    "stage": "IN_RETEST"
+    "stage": "BASING"
   },
   "APCOTEXIND": {
-    "stage": "BASING"
+    "stage": "FRESH_REVERSAL"
   },
   "QUESS": {
     "stage": "BASING"
@@ -490,7 +489,7 @@
     "stage": "IN_RETEST"
   },
   "NAVINFLUOR": {
-    "stage": "IN_RETEST"
+    "stage": "BASING"
   },
   "KARURVYSYA": {
     "stage": "STALE_BOS2"
@@ -742,7 +741,7 @@
     "stage": "IN_RETEST"
   },
   "KALYANKJIL": {
-    "stage": "FRESH_REVERSAL"
+    "stage": "BASING"
   },
   "CONCORDBIO": {
     "stage": "FRESH_BOS2"
@@ -838,7 +837,7 @@
     "stage": "PRE_BOS2_READY"
   },
   "VMART": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "EXIDEIND": {
     "stage": "BASING"
@@ -968,7 +967,7 @@
     "stage": "STALE_BOS2"
   },
   "INNOVACAP": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "COALINDIA": {
     "stage": "STALE_BOS2"
@@ -1100,7 +1099,7 @@
     "stage": "IN_RETEST"
   },
   "NAUKRI": {
-    "stage": "IN_RETEST"
+    "stage": "PRE_BOS2_READY"
   },
   "LUMAXTECH": {
     "stage": "IN_RETEST"
