@@ -45,7 +45,7 @@
     "stage": "BASING"
   },
   "RRKABEL": {
-    "stage": "BASING"
+    "stage": "STALE_BOS2"
   },
   "HAPPYFORGE": {
     "stage": "STALE_BOS2"
@@ -75,7 +75,7 @@
     "stage": "FRESH_BOS2"
   },
   "LLOYDSME": {
-    "stage": "STALE_BOS2"
+    "stage": "BASING"
   },
   "TORNTPHARM": {
     "stage": "IN_RETEST"
@@ -96,7 +96,7 @@
     "stage": "STALE_BOS2"
   },
   "ARMANFIN": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "OLECTRA": {
     "stage": "BASING"
@@ -108,7 +108,7 @@
     "stage": "BASING"
   },
   "MMFL": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "OFSS": {
     "stage": "FRESH_REVERSAL",
@@ -174,10 +174,10 @@
     "stage": "PRE_BOS2_READY"
   },
   "GOKULAGRO": {
-    "stage": "FRESH_BOS2"
+    "stage": "PRE_BOS2_READY"
   },
   "PHOENIXLTD": {
-    "stage": "FRESH_REVERSAL"
+    "stage": "BASING"
   },
   "IONEXCHANG": {
     "stage": "FRESH_REVERSAL"
@@ -189,7 +189,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "SUMICHEM": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "CIEINDIA": {
     "stage": "BASING"
@@ -213,7 +213,7 @@
     "stage": "IN_RETEST"
   },
   "PGIL": {
-    "stage": "IN_RETEST"
+    "stage": "STALE_BOS2"
   },
   "INDHOTEL": {
     "stage": "PRE_BOS2_READY"
@@ -286,7 +286,7 @@
     "stage": "BASING"
   },
   "SSWL": {
-    "stage": "STALE_BOS2"
+    "stage": "BASING"
   },
   "HIRECT": {
     "stage": "BASING"
@@ -331,7 +331,7 @@
     "stage": "BASING"
   },
   "IPCALAB": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "NDRAUTO": {
     "stage": "BASING"
@@ -419,7 +419,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "GABRIEL": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "UNIPARTS": {
     "stage": "BASING"
@@ -516,7 +516,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "KABRAEXTRU": {
-    "stage": "BASING"
+    "stage": "STALE_BOS2"
   },
   "LAURUSLABS": {
     "stage": "STALE_BOS2"
@@ -673,7 +673,7 @@
     "stage": "STALE_BOS2"
   },
   "CYIENTDLM": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "JASH": {
     "stage": "STALE_BOS2"
@@ -805,7 +805,7 @@
     "stage": "BASING"
   },
   "RAYMOND": {
-    "stage": "FRESH_BOS2"
+    "stage": "IN_RETEST"
   },
   "STOVEKRAFT": {
     "stage": "STALE_BOS2"
@@ -1154,7 +1154,7 @@
     "stage": "IN_RETEST"
   },
   "COFORGE": {
-    "stage": "IN_RETEST"
+    "stage": "BASING"
   },
   "MANORAMA": {
     "stage": "IN_RETEST"
