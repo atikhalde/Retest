@@ -45,7 +45,7 @@
     "stage": "BASING"
   },
   "RRKABEL": {
-    "stage": "STALE_BOS2"
+    "stage": "BASING"
   },
   "HAPPYFORGE": {
     "stage": "STALE_BOS2"
@@ -111,7 +111,7 @@
     "stage": "PRE_BOS2_READY"
   },
   "OFSS": {
-    "stage": "FRESH_REVERSAL",
+    "stage": "BASING",
     "last_reversal_alerted": "2026-08-20"
   },
   "AZAD": {
@@ -119,7 +119,7 @@
     "last_reversal_alerted": "2026-08-05"
   },
   "RISHABH": {
-    "stage": "FRESH_BOS2"
+    "stage": "IN_RETEST"
   },
   "GNA": {
     "stage": "PRE_BOS2_READY"
@@ -177,7 +177,7 @@
     "stage": "PRE_BOS2_READY"
   },
   "PHOENIXLTD": {
-    "stage": "BASING"
+    "stage": "FRESH_REVERSAL"
   },
   "IONEXCHANG": {
     "stage": "FRESH_REVERSAL"
@@ -276,7 +276,7 @@
     "stage": "BASING"
   },
   "MPSLTD": {
-    "stage": "BASING",
+    "stage": "PRE_BOS2_READY",
     "last_reversal_alerted": "2026-08-20"
   },
   "SHREEPUSHK": {
@@ -331,7 +331,7 @@
     "stage": "BASING"
   },
   "IPCALAB": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "NDRAUTO": {
     "stage": "BASING"
@@ -384,7 +384,7 @@
     "stage": "BASING"
   },
   "PITTIENG": {
-    "stage": "IN_RETEST"
+    "stage": "FRESH_BOS2"
   },
   "GIPCL": {
     "stage": "BASING"
@@ -673,7 +673,7 @@
     "stage": "STALE_BOS2"
   },
   "CYIENTDLM": {
-    "stage": "IN_RETEST"
+    "stage": "STALE_BOS2"
   },
   "JASH": {
     "stage": "STALE_BOS2"
@@ -799,7 +799,7 @@
     "stage": "STALE_BOS2"
   },
   "HONASA": {
-    "stage": "FRESH_BOS2"
+    "stage": "IN_RETEST"
   },
   "GANDHAR": {
     "stage": "BASING"
