@@ -45,7 +45,7 @@
     "stage": "BASING"
   },
   "RRKABEL": {
-    "stage": "BASING"
+    "stage": "STALE_BOS2"
   },
   "HAPPYFORGE": {
     "stage": "STALE_BOS2"
@@ -75,7 +75,7 @@
     "stage": "STALE_BOS2"
   },
   "LLOYDSME": {
-    "stage": "STALE_BOS2"
+    "stage": "BASING"
   },
   "TORNTPHARM": {
     "stage": "IN_RETEST"
@@ -111,7 +111,7 @@
     "stage": "BASING"
   },
   "OFSS": {
-    "stage": "FRESH_REVERSAL",
+    "stage": "BASING",
     "last_reversal_alerted": "2026-08-20"
   },
   "AZAD": {
@@ -189,7 +189,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "SUMICHEM": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "CIEINDIA": {
     "stage": "BASING"
@@ -431,7 +431,7 @@
     "stage": "BASING"
   },
   "SPORTKING": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "JLHL": {
     "stage": "BASING",
@@ -450,7 +450,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "QUESS": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "CENTUM": {
     "stage": "STALE_BOS2"
@@ -670,7 +670,7 @@
     "stage": "STALE_BOS2"
   },
   "MBAPL": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "CYIENTDLM": {
     "stage": "STALE_BOS2"
@@ -751,7 +751,7 @@
     "stage": "FRESH_BOS2"
   },
   "THEJO": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "VSSL": {
     "stage": "FRESH_BOS2"
@@ -838,7 +838,7 @@
     "stage": "STALE_BOS2"
   },
   "MUFIN": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "VMART": {
     "stage": "PRE_BOS2_READY"
@@ -847,7 +847,7 @@
     "stage": "BASING"
   },
   "SUPRIYA": {
-    "stage": "BASING"
+    "stage": "FRESH_REVERSAL"
   },
   "ICICIBANK": {
     "stage": "BASING"
@@ -1175,6 +1175,9 @@
     "stage": "IN_RETEST"
   },
   "MANALIPETC": {
+    "stage": "IN_RETEST"
+  },
+  "HEG": {
     "stage": "IN_RETEST"
   }
 }
