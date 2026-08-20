@@ -119,7 +119,7 @@
     "last_reversal_alerted": "2026-08-05"
   },
   "RISHABH": {
-    "stage": "IN_RETEST"
+    "stage": "FRESH_BOS2"
   },
   "GNA": {
     "stage": "PRE_BOS2_READY"
@@ -286,7 +286,7 @@
     "stage": "BASING"
   },
   "SSWL": {
-    "stage": "STALE_BOS2"
+    "stage": "BASING"
   },
   "HIRECT": {
     "stage": "BASING"
@@ -516,7 +516,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "KABRAEXTRU": {
-    "stage": "BASING"
+    "stage": "STALE_BOS2"
   },
   "LAURUSLABS": {
     "stage": "STALE_BOS2"
@@ -841,7 +841,7 @@
     "stage": "BASING"
   },
   "VMART": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "EXIDEIND": {
     "stage": "BASING"
