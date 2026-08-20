@@ -102,7 +102,7 @@
     "stage": "BASING"
   },
   "SUVEN": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "ADOR": {
     "stage": "BASING"
@@ -149,7 +149,7 @@
     "stage": "STALE_BOS2"
   },
   "MOTILALOFS": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "YESBANK": {
     "stage": "BASING"
@@ -173,10 +173,10 @@
     "stage": "PRE_BOS2_READY"
   },
   "GOKULAGRO": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "PHOENIXLTD": {
-    "stage": "BASING"
+    "stage": "FRESH_REVERSAL"
   },
   "IONEXCHANG": {
     "stage": "FRESH_REVERSAL"
@@ -212,7 +212,7 @@
     "stage": "FRESH_BOS2"
   },
   "PGIL": {
-    "stage": "IN_RETEST"
+    "stage": "STALE_BOS2"
   },
   "INDHOTEL": {
     "stage": "BASING"
@@ -275,8 +275,8 @@
     "stage": "BASING"
   },
   "MPSLTD": {
-    "stage": "BASING",
-    "last_reversal_alerted": "2026-08-19"
+    "stage": "FRESH_REVERSAL",
+    "last_reversal_alerted": "2026-08-20"
   },
   "SHREEPUSHK": {
     "stage": "BASING"
@@ -371,7 +371,7 @@
     "stage": "FRESH_BOS2"
   },
   "UJJIVANSFB": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "VOLTAMP": {
     "stage": "BASING"
@@ -418,7 +418,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "GABRIEL": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "UNIPARTS": {
     "stage": "BASING"
@@ -440,7 +440,7 @@
     "stage": "FRESH_BOS2"
   },
   "REDINGTON": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "KRISHANA": {
     "stage": "IN_RETEST"
@@ -668,7 +668,7 @@
     "stage": "STALE_BOS2"
   },
   "MBAPL": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "CYIENTDLM": {
     "stage": "STALE_BOS2"
@@ -969,7 +969,7 @@
     "stage": "STALE_BOS2"
   },
   "INNOVACAP": {
-    "stage": "IN_RETEST"
+    "stage": "STALE_BOS2"
   },
   "COALINDIA": {
     "stage": "STALE_BOS2"
@@ -1080,7 +1080,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "WINDLAS": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "FIEMIND": {
     "stage": "IN_RETEST"
