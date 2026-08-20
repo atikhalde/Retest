@@ -45,7 +45,7 @@
     "stage": "BASING"
   },
   "RRKABEL": {
-    "stage": "STALE_BOS2"
+    "stage": "BASING"
   },
   "HAPPYFORGE": {
     "stage": "STALE_BOS2"
@@ -75,7 +75,7 @@
     "stage": "STALE_BOS2"
   },
   "LLOYDSME": {
-    "stage": "BASING"
+    "stage": "STALE_BOS2"
   },
   "TORNTPHARM": {
     "stage": "IN_RETEST"
@@ -286,7 +286,7 @@
     "stage": "BASING"
   },
   "SSWL": {
-    "stage": "BASING"
+    "stage": "STALE_BOS2"
   },
   "HIRECT": {
     "stage": "BASING"
@@ -425,13 +425,13 @@
     "stage": "BASING"
   },
   "RADICO": {
-    "stage": "BASING"
+    "stage": "STALE_BOS2"
   },
   "MANAPPURAM": {
     "stage": "BASING"
   },
   "SPORTKING": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "JLHL": {
     "stage": "BASING",
@@ -670,7 +670,7 @@
     "stage": "STALE_BOS2"
   },
   "MBAPL": {
-    "stage": "IN_RETEST"
+    "stage": "STALE_BOS2"
   },
   "CYIENTDLM": {
     "stage": "STALE_BOS2"
@@ -838,7 +838,7 @@
     "stage": "STALE_BOS2"
   },
   "MUFIN": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "FRESH_BOS2"
   },
   "VMART": {
     "stage": "PRE_BOS2_READY"
@@ -847,7 +847,7 @@
     "stage": "BASING"
   },
   "SUPRIYA": {
-    "stage": "FRESH_REVERSAL"
+    "stage": "BASING"
   },
   "ICICIBANK": {
     "stage": "BASING"
@@ -1154,7 +1154,7 @@
     "stage": "IN_RETEST"
   },
   "COFORGE": {
-    "stage": "BASING"
+    "stage": "IN_RETEST"
   },
   "MANORAMA": {
     "stage": "IN_RETEST"
