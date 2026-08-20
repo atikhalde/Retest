@@ -75,7 +75,7 @@
     "stage": "FRESH_BOS2"
   },
   "LLOYDSME": {
-    "stage": "STALE_BOS2"
+    "stage": "BASING"
   },
   "TORNTPHARM": {
     "stage": "IN_RETEST"
@@ -108,10 +108,10 @@
     "stage": "BASING"
   },
   "MMFL": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "IN_RETEST"
   },
   "OFSS": {
-    "stage": "BASING"
+    "stage": "FRESH_REVERSAL"
   },
   "AZAD": {
     "stage": "BASING",
@@ -121,7 +121,7 @@
     "stage": "IN_RETEST"
   },
   "GNA": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "FRESH_BOS2"
   },
   "GODREJIND": {
     "stage": "BASING"
@@ -203,7 +203,7 @@
     "stage": "STALE_BOS2"
   },
   "EVEREADY": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "CARYSIL": {
     "stage": "STALE_BOS2"
@@ -212,7 +212,7 @@
     "stage": "IN_RETEST"
   },
   "PGIL": {
-    "stage": "IN_RETEST"
+    "stage": "STALE_BOS2"
   },
   "INDHOTEL": {
     "stage": "PRE_BOS2_READY"
@@ -285,7 +285,7 @@
     "stage": "BASING"
   },
   "SSWL": {
-    "stage": "STALE_BOS2"
+    "stage": "BASING"
   },
   "HIRECT": {
     "stage": "BASING"
@@ -837,7 +837,7 @@
     "stage": "STALE_BOS2"
   },
   "MUFIN": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "VMART": {
     "stage": "PRE_BOS2_READY"
@@ -970,7 +970,7 @@
     "stage": "STALE_BOS2"
   },
   "INNOVACAP": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "COALINDIA": {
     "stage": "STALE_BOS2"
@@ -1153,7 +1153,7 @@
     "stage": "IN_RETEST"
   },
   "COFORGE": {
-    "stage": "IN_RETEST"
+    "stage": "BASING"
   },
   "MANORAMA": {
     "stage": "IN_RETEST"
