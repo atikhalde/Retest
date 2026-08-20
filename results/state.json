@@ -39,7 +39,7 @@
     "stage": "PRE_BOS2_READY"
   },
   "GLAND": {
-    "stage": "IN_RETEST"
+    "stage": "BASING"
   },
   "LLOYDSENGG": {
     "stage": "BASING"
@@ -105,10 +105,10 @@
     "stage": "PRE_BOS2_READY"
   },
   "ADOR": {
-    "stage": "FRESH_BOS2"
+    "stage": "BASING"
   },
   "MMFL": {
-    "stage": "IN_RETEST"
+    "stage": "PRE_BOS2_READY"
   },
   "OFSS": {
     "stage": "BASING"
@@ -146,10 +146,10 @@
     "stage": "FRESH_REVERSAL"
   },
   "SKYGOLD": {
-    "stage": "FRESH_BOS2"
+    "stage": "STALE_BOS2"
   },
   "MOTILALOFS": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "YESBANK": {
     "stage": "BASING"
@@ -188,7 +188,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "SUMICHEM": {
-    "stage": "IN_RETEST"
+    "stage": "PRE_BOS2_READY"
   },
   "CIEINDIA": {
     "stage": "BASING"
@@ -242,7 +242,7 @@
     "stage": "BASING"
   },
   "RBLBANK": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "WELCORP": {
     "stage": "STALE_BOS2"
@@ -275,7 +275,7 @@
     "stage": "BASING"
   },
   "MPSLTD": {
-    "stage": "FRESH_REVERSAL",
+    "stage": "BASING",
     "last_reversal_alerted": "2026-08-19"
   },
   "SHREEPUSHK": {
@@ -449,7 +449,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "QUESS": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "CENTUM": {
     "stage": "STALE_BOS2"
@@ -515,7 +515,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "KABRAEXTRU": {
-    "stage": "STALE_BOS2"
+    "stage": "BASING"
   },
   "LAURUSLABS": {
     "stage": "STALE_BOS2"
@@ -545,7 +545,7 @@
     "stage": "STALE_BOS2"
   },
   "FEDERALBNK": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "LINDEINDIA": {
     "stage": "STALE_BOS2"
@@ -692,7 +692,7 @@
     "stage": "STALE_BOS2"
   },
   "SOLARINDS": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "PSPPROJECT": {
     "stage": "STALE_BOS2"
@@ -942,7 +942,7 @@
     "stage": "STALE_BOS2"
   },
   "MACPOWER": {
-    "stage": "IN_RETEST"
+    "stage": "BASING"
   },
   "LLOYDSENT": {
     "stage": "STALE_BOS2"
@@ -1020,7 +1020,7 @@
     "stage": "STALE_BOS2"
   },
   "TATATECH": {
-    "stage": "IN_RETEST"
+    "stage": "BASING"
   },
   "OPTIEMUS": {
     "stage": "STALE_BOS2"
@@ -1068,7 +1068,7 @@
     "stage": "BASING"
   },
   "SHRIRAMFIN": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "SUMEETINDS": {
     "stage": "STALE_BOS2"
@@ -1095,7 +1095,7 @@
     "stage": "IN_RETEST"
   },
   "ORISSAMINE": {
-    "stage": "IN_RETEST"
+    "stage": "BASING"
   },
   "HCG": {
     "stage": "IN_RETEST"
@@ -1113,7 +1113,7 @@
     "stage": "IN_RETEST"
   },
   "THYROCARE": {
-    "stage": "IN_RETEST"
+    "stage": "BASING"
   },
   "ONIDA": {
     "stage": "BASING"
@@ -1152,7 +1152,7 @@
     "stage": "IN_RETEST"
   },
   "COFORGE": {
-    "stage": "IN_RETEST"
+    "stage": "PRE_BOS2_READY"
   },
   "MANORAMA": {
     "stage": "IN_RETEST"
