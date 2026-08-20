@@ -387,7 +387,7 @@
     "stage": "IN_RETEST"
   },
   "GIPCL": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "CUMMINSIND": {
     "stage": "BASING"
@@ -471,7 +471,7 @@
     "stage": "STALE_BOS2"
   },
   "ENTERO": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "HINDALCO": {
     "stage": "STALE_BOS2"
