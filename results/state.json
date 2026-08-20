@@ -286,7 +286,7 @@
     "stage": "BASING"
   },
   "SSWL": {
-    "stage": "STALE_BOS2"
+    "stage": "BASING"
   },
   "HIRECT": {
     "stage": "BASING"
@@ -425,7 +425,7 @@
     "stage": "BASING"
   },
   "RADICO": {
-    "stage": "STALE_BOS2"
+    "stage": "BASING"
   },
   "MANAPPURAM": {
     "stage": "BASING"
@@ -1154,7 +1154,7 @@
     "stage": "IN_RETEST"
   },
   "COFORGE": {
-    "stage": "IN_RETEST"
+    "stage": "BASING"
   },
   "MANORAMA": {
     "stage": "IN_RETEST"
