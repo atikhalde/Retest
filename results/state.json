@@ -45,7 +45,7 @@
     "stage": "BASING"
   },
   "RRKABEL": {
-    "stage": "STALE_BOS2"
+    "stage": "BASING"
   },
   "HAPPYFORGE": {
     "stage": "STALE_BOS2"
@@ -450,7 +450,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "QUESS": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "CENTUM": {
     "stage": "STALE_BOS2"
@@ -516,7 +516,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "KABRAEXTRU": {
-    "stage": "STALE_BOS2"
+    "stage": "BASING"
   },
   "LAURUSLABS": {
     "stage": "STALE_BOS2"
@@ -841,7 +841,7 @@
     "stage": "BASING"
   },
   "VMART": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "EXIDEIND": {
     "stage": "BASING"
@@ -868,7 +868,7 @@
     "stage": "BASING"
   },
   "BLSE": {
-    "stage": "BASING"
+    "stage": "FRESH_BOS2"
   },
   "VTL": {
     "stage": "BASING"
