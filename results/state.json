@@ -425,7 +425,7 @@
     "stage": "BASING"
   },
   "RADICO": {
-    "stage": "STALE_BOS2"
+    "stage": "BASING"
   },
   "MANAPPURAM": {
     "stage": "BASING"
@@ -838,7 +838,7 @@
     "stage": "STALE_BOS2"
   },
   "MUFIN": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "VMART": {
     "stage": "BASING"
