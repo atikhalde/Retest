@@ -45,7 +45,7 @@
     "stage": "BASING"
   },
   "RRKABEL": {
-    "stage": "BASING"
+    "stage": "STALE_BOS2"
   },
   "HAPPYFORGE": {
     "stage": "STALE_BOS2"
@@ -111,7 +111,7 @@
     "stage": "PRE_BOS2_READY"
   },
   "OFSS": {
-    "stage": "BASING",
+    "stage": "FRESH_REVERSAL",
     "last_reversal_alerted": "2026-08-20"
   },
   "AZAD": {
@@ -189,7 +189,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "SUMICHEM": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "CIEINDIA": {
     "stage": "BASING"
@@ -276,7 +276,7 @@
     "stage": "BASING"
   },
   "MPSLTD": {
-    "stage": "PRE_BOS2_READY",
+    "stage": "BASING",
     "last_reversal_alerted": "2026-08-20"
   },
   "SHREEPUSHK": {
@@ -286,7 +286,7 @@
     "stage": "BASING"
   },
   "SSWL": {
-    "stage": "BASING"
+    "stage": "STALE_BOS2"
   },
   "HIRECT": {
     "stage": "BASING"
@@ -384,7 +384,7 @@
     "stage": "BASING"
   },
   "PITTIENG": {
-    "stage": "FRESH_BOS2"
+    "stage": "IN_RETEST"
   },
   "GIPCL": {
     "stage": "BASING"
@@ -546,7 +546,7 @@
     "stage": "STALE_BOS2"
   },
   "FEDERALBNK": {
-    "stage": "PRE_BOS2_READY",
+    "stage": "BASING",
     "last_reversal_alerted": "2026-08-20"
   },
   "LINDEINDIA": {
