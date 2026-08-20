@@ -75,7 +75,7 @@
     "stage": "FRESH_BOS2"
   },
   "LLOYDSME": {
-    "stage": "BASING"
+    "stage": "STALE_BOS2"
   },
   "TORNTPHARM": {
     "stage": "IN_RETEST"
@@ -96,7 +96,7 @@
     "stage": "STALE_BOS2"
   },
   "ARMANFIN": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "OLECTRA": {
     "stage": "BASING"
@@ -111,7 +111,8 @@
     "stage": "IN_RETEST"
   },
   "OFSS": {
-    "stage": "FRESH_REVERSAL"
+    "stage": "FRESH_REVERSAL",
+    "last_reversal_alerted": "2026-08-20"
   },
   "AZAD": {
     "stage": "BASING",
@@ -121,7 +122,7 @@
     "stage": "IN_RETEST"
   },
   "GNA": {
-    "stage": "FRESH_BOS2"
+    "stage": "PRE_BOS2_READY"
   },
   "GODREJIND": {
     "stage": "BASING"
@@ -176,7 +177,7 @@
     "stage": "PRE_BOS2_READY"
   },
   "PHOENIXLTD": {
-    "stage": "FRESH_REVERSAL"
+    "stage": "BASING"
   },
   "IONEXCHANG": {
     "stage": "FRESH_REVERSAL"
@@ -383,10 +384,10 @@
     "stage": "BASING"
   },
   "PITTIENG": {
-    "stage": "IN_RETEST"
+    "stage": "FRESH_BOS2"
   },
   "GIPCL": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "CUMMINSIND": {
     "stage": "BASING"
@@ -418,7 +419,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "GABRIEL": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "UNIPARTS": {
     "stage": "BASING"
@@ -837,7 +838,7 @@
     "stage": "STALE_BOS2"
   },
   "MUFIN": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "VMART": {
     "stage": "PRE_BOS2_READY"
