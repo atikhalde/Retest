@@ -470,7 +470,7 @@
     "stage": "STALE_BOS2"
   },
   "ENTERO": {
-    "stage": "IN_RETEST"
+    "stage": "STALE_BOS2"
   },
   "HINDALCO": {
     "stage": "STALE_BOS2"
@@ -672,7 +672,7 @@
     "stage": "STALE_BOS2"
   },
   "CYIENTDLM": {
-    "stage": "IN_RETEST"
+    "stage": "STALE_BOS2"
   },
   "JASH": {
     "stage": "STALE_BOS2"
@@ -843,7 +843,7 @@
     "stage": "PRE_BOS2_READY"
   },
   "EXIDEIND": {
-    "stage": "IN_RETEST"
+    "stage": "BASING"
   },
   "SUPRIYA": {
     "stage": "BASING"
@@ -1081,7 +1081,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "WINDLAS": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "FIEMIND": {
     "stage": "IN_RETEST"
