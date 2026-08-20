@@ -96,7 +96,7 @@
     "stage": "STALE_BOS2"
   },
   "ARMANFIN": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "OLECTRA": {
     "stage": "BASING"
@@ -108,7 +108,7 @@
     "stage": "BASING"
   },
   "MMFL": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "OFSS": {
     "stage": "FRESH_REVERSAL",
@@ -546,7 +546,7 @@
     "stage": "STALE_BOS2"
   },
   "FEDERALBNK": {
-    "stage": "FRESH_REVERSAL",
+    "stage": "PRE_BOS2_READY",
     "last_reversal_alerted": "2026-08-20"
   },
   "LINDEINDIA": {
@@ -772,7 +772,7 @@
     "stage": "STALE_BOS2"
   },
   "WESTLIFE": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "JKTYRE": {
     "stage": "STALE_BOS2"
@@ -841,7 +841,7 @@
     "stage": "BASING"
   },
   "VMART": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "EXIDEIND": {
     "stage": "BASING"
