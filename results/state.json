@@ -844,7 +844,7 @@
     "last_reversal_alerted": "2026-08-21"
   },
   "VMART": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "EXIDEIND": {
     "stage": "BASING"
@@ -1190,6 +1190,9 @@
     "stage": "IN_RETEST"
   },
   "UDS": {
+    "stage": "IN_RETEST"
+  },
+  "PTCIL": {
     "stage": "IN_RETEST"
   }
 }
