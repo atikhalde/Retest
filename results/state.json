@@ -75,7 +75,7 @@
     "stage": "STALE_BOS2"
   },
   "LLOYDSME": {
-    "stage": "STALE_BOS2"
+    "stage": "BASING"
   },
   "TORNTPHARM": {
     "stage": "IN_RETEST"
@@ -286,14 +286,14 @@
     "stage": "BASING"
   },
   "SSWL": {
-    "stage": "STALE_BOS2"
+    "stage": "BASING"
   },
   "HIRECT": {
     "stage": "FRESH_REVERSAL",
     "last_reversal_alerted": "2026-08-21"
   },
   "WELENT": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "FRESH_BOS2"
   },
   "SHAREINDIA": {
     "stage": "FRESH_REVERSAL"
@@ -1085,7 +1085,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "WINDLAS": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "FIEMIND": {
     "stage": "IN_RETEST"
@@ -1094,7 +1094,7 @@
     "stage": "PRE_BOS2_READY"
   },
   "SUDARSCHEM": {
-    "stage": "FRESH_BOS2"
+    "stage": "FRESH_REVERSAL"
   },
   "ALLCARGO": {
     "stage": "IN_RETEST"
@@ -1157,7 +1157,7 @@
     "stage": "IN_RETEST"
   },
   "COFORGE": {
-    "stage": "IN_RETEST"
+    "stage": "BASING"
   },
   "MANORAMA": {
     "stage": "IN_RETEST"
