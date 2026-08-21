@@ -27,7 +27,7 @@
     "stage": "BASING"
   },
   "ASTERDM": {
-    "stage": "BASING"
+    "stage": "STALE_BOS2"
   },
   "EMIL": {
     "stage": "STALE_BOS2"
@@ -252,7 +252,7 @@
     "stage": "FRESH_BOS2"
   },
   "ALKYLAMINE": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "NITINSPIN": {
     "stage": "FRESH_BOS2"
@@ -293,7 +293,7 @@
     "last_reversal_alerted": "2026-08-21"
   },
   "WELENT": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "FRESH_BOS2"
   },
   "SHAREINDIA": {
     "stage": "FRESH_REVERSAL"
@@ -696,7 +696,7 @@
     "stage": "STALE_BOS2"
   },
   "SOLARINDS": {
-    "stage": "IN_RETEST"
+    "stage": "STALE_BOS2"
   },
   "PSPPROJECT": {
     "stage": "STALE_BOS2"
@@ -840,11 +840,10 @@
     "stage": "STALE_BOS2"
   },
   "MUFIN": {
-    "stage": "BASING",
-    "last_reversal_alerted": "2026-08-21"
+    "stage": "PRE_BOS2_READY"
   },
   "VMART": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "EXIDEIND": {
     "stage": "BASING"
@@ -919,7 +918,8 @@
     "stage": "FRESH_BOS2"
   },
   "RPTECH": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "FRESH_REVERSAL",
+    "last_reversal_alerted": "2026-08-21"
   },
   "UNIVCABLES": {
     "stage": "BASING"
