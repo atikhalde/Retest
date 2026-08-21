@@ -45,7 +45,7 @@
     "stage": "BASING"
   },
   "RRKABEL": {
-    "stage": "FRESH_REVERSAL"
+    "stage": "STALE_BOS2"
   },
   "HAPPYFORGE": {
     "stage": "STALE_BOS2"
@@ -75,7 +75,7 @@
     "stage": "STALE_BOS2"
   },
   "LLOYDSME": {
-    "stage": "BASING"
+    "stage": "STALE_BOS2"
   },
   "TORNTPHARM": {
     "stage": "IN_RETEST"
@@ -122,7 +122,7 @@
     "stage": "FRESH_BOS2"
   },
   "GNA": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "FRESH_BOS2"
   },
   "GODREJIND": {
     "stage": "BASING"
@@ -177,7 +177,7 @@
     "stage": "PRE_BOS2_READY"
   },
   "PHOENIXLTD": {
-    "stage": "FRESH_REVERSAL"
+    "stage": "BASING"
   },
   "IONEXCHANG": {
     "stage": "FRESH_REVERSAL"
@@ -252,7 +252,7 @@
     "stage": "FRESH_BOS2"
   },
   "ALKYLAMINE": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "NITINSPIN": {
     "stage": "FRESH_BOS2"
@@ -286,14 +286,14 @@
     "stage": "BASING"
   },
   "SSWL": {
-    "stage": "BASING"
+    "stage": "STALE_BOS2"
   },
   "HIRECT": {
-    "stage": "FRESH_REVERSAL",
+    "stage": "BASING",
     "last_reversal_alerted": "2026-08-21"
   },
   "WELENT": {
-    "stage": "FRESH_BOS2"
+    "stage": "PRE_BOS2_READY"
   },
   "SHAREINDIA": {
     "stage": "FRESH_REVERSAL"
@@ -427,7 +427,7 @@
     "stage": "BASING"
   },
   "RADICO": {
-    "stage": "STALE_BOS2"
+    "stage": "BASING"
   },
   "MANAPPURAM": {
     "stage": "BASING"
@@ -446,7 +446,7 @@
     "stage": "BASING"
   },
   "KRISHANA": {
-    "stage": "IN_RETEST"
+    "stage": "BASING"
   },
   "APCOTEXIND": {
     "stage": "FRESH_REVERSAL"
@@ -518,7 +518,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "KABRAEXTRU": {
-    "stage": "BASING"
+    "stage": "STALE_BOS2"
   },
   "LAURUSLABS": {
     "stage": "STALE_BOS2"
@@ -789,7 +789,7 @@
     "stage": "STALE_BOS2"
   },
   "ASKAUTOLTD": {
-    "stage": "BASING"
+    "stage": "STALE_BOS2"
   },
   "RANEHOLDIN": {
     "stage": "STALE_BOS2"
@@ -844,7 +844,7 @@
     "last_reversal_alerted": "2026-08-21"
   },
   "VMART": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "EXIDEIND": {
     "stage": "BASING"
@@ -1085,7 +1085,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "WINDLAS": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "FIEMIND": {
     "stage": "IN_RETEST"
@@ -1094,7 +1094,7 @@
     "stage": "PRE_BOS2_READY"
   },
   "SUDARSCHEM": {
-    "stage": "FRESH_REVERSAL"
+    "stage": "FRESH_BOS2"
   },
   "ALLCARGO": {
     "stage": "IN_RETEST"
@@ -1157,7 +1157,7 @@
     "stage": "IN_RETEST"
   },
   "COFORGE": {
-    "stage": "BASING"
+    "stage": "IN_RETEST"
   },
   "MANORAMA": {
     "stage": "IN_RETEST"
