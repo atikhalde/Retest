@@ -156,7 +156,7 @@
     "stage": "BASING"
   },
   "SENORES": {
-    "stage": "IN_RETEST"
+    "stage": "STALE_BOS2"
   },
   "RML": {
     "stage": "STALE_BOS2"
@@ -1152,7 +1152,7 @@
     "stage": "IN_RETEST"
   },
   "INDGN": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "YUKEN": {
     "stage": "IN_RETEST"
