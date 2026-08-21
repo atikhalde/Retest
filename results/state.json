@@ -807,7 +807,7 @@
     "stage": "BASING"
   },
   "RAYMOND": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "STOVEKRAFT": {
     "stage": "STALE_BOS2"
@@ -919,7 +919,7 @@
     "stage": "FRESH_BOS2"
   },
   "RPTECH": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "UNIVCABLES": {
     "stage": "BASING"
