@@ -150,7 +150,7 @@
     "stage": "STALE_BOS2"
   },
   "MOTILALOFS": {
-    "stage": "BASING"
+    "stage": "FRESH_BOS2"
   },
   "YESBANK": {
     "stage": "BASING"
@@ -252,7 +252,7 @@
     "stage": "FRESH_BOS2"
   },
   "ALKYLAMINE": {
-    "stage": "BASING"
+    "stage": "FRESH_BOS2"
   },
   "NITINSPIN": {
     "stage": "FRESH_BOS2"
@@ -293,7 +293,7 @@
     "last_reversal_alerted": "2026-08-21"
   },
   "WELENT": {
-    "stage": "FRESH_BOS2"
+    "stage": "PRE_BOS2_READY"
   },
   "SHAREINDIA": {
     "stage": "FRESH_REVERSAL"
@@ -473,7 +473,7 @@
     "stage": "STALE_BOS2"
   },
   "ENTERO": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "HINDALCO": {
     "stage": "STALE_BOS2"
@@ -947,7 +947,7 @@
     "stage": "STALE_BOS2"
   },
   "MACPOWER": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "LLOYDSENT": {
     "stage": "STALE_BOS2"
