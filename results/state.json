@@ -54,7 +54,7 @@
     "stage": "STALE_BOS2"
   },
   "MINDACORP": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "AEROENTER": {
     "stage": "STALE_BOS2"
@@ -156,7 +156,7 @@
     "stage": "BASING"
   },
   "SENORES": {
-    "stage": "IN_RETEST"
+    "stage": "STALE_BOS2"
   },
   "RML": {
     "stage": "STALE_BOS2"
@@ -491,7 +491,7 @@
     "stage": "STALE_BOS2"
   },
   "MARKSANS": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "NAVINFLUOR": {
     "stage": "BASING"
