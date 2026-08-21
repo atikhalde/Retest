@@ -156,7 +156,7 @@
     "stage": "BASING"
   },
   "SENORES": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "RML": {
     "stage": "STALE_BOS2"
@@ -491,7 +491,7 @@
     "stage": "STALE_BOS2"
   },
   "MARKSANS": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "NAVINFLUOR": {
     "stage": "BASING"
