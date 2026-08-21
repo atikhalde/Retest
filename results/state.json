@@ -75,13 +75,13 @@
     "stage": "STALE_BOS2"
   },
   "LLOYDSME": {
-    "stage": "STALE_BOS2"
+    "stage": "BASING"
   },
   "TORNTPHARM": {
     "stage": "IN_RETEST"
   },
   "INDORAMA": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "NAZARA": {
     "stage": "STALE_BOS2"
@@ -286,7 +286,7 @@
     "stage": "BASING"
   },
   "SSWL": {
-    "stage": "STALE_BOS2"
+    "stage": "BASING"
   },
   "HIRECT": {
     "stage": "FRESH_REVERSAL",
@@ -389,7 +389,7 @@
     "stage": "IN_RETEST"
   },
   "GIPCL": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "IN_RETEST"
   },
   "CUMMINSIND": {
     "stage": "BASING"
@@ -1094,7 +1094,7 @@
     "stage": "PRE_BOS2_READY"
   },
   "SUDARSCHEM": {
-    "stage": "FRESH_BOS2"
+    "stage": "FRESH_REVERSAL"
   },
   "ALLCARGO": {
     "stage": "IN_RETEST"
@@ -1157,7 +1157,7 @@
     "stage": "IN_RETEST"
   },
   "COFORGE": {
-    "stage": "IN_RETEST"
+    "stage": "BASING"
   },
   "MANORAMA": {
     "stage": "IN_RETEST"
