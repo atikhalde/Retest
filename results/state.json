@@ -15,7 +15,7 @@
     "stage": "BASING"
   },
   "RBA": {
-    "stage": "FRESH_BOS2"
+    "stage": "STALE_BOS2"
   },
   "KDDL": {
     "stage": "BASING"
@@ -45,7 +45,7 @@
     "stage": "BASING"
   },
   "RRKABEL": {
-    "stage": "BASING"
+    "stage": "FRESH_REVERSAL"
   },
   "HAPPYFORGE": {
     "stage": "STALE_BOS2"
@@ -108,7 +108,7 @@
     "stage": "FRESH_BOS2"
   },
   "MMFL": {
-    "stage": "BASING"
+    "stage": "FRESH_REVERSAL"
   },
   "OFSS": {
     "stage": "BASING",
@@ -189,7 +189,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "SUMICHEM": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "CIEINDIA": {
     "stage": "BASING"
@@ -216,7 +216,7 @@
     "stage": "IN_RETEST"
   },
   "INDHOTEL": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "TEXINFRA": {
     "stage": "BASING"
@@ -234,7 +234,7 @@
     "stage": "BASING"
   },
   "LALPATHLAB": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "PVRINOX": {
     "stage": "BASING"
@@ -375,7 +375,7 @@
     "stage": "PRE_BOS2_READY"
   },
   "VOLTAMP": {
-    "stage": "BASING"
+    "stage": "FRESH_REVERSAL"
   },
   "TANLA": {
     "stage": "BASING"
@@ -387,7 +387,7 @@
     "stage": "IN_RETEST"
   },
   "GIPCL": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "IN_RETEST"
   },
   "CUMMINSIND": {
     "stage": "BASING"
@@ -403,7 +403,7 @@
     "stage": "BASING"
   },
   "BIOCON": {
-    "stage": "BASING",
+    "stage": "FRESH_REVERSAL",
     "last_reversal_alerted": "2026-08-06"
   },
   "KSB": {
@@ -431,14 +431,14 @@
     "stage": "BASING"
   },
   "SPORTKING": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "JLHL": {
     "stage": "BASING",
     "last_reversal_alerted": "2026-08-19"
   },
   "NELCO": {
-    "stage": "FRESH_BOS2"
+    "stage": "STALE_BOS2"
   },
   "REDINGTON": {
     "stage": "BASING"
@@ -471,7 +471,7 @@
     "stage": "STALE_BOS2"
   },
   "ENTERO": {
-    "stage": "IN_RETEST"
+    "stage": "STALE_BOS2"
   },
   "HINDALCO": {
     "stage": "STALE_BOS2"
@@ -546,7 +546,7 @@
     "stage": "STALE_BOS2"
   },
   "FEDERALBNK": {
-    "stage": "BASING",
+    "stage": "FRESH_REVERSAL",
     "last_reversal_alerted": "2026-08-20"
   },
   "LINDEINDIA": {
@@ -556,7 +556,7 @@
     "stage": "STALE_BOS2"
   },
   "FINCABLES": {
-    "stage": "IN_RETEST"
+    "stage": "BASING"
   },
   "APOLLO": {
     "stage": "STALE_BOS2"
@@ -598,7 +598,7 @@
     "stage": "STALE_BOS2"
   },
   "MANINDS": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "PREMIERENE": {
     "stage": "STALE_BOS2"
@@ -670,7 +670,7 @@
     "stage": "STALE_BOS2"
   },
   "MBAPL": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "CYIENTDLM": {
     "stage": "STALE_BOS2"
@@ -694,7 +694,7 @@
     "stage": "STALE_BOS2"
   },
   "SOLARINDS": {
-    "stage": "IN_RETEST"
+    "stage": "STALE_BOS2"
   },
   "PSPPROJECT": {
     "stage": "STALE_BOS2"
@@ -838,7 +838,7 @@
     "stage": "STALE_BOS2"
   },
   "MUFIN": {
-    "stage": "FRESH_BOS2"
+    "stage": "BASING"
   },
   "VMART": {
     "stage": "PRE_BOS2_READY"
@@ -856,7 +856,7 @@
     "stage": "FRESH_BOS2"
   },
   "JSFB": {
-    "stage": "FRESH_REVERSAL"
+    "stage": "BASING"
   },
   "JUSTDIAL": {
     "stage": "FRESH_REVERSAL"
@@ -907,7 +907,7 @@
     "stage": "BASING"
   },
   "AVANTEL": {
-    "stage": "BASING"
+    "stage": "FRESH_REVERSAL"
   },
   "EMCURE": {
     "stage": "BASING"
@@ -1067,7 +1067,7 @@
     "stage": "BASING"
   },
   "JGCHEM": {
-    "stage": "BASING"
+    "stage": "FRESH_REVERSAL"
   },
   "SHRIRAMFIN": {
     "stage": "PRE_BOS2_READY"
@@ -1076,7 +1076,7 @@
     "stage": "STALE_BOS2"
   },
   "AARTIPHARM": {
-    "stage": "IN_RETEST"
+    "stage": "BASING"
   },
   "ANANTRAJ": {
     "stage": "FRESH_REVERSAL"
@@ -1103,13 +1103,13 @@
     "stage": "IN_RETEST"
   },
   "NAUKRI": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "LUMAXTECH": {
-    "stage": "IN_RETEST"
+    "stage": "BASING"
   },
   "PPLPHARMA": {
-    "stage": "IN_RETEST"
+    "stage": "PRE_BOS2_READY"
   },
   "DOLPHIN": {
     "stage": "IN_RETEST"
@@ -1148,7 +1148,7 @@
     "stage": "IN_RETEST"
   },
   "INDGN": {
-    "stage": "IN_RETEST"
+    "stage": "BASING"
   },
   "YUKEN": {
     "stage": "IN_RETEST"
