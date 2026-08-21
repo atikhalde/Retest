@@ -81,7 +81,7 @@
     "stage": "IN_RETEST"
   },
   "INDORAMA": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "NAZARA": {
     "stage": "STALE_BOS2"
@@ -473,7 +473,7 @@
     "stage": "STALE_BOS2"
   },
   "ENTERO": {
-    "stage": "IN_RETEST"
+    "stage": "STALE_BOS2"
   },
   "HINDALCO": {
     "stage": "STALE_BOS2"
