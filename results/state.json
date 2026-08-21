@@ -843,7 +843,7 @@
     "stage": "FRESH_BOS2"
   },
   "VMART": {
-    "stage": "FRESH_REVERSAL",
+    "stage": "FRESH_BOS2",
     "last_reversal_alerted": "2026-08-21"
   },
   "EXIDEIND": {
@@ -948,7 +948,7 @@
     "stage": "STALE_BOS2"
   },
   "MACPOWER": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "LLOYDSENT": {
     "stage": "STALE_BOS2"
