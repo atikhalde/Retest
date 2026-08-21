@@ -75,13 +75,13 @@
     "stage": "STALE_BOS2"
   },
   "LLOYDSME": {
-    "stage": "BASING"
+    "stage": "STALE_BOS2"
   },
   "TORNTPHARM": {
     "stage": "IN_RETEST"
   },
   "INDORAMA": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "NAZARA": {
     "stage": "STALE_BOS2"
@@ -286,14 +286,14 @@
     "stage": "BASING"
   },
   "SSWL": {
-    "stage": "BASING"
+    "stage": "STALE_BOS2"
   },
   "HIRECT": {
     "stage": "FRESH_REVERSAL",
     "last_reversal_alerted": "2026-08-21"
   },
   "WELENT": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "SHAREINDIA": {
     "stage": "FRESH_REVERSAL"
@@ -696,7 +696,7 @@
     "stage": "STALE_BOS2"
   },
   "SOLARINDS": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "PSPPROJECT": {
     "stage": "STALE_BOS2"
@@ -1094,7 +1094,7 @@
     "stage": "PRE_BOS2_READY"
   },
   "SUDARSCHEM": {
-    "stage": "FRESH_REVERSAL"
+    "stage": "FRESH_BOS2"
   },
   "ALLCARGO": {
     "stage": "IN_RETEST"
@@ -1157,7 +1157,7 @@
     "stage": "IN_RETEST"
   },
   "COFORGE": {
-    "stage": "BASING"
+    "stage": "IN_RETEST"
   },
   "MANORAMA": {
     "stage": "IN_RETEST"
