@@ -237,7 +237,7 @@
     "stage": "PRE_BOS2_READY"
   },
   "PVRINOX": {
-    "stage": "BASING"
+    "stage": "FRESH_BOS2"
   },
   "KIRLOSBROS": {
     "stage": "BASING"
@@ -317,7 +317,7 @@
     "stage": "STALE_BOS2"
   },
   "AIAENG": {
-    "stage": "BASING"
+    "stage": "STALE_BOS2"
   },
   "KSL": {
     "stage": "BASING"
@@ -377,7 +377,7 @@
     "stage": "BASING"
   },
   "VOLTAMP": {
-    "stage": "FRESH_REVERSAL"
+    "stage": "FRESH_BOS2"
   },
   "TANLA": {
     "stage": "BASING"
@@ -838,7 +838,7 @@
     "stage": "BASING"
   },
   "LMW": {
-    "stage": "IN_RETEST"
+    "stage": "STALE_BOS2"
   },
   "MUFIN": {
     "stage": "FRESH_BOS2"
@@ -1139,7 +1139,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "TASTYBITE": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "NINSYS": {
     "stage": "STALE_BOS2"
@@ -1154,7 +1154,7 @@
     "stage": "IN_RETEST"
   },
   "INDGN": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "YUKEN": {
     "stage": "BASING"
