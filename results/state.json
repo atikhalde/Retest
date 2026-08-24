@@ -171,7 +171,7 @@
     "stage": "BASING"
   },
   "INGERRAND": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "GOKULAGRO": {
     "stage": "PRE_BOS2_READY"
@@ -293,7 +293,7 @@
     "last_reversal_alerted": "2026-08-21"
   },
   "WELENT": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "SHAREINDIA": {
     "stage": "BASING"
@@ -323,7 +323,7 @@
     "stage": "BASING"
   },
   "QUADFUTURE": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "FRESH_BOS2"
   },
   "SUYOG": {
     "stage": "BASING"
@@ -1140,7 +1140,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "TASTYBITE": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "NINSYS": {
     "stage": "STALE_BOS2"
