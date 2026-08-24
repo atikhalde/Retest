@@ -293,7 +293,7 @@
     "last_reversal_alerted": "2026-08-21"
   },
   "WELENT": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "SHAREINDIA": {
     "stage": "BASING"
@@ -1125,7 +1125,7 @@
     "stage": "BASING"
   },
   "INDOTECH": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "SIGMAADV": {
     "stage": "FRESH_REVERSAL"
