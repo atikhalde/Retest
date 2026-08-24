@@ -171,7 +171,7 @@
     "stage": "BASING"
   },
   "INGERRAND": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "GOKULAGRO": {
     "stage": "PRE_BOS2_READY"
@@ -293,7 +293,7 @@
     "last_reversal_alerted": "2026-08-21"
   },
   "WELENT": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "SHAREINDIA": {
     "stage": "BASING"
@@ -323,7 +323,7 @@
     "stage": "BASING"
   },
   "QUADFUTURE": {
-    "stage": "FRESH_BOS2"
+    "stage": "PRE_BOS2_READY"
   },
   "SUYOG": {
     "stage": "BASING"
@@ -371,7 +371,7 @@
     "stage": "BASING"
   },
   "FLUOROCHEM": {
-    "stage": "IN_RETEST"
+    "stage": "STALE_BOS2"
   },
   "UJJIVANSFB": {
     "stage": "BASING"
@@ -849,7 +849,7 @@
     "last_reversal_alerted": "2026-08-21"
   },
   "EXIDEIND": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "SUPRIYA": {
     "stage": "BASING"
