@@ -102,10 +102,10 @@
     "stage": "BASING"
   },
   "SUVEN": {
-    "stage": "IN_RETEST"
+    "stage": "FRESH_BOS2"
   },
   "ADOR": {
-    "stage": "FRESH_BOS2"
+    "stage": "IN_RETEST"
   },
   "MMFL": {
     "stage": "FRESH_REVERSAL"
@@ -293,7 +293,7 @@
     "last_reversal_alerted": "2026-08-21"
   },
   "WELENT": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "SHAREINDIA": {
     "stage": "BASING"
@@ -374,7 +374,7 @@
     "stage": "STALE_BOS2"
   },
   "UJJIVANSFB": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "VOLTAMP": {
     "stage": "FRESH_REVERSAL"
@@ -491,7 +491,7 @@
     "stage": "STALE_BOS2"
   },
   "MARKSANS": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "NAVINFLUOR": {
     "stage": "BASING",
@@ -838,7 +838,7 @@
     "stage": "BASING"
   },
   "LMW": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "MUFIN": {
     "stage": "FRESH_BOS2"
@@ -1139,7 +1139,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "TASTYBITE": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "NINSYS": {
     "stage": "STALE_BOS2"
@@ -1154,7 +1154,7 @@
     "stage": "IN_RETEST"
   },
   "INDGN": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "YUKEN": {
     "stage": "BASING"
@@ -1208,6 +1208,9 @@
     "stage": "STALE_BOS2"
   },
   "BECTORFOOD": {
+    "stage": "IN_RETEST"
+  },
+  "GLAXO": {
     "stage": "IN_RETEST"
   }
 }
