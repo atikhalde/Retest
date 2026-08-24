@@ -219,7 +219,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "TEXINFRA": {
-    "stage": "BASING"
+    "stage": "FRESH_REVERSAL"
   },
   "IKS": {
     "stage": "BASING"
@@ -377,7 +377,7 @@
     "stage": "BASING"
   },
   "VOLTAMP": {
-    "stage": "FRESH_BOS2"
+    "stage": "FRESH_REVERSAL"
   },
   "TANLA": {
     "stage": "FRESH_REVERSAL",
@@ -839,7 +839,7 @@
     "stage": "BASING"
   },
   "LMW": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "MUFIN": {
     "stage": "FRESH_BOS2"
@@ -1212,6 +1212,9 @@
     "stage": "IN_RETEST"
   },
   "GLAXO": {
+    "stage": "IN_RETEST"
+  },
+  "HNDFDS": {
     "stage": "IN_RETEST"
   }
 }
