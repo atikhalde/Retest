@@ -27,7 +27,7 @@
     "stage": "BASING"
   },
   "ASTERDM": {
-    "stage": "BASING"
+    "stage": "STALE_BOS2"
   },
   "EMIL": {
     "stage": "STALE_BOS2"
@@ -78,10 +78,10 @@
     "stage": "STALE_BOS2"
   },
   "TORNTPHARM": {
-    "stage": "IN_RETEST"
+    "stage": "FRESH_REVERSAL"
   },
   "INDORAMA": {
-    "stage": "BASING"
+    "stage": "FRESH_REVERSAL"
   },
   "NAZARA": {
     "stage": "STALE_BOS2"
@@ -102,7 +102,7 @@
     "stage": "BASING"
   },
   "SUVEN": {
-    "stage": "FRESH_BOS2"
+    "stage": "IN_RETEST"
   },
   "ADOR": {
     "stage": "FRESH_BOS2"
@@ -162,7 +162,7 @@
     "stage": "STALE_BOS2"
   },
   "HARSHA": {
-    "stage": "FRESH_REVERSAL"
+    "stage": "BASING"
   },
   "KPIL": {
     "stage": "BASING"
@@ -198,7 +198,7 @@
     "stage": "BASING"
   },
   "SANGHVIMOV": {
-    "stage": "IN_RETEST"
+    "stage": "BASING"
   },
   "GARFIBRES": {
     "stage": "STALE_BOS2"
@@ -216,7 +216,7 @@
     "stage": "IN_RETEST"
   },
   "INDHOTEL": {
-    "stage": "BASING"
+    "stage": "FRESH_REVERSAL"
   },
   "TEXINFRA": {
     "stage": "BASING"
@@ -243,7 +243,7 @@
     "stage": "BASING"
   },
   "RBLBANK": {
-    "stage": "BASING"
+    "stage": "FRESH_REVERSAL"
   },
   "WELCORP": {
     "stage": "STALE_BOS2"
@@ -421,7 +421,7 @@
     "stage": "BASING"
   },
   "GABRIEL": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "UNIPARTS": {
     "stage": "BASING"
@@ -446,19 +446,19 @@
     "stage": "BASING"
   },
   "KRISHANA": {
-    "stage": "BASING"
+    "stage": "FRESH_REVERSAL"
   },
   "APCOTEXIND": {
     "stage": "FRESH_REVERSAL"
   },
   "QUESS": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "CENTUM": {
     "stage": "STALE_BOS2"
   },
   "WSTCSTPAPR": {
-    "stage": "IN_RETEST"
+    "stage": "PRE_BOS2_READY"
   },
   "NGLFINE": {
     "stage": "STALE_BOS2"
@@ -512,7 +512,7 @@
     "stage": "STALE_BOS2"
   },
   "CUPID": {
-    "stage": "IN_RETEST"
+    "stage": "BASING"
   },
   "FILATEX": {
     "stage": "FRESH_REVERSAL"
@@ -576,7 +576,7 @@
     "stage": "STALE_BOS2"
   },
   "APOLLOHOSP": {
-    "stage": "FRESH_REVERSAL"
+    "stage": "BASING"
   },
   "VEDL": {
     "stage": "STALE_BOS2"
@@ -756,10 +756,10 @@
     "stage": "BASING"
   },
   "VSSL": {
-    "stage": "FRESH_BOS2"
+    "stage": "STALE_BOS2"
   },
   "63MOONS": {
-    "stage": "BASING"
+    "stage": "FRESH_REVERSAL"
   },
   "VIMTALABS": {
     "stage": "FRESH_REVERSAL"
@@ -768,7 +768,7 @@
     "stage": "BASING"
   },
   "TI": {
-    "stage": "FRESH_BOS2"
+    "stage": "STALE_BOS2"
   },
   "PTC": {
     "stage": "STALE_BOS2"
@@ -868,7 +868,7 @@
     "stage": "BASING"
   },
   "SANDHAR": {
-    "stage": "BASING"
+    "stage": "FRESH_REVERSAL"
   },
   "BLSE": {
     "stage": "FRESH_BOS2"
@@ -926,7 +926,7 @@
     "stage": "BASING"
   },
   "UNIMECH": {
-    "stage": "FRESH_BOS2"
+    "stage": "STALE_BOS2"
   },
   "ASIANENE": {
     "stage": "FRESH_BOS2"
@@ -1104,7 +1104,7 @@
     "stage": "BASING"
   },
   "HCG": {
-    "stage": "IN_RETEST"
+    "stage": "FRESH_REVERSAL"
   },
   "NAUKRI": {
     "stage": "PRE_BOS2_READY"
@@ -1113,7 +1113,7 @@
     "stage": "BASING"
   },
   "PPLPHARMA": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "FRESH_REVERSAL"
   },
   "DOLPHIN": {
     "stage": "BASING"
@@ -1125,10 +1125,10 @@
     "stage": "BASING"
   },
   "INDOTECH": {
-    "stage": "FRESH_REVERSAL"
+    "stage": "PRE_BOS2_READY"
   },
   "SIGMAADV": {
-    "stage": "BASING"
+    "stage": "FRESH_REVERSAL"
   },
   "MUNJALAU": {
     "stage": "IN_RETEST"
@@ -1137,7 +1137,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "TASTYBITE": {
-    "stage": "IN_RETEST"
+    "stage": "PRE_BOS2_READY"
   },
   "NINSYS": {
     "stage": "STALE_BOS2"
@@ -1155,7 +1155,7 @@
     "stage": "PRE_BOS2_READY"
   },
   "YUKEN": {
-    "stage": "IN_RETEST"
+    "stage": "BASING"
   },
   "COFORGE": {
     "stage": "IN_RETEST"
@@ -1195,5 +1195,14 @@
   },
   "PTCIL": {
     "stage": "IN_RETEST"
+  },
+  "AIIL": {
+    "stage": "BASING"
+  },
+  "EXCELINDUS": {
+    "stage": "IN_RETEST"
+  },
+  "JNKINDIA": {
+    "stage": "STALE_BOS2"
   }
 }
