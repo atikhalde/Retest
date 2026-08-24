@@ -752,7 +752,7 @@
     "stage": "BASING"
   },
   "CONCORDBIO": {
-    "stage": "IN_RETEST"
+    "stage": "FRESH_BOS2"
   },
   "THEJO": {
     "stage": "BASING"
@@ -1155,7 +1155,7 @@
     "stage": "IN_RETEST"
   },
   "INDGN": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "YUKEN": {
     "stage": "BASING"
