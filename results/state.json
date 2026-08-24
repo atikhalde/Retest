@@ -105,7 +105,7 @@
     "stage": "FRESH_BOS2"
   },
   "ADOR": {
-    "stage": "FRESH_BOS2"
+    "stage": "IN_RETEST"
   },
   "MMFL": {
     "stage": "FRESH_REVERSAL"
@@ -219,7 +219,8 @@
     "stage": "FRESH_REVERSAL"
   },
   "TEXINFRA": {
-    "stage": "FRESH_REVERSAL"
+    "stage": "FRESH_REVERSAL",
+    "last_reversal_alerted": "2026-08-24"
   },
   "IKS": {
     "stage": "BASING"
@@ -380,7 +381,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "TANLA": {
-    "stage": "FRESH_REVERSAL",
+    "stage": "BASING",
     "last_reversal_alerted": "2026-08-24"
   },
   "NITCO": {
@@ -839,7 +840,7 @@
     "stage": "BASING"
   },
   "LMW": {
-    "stage": "IN_RETEST"
+    "stage": "STALE_BOS2"
   },
   "MUFIN": {
     "stage": "FRESH_BOS2"
@@ -1155,7 +1156,7 @@
     "stage": "IN_RETEST"
   },
   "INDGN": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "YUKEN": {
     "stage": "BASING"
