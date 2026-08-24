@@ -27,7 +27,7 @@
     "stage": "BASING"
   },
   "ASTERDM": {
-    "stage": "STALE_BOS2"
+    "stage": "BASING"
   },
   "EMIL": {
     "stage": "STALE_BOS2"
@@ -494,7 +494,7 @@
     "stage": "PRE_BOS2_READY"
   },
   "NAVINFLUOR": {
-    "stage": "FRESH_REVERSAL",
+    "stage": "BASING",
     "last_reversal_alerted": "2026-08-24"
   },
   "KARURVYSYA": {
@@ -1205,5 +1205,8 @@
   },
   "JNKINDIA": {
     "stage": "STALE_BOS2"
+  },
+  "BECTORFOOD": {
+    "stage": "IN_RETEST"
   }
 }
