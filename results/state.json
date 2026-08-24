@@ -27,7 +27,7 @@
     "stage": "BASING"
   },
   "ASTERDM": {
-    "stage": "BASING"
+    "stage": "STALE_BOS2"
   },
   "EMIL": {
     "stage": "STALE_BOS2"
@@ -54,7 +54,7 @@
     "stage": "STALE_BOS2"
   },
   "MINDACORP": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "AEROENTER": {
     "stage": "STALE_BOS2"
@@ -458,7 +458,7 @@
     "stage": "STALE_BOS2"
   },
   "WSTCSTPAPR": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "NGLFINE": {
     "stage": "STALE_BOS2"
@@ -494,7 +494,7 @@
     "stage": "BASING"
   },
   "NAVINFLUOR": {
-    "stage": "FRESH_REVERSAL",
+    "stage": "BASING",
     "last_reversal_alerted": "2026-08-24"
   },
   "KARURVYSYA": {
@@ -1076,7 +1076,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "SHRIRAMFIN": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "SUMEETINDS": {
     "stage": "STALE_BOS2"
@@ -1109,7 +1109,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "NAUKRI": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "LUMAXTECH": {
     "stage": "BASING"
@@ -1154,7 +1154,7 @@
     "stage": "IN_RETEST"
   },
   "INDGN": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "YUKEN": {
     "stage": "BASING"
