@@ -105,7 +105,7 @@
     "stage": "FRESH_BOS2"
   },
   "ADOR": {
-    "stage": "IN_RETEST"
+    "stage": "FRESH_BOS2"
   },
   "MMFL": {
     "stage": "FRESH_REVERSAL"
@@ -293,7 +293,7 @@
     "last_reversal_alerted": "2026-08-21"
   },
   "WELENT": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "SHAREINDIA": {
     "stage": "BASING"
@@ -323,7 +323,7 @@
     "stage": "BASING"
   },
   "QUADFUTURE": {
-    "stage": "BASING"
+    "stage": "FRESH_BOS2"
   },
   "SUYOG": {
     "stage": "BASING"
@@ -371,7 +371,7 @@
     "stage": "BASING"
   },
   "FLUOROCHEM": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "UJJIVANSFB": {
     "stage": "BASING"
@@ -492,7 +492,7 @@
     "stage": "STALE_BOS2"
   },
   "MARKSANS": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "NAVINFLUOR": {
     "stage": "BASING",
