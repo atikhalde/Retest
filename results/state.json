@@ -421,7 +421,7 @@
     "stage": "BASING"
   },
   "GABRIEL": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "UNIPARTS": {
     "stage": "BASING"
@@ -494,7 +494,8 @@
     "stage": "PRE_BOS2_READY"
   },
   "NAVINFLUOR": {
-    "stage": "BASING"
+    "stage": "FRESH_REVERSAL",
+    "last_reversal_alerted": "2026-08-24"
   },
   "KARURVYSYA": {
     "stage": "STALE_BOS2"
@@ -1125,7 +1126,7 @@
     "stage": "BASING"
   },
   "INDOTECH": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "SIGMAADV": {
     "stage": "FRESH_REVERSAL"
