@@ -105,7 +105,7 @@
     "stage": "FRESH_BOS2"
   },
   "ADOR": {
-    "stage": "IN_RETEST"
+    "stage": "FRESH_BOS2"
   },
   "MMFL": {
     "stage": "FRESH_REVERSAL"
@@ -1129,7 +1129,7 @@
     "stage": "BASING"
   },
   "INDOTECH": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "SIGMAADV": {
     "stage": "FRESH_REVERSAL"
