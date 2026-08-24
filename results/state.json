@@ -54,7 +54,7 @@
     "stage": "STALE_BOS2"
   },
   "MINDACORP": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "AEROENTER": {
     "stage": "STALE_BOS2"
@@ -491,10 +491,10 @@
     "stage": "STALE_BOS2"
   },
   "MARKSANS": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "NAVINFLUOR": {
-    "stage": "BASING",
+    "stage": "FRESH_REVERSAL",
     "last_reversal_alerted": "2026-08-24"
   },
   "KARURVYSYA": {
@@ -869,7 +869,8 @@
     "stage": "BASING"
   },
   "SANDHAR": {
-    "stage": "FRESH_REVERSAL"
+    "stage": "FRESH_REVERSAL",
+    "last_reversal_alerted": "2026-08-24"
   },
   "BLSE": {
     "stage": "FRESH_BOS2"
