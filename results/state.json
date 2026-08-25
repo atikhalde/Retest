@@ -111,7 +111,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "OFSS": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "AZAD": {
     "stage": "BASING",
@@ -323,7 +323,7 @@
     "stage": "BASING"
   },
   "QUADFUTURE": {
-    "stage": "FRESH_BOS2"
+    "stage": "PRE_BOS2_READY"
   },
   "SUYOG": {
     "stage": "BASING"
