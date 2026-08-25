@@ -54,7 +54,7 @@
     "stage": "STALE_BOS2"
   },
   "MINDACORP": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "AEROENTER": {
     "stage": "STALE_BOS2"
@@ -102,7 +102,7 @@
     "stage": "BASING"
   },
   "SUVEN": {
-    "stage": "IN_RETEST"
+    "stage": "FRESH_BOS2"
   },
   "ADOR": {
     "stage": "FRESH_BOS2"
@@ -171,7 +171,7 @@
     "stage": "BASING"
   },
   "INGERRAND": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "GOKULAGRO": {
     "stage": "PRE_BOS2_READY"
@@ -238,7 +238,7 @@
     "stage": "PRE_BOS2_READY"
   },
   "PVRINOX": {
-    "stage": "BASING"
+    "stage": "FRESH_BOS2"
   },
   "KIRLOSBROS": {
     "stage": "BASING"
@@ -324,7 +324,7 @@
     "stage": "BASING"
   },
   "QUADFUTURE": {
-    "stage": "BASING"
+    "stage": "FRESH_BOS2"
   },
   "SUYOG": {
     "stage": "BASING"
@@ -890,7 +890,7 @@
     "stage": "BASING"
   },
   "CGCL": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "J&KBANK": {
     "stage": "STALE_BOS2"
