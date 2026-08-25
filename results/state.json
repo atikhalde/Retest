@@ -54,7 +54,7 @@
     "stage": "STALE_BOS2"
   },
   "MINDACORP": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "AEROENTER": {
     "stage": "STALE_BOS2"
@@ -69,7 +69,7 @@
     "stage": "STALE_BOS2"
   },
   "IGPL": {
-    "stage": "FRESH_REVERSAL"
+    "stage": "BASING"
   },
   "GRASIM": {
     "stage": "STALE_BOS2"
@@ -102,7 +102,7 @@
     "stage": "BASING"
   },
   "SUVEN": {
-    "stage": "FRESH_BOS2"
+    "stage": "IN_RETEST"
   },
   "ADOR": {
     "stage": "FRESH_BOS2"
@@ -119,7 +119,7 @@
     "last_reversal_alerted": "2026-08-05"
   },
   "RISHABH": {
-    "stage": "FRESH_BOS2"
+    "stage": "STALE_BOS2"
   },
   "GNA": {
     "stage": "FRESH_BOS2"
@@ -195,7 +195,7 @@
     "stage": "BASING"
   },
   "POWERGRID": {
-    "stage": "BASING"
+    "stage": "FRESH_REVERSAL"
   },
   "SANGHVIMOV": {
     "stage": "BASING"
@@ -219,7 +219,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "TEXINFRA": {
-    "stage": "FRESH_REVERSAL",
+    "stage": "BASING",
     "last_reversal_alerted": "2026-08-24"
   },
   "IKS": {
@@ -238,7 +238,7 @@
     "stage": "PRE_BOS2_READY"
   },
   "PVRINOX": {
-    "stage": "FRESH_BOS2"
+    "stage": "BASING"
   },
   "KIRLOSBROS": {
     "stage": "BASING"
@@ -324,7 +324,7 @@
     "stage": "BASING"
   },
   "QUADFUTURE": {
-    "stage": "FRESH_BOS2"
+    "stage": "BASING"
   },
   "SUYOG": {
     "stage": "BASING"
@@ -388,7 +388,7 @@
     "stage": "BASING"
   },
   "PITTIENG": {
-    "stage": "IN_RETEST"
+    "stage": "BASING"
   },
   "GIPCL": {
     "stage": "IN_RETEST"
@@ -432,7 +432,7 @@
     "stage": "BASING"
   },
   "MANAPPURAM": {
-    "stage": "BASING"
+    "stage": "FRESH_REVERSAL"
   },
   "SPORTKING": {
     "stage": "FRESH_REVERSAL"
@@ -445,7 +445,7 @@
     "stage": "STALE_BOS2"
   },
   "REDINGTON": {
-    "stage": "BASING"
+    "stage": "FRESH_REVERSAL"
   },
   "KRISHANA": {
     "stage": "FRESH_REVERSAL"
@@ -804,7 +804,7 @@
     "stage": "STALE_BOS2"
   },
   "HONASA": {
-    "stage": "IN_RETEST"
+    "stage": "BASING"
   },
   "GANDHAR": {
     "stage": "BASING"
@@ -856,7 +856,7 @@
     "stage": "BASING"
   },
   "ICICIBANK": {
-    "stage": "BASING"
+    "stage": "FRESH_REVERSAL"
   },
   "RPEL": {
     "stage": "STALE_BOS2"
@@ -896,7 +896,7 @@
     "stage": "STALE_BOS2"
   },
   "MANGLMCEM": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "GANECOS": {
     "stage": "BASING"
@@ -920,7 +920,7 @@
     "stage": "BASING"
   },
   "AVADHSUGAR": {
-    "stage": "FRESH_BOS2"
+    "stage": "STALE_BOS2"
   },
   "RPTECH": {
     "stage": "FRESH_REVERSAL",
@@ -1078,7 +1078,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "SHRIRAMFIN": {
-    "stage": "BASING"
+    "stage": "FRESH_REVERSAL"
   },
   "SUMEETINDS": {
     "stage": "STALE_BOS2"
@@ -1162,7 +1162,7 @@
     "stage": "BASING"
   },
   "COFORGE": {
-    "stage": "IN_RETEST"
+    "stage": "FRESH_REVERSAL"
   },
   "MANORAMA": {
     "stage": "IN_RETEST"
