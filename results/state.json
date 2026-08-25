@@ -173,7 +173,7 @@
     "stage": "BASING"
   },
   "GOKULAGRO": {
-    "stage": "BASING"
+    "stage": "FRESH_BOS2"
   },
   "PHOENIXLTD": {
     "stage": "BASING"
@@ -1215,6 +1215,9 @@
     "stage": "IN_RETEST"
   },
   "HNDFDS": {
+    "stage": "IN_RETEST"
+  },
+  "KOLTEPATIL": {
     "stage": "IN_RETEST"
   }
 }
