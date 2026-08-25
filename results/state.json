@@ -36,7 +36,7 @@
     "stage": "FRESH_BOS2"
   },
   "CRAFTSMAN": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "GLAND": {
     "stage": "BASING"
@@ -234,7 +234,7 @@
     "stage": "BASING"
   },
   "LALPATHLAB": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "PVRINOX": {
     "stage": "FRESH_BOS2"
@@ -889,7 +889,7 @@
     "stage": "BASING"
   },
   "CGCL": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "J&KBANK": {
     "stage": "STALE_BOS2"
