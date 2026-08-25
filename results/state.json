@@ -776,7 +776,7 @@
     "stage": "STALE_BOS2"
   },
   "WESTLIFE": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "JKTYRE": {
     "stage": "STALE_BOS2"
