@@ -42,7 +42,7 @@
     "stage": "BASING"
   },
   "LLOYDSENGG": {
-    "stage": "STALE_BOS2"
+    "stage": "BASING"
   },
   "RRKABEL": {
     "stage": "STALE_BOS2"
@@ -434,7 +434,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "SPORTKING": {
-    "stage": "FRESH_REVERSAL"
+    "stage": "FRESH_BOS2"
   },
   "JLHL": {
     "stage": "BASING",
@@ -889,7 +889,7 @@
     "stage": "BASING"
   },
   "CGCL": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "J&KBANK": {
     "stage": "STALE_BOS2"
