@@ -839,7 +839,7 @@
     "stage": "BASING"
   },
   "LMW": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "MUFIN": {
     "stage": "FRESH_BOS2"
@@ -870,7 +870,7 @@
     "stage": "BASING"
   },
   "SANDHAR": {
-    "stage": "BASING",
+    "stage": "FRESH_REVERSAL",
     "last_reversal_alerted": "2026-08-24"
   },
   "BLSE": {
