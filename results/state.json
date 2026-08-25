@@ -922,7 +922,7 @@
     "stage": "STALE_BOS2"
   },
   "RPTECH": {
-    "stage": "FRESH_REVERSAL",
+    "stage": "STALE_BOS2",
     "last_reversal_alerted": "2026-08-21"
   },
   "UNIVCABLES": {
@@ -1218,6 +1218,9 @@
     "stage": "IN_RETEST"
   },
   "KOLTEPATIL": {
+    "stage": "IN_RETEST"
+  },
+  "KIRIINDUS": {
     "stage": "IN_RETEST"
   }
 }
