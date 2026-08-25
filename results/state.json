@@ -111,8 +111,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "OFSS": {
-    "stage": "BASING",
-    "last_reversal_alerted": "2026-08-20"
+    "stage": "PRE_BOS2_READY"
   },
   "AZAD": {
     "stage": "BASING",
@@ -174,7 +173,7 @@
     "stage": "BASING"
   },
   "GOKULAGRO": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "PHOENIXLTD": {
     "stage": "BASING"
@@ -250,7 +249,7 @@
     "stage": "STALE_BOS2"
   },
   "ACE": {
-    "stage": "FRESH_BOS2"
+    "stage": "IN_RETEST"
   },
   "ALKYLAMINE": {
     "stage": "FRESH_BOS2"
@@ -469,7 +468,7 @@
     "stage": "BASING"
   },
   "APOLLOPIPE": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "AMBIKCO": {
     "stage": "STALE_BOS2"
@@ -493,7 +492,7 @@
     "stage": "STALE_BOS2"
   },
   "MARKSANS": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "NAVINFLUOR": {
     "stage": "BASING",
@@ -777,7 +776,7 @@
     "stage": "STALE_BOS2"
   },
   "WESTLIFE": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "JKTYRE": {
     "stage": "STALE_BOS2"
@@ -871,7 +870,7 @@
     "stage": "BASING"
   },
   "SANDHAR": {
-    "stage": "FRESH_REVERSAL",
+    "stage": "BASING",
     "last_reversal_alerted": "2026-08-24"
   },
   "BLSE": {
@@ -1156,7 +1155,7 @@
     "stage": "IN_RETEST"
   },
   "INDGN": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "YUKEN": {
     "stage": "BASING"
