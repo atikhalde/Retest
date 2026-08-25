@@ -84,7 +84,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "NAZARA": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "KAPSTON": {
     "stage": "STALE_BOS2"
@@ -870,7 +870,7 @@
     "stage": "BASING"
   },
   "SANDHAR": {
-    "stage": "FRESH_REVERSAL",
+    "stage": "BASING",
     "last_reversal_alerted": "2026-08-24"
   },
   "BLSE": {
