@@ -293,7 +293,7 @@
     "last_reversal_alerted": "2026-08-21"
   },
   "WELENT": {
-    "stage": "BASING"
+    "stage": "FRESH_BOS2"
   },
   "SHAREINDIA": {
     "stage": "BASING"
@@ -578,7 +578,7 @@
     "stage": "STALE_BOS2"
   },
   "APOLLOHOSP": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "VEDL": {
     "stage": "STALE_BOS2"
@@ -776,7 +776,7 @@
     "stage": "STALE_BOS2"
   },
   "WESTLIFE": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "JKTYRE": {
     "stage": "STALE_BOS2"
@@ -922,7 +922,7 @@
     "stage": "STALE_BOS2"
   },
   "RPTECH": {
-    "stage": "STALE_BOS2",
+    "stage": "FRESH_REVERSAL",
     "last_reversal_alerted": "2026-08-21"
   },
   "UNIVCABLES": {
