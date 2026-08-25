@@ -3,7 +3,7 @@
     "stage": "STALE_BOS2"
   },
   "PNBHOUSING": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "SUPRAJIT": {
     "stage": "BASING"
@@ -90,7 +90,7 @@
     "stage": "STALE_BOS2"
   },
   "NESTLEIND": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "XPROINDIA": {
     "stage": "STALE_BOS2"
@@ -1110,7 +1110,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "NAUKRI": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "LUMAXTECH": {
     "stage": "BASING"
