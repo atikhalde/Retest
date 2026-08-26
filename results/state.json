@@ -581,7 +581,7 @@
     "stage": "STALE_BOS2"
   },
   "APOLLOHOSP": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "VEDL": {
     "stage": "STALE_BOS2"
@@ -954,7 +954,7 @@
     "stage": "STALE_BOS2"
   },
   "MACPOWER": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "LLOYDSENT": {
     "stage": "STALE_BOS2"
