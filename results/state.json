@@ -295,7 +295,7 @@
     "last_reversal_alerted": "2026-08-21"
   },
   "WELENT": {
-    "stage": "BASING"
+    "stage": "FRESH_BOS2"
   },
   "SHAREINDIA": {
     "stage": "BASING"
@@ -1158,7 +1158,8 @@
     "stage": "IN_RETEST"
   },
   "INDGN": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "FRESH_REVERSAL",
+    "last_reversal_alerted": "2026-08-26"
   },
   "YUKEN": {
     "stage": "BASING"
