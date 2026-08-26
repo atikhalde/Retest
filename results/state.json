@@ -497,8 +497,8 @@
     "stage": "BASING"
   },
   "NAVINFLUOR": {
-    "stage": "BASING",
-    "last_reversal_alerted": "2026-08-24"
+    "stage": "FRESH_REVERSAL",
+    "last_reversal_alerted": "2026-08-26"
   },
   "KARURVYSYA": {
     "stage": "STALE_BOS2"
@@ -1158,7 +1158,8 @@
     "stage": "IN_RETEST"
   },
   "INDGN": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "FRESH_REVERSAL",
+    "last_reversal_alerted": "2026-08-26"
   },
   "YUKEN": {
     "stage": "BASING"
