@@ -39,7 +39,7 @@
     "stage": "PRE_BOS2_READY"
   },
   "GLAND": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "LLOYDSENGG": {
     "stage": "BASING"
@@ -111,7 +111,7 @@
     "stage": "BASING"
   },
   "OFSS": {
-    "stage": "BASING",
+    "stage": "FRESH_BOS2",
     "last_reversal_alerted": "2026-08-26"
   },
   "AZAD": {
