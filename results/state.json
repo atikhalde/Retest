@@ -111,7 +111,7 @@
     "stage": "BASING"
   },
   "OFSS": {
-    "stage": "FRESH_REVERSAL",
+    "stage": "BASING",
     "last_reversal_alerted": "2026-08-26"
   },
   "AZAD": {
@@ -235,11 +235,11 @@
     "stage": "BASING"
   },
   "LALPATHLAB": {
-    "stage": "FRESH_REVERSAL",
+    "stage": "BASING",
     "last_reversal_alerted": "2026-08-26"
   },
   "PVRINOX": {
-    "stage": "FRESH_BOS2"
+    "stage": "IN_RETEST"
   },
   "KIRLOSBROS": {
     "stage": "BASING"
