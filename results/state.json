@@ -111,7 +111,8 @@
     "stage": "BASING"
   },
   "OFSS": {
-    "stage": "BASING"
+    "stage": "FRESH_REVERSAL",
+    "last_reversal_alerted": "2026-08-26"
   },
   "AZAD": {
     "stage": "BASING",
@@ -170,7 +171,7 @@
     "stage": "BASING"
   },
   "INGERRAND": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "GOKULAGRO": {
     "stage": "FRESH_BOS2"
@@ -234,7 +235,8 @@
     "stage": "BASING"
   },
   "LALPATHLAB": {
-    "stage": "BASING"
+    "stage": "FRESH_REVERSAL",
+    "last_reversal_alerted": "2026-08-26"
   },
   "PVRINOX": {
     "stage": "FRESH_BOS2"
@@ -635,7 +637,7 @@
     "stage": "STALE_BOS2"
   },
   "KINGFA": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "APARINDS": {
     "stage": "STALE_BOS2"
@@ -1131,7 +1133,7 @@
     "stage": "BASING"
   },
   "SIGMAADV": {
-    "stage": "FRESH_REVERSAL"
+    "stage": "FRESH_BOS2"
   },
   "MUNJALAU": {
     "stage": "IN_RETEST"
@@ -1149,13 +1151,13 @@
     "stage": "STALE_BOS2"
   },
   "UNOMINDA": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "FOSECOIND": {
     "stage": "IN_RETEST"
   },
   "INDGN": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "YUKEN": {
     "stage": "BASING"
@@ -1173,7 +1175,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "TVSSRICHAK": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "IIFL": {
     "stage": "FRESH_REVERSAL"
