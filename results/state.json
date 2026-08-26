@@ -36,7 +36,7 @@
     "stage": "IN_RETEST"
   },
   "CRAFTSMAN": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "GLAND": {
     "stage": "BASING"
@@ -1236,6 +1236,9 @@
     "stage": "IN_RETEST"
   },
   "SYNCOMF": {
+    "stage": "IN_RETEST"
+  },
+  "HATSUN": {
     "stage": "IN_RETEST"
   }
 }
