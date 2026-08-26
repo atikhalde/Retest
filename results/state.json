@@ -334,7 +334,7 @@
     "stage": "BASING"
   },
   "IPCALAB": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "NDRAUTO": {
     "stage": "BASING"
@@ -892,7 +892,7 @@
     "stage": "BASING"
   },
   "CGCL": {
-    "stage": "BASING"
+    "stage": "FRESH_BOS2"
   },
   "J&KBANK": {
     "stage": "STALE_BOS2"
@@ -1098,7 +1098,7 @@
     "stage": "IN_RETEST"
   },
   "INDIGOPNTS": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "SUDARSCHEM": {
     "stage": "FRESH_BOS2"
@@ -1224,6 +1224,9 @@
     "stage": "IN_RETEST"
   },
   "KIRIINDUS": {
+    "stage": "IN_RETEST"
+  },
+  "AGI": {
     "stage": "IN_RETEST"
   }
 }
