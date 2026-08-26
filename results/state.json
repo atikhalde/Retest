@@ -455,7 +455,7 @@
     "stage": "BASING"
   },
   "QUESS": {
-    "stage": "BASING"
+    "stage": "FRESH_BOS2"
   },
   "CENTUM": {
     "stage": "STALE_BOS2"
@@ -531,7 +531,8 @@
     "stage": "STALE_BOS2"
   },
   "MEDANTA": {
-    "stage": "BASING"
+    "stage": "FRESH_REVERSAL",
+    "last_reversal_alerted": "2026-08-26"
   },
   "CHENNPETRO": {
     "stage": "STALE_BOS2"
