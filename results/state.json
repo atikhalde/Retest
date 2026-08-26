@@ -239,7 +239,7 @@
     "last_reversal_alerted": "2026-08-26"
   },
   "PVRINOX": {
-    "stage": "FRESH_BOS2"
+    "stage": "IN_RETEST"
   },
   "KIRLOSBROS": {
     "stage": "BASING"
@@ -334,7 +334,7 @@
     "stage": "BASING"
   },
   "IPCALAB": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "NDRAUTO": {
     "stage": "BASING"
@@ -898,7 +898,7 @@
     "stage": "STALE_BOS2"
   },
   "MANGLMCEM": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "GANECOS": {
     "stage": "BASING"
@@ -1158,8 +1158,7 @@
     "stage": "IN_RETEST"
   },
   "INDGN": {
-    "stage": "FRESH_REVERSAL",
-    "last_reversal_alerted": "2026-08-26"
+    "stage": "PRE_BOS2_READY"
   },
   "YUKEN": {
     "stage": "BASING"
@@ -1177,7 +1176,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "TVSSRICHAK": {
-    "stage": "BASING"
+    "stage": "FRESH_BOS2"
   },
   "IIFL": {
     "stage": "FRESH_REVERSAL"
@@ -1228,6 +1227,15 @@
     "stage": "IN_RETEST"
   },
   "AGI": {
+    "stage": "IN_RETEST"
+  },
+  "HAL": {
+    "stage": "IN_RETEST"
+  },
+  "PCJEWELLER": {
+    "stage": "IN_RETEST"
+  },
+  "SYNCOMF": {
     "stage": "IN_RETEST"
   }
 }
