@@ -45,7 +45,7 @@
     "stage": "BASING"
   },
   "RRKABEL": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "HAPPYFORGE": {
     "stage": "STALE_BOS2"
@@ -111,7 +111,7 @@
     "stage": "BASING"
   },
   "OFSS": {
-    "stage": "FRESH_REVERSAL",
+    "stage": "BASING",
     "last_reversal_alerted": "2026-08-27"
   },
   "AZAD": {
@@ -282,7 +282,7 @@
     "last_reversal_alerted": "2026-08-20"
   },
   "SHREEPUSHK": {
-    "stage": "BASING"
+    "stage": "IN_RETEST"
   },
   "KPRMILL": {
     "stage": "BASING"
@@ -389,7 +389,7 @@
     "stage": "BASING"
   },
   "PITTIENG": {
-    "stage": "IN_RETEST"
+    "stage": "FRESH_BOS2"
   },
   "GIPCL": {
     "stage": "FRESH_REVERSAL"
@@ -461,7 +461,7 @@
     "stage": "STALE_BOS2"
   },
   "WSTCSTPAPR": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "NGLFINE": {
     "stage": "STALE_BOS2"
@@ -581,7 +581,7 @@
     "stage": "STALE_BOS2"
   },
   "APOLLOHOSP": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "VEDL": {
     "stage": "STALE_BOS2"
@@ -638,7 +638,7 @@
     "stage": "STALE_BOS2"
   },
   "KINGFA": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "APARINDS": {
     "stage": "STALE_BOS2"
@@ -1134,7 +1134,7 @@
     "stage": "BASING"
   },
   "SIGMAADV": {
-    "stage": "FRESH_REVERSAL"
+    "stage": "FRESH_BOS2"
   },
   "MUNJALAU": {
     "stage": "BASING"
@@ -1152,7 +1152,7 @@
     "stage": "STALE_BOS2"
   },
   "UNOMINDA": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "FOSECOIND": {
     "stage": "IN_RETEST"
