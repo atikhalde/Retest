@@ -171,7 +171,7 @@
     "stage": "BASING"
   },
   "INGERRAND": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "GOKULAGRO": {
     "stage": "FRESH_BOS2"
@@ -260,7 +260,7 @@
     "stage": "STALE_BOS2"
   },
   "DIVGIITTS": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "DATAMATICS": {
     "stage": "BASING"
@@ -334,7 +334,7 @@
     "stage": "BASING"
   },
   "IPCALAB": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "NDRAUTO": {
     "stage": "BASING"
@@ -638,7 +638,7 @@
     "stage": "STALE_BOS2"
   },
   "KINGFA": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "APARINDS": {
     "stage": "STALE_BOS2"
@@ -848,7 +848,7 @@
     "stage": "FRESH_BOS2"
   },
   "VMART": {
-    "stage": "FRESH_BOS2",
+    "stage": "IN_RETEST",
     "last_reversal_alerted": "2026-08-21"
   },
   "EXIDEIND": {
@@ -1245,6 +1245,9 @@
     "stage": "IN_RETEST"
   },
   "KRBL": {
+    "stage": "IN_RETEST"
+  },
+  "MAXESTATES": {
     "stage": "IN_RETEST"
   }
 }
