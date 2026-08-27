@@ -105,7 +105,7 @@
     "stage": "IN_RETEST"
   },
   "ADOR": {
-    "stage": "IN_RETEST"
+    "stage": "STALE_BOS2"
   },
   "MMFL": {
     "stage": "BASING"
@@ -260,7 +260,7 @@
     "stage": "STALE_BOS2"
   },
   "DIVGIITTS": {
-    "stage": "IN_RETEST"
+    "stage": "STALE_BOS2"
   },
   "DATAMATICS": {
     "stage": "BASING"
@@ -334,7 +334,7 @@
     "stage": "BASING"
   },
   "IPCALAB": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "NDRAUTO": {
     "stage": "BASING"
@@ -889,7 +889,7 @@
     "stage": "BASING"
   },
   "TRITURBINE": {
-    "stage": "FRESH_REVERSAL"
+    "stage": "BASING"
   },
   "CGCL": {
     "stage": "FRESH_BOS2"
