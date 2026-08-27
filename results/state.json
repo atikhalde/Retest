@@ -171,7 +171,7 @@
     "stage": "BASING"
   },
   "INGERRAND": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "GOKULAGRO": {
     "stage": "FRESH_BOS2"
@@ -334,7 +334,7 @@
     "stage": "BASING"
   },
   "IPCALAB": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "NDRAUTO": {
     "stage": "BASING"
@@ -392,7 +392,7 @@
     "stage": "IN_RETEST"
   },
   "GIPCL": {
-    "stage": "FRESH_REVERSAL"
+    "stage": "FRESH_BOS2"
   },
   "CUMMINSIND": {
     "stage": "BASING"
@@ -638,7 +638,7 @@
     "stage": "STALE_BOS2"
   },
   "KINGFA": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "APARINDS": {
     "stage": "STALE_BOS2"
@@ -752,7 +752,7 @@
     "stage": "IN_RETEST"
   },
   "KALYANKJIL": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "CONCORDBIO": {
     "stage": "IN_RETEST"
@@ -1158,7 +1158,8 @@
     "stage": "IN_RETEST"
   },
   "INDGN": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "FRESH_REVERSAL",
+    "last_reversal_alerted": "2026-08-27"
   },
   "YUKEN": {
     "stage": "BASING"
