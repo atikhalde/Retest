@@ -254,7 +254,7 @@
     "stage": "IN_RETEST"
   },
   "ALKYLAMINE": {
-    "stage": "FRESH_BOS2"
+    "stage": "IN_RETEST"
   },
   "NITINSPIN": {
     "stage": "STALE_BOS2"
@@ -491,7 +491,7 @@
     "stage": "STALE_BOS2"
   },
   "SHRIPISTON": {
-    "stage": "IN_RETEST"
+    "stage": "STALE_BOS2"
   },
   "MARKSANS": {
     "stage": "FRESH_REVERSAL"
@@ -889,7 +889,7 @@
     "stage": "BASING"
   },
   "TRITURBINE": {
-    "stage": "FRESH_REVERSAL"
+    "stage": "BASING"
   },
   "CGCL": {
     "stage": "FRESH_BOS2"
