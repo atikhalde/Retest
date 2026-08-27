@@ -701,7 +701,7 @@
     "stage": "STALE_BOS2"
   },
   "SOLARINDS": {
-    "stage": "FRESH_REVERSAL"
+    "stage": "FRESH_BOS2"
   },
   "PSPPROJECT": {
     "stage": "STALE_BOS2"
@@ -752,7 +752,7 @@
     "stage": "IN_RETEST"
   },
   "KALYANKJIL": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "CONCORDBIO": {
     "stage": "IN_RETEST"
@@ -1249,6 +1249,9 @@
     "stage": "IN_RETEST"
   },
   "MAXESTATES": {
+    "stage": "IN_RETEST"
+  },
+  "FMGOETZE": {
     "stage": "IN_RETEST"
   }
 }
