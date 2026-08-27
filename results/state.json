@@ -260,7 +260,7 @@
     "stage": "STALE_BOS2"
   },
   "DIVGIITTS": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "DATAMATICS": {
     "stage": "BASING"
@@ -334,7 +334,7 @@
     "stage": "BASING"
   },
   "IPCALAB": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "NDRAUTO": {
     "stage": "BASING"
@@ -531,7 +531,7 @@
     "stage": "STALE_BOS2"
   },
   "MEDANTA": {
-    "stage": "FRESH_REVERSAL",
+    "stage": "FRESH_BOS2",
     "last_reversal_alerted": "2026-08-27"
   },
   "CHENNPETRO": {
