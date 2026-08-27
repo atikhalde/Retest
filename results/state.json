@@ -334,7 +334,7 @@
     "stage": "BASING"
   },
   "IPCALAB": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "NDRAUTO": {
     "stage": "BASING"
@@ -1140,7 +1140,7 @@
     "stage": "BASING"
   },
   "ENDURANCE": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "TASTYBITE": {
     "stage": "BASING"
