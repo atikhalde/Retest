@@ -334,7 +334,7 @@
     "stage": "BASING"
   },
   "IPCALAB": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "NDRAUTO": {
     "stage": "BASING"
@@ -1077,7 +1077,7 @@
     "stage": "BASING"
   },
   "JGCHEM": {
-    "stage": "BASING"
+    "stage": "FRESH_BOS2"
   },
   "SHRIRAMFIN": {
     "stage": "BASING"
@@ -1140,7 +1140,7 @@
     "stage": "BASING"
   },
   "ENDURANCE": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "TASTYBITE": {
     "stage": "BASING"
