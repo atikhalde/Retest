@@ -36,7 +36,7 @@
     "stage": "IN_RETEST"
   },
   "CRAFTSMAN": {
-    "stage": "BASING"
+    "stage": "FRESH_BOS2"
   },
   "GLAND": {
     "stage": "BASING"
@@ -171,7 +171,7 @@
     "stage": "BASING"
   },
   "INGERRAND": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "FRESH_BOS2"
   },
   "GOKULAGRO": {
     "stage": "FRESH_BOS2"
@@ -257,7 +257,7 @@
     "stage": "FRESH_BOS2"
   },
   "NITINSPIN": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "DIVGIITTS": {
     "stage": "STALE_BOS2"
