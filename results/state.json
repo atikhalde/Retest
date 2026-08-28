@@ -1140,7 +1140,7 @@
     "stage": "BASING"
   },
   "ENDURANCE": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "TASTYBITE": {
     "stage": "BASING"
@@ -1201,7 +1201,7 @@
     "stage": "IN_RETEST"
   },
   "PTCIL": {
-    "stage": "BASING"
+    "stage": "FRESH_BOS2"
   },
   "AIIL": {
     "stage": "FRESH_REVERSAL"
