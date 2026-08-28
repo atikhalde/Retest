@@ -258,7 +258,7 @@
     "stage": "IN_RETEST"
   },
   "NITINSPIN": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "DIVGIITTS": {
     "stage": "IN_RETEST"
@@ -449,7 +449,7 @@
     "stage": "IN_RETEST"
   },
   "KRISHANA": {
-    "stage": "IN_RETEST"
+    "stage": "BASING"
   },
   "APCOTEXIND": {
     "stage": "BASING"
@@ -954,7 +954,7 @@
     "stage": "STALE_BOS2"
   },
   "MACPOWER": {
-    "stage": "BASING"
+    "stage": "FRESH_BOS2"
   },
   "LLOYDSENT": {
     "stage": "STALE_BOS2"
@@ -1113,7 +1113,7 @@
     "stage": "BASING"
   },
   "NAUKRI": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "LUMAXTECH": {
     "stage": "BASING"
