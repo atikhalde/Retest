@@ -108,7 +108,7 @@
     "stage": "IN_RETEST"
   },
   "MMFL": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "OFSS": {
     "stage": "FRESH_BOS2",
@@ -171,7 +171,7 @@
     "stage": "BASING"
   },
   "INGERRAND": {
-    "stage": "BASING"
+    "stage": "FRESH_BOS2"
   },
   "GOKULAGRO": {
     "stage": "FRESH_BOS2"
@@ -770,7 +770,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "M&MFIN": {
-    "stage": "FRESH_REVERSAL"
+    "stage": "BASING"
   },
   "TI": {
     "stage": "STALE_BOS2"
@@ -1140,7 +1140,7 @@
     "stage": "BASING"
   },
   "ENDURANCE": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "TASTYBITE": {
     "stage": "BASING"
