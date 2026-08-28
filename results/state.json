@@ -96,7 +96,7 @@
     "stage": "STALE_BOS2"
   },
   "ARMANFIN": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "OLECTRA": {
     "stage": "BASING"
@@ -105,7 +105,7 @@
     "stage": "IN_RETEST"
   },
   "ADOR": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "MMFL": {
     "stage": "BASING"
