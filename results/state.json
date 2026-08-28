@@ -491,7 +491,7 @@
     "stage": "STALE_BOS2"
   },
   "SHRIPISTON": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "MARKSANS": {
     "stage": "FRESH_REVERSAL"
