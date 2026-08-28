@@ -96,7 +96,8 @@
     "stage": "STALE_BOS2"
   },
   "ARMANFIN": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "FRESH_REVERSAL",
+    "last_reversal_alerted": "2026-08-28"
   },
   "OLECTRA": {
     "stage": "BASING"
@@ -340,7 +341,7 @@
     "stage": "BASING"
   },
   "TMB": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "JSWENERGY": {
     "stage": "BASING"
@@ -426,7 +427,7 @@
     "stage": "BASING"
   },
   "UNIPARTS": {
-    "stage": "BASING"
+    "stage": "FRESH_BOS2"
   },
   "RADICO": {
     "stage": "BASING"
@@ -448,7 +449,7 @@
     "stage": "IN_RETEST"
   },
   "KRISHANA": {
-    "stage": "BASING"
+    "stage": "IN_RETEST"
   },
   "APCOTEXIND": {
     "stage": "BASING"
@@ -1112,7 +1113,7 @@
     "stage": "BASING"
   },
   "NAUKRI": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "LUMAXTECH": {
     "stage": "BASING"
