@@ -245,22 +245,22 @@
     "stage": "BASING"
   },
   "RBLBANK": {
-    "stage": "FRESH_REVERSAL"
+    "stage": "PRE_BOS2_READY"
   },
   "WELCORP": {
     "stage": "STALE_BOS2"
   },
   "ACE": {
-    "stage": "IN_RETEST"
+    "stage": "BASING"
   },
   "ALKYLAMINE": {
-    "stage": "FRESH_BOS2"
-  },
-  "NITINSPIN": {
     "stage": "IN_RETEST"
   },
-  "DIVGIITTS": {
+  "NITINSPIN": {
     "stage": "STALE_BOS2"
+  },
+  "DIVGIITTS": {
+    "stage": "IN_RETEST"
   },
   "DATAMATICS": {
     "stage": "BASING"
@@ -340,8 +340,7 @@
     "stage": "BASING"
   },
   "TMB": {
-    "stage": "FRESH_REVERSAL",
-    "last_reversal_alerted": "2026-08-21"
+    "stage": "PRE_BOS2_READY"
   },
   "JSWENERGY": {
     "stage": "BASING"
@@ -379,7 +378,7 @@
     "stage": "BASING"
   },
   "VOLTAMP": {
-    "stage": "FRESH_REVERSAL"
+    "stage": "PRE_BOS2_READY"
   },
   "TANLA": {
     "stage": "BASING",
@@ -389,7 +388,7 @@
     "stage": "BASING"
   },
   "PITTIENG": {
-    "stage": "FRESH_BOS2"
+    "stage": "IN_RETEST"
   },
   "GIPCL": {
     "stage": "FRESH_BOS2"
@@ -531,7 +530,7 @@
     "stage": "STALE_BOS2"
   },
   "MEDANTA": {
-    "stage": "FRESH_REVERSAL",
+    "stage": "FRESH_BOS2",
     "last_reversal_alerted": "2026-08-26"
   },
   "CHENNPETRO": {
@@ -767,7 +766,7 @@
     "stage": "BASING"
   },
   "VIMTALABS": {
-    "stage": "FRESH_REVERSAL"
+    "stage": "BASING"
   },
   "M&MFIN": {
     "stage": "BASING"
@@ -779,7 +778,7 @@
     "stage": "STALE_BOS2"
   },
   "WESTLIFE": {
-    "stage": "FRESH_REVERSAL"
+    "stage": "BASING"
   },
   "JKTYRE": {
     "stage": "STALE_BOS2"
@@ -845,7 +844,7 @@
     "stage": "BASING"
   },
   "MUFIN": {
-    "stage": "FRESH_BOS2"
+    "stage": "STALE_BOS2"
   },
   "VMART": {
     "stage": "IN_RETEST",
@@ -877,7 +876,7 @@
     "last_reversal_alerted": "2026-08-24"
   },
   "BLSE": {
-    "stage": "FRESH_BOS2"
+    "stage": "STALE_BOS2"
   },
   "VTL": {
     "stage": "BASING"
@@ -981,7 +980,7 @@
     "stage": "STALE_BOS2"
   },
   "INNOVACAP": {
-    "stage": "FRESH_REVERSAL"
+    "stage": "PRE_BOS2_READY"
   },
   "COALINDIA": {
     "stage": "STALE_BOS2"
@@ -1101,7 +1100,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "SUDARSCHEM": {
-    "stage": "FRESH_BOS2"
+    "stage": "STALE_BOS2"
   },
   "ALLCARGO": {
     "stage": "IN_RETEST"
@@ -1162,7 +1161,7 @@
     "last_reversal_alerted": "2026-08-28"
   },
   "YUKEN": {
-    "stage": "BASING"
+    "stage": "FRESH_BOS2"
   },
   "COFORGE": {
     "stage": "FRESH_BOS2"
@@ -1198,7 +1197,7 @@
     "stage": "IN_RETEST"
   },
   "UDS": {
-    "stage": "IN_RETEST"
+    "stage": "BASING"
   },
   "PTCIL": {
     "stage": "FRESH_BOS2"
