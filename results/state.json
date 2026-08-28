@@ -210,7 +210,7 @@
     "stage": "STALE_BOS2"
   },
   "NETWEB": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "PGIL": {
     "stage": "BASING"
@@ -334,7 +334,7 @@
     "stage": "BASING"
   },
   "IPCALAB": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "NDRAUTO": {
     "stage": "BASING"
@@ -752,7 +752,7 @@
     "stage": "IN_RETEST"
   },
   "KALYANKJIL": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "CONCORDBIO": {
     "stage": "IN_RETEST"
@@ -1158,8 +1158,8 @@
     "stage": "IN_RETEST"
   },
   "INDGN": {
-    "stage": "PRE_BOS2_READY",
-    "last_reversal_alerted": "2026-08-27"
+    "stage": "FRESH_REVERSAL",
+    "last_reversal_alerted": "2026-08-28"
   },
   "YUKEN": {
     "stage": "BASING"
