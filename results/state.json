@@ -3,7 +3,7 @@
     "stage": "STALE_BOS2"
   },
   "PNBHOUSING": {
-    "stage": "BASING"
+    "stage": "IN_RETEST"
   },
   "SUPRAJIT": {
     "stage": "BASING"
@@ -21,7 +21,7 @@
     "stage": "BASING"
   },
   "MARINE": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "NAHARSPING": {
     "stage": "BASING"
@@ -36,13 +36,13 @@
     "stage": "IN_RETEST"
   },
   "CRAFTSMAN": {
-    "stage": "FRESH_BOS2"
+    "stage": "BASING"
   },
   "GLAND": {
-    "stage": "FRESH_REVERSAL"
+    "stage": "BASING"
   },
   "LLOYDSENGG": {
-    "stage": "STALE_BOS2"
+    "stage": "FRESH_REVERSAL"
   },
   "RRKABEL": {
     "stage": "IN_RETEST"
@@ -96,7 +96,7 @@
     "stage": "STALE_BOS2"
   },
   "ARMANFIN": {
-    "stage": "FRESH_REVERSAL"
+    "stage": "PRE_BOS2_READY"
   },
   "OLECTRA": {
     "stage": "BASING"
@@ -171,7 +171,7 @@
     "stage": "BASING"
   },
   "INGERRAND": {
-    "stage": "FRESH_BOS2"
+    "stage": "BASING"
   },
   "GOKULAGRO": {
     "stage": "FRESH_BOS2"
@@ -257,7 +257,7 @@
     "stage": "IN_RETEST"
   },
   "NITINSPIN": {
-    "stage": "IN_RETEST"
+    "stage": "STALE_BOS2"
   },
   "DIVGIITTS": {
     "stage": "IN_RETEST"
@@ -285,7 +285,7 @@
     "stage": "IN_RETEST"
   },
   "KPRMILL": {
-    "stage": "FRESH_REVERSAL"
+    "stage": "BASING"
   },
   "SSWL": {
     "stage": "STALE_BOS2"
@@ -372,7 +372,7 @@
     "stage": "BASING"
   },
   "FLUOROCHEM": {
-    "stage": "FRESH_REVERSAL"
+    "stage": "IN_RETEST"
   },
   "UJJIVANSFB": {
     "stage": "BASING"
@@ -426,10 +426,10 @@
     "stage": "BASING"
   },
   "UNIPARTS": {
-    "stage": "FRESH_BOS2"
+    "stage": "BASING"
   },
   "RADICO": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "MANAPPURAM": {
     "stage": "BASING"
@@ -466,7 +466,7 @@
     "stage": "STALE_BOS2"
   },
   "CNL": {
-    "stage": "FRESH_REVERSAL",
+    "stage": "BASING",
     "last_reversal_alerted": "2026-08-31"
   },
   "APOLLOPIPE": {
@@ -677,7 +677,7 @@
     "stage": "STALE_BOS2"
   },
   "MBAPL": {
-    "stage": "BASING"
+    "stage": "FRESH_REVERSAL"
   },
   "CYIENTDLM": {
     "stage": "STALE_BOS2"
@@ -755,7 +755,7 @@
     "stage": "BASING"
   },
   "CONCORDBIO": {
-    "stage": "BASING"
+    "stage": "IN_RETEST"
   },
   "THEJO": {
     "stage": "BASING"
@@ -767,8 +767,7 @@
     "stage": "BASING"
   },
   "VIMTALABS": {
-    "stage": "FRESH_REVERSAL",
-    "last_reversal_alerted": "2026-08-31"
+    "stage": "PRE_BOS2_READY"
   },
   "M&MFIN": {
     "stage": "BASING"
@@ -834,7 +833,7 @@
     "stage": "BASING"
   },
   "ACUTAAS": {
-    "stage": "FRESH_REVERSAL"
+    "stage": "BASING"
   },
   "DSSL": {
     "stage": "BASING"
@@ -843,7 +842,7 @@
     "stage": "BASING"
   },
   "LMW": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "MUFIN": {
     "stage": "STALE_BOS2"
@@ -865,7 +864,7 @@
     "stage": "STALE_BOS2"
   },
   "JSFB": {
-    "stage": "STALE_BOS2"
+    "stage": "FRESH_BOS2"
   },
   "JUSTDIAL": {
     "stage": "FRESH_REVERSAL"
@@ -920,7 +919,7 @@
     "stage": "BASING"
   },
   "EMCURE": {
-    "stage": "FRESH_REVERSAL"
+    "stage": "BASING"
   },
   "AVADHSUGAR": {
     "stage": "STALE_BOS2"
@@ -943,7 +942,8 @@
     "last_reversal_alerted": "2026-08-17"
   },
   "GPTHEALTH": {
-    "stage": "BASING"
+    "stage": "FRESH_REVERSAL",
+    "last_reversal_alerted": "2026-08-31"
   },
   "KICL": {
     "stage": "STALE_BOS2"
@@ -1117,7 +1117,7 @@
     "stage": "BASING"
   },
   "LUMAXTECH": {
-    "stage": "FRESH_REVERSAL"
+    "stage": "PRE_BOS2_READY"
   },
   "PPLPHARMA": {
     "stage": "FRESH_REVERSAL"
@@ -1153,7 +1153,7 @@
     "stage": "STALE_BOS2"
   },
   "UNOMINDA": {
-    "stage": "FRESH_REVERSAL"
+    "stage": "PRE_BOS2_READY"
   },
   "FOSECOIND": {
     "stage": "IN_RETEST"
@@ -1163,7 +1163,7 @@
     "last_reversal_alerted": "2026-08-31"
   },
   "YUKEN": {
-    "stage": "FRESH_BOS2"
+    "stage": "BASING"
   },
   "COFORGE": {
     "stage": "FRESH_BOS2"
@@ -1172,7 +1172,7 @@
     "stage": "BASING"
   },
   "GMMPFAUDLR": {
-    "stage": "FRESH_REVERSAL"
+    "stage": "PRE_BOS2_READY"
   },
   "CASTROLIND": {
     "stage": "FRESH_REVERSAL"
@@ -1181,7 +1181,7 @@
     "stage": "FRESH_BOS2"
   },
   "IIFL": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "FRESH_REVERSAL"
   },
   "AVTNPL": {
     "stage": "BASING"
@@ -1259,6 +1259,9 @@
     "stage": "BASING"
   },
   "BALUFORGE": {
+    "stage": "IN_RETEST"
+  },
+  "BRIGADE": {
     "stage": "IN_RETEST"
   }
 }
