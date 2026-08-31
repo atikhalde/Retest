@@ -21,7 +21,7 @@
     "stage": "BASING"
   },
   "MARINE": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "NAHARSPING": {
     "stage": "BASING"
@@ -69,7 +69,7 @@
     "stage": "STALE_BOS2"
   },
   "IGPL": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "GRASIM": {
     "stage": "STALE_BOS2"
@@ -108,7 +108,7 @@
     "stage": "IN_RETEST"
   },
   "MMFL": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "OFSS": {
     "stage": "FRESH_BOS2",
@@ -257,7 +257,7 @@
     "stage": "IN_RETEST"
   },
   "NITINSPIN": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "DIVGIITTS": {
     "stage": "IN_RETEST"
@@ -285,7 +285,7 @@
     "stage": "IN_RETEST"
   },
   "KPRMILL": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "SSWL": {
     "stage": "STALE_BOS2"
@@ -340,7 +340,7 @@
     "stage": "BASING"
   },
   "TMB": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "FRESH_BOS2"
   },
   "JSWENERGY": {
     "stage": "BASING"
@@ -423,7 +423,7 @@
     "stage": "BASING"
   },
   "GABRIEL": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "UNIPARTS": {
     "stage": "BASING"
@@ -1190,7 +1190,7 @@
     "stage": "IN_RETEST"
   },
   "HEG": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "BAJAJHIND": {
     "stage": "BASING"
@@ -1262,6 +1262,9 @@
     "stage": "IN_RETEST"
   },
   "BRIGADE": {
+    "stage": "IN_RETEST"
+  },
+  "360ONE": {
     "stage": "IN_RETEST"
   }
 }
