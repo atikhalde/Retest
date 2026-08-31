@@ -36,13 +36,13 @@
     "stage": "IN_RETEST"
   },
   "CRAFTSMAN": {
-    "stage": "FRESH_BOS2"
+    "stage": "BASING"
   },
   "GLAND": {
     "stage": "BASING"
   },
   "LLOYDSENGG": {
-    "stage": "BASING"
+    "stage": "STALE_BOS2"
   },
   "RRKABEL": {
     "stage": "IN_RETEST"
@@ -69,7 +69,7 @@
     "stage": "STALE_BOS2"
   },
   "IGPL": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "GRASIM": {
     "stage": "STALE_BOS2"
@@ -81,7 +81,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "INDORAMA": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "NAZARA": {
     "stage": "IN_RETEST"
@@ -96,8 +96,7 @@
     "stage": "STALE_BOS2"
   },
   "ARMANFIN": {
-    "stage": "FRESH_REVERSAL",
-    "last_reversal_alerted": "2026-08-28"
+    "stage": "PRE_BOS2_READY"
   },
   "OLECTRA": {
     "stage": "BASING"
@@ -151,7 +150,7 @@
     "stage": "STALE_BOS2"
   },
   "MOTILALOFS": {
-    "stage": "FRESH_BOS2"
+    "stage": "STALE_BOS2"
   },
   "YESBANK": {
     "stage": "BASING"
@@ -172,7 +171,7 @@
     "stage": "BASING"
   },
   "INGERRAND": {
-    "stage": "FRESH_BOS2"
+    "stage": "BASING"
   },
   "GOKULAGRO": {
     "stage": "FRESH_BOS2"
@@ -196,7 +195,7 @@
     "stage": "BASING"
   },
   "POWERGRID": {
-    "stage": "FRESH_REVERSAL"
+    "stage": "BASING"
   },
   "SANGHVIMOV": {
     "stage": "BASING"
@@ -211,7 +210,7 @@
     "stage": "STALE_BOS2"
   },
   "NETWEB": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "PGIL": {
     "stage": "BASING"
@@ -258,7 +257,7 @@
     "stage": "IN_RETEST"
   },
   "NITINSPIN": {
-    "stage": "IN_RETEST"
+    "stage": "STALE_BOS2"
   },
   "DIVGIITTS": {
     "stage": "IN_RETEST"
@@ -302,7 +301,7 @@
     "stage": "BASING"
   },
   "STEL": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "SENCO": {
     "stage": "BASING"
@@ -341,7 +340,7 @@
     "stage": "BASING"
   },
   "TMB": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "JSWENERGY": {
     "stage": "BASING"
@@ -427,7 +426,7 @@
     "stage": "BASING"
   },
   "UNIPARTS": {
-    "stage": "FRESH_BOS2"
+    "stage": "BASING"
   },
   "RADICO": {
     "stage": "BASING"
@@ -491,7 +490,7 @@
     "stage": "STALE_BOS2"
   },
   "SHRIPISTON": {
-    "stage": "IN_RETEST"
+    "stage": "STALE_BOS2"
   },
   "MARKSANS": {
     "stage": "FRESH_REVERSAL"
@@ -767,7 +766,7 @@
     "stage": "BASING"
   },
   "VIMTALABS": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "M&MFIN": {
     "stage": "BASING"
@@ -858,7 +857,7 @@
     "stage": "BASING"
   },
   "ICICIBANK": {
-    "stage": "FRESH_REVERSAL"
+    "stage": "BASING"
   },
   "RPEL": {
     "stage": "STALE_BOS2"
@@ -925,7 +924,7 @@
     "stage": "STALE_BOS2"
   },
   "RPTECH": {
-    "stage": "FRESH_REVERSAL",
+    "stage": "BASING",
     "last_reversal_alerted": "2026-08-21"
   },
   "UNIVCABLES": {
@@ -981,7 +980,7 @@
     "stage": "STALE_BOS2"
   },
   "INNOVACAP": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "COALINDIA": {
     "stage": "STALE_BOS2"
@@ -1032,7 +1031,7 @@
     "stage": "STALE_BOS2"
   },
   "TATATECH": {
-    "stage": "BASING"
+    "stage": "FRESH_REVERSAL"
   },
   "OPTIEMUS": {
     "stage": "STALE_BOS2"
@@ -1113,13 +1112,13 @@
     "stage": "BASING"
   },
   "NAUKRI": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "LUMAXTECH": {
     "stage": "BASING"
   },
   "PPLPHARMA": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "FRESH_REVERSAL"
   },
   "DOLPHIN": {
     "stage": "BASING"
@@ -1158,11 +1157,10 @@
     "stage": "IN_RETEST"
   },
   "INDGN": {
-    "stage": "FRESH_REVERSAL",
-    "last_reversal_alerted": "2026-08-28"
+    "stage": "PRE_BOS2_READY"
   },
   "YUKEN": {
-    "stage": "FRESH_BOS2"
+    "stage": "BASING"
   },
   "COFORGE": {
     "stage": "FRESH_BOS2"
@@ -1213,10 +1211,10 @@
     "stage": "STALE_BOS2"
   },
   "BECTORFOOD": {
-    "stage": "IN_RETEST"
+    "stage": "BASING"
   },
   "GLAXO": {
-    "stage": "IN_RETEST"
+    "stage": "BASING"
   },
   "HNDFDS": {
     "stage": "IN_RETEST"
@@ -1252,6 +1250,12 @@
     "stage": "IN_RETEST"
   },
   "FMGOETZE": {
+    "stage": "IN_RETEST"
+  },
+  "ASAHIINDIA": {
+    "stage": "BASING"
+  },
+  "BALUFORGE": {
     "stage": "IN_RETEST"
   }
 }
