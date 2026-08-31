@@ -81,7 +81,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "INDORAMA": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "NAZARA": {
     "stage": "IN_RETEST"
@@ -295,7 +295,7 @@
     "last_reversal_alerted": "2026-08-21"
   },
   "WELENT": {
-    "stage": "FRESH_BOS2"
+    "stage": "IN_RETEST"
   },
   "SHAREINDIA": {
     "stage": "BASING"
@@ -448,7 +448,7 @@
     "stage": "IN_RETEST"
   },
   "KRISHANA": {
-    "stage": "IN_RETEST"
+    "stage": "BASING"
   },
   "APCOTEXIND": {
     "stage": "BASING"
@@ -1156,7 +1156,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "FOSECOIND": {
-    "stage": "FRESH_REVERSAL"
+    "stage": "IN_RETEST"
   },
   "INDGN": {
     "stage": "FRESH_REVERSAL",
