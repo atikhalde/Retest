@@ -21,7 +21,7 @@
     "stage": "BASING"
   },
   "MARINE": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "NAHARSPING": {
     "stage": "BASING"
@@ -81,7 +81,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "INDORAMA": {
-    "stage": "FRESH_BOS2"
+    "stage": "PRE_BOS2_READY"
   },
   "NAZARA": {
     "stage": "IN_RETEST"
@@ -295,7 +295,7 @@
     "last_reversal_alerted": "2026-08-21"
   },
   "WELENT": {
-    "stage": "IN_RETEST"
+    "stage": "FRESH_BOS2"
   },
   "SHAREINDIA": {
     "stage": "BASING"
@@ -448,7 +448,7 @@
     "stage": "IN_RETEST"
   },
   "KRISHANA": {
-    "stage": "IN_RETEST"
+    "stage": "BASING"
   },
   "APCOTEXIND": {
     "stage": "BASING"
@@ -460,7 +460,7 @@
     "stage": "STALE_BOS2"
   },
   "WSTCSTPAPR": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "NGLFINE": {
     "stage": "STALE_BOS2"
@@ -638,7 +638,7 @@
     "stage": "STALE_BOS2"
   },
   "KINGFA": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "APARINDS": {
     "stage": "STALE_BOS2"
@@ -942,7 +942,7 @@
     "last_reversal_alerted": "2026-08-17"
   },
   "GPTHEALTH": {
-    "stage": "FRESH_REVERSAL",
+    "stage": "BASING",
     "last_reversal_alerted": "2026-08-31"
   },
   "KICL": {
@@ -1190,7 +1190,7 @@
     "stage": "IN_RETEST"
   },
   "HEG": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "BAJAJHIND": {
     "stage": "BASING"
