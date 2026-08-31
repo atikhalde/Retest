@@ -69,7 +69,7 @@
     "stage": "STALE_BOS2"
   },
   "IGPL": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "GRASIM": {
     "stage": "STALE_BOS2"
@@ -171,7 +171,7 @@
     "stage": "BASING"
   },
   "INGERRAND": {
-    "stage": "BASING"
+    "stage": "FRESH_BOS2"
   },
   "GOKULAGRO": {
     "stage": "FRESH_BOS2"
@@ -213,10 +213,10 @@
     "stage": "BASING"
   },
   "PGIL": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "INDHOTEL": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "TEXINFRA": {
     "stage": "FRESH_REVERSAL",
@@ -257,7 +257,7 @@
     "stage": "IN_RETEST"
   },
   "NITINSPIN": {
-    "stage": "IN_RETEST"
+    "stage": "STALE_BOS2"
   },
   "DIVGIITTS": {
     "stage": "IN_RETEST"
@@ -301,7 +301,7 @@
     "stage": "BASING"
   },
   "STEL": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "FRESH_BOS2"
   },
   "SENCO": {
     "stage": "BASING"
@@ -804,7 +804,7 @@
     "stage": "STALE_BOS2"
   },
   "AUBANK": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "HONASA": {
     "stage": "BASING"
@@ -1112,10 +1112,10 @@
     "stage": "BASING"
   },
   "HCG": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "NAUKRI": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "LUMAXTECH": {
     "stage": "PRE_BOS2_READY"
@@ -1173,7 +1173,7 @@
     "stage": "BASING"
   },
   "GMMPFAUDLR": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "CASTROLIND": {
     "stage": "FRESH_REVERSAL"
@@ -1185,13 +1185,13 @@
     "stage": "FRESH_REVERSAL"
   },
   "AVTNPL": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "MANALIPETC": {
     "stage": "IN_RETEST"
   },
   "HEG": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "BAJAJHIND": {
     "stage": "BASING"
