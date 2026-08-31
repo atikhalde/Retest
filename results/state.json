@@ -21,7 +21,7 @@
     "stage": "BASING"
   },
   "MARINE": {
-    "stage": "IN_RETEST"
+    "stage": "STALE_BOS2"
   },
   "NAHARSPING": {
     "stage": "BASING"
@@ -81,7 +81,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "INDORAMA": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "FRESH_BOS2"
   },
   "NAZARA": {
     "stage": "IN_RETEST"
@@ -269,7 +269,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "YATHARTH": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "ICIL": {
     "stage": "STALE_BOS2"
@@ -301,7 +301,7 @@
     "stage": "BASING"
   },
   "STEL": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "FRESH_BOS2"
   },
   "SENCO": {
     "stage": "BASING"
@@ -448,7 +448,7 @@
     "stage": "IN_RETEST"
   },
   "KRISHANA": {
-    "stage": "BASING"
+    "stage": "IN_RETEST"
   },
   "APCOTEXIND": {
     "stage": "BASING"
@@ -460,13 +460,13 @@
     "stage": "STALE_BOS2"
   },
   "WSTCSTPAPR": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "NGLFINE": {
     "stage": "STALE_BOS2"
   },
   "CNL": {
-    "stage": "BASING",
+    "stage": "FRESH_BOS2",
     "last_reversal_alerted": "2026-08-31"
   },
   "APOLLOPIPE": {
@@ -982,7 +982,7 @@
     "stage": "STALE_BOS2"
   },
   "INNOVACAP": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "COALINDIA": {
     "stage": "STALE_BOS2"
@@ -1159,7 +1159,7 @@
     "stage": "IN_RETEST"
   },
   "INDGN": {
-    "stage": "FRESH_REVERSAL",
+    "stage": "FRESH_BOS2",
     "last_reversal_alerted": "2026-08-31"
   },
   "YUKEN": {
