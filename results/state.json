@@ -21,7 +21,7 @@
     "stage": "BASING"
   },
   "MARINE": {
-    "stage": "IN_RETEST"
+    "stage": "STALE_BOS2"
   },
   "NAHARSPING": {
     "stage": "BASING"
@@ -39,7 +39,7 @@
     "stage": "FRESH_BOS2"
   },
   "GLAND": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "LLOYDSENGG": {
     "stage": "FRESH_REVERSAL"
@@ -96,7 +96,7 @@
     "stage": "STALE_BOS2"
   },
   "ARMANFIN": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "OLECTRA": {
     "stage": "BASING"
@@ -108,7 +108,7 @@
     "stage": "IN_RETEST"
   },
   "MMFL": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "OFSS": {
     "stage": "FRESH_BOS2",
@@ -426,7 +426,7 @@
     "stage": "PRE_BOS2_READY"
   },
   "UNIPARTS": {
-    "stage": "BASING"
+    "stage": "FRESH_BOS2"
   },
   "RADICO": {
     "stage": "PRE_BOS2_READY"
@@ -767,7 +767,7 @@
     "stage": "BASING"
   },
   "VIMTALABS": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "M&MFIN": {
     "stage": "BASING"
@@ -982,7 +982,7 @@
     "stage": "STALE_BOS2"
   },
   "INNOVACAP": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "COALINDIA": {
     "stage": "STALE_BOS2"
@@ -1114,7 +1114,7 @@
     "stage": "BASING"
   },
   "NAUKRI": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "LUMAXTECH": {
     "stage": "PRE_BOS2_READY"
@@ -1265,6 +1265,9 @@
     "stage": "IN_RETEST"
   },
   "360ONE": {
+    "stage": "IN_RETEST"
+  },
+  "DCBBANK": {
     "stage": "IN_RETEST"
   }
 }
