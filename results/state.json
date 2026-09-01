@@ -81,7 +81,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "INDORAMA": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "NAZARA": {
     "stage": "FRESH_REVERSAL"
@@ -301,7 +301,7 @@
     "stage": "BASING"
   },
   "STEL": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "SENCO": {
     "stage": "BASING"
@@ -890,7 +890,7 @@
     "stage": "BASING"
   },
   "TRITURBINE": {
-    "stage": "FRESH_REVERSAL"
+    "stage": "BASING"
   },
   "CGCL": {
     "stage": "FRESH_BOS2"
@@ -1182,10 +1182,10 @@
     "stage": "FRESH_BOS2"
   },
   "IIFL": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "AVTNPL": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "MANALIPETC": {
     "stage": "IN_RETEST"
