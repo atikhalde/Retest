@@ -302,7 +302,7 @@
     "stage": "BASING"
   },
   "STEL": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "SENCO": {
     "stage": "BASING"
@@ -811,7 +811,7 @@
     "stage": "BASING"
   },
   "GANDHAR": {
-    "stage": "BASING"
+    "stage": "FRESH_BOS2"
   },
   "RAYMOND": {
     "stage": "STALE_BOS2"
@@ -944,7 +944,7 @@
     "last_reversal_alerted": "2026-08-17"
   },
   "GPTHEALTH": {
-    "stage": "FRESH_REVERSAL",
+    "stage": "BASING",
     "last_reversal_alerted": "2026-09-01"
   },
   "KICL": {
