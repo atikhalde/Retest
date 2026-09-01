@@ -235,7 +235,7 @@
     "stage": "BASING"
   },
   "LALPATHLAB": {
-    "stage": "FRESH_REVERSAL",
+    "stage": "FRESH_BOS2",
     "last_reversal_alerted": "2026-08-26"
   },
   "PVRINOX": {
@@ -460,7 +460,7 @@
     "stage": "STALE_BOS2"
   },
   "WSTCSTPAPR": {
-    "stage": "FRESH_REVERSAL",
+    "stage": "FRESH_BOS2",
     "last_reversal_alerted": "2026-09-01"
   },
   "NGLFINE": {
@@ -579,7 +579,7 @@
     "stage": "STALE_BOS2"
   },
   "PRECWIRE": {
-    "stage": "IN_RETEST"
+    "stage": "STALE_BOS2"
   },
   "APOLLOHOSP": {
     "stage": "FRESH_REVERSAL"
@@ -859,7 +859,7 @@
     "stage": "BASING"
   },
   "ICICIBANK": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "RPEL": {
     "stage": "STALE_BOS2"
@@ -1052,7 +1052,7 @@
     "stage": "STALE_BOS2"
   },
   "DIXON": {
-    "stage": "STALE_BOS2"
+    "stage": "BASING"
   },
   "INOXINDIA": {
     "stage": "IN_RETEST"
