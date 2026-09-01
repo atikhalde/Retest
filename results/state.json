@@ -43,7 +43,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "LLOYDSENGG": {
-    "stage": "FRESH_REVERSAL"
+    "stage": "STALE_BOS2"
   },
   "RRKABEL": {
     "stage": "PRE_BOS2_READY"
@@ -211,7 +211,7 @@
     "stage": "STALE_BOS2"
   },
   "NETWEB": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "PGIL": {
     "stage": "BASING"
@@ -379,7 +379,7 @@
     "stage": "BASING"
   },
   "VOLTAMP": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "TANLA": {
     "stage": "BASING",
@@ -402,7 +402,7 @@
     "last_reversal_alerted": "2026-08-07"
   },
   "TCPLPACK": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "HSCL": {
     "stage": "BASING"
@@ -639,7 +639,7 @@
     "stage": "STALE_BOS2"
   },
   "KINGFA": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "APARINDS": {
     "stage": "STALE_BOS2"
@@ -860,7 +860,7 @@
     "stage": "BASING"
   },
   "ICICIBANK": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "RPEL": {
     "stage": "STALE_BOS2"
@@ -944,7 +944,7 @@
     "last_reversal_alerted": "2026-09-01"
   },
   "GPTHEALTH": {
-    "stage": "FRESH_REVERSAL",
+    "stage": "BASING",
     "last_reversal_alerted": "2026-09-01"
   },
   "KICL": {
@@ -984,7 +984,7 @@
     "stage": "STALE_BOS2"
   },
   "INNOVACAP": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "COALINDIA": {
     "stage": "STALE_BOS2"
