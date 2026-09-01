@@ -424,7 +424,7 @@
     "stage": "BASING"
   },
   "GABRIEL": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "UNIPARTS": {
     "stage": "FRESH_BOS2"
@@ -486,7 +486,7 @@
     "stage": "STALE_BOS2"
   },
   "RAMRAT": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "TIMKEN": {
     "stage": "STALE_BOS2"
