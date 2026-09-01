@@ -42,7 +42,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "LLOYDSENGG": {
-    "stage": "STALE_BOS2"
+    "stage": "FRESH_REVERSAL"
   },
   "RRKABEL": {
     "stage": "PRE_BOS2_READY"
@@ -210,7 +210,7 @@
     "stage": "STALE_BOS2"
   },
   "NETWEB": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "PGIL": {
     "stage": "BASING"
@@ -983,7 +983,7 @@
     "stage": "STALE_BOS2"
   },
   "INNOVACAP": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "COALINDIA": {
     "stage": "STALE_BOS2"
@@ -1115,7 +1115,7 @@
     "stage": "BASING"
   },
   "NAUKRI": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "LUMAXTECH": {
     "stage": "FRESH_REVERSAL"
@@ -1185,7 +1185,7 @@
     "stage": "PRE_BOS2_READY"
   },
   "AVTNPL": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "MANALIPETC": {
     "stage": "IN_RETEST"
@@ -1269,6 +1269,9 @@
     "stage": "IN_RETEST"
   },
   "DCBBANK": {
+    "stage": "IN_RETEST"
+  },
+  "PERSISTENT": {
     "stage": "IN_RETEST"
   }
 }
