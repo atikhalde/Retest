@@ -46,7 +46,7 @@
     "stage": "STALE_BOS2"
   },
   "RRKABEL": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "HAPPYFORGE": {
     "stage": "STALE_BOS2"
@@ -402,7 +402,7 @@
     "last_reversal_alerted": "2026-08-07"
   },
   "TCPLPACK": {
-    "stage": "IN_RETEST"
+    "stage": "STALE_BOS2"
   },
   "HSCL": {
     "stage": "BASING"
@@ -486,7 +486,7 @@
     "stage": "STALE_BOS2"
   },
   "RAMRAT": {
-    "stage": "IN_RETEST"
+    "stage": "STALE_BOS2"
   },
   "TIMKEN": {
     "stage": "STALE_BOS2"
@@ -940,7 +940,7 @@
     "stage": "IN_RETEST"
   },
   "SMLMAH": {
-    "stage": "FRESH_REVERSAL",
+    "stage": "BASING",
     "last_reversal_alerted": "2026-09-01"
   },
   "GPTHEALTH": {
