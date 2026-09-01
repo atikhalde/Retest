@@ -24,7 +24,7 @@
     "stage": "STALE_BOS2"
   },
   "NAHARSPING": {
-    "stage": "FRESH_REVERSAL",
+    "stage": "BASING",
     "last_reversal_alerted": "2026-09-01"
   },
   "ASTERDM": {
@@ -486,7 +486,7 @@
     "stage": "STALE_BOS2"
   },
   "RAMRAT": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "TIMKEN": {
     "stage": "STALE_BOS2"
@@ -940,11 +940,11 @@
     "stage": "IN_RETEST"
   },
   "SMLMAH": {
-    "stage": "BASING",
-    "last_reversal_alerted": "2026-08-17"
+    "stage": "FRESH_REVERSAL",
+    "last_reversal_alerted": "2026-09-01"
   },
   "GPTHEALTH": {
-    "stage": "BASING",
+    "stage": "FRESH_REVERSAL",
     "last_reversal_alerted": "2026-09-01"
   },
   "KICL": {
