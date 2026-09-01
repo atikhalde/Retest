@@ -335,7 +335,7 @@
     "stage": "BASING"
   },
   "IPCALAB": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "NDRAUTO": {
     "stage": "BASING"
@@ -402,7 +402,7 @@
     "last_reversal_alerted": "2026-08-07"
   },
   "TCPLPACK": {
-    "stage": "IN_RETEST"
+    "stage": "STALE_BOS2"
   },
   "HSCL": {
     "stage": "BASING"
@@ -639,7 +639,7 @@
     "stage": "STALE_BOS2"
   },
   "KINGFA": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "APARINDS": {
     "stage": "STALE_BOS2"
