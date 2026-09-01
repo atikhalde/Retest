@@ -24,7 +24,8 @@
     "stage": "STALE_BOS2"
   },
   "NAHARSPING": {
-    "stage": "BASING"
+    "stage": "FRESH_REVERSAL",
+    "last_reversal_alerted": "2026-09-01"
   },
   "ASTERDM": {
     "stage": "STALE_BOS2"
@@ -81,7 +82,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "INDORAMA": {
-    "stage": "BASING"
+    "stage": "FRESH_BOS2"
   },
   "NAZARA": {
     "stage": "FRESH_REVERSAL"
@@ -334,7 +335,7 @@
     "stage": "BASING"
   },
   "IPCALAB": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "NDRAUTO": {
     "stage": "BASING"
@@ -378,7 +379,7 @@
     "stage": "BASING"
   },
   "VOLTAMP": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "TANLA": {
     "stage": "BASING",
@@ -460,7 +461,7 @@
     "stage": "STALE_BOS2"
   },
   "WSTCSTPAPR": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "NGLFINE": {
     "stage": "STALE_BOS2"
@@ -485,7 +486,7 @@
     "stage": "STALE_BOS2"
   },
   "RAMRAT": {
-    "stage": "IN_RETEST"
+    "stage": "STALE_BOS2"
   },
   "TIMKEN": {
     "stage": "STALE_BOS2"
@@ -1185,7 +1186,7 @@
     "stage": "PRE_BOS2_READY"
   },
   "AVTNPL": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "MANALIPETC": {
     "stage": "IN_RETEST"
@@ -1200,7 +1201,7 @@
     "stage": "IN_RETEST"
   },
   "UDS": {
-    "stage": "BASING"
+    "stage": "FRESH_BOS2"
   },
   "PTCIL": {
     "stage": "FRESH_BOS2"
