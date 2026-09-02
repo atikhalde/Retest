@@ -70,7 +70,7 @@
     "stage": "STALE_BOS2"
   },
   "IGPL": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "GRASIM": {
     "stage": "STALE_BOS2"
@@ -766,7 +766,7 @@
     "stage": "STALE_BOS2"
   },
   "63MOONS": {
-    "stage": "FRESH_REVERSAL",
+    "stage": "BASING",
     "last_reversal_alerted": "2026-09-02"
   },
   "VIMTALABS": {
@@ -1230,7 +1230,7 @@
     "stage": "BASING"
   },
   "KIRIINDUS": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "AGI": {
     "stage": "PRE_BOS2_READY"
