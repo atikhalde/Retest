@@ -103,7 +103,7 @@
     "stage": "BASING"
   },
   "SUVEN": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "ADOR": {
     "stage": "IN_RETEST"
@@ -136,7 +136,8 @@
     "last_reversal_alerted": "2026-08-17"
   },
   "ANTELOPUS": {
-    "stage": "FRESH_REVERSAL"
+    "stage": "FRESH_REVERSAL",
+    "last_reversal_alerted": "2026-09-02"
   },
   "ASTRAMICRO": {
     "stage": "BASING"
@@ -163,7 +164,7 @@
     "stage": "STALE_BOS2"
   },
   "HARSHA": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "KPIL": {
     "stage": "BASING"
@@ -334,7 +335,7 @@
     "stage": "BASING"
   },
   "IPCALAB": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "NDRAUTO": {
     "stage": "BASING"
@@ -941,7 +942,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "SMLMAH": {
-    "stage": "FRESH_REVERSAL",
+    "stage": "BASING",
     "last_reversal_alerted": "2026-09-02"
   },
   "GPTHEALTH": {
@@ -1220,7 +1221,7 @@
     "stage": "BASING"
   },
   "GLAXO": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "HNDFDS": {
     "stage": "FRESH_REVERSAL"
