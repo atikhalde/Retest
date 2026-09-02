@@ -852,7 +852,7 @@
     "stage": "STALE_BOS2"
   },
   "VMART": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "EXIDEIND": {
     "stage": "IN_RETEST"
@@ -1055,7 +1055,7 @@
     "stage": "STALE_BOS2"
   },
   "DIXON": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "INOXINDIA": {
     "stage": "IN_RETEST"
@@ -1287,6 +1287,9 @@
     "stage": "IN_RETEST"
   },
   "VIDHIING": {
+    "stage": "IN_RETEST"
+  },
+  "DIVISLAB": {
     "stage": "IN_RETEST"
   }
 }
