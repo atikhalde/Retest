@@ -446,7 +446,7 @@
     "stage": "STALE_BOS2"
   },
   "REDINGTON": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "KRISHANA": {
     "stage": "BASING"
@@ -902,7 +902,7 @@
     "stage": "STALE_BOS2"
   },
   "MANGLMCEM": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "GANECOS": {
     "stage": "BASING"
@@ -986,7 +986,7 @@
     "stage": "STALE_BOS2"
   },
   "INNOVACAP": {
-    "stage": "BASING"
+    "stage": "FRESH_BOS2"
   },
   "COALINDIA": {
     "stage": "STALE_BOS2"
