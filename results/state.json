@@ -34,7 +34,7 @@
     "stage": "STALE_BOS2"
   },
   "AVALON": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "CRAFTSMAN": {
     "stage": "IN_RETEST"
@@ -109,7 +109,7 @@
     "stage": "IN_RETEST"
   },
   "MMFL": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "OFSS": {
     "stage": "FRESH_BOS2",
@@ -245,7 +245,7 @@
     "stage": "BASING"
   },
   "RBLBANK": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "IN_RETEST"
   },
   "WELCORP": {
     "stage": "STALE_BOS2"
@@ -765,7 +765,8 @@
     "stage": "STALE_BOS2"
   },
   "63MOONS": {
-    "stage": "BASING"
+    "stage": "FRESH_REVERSAL",
+    "last_reversal_alerted": "2026-09-02"
   },
   "VIMTALABS": {
     "stage": "FRESH_REVERSAL",
@@ -900,7 +901,7 @@
     "stage": "STALE_BOS2"
   },
   "MANGLMCEM": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "GANECOS": {
     "stage": "BASING"
@@ -1219,7 +1220,7 @@
     "stage": "BASING"
   },
   "GLAXO": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "HNDFDS": {
     "stage": "FRESH_REVERSAL"
@@ -1231,7 +1232,7 @@
     "stage": "PRE_BOS2_READY"
   },
   "AGI": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "HAL": {
     "stage": "IN_RETEST"
