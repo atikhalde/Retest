@@ -70,7 +70,7 @@
     "stage": "STALE_BOS2"
   },
   "IGPL": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "GRASIM": {
     "stage": "STALE_BOS2"
@@ -902,7 +902,7 @@
     "stage": "STALE_BOS2"
   },
   "MANGLMCEM": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "GANECOS": {
     "stage": "BASING"
@@ -1106,7 +1106,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "SUDARSCHEM": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "ALLCARGO": {
     "stage": "BASING"
@@ -1230,7 +1230,7 @@
     "stage": "BASING"
   },
   "KIRIINDUS": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "AGI": {
     "stage": "PRE_BOS2_READY"
