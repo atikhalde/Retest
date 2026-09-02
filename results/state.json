@@ -79,7 +79,7 @@
     "stage": "STALE_BOS2"
   },
   "TORNTPHARM": {
-    "stage": "FRESH_REVERSAL"
+    "stage": "BASING"
   },
   "INDORAMA": {
     "stage": "FRESH_BOS2"
@@ -236,7 +236,7 @@
     "stage": "BASING"
   },
   "LALPATHLAB": {
-    "stage": "FRESH_REVERSAL",
+    "stage": "FRESH_BOS2",
     "last_reversal_alerted": "2026-08-26"
   },
   "PVRINOX": {
@@ -289,7 +289,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "SSWL": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "HIRECT": {
     "stage": "BASING",
@@ -527,7 +527,7 @@
     "stage": "STALE_BOS2"
   },
   "LAURUSLABS": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "NMDC": {
     "stage": "STALE_BOS2"
@@ -828,7 +828,7 @@
     "stage": "BASING"
   },
   "KIRLOSENG": {
-    "stage": "BASING"
+    "stage": "FRESH_REVERSAL"
   },
   "EIEL": {
     "stage": "FRESH_REVERSAL"
