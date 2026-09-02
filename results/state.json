@@ -163,7 +163,7 @@
     "stage": "STALE_BOS2"
   },
   "HARSHA": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "KPIL": {
     "stage": "BASING"
@@ -423,7 +423,7 @@
     "stage": "BASING"
   },
   "GABRIEL": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "UNIPARTS": {
     "stage": "FRESH_BOS2"
@@ -1095,7 +1095,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "WINDLAS": {
-    "stage": "BASING"
+    "stage": "FRESH_BOS2"
   },
   "FIEMIND": {
     "stage": "IN_RETEST"
@@ -1219,7 +1219,7 @@
     "stage": "BASING"
   },
   "GLAXO": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "HNDFDS": {
     "stage": "FRESH_REVERSAL"
@@ -1231,7 +1231,7 @@
     "stage": "PRE_BOS2_READY"
   },
   "AGI": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "HAL": {
     "stage": "IN_RETEST"
