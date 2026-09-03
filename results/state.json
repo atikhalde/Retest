@@ -221,7 +221,7 @@
     "stage": "BASING"
   },
   "TEXINFRA": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "FRESH_BOS2"
   },
   "IKS": {
     "stage": "BASING"
@@ -472,7 +472,7 @@
     "last_reversal_alerted": "2026-08-31"
   },
   "APOLLOPIPE": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "AMBIKCO": {
     "stage": "STALE_BOS2"
@@ -1055,7 +1055,7 @@
     "stage": "STALE_BOS2"
   },
   "DIXON": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "INOXINDIA": {
     "stage": "IN_RETEST"
@@ -1186,10 +1186,10 @@
     "stage": "FRESH_BOS2"
   },
   "IIFL": {
-    "stage": "FRESH_BOS2"
+    "stage": "PRE_BOS2_READY"
   },
   "AVTNPL": {
-    "stage": "FRESH_BOS2"
+    "stage": "PRE_BOS2_READY"
   },
   "MANALIPETC": {
     "stage": "IN_RETEST"
