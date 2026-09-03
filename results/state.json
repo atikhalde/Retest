@@ -103,7 +103,7 @@
     "stage": "BASING"
   },
   "SUVEN": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "ADOR": {
     "stage": "IN_RETEST"
@@ -455,7 +455,7 @@
     "stage": "BASING"
   },
   "QUESS": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "CENTUM": {
     "stage": "STALE_BOS2"
@@ -986,7 +986,7 @@
     "stage": "STALE_BOS2"
   },
   "INNOVACAP": {
-    "stage": "FRESH_REVERSAL"
+    "stage": "FRESH_BOS2"
   },
   "COALINDIA": {
     "stage": "STALE_BOS2"
@@ -1297,6 +1297,9 @@
     "stage": "IN_RETEST"
   },
   "UNITDSPR": {
+    "stage": "IN_RETEST"
+  },
+  "UFLEX": {
     "stage": "IN_RETEST"
   }
 }
