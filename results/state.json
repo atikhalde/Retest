@@ -941,8 +941,8 @@
     "stage": "BASING"
   },
   "SMLMAH": {
-    "stage": "BASING",
-    "last_reversal_alerted": "2026-09-02"
+    "stage": "FRESH_REVERSAL",
+    "last_reversal_alerted": "2026-09-03"
   },
   "GPTHEALTH": {
     "stage": "FRESH_REVERSAL",
@@ -1290,6 +1290,9 @@
     "stage": "IN_RETEST"
   },
   "DIVISLAB": {
+    "stage": "IN_RETEST"
+  },
+  "JYOTICNC": {
     "stage": "IN_RETEST"
   }
 }
