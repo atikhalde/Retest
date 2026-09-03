@@ -37,7 +37,7 @@
     "stage": "BASING"
   },
   "CRAFTSMAN": {
-    "stage": "IN_RETEST"
+    "stage": "FRESH_BOS2"
   },
   "GLAND": {
     "stage": "FRESH_REVERSAL"
@@ -103,7 +103,7 @@
     "stage": "BASING"
   },
   "SUVEN": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "ADOR": {
     "stage": "IN_RETEST"
@@ -286,7 +286,7 @@
     "stage": "IN_RETEST"
   },
   "KPRMILL": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "SSWL": {
     "stage": "IN_RETEST"
@@ -351,8 +351,8 @@
     "last_reversal_alerted": "2026-08-12"
   },
   "GRANULES": {
-    "stage": "BASING",
-    "last_reversal_alerted": "2026-08-07"
+    "stage": "FRESH_REVERSAL",
+    "last_reversal_alerted": "2026-09-03"
   },
   "GANESHHOU": {
     "stage": "BASING"
@@ -379,7 +379,7 @@
     "stage": "BASING"
   },
   "VOLTAMP": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "TANLA": {
     "stage": "BASING",
@@ -455,7 +455,7 @@
     "stage": "BASING"
   },
   "QUESS": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "CENTUM": {
     "stage": "STALE_BOS2"
@@ -788,7 +788,7 @@
     "stage": "STALE_BOS2"
   },
   "BOSCHLTD": {
-    "stage": "IN_RETEST"
+    "stage": "STALE_BOS2"
   },
   "IOLCP": {
     "stage": "IN_RETEST"
@@ -852,7 +852,7 @@
     "stage": "STALE_BOS2"
   },
   "VMART": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "EXIDEIND": {
     "stage": "BASING"
@@ -1186,7 +1186,7 @@
     "stage": "FRESH_BOS2"
   },
   "IIFL": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "FRESH_BOS2"
   },
   "AVTNPL": {
     "stage": "FRESH_BOS2"
@@ -1234,7 +1234,7 @@
     "stage": "FRESH_BOS2"
   },
   "AGI": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "HAL": {
     "stage": "IN_RETEST"
