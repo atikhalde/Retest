@@ -97,13 +97,13 @@
     "stage": "STALE_BOS2"
   },
   "ARMANFIN": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "OLECTRA": {
     "stage": "BASING"
   },
   "SUVEN": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "ADOR": {
     "stage": "IN_RETEST"
@@ -218,10 +218,10 @@
     "stage": "FRESH_REVERSAL"
   },
   "INDHOTEL": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "TEXINFRA": {
-    "stage": "FRESH_BOS2"
+    "stage": "PRE_BOS2_READY"
   },
   "IKS": {
     "stage": "BASING"
@@ -240,7 +240,7 @@
     "last_reversal_alerted": "2026-08-26"
   },
   "PVRINOX": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "KIRLOSBROS": {
     "stage": "BASING"
@@ -286,7 +286,7 @@
     "stage": "IN_RETEST"
   },
   "KPRMILL": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "SSWL": {
     "stage": "IN_RETEST"
@@ -1158,7 +1158,7 @@
     "stage": "STALE_BOS2"
   },
   "UNOMINDA": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "FOSECOIND": {
     "stage": "IN_RETEST"
