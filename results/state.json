@@ -103,7 +103,7 @@
     "stage": "BASING"
   },
   "SUVEN": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "ADOR": {
     "stage": "IN_RETEST"
@@ -1222,7 +1222,7 @@
     "stage": "BASING"
   },
   "GLAXO": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "HNDFDS": {
     "stage": "FRESH_REVERSAL"
@@ -1294,6 +1294,9 @@
     "stage": "IN_RETEST"
   },
   "JYOTICNC": {
+    "stage": "IN_RETEST"
+  },
+  "UNITDSPR": {
     "stage": "IN_RETEST"
   }
 }
