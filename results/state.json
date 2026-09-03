@@ -472,7 +472,7 @@
     "last_reversal_alerted": "2026-08-31"
   },
   "APOLLOPIPE": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "AMBIKCO": {
     "stage": "STALE_BOS2"
