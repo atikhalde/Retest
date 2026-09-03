@@ -37,7 +37,7 @@
     "stage": "BASING"
   },
   "CRAFTSMAN": {
-    "stage": "FRESH_BOS2"
+    "stage": "IN_RETEST"
   },
   "GLAND": {
     "stage": "FRESH_REVERSAL"
@@ -103,7 +103,7 @@
     "stage": "BASING"
   },
   "SUVEN": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "ADOR": {
     "stage": "IN_RETEST"
