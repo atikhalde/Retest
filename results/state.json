@@ -40,7 +40,7 @@
     "stage": "IN_RETEST"
   },
   "GLAND": {
-    "stage": "FRESH_REVERSAL"
+    "stage": "PRE_BOS2_READY"
   },
   "LLOYDSENGG": {
     "stage": "STALE_BOS2"
@@ -97,7 +97,7 @@
     "stage": "STALE_BOS2"
   },
   "ARMANFIN": {
-    "stage": "FRESH_REVERSAL"
+    "stage": "BASING"
   },
   "OLECTRA": {
     "stage": "BASING"
@@ -112,7 +112,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "OFSS": {
-    "stage": "FRESH_BOS2",
+    "stage": "STALE_BOS2",
     "last_reversal_alerted": "2026-08-27"
   },
   "AZAD": {
@@ -185,7 +185,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "LINCOLN": {
-    "stage": "BASING"
+    "stage": "FRESH_REVERSAL"
   },
   "RELIGARE": {
     "stage": "FRESH_REVERSAL"
@@ -221,7 +221,7 @@
     "stage": "BASING"
   },
   "TEXINFRA": {
-    "stage": "FRESH_BOS2"
+    "stage": "PRE_BOS2_READY"
   },
   "IKS": {
     "stage": "BASING"
@@ -276,7 +276,7 @@
     "stage": "STALE_BOS2"
   },
   "CERA": {
-    "stage": "BASING"
+    "stage": "FRESH_REVERSAL"
   },
   "MPSLTD": {
     "stage": "BASING",
@@ -351,7 +351,7 @@
     "last_reversal_alerted": "2026-08-12"
   },
   "GRANULES": {
-    "stage": "FRESH_REVERSAL",
+    "stage": "BASING",
     "last_reversal_alerted": "2026-09-03"
   },
   "GANESHHOU": {
@@ -373,7 +373,7 @@
     "stage": "BASING"
   },
   "FLUOROCHEM": {
-    "stage": "FRESH_REVERSAL"
+    "stage": "BASING"
   },
   "UJJIVANSFB": {
     "stage": "BASING"
@@ -389,7 +389,7 @@
     "stage": "BASING"
   },
   "PITTIENG": {
-    "stage": "IN_RETEST"
+    "stage": "BASING"
   },
   "GIPCL": {
     "stage": "IN_RETEST"
@@ -424,10 +424,10 @@
     "stage": "BASING"
   },
   "GABRIEL": {
-    "stage": "BASING"
+    "stage": "FRESH_REVERSAL"
   },
   "UNIPARTS": {
-    "stage": "FRESH_BOS2"
+    "stage": "IN_RETEST"
   },
   "RADICO": {
     "stage": "BASING"
@@ -493,7 +493,7 @@
     "stage": "STALE_BOS2"
   },
   "SHRIPISTON": {
-    "stage": "IN_RETEST"
+    "stage": "BASING"
   },
   "MARKSANS": {
     "stage": "BASING"
@@ -526,7 +526,7 @@
     "stage": "STALE_BOS2"
   },
   "LAURUSLABS": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "NMDC": {
     "stage": "STALE_BOS2"
@@ -681,7 +681,7 @@
     "stage": "BASING"
   },
   "CYIENTDLM": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "JASH": {
     "stage": "STALE_BOS2"
@@ -862,7 +862,7 @@
     "last_reversal_alerted": "2026-09-02"
   },
   "ICICIBANK": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "RPEL": {
     "stage": "STALE_BOS2"
@@ -902,7 +902,7 @@
     "stage": "STALE_BOS2"
   },
   "MANGLMCEM": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "GANECOS": {
     "stage": "BASING"
@@ -1103,10 +1103,10 @@
     "stage": "IN_RETEST"
   },
   "INDIGOPNTS": {
-    "stage": "FRESH_REVERSAL"
+    "stage": "BASING"
   },
   "SUDARSCHEM": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "ALLCARGO": {
     "stage": "BASING"
@@ -1148,7 +1148,7 @@
     "stage": "BASING"
   },
   "TASTYBITE": {
-    "stage": "FRESH_REVERSAL",
+    "stage": "BASING",
     "last_reversal_alerted": "2026-09-03"
   },
   "NINSYS": {
@@ -1158,7 +1158,7 @@
     "stage": "STALE_BOS2"
   },
   "UNOMINDA": {
-    "stage": "FRESH_REVERSAL"
+    "stage": "BASING"
   },
   "FOSECOIND": {
     "stage": "IN_RETEST"
@@ -1177,19 +1177,19 @@
     "stage": "BASING"
   },
   "GMMPFAUDLR": {
-    "stage": "FRESH_REVERSAL"
+    "stage": "PRE_BOS2_READY"
   },
   "CASTROLIND": {
     "stage": "FRESH_REVERSAL"
   },
   "TVSSRICHAK": {
-    "stage": "FRESH_BOS2"
+    "stage": "STALE_BOS2"
   },
   "IIFL": {
     "stage": "PRE_BOS2_READY"
   },
   "AVTNPL": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "FRESH_REVERSAL"
   },
   "MANALIPETC": {
     "stage": "IN_RETEST"
@@ -1246,7 +1246,7 @@
     "stage": "FRESH_BOS2"
   },
   "HATSUN": {
-    "stage": "BASING"
+    "stage": "FRESH_BOS2"
   },
   "SURAKSHA": {
     "stage": "BASING"
@@ -1300,6 +1300,12 @@
     "stage": "IN_RETEST"
   },
   "UFLEX": {
+    "stage": "IN_RETEST"
+  },
+  "LUMAXIND": {
+    "stage": "IN_RETEST"
+  },
+  "INDOCO": {
     "stage": "IN_RETEST"
   }
 }
