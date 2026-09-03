@@ -97,7 +97,7 @@
     "stage": "STALE_BOS2"
   },
   "ARMANFIN": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "OLECTRA": {
     "stage": "BASING"
@@ -221,7 +221,7 @@
     "stage": "BASING"
   },
   "TEXINFRA": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "FRESH_BOS2"
   },
   "IKS": {
     "stage": "BASING"
@@ -335,7 +335,7 @@
     "stage": "BASING"
   },
   "IPCALAB": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "NDRAUTO": {
     "stage": "BASING"
@@ -351,7 +351,7 @@
     "last_reversal_alerted": "2026-08-12"
   },
   "GRANULES": {
-    "stage": "BASING",
+    "stage": "FRESH_REVERSAL",
     "last_reversal_alerted": "2026-09-03"
   },
   "GANESHHOU": {
@@ -472,7 +472,7 @@
     "last_reversal_alerted": "2026-08-31"
   },
   "APOLLOPIPE": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "AMBIKCO": {
     "stage": "STALE_BOS2"
@@ -902,7 +902,7 @@
     "stage": "STALE_BOS2"
   },
   "MANGLMCEM": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "GANECOS": {
     "stage": "BASING"
