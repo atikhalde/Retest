@@ -167,7 +167,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "KPIL": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "ZYDUSWELL": {
     "stage": "BASING"
@@ -430,7 +430,7 @@
     "stage": "FRESH_BOS2"
   },
   "RADICO": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "MANAPPURAM": {
     "stage": "BASING"
@@ -824,7 +824,8 @@
     "stage": "STALE_BOS2"
   },
   "BFINVEST": {
-    "stage": "BASING"
+    "stage": "FRESH_REVERSAL",
+    "last_reversal_alerted": "2026-09-03"
   },
   "KIRLOSENG": {
     "stage": "FRESH_REVERSAL"
@@ -1185,10 +1186,10 @@
     "stage": "FRESH_BOS2"
   },
   "IIFL": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "AVTNPL": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "FRESH_BOS2"
   },
   "MANALIPETC": {
     "stage": "IN_RETEST"
