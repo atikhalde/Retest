@@ -788,7 +788,7 @@
     "stage": "STALE_BOS2"
   },
   "BOSCHLTD": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "IOLCP": {
     "stage": "IN_RETEST"
@@ -1222,7 +1222,7 @@
     "stage": "BASING"
   },
   "GLAXO": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "HNDFDS": {
     "stage": "FRESH_REVERSAL"
