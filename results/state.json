@@ -21,7 +21,7 @@
     "stage": "BASING"
   },
   "MARINE": {
-    "stage": "IN_RETEST"
+    "stage": "STALE_BOS2"
   },
   "NAHARSPING": {
     "stage": "BASING",
@@ -136,7 +136,7 @@
     "last_reversal_alerted": "2026-08-17"
   },
   "ANTELOPUS": {
-    "stage": "IN_RETEST",
+    "stage": "FRESH_BOS2",
     "last_reversal_alerted": "2026-09-02"
   },
   "ASTRAMICRO": {
@@ -296,7 +296,7 @@
     "last_reversal_alerted": "2026-08-21"
   },
   "WELENT": {
-    "stage": "BASING"
+    "stage": "FRESH_BOS2"
   },
   "SHAREINDIA": {
     "stage": "BASING"
