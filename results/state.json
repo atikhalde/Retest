@@ -136,7 +136,7 @@
     "last_reversal_alerted": "2026-08-17"
   },
   "ANTELOPUS": {
-    "stage": "FRESH_BOS2",
+    "stage": "IN_RETEST",
     "last_reversal_alerted": "2026-09-02"
   },
   "ASTRAMICRO": {
@@ -212,7 +212,7 @@
     "stage": "STALE_BOS2"
   },
   "NETWEB": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "PGIL": {
     "stage": "FRESH_REVERSAL"
@@ -942,7 +942,7 @@
     "stage": "BASING"
   },
   "SMLMAH": {
-    "stage": "FRESH_REVERSAL",
+    "stage": "FRESH_BOS2",
     "last_reversal_alerted": "2026-09-04"
   },
   "GPTHEALTH": {
@@ -1181,7 +1181,7 @@
     "stage": "IN_RETEST"
   },
   "CASTROLIND": {
-    "stage": "FRESH_REVERSAL"
+    "stage": "IN_RETEST"
   },
   "TVSSRICHAK": {
     "stage": "STALE_BOS2"
