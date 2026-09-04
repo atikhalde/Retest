@@ -212,7 +212,7 @@
     "stage": "STALE_BOS2"
   },
   "NETWEB": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "PGIL": {
     "stage": "FRESH_REVERSAL"
