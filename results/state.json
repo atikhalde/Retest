@@ -21,7 +21,7 @@
     "stage": "BASING"
   },
   "MARINE": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "NAHARSPING": {
     "stage": "BASING",
@@ -97,7 +97,7 @@
     "stage": "STALE_BOS2"
   },
   "ARMANFIN": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "OLECTRA": {
     "stage": "BASING"
@@ -136,7 +136,7 @@
     "last_reversal_alerted": "2026-08-17"
   },
   "ANTELOPUS": {
-    "stage": "FRESH_BOS2",
+    "stage": "IN_RETEST",
     "last_reversal_alerted": "2026-09-02"
   },
   "ASTRAMICRO": {
@@ -759,7 +759,7 @@
     "stage": "BASING"
   },
   "THEJO": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "VSSL": {
     "stage": "STALE_BOS2"
@@ -862,7 +862,7 @@
     "last_reversal_alerted": "2026-09-02"
   },
   "ICICIBANK": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "RPEL": {
     "stage": "STALE_BOS2"
@@ -942,7 +942,7 @@
     "stage": "BASING"
   },
   "SMLMAH": {
-    "stage": "FRESH_BOS2",
+    "stage": "FRESH_REVERSAL",
     "last_reversal_alerted": "2026-09-04"
   },
   "GPTHEALTH": {
@@ -1175,7 +1175,7 @@
     "stage": "FRESH_BOS2"
   },
   "MANORAMA": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "GMMPFAUDLR": {
     "stage": "IN_RETEST"
