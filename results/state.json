@@ -97,7 +97,7 @@
     "stage": "STALE_BOS2"
   },
   "ARMANFIN": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "OLECTRA": {
     "stage": "BASING"
@@ -191,7 +191,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "SUMICHEM": {
-    "stage": "BASING"
+    "stage": "STALE_BOS2"
   },
   "CIEINDIA": {
     "stage": "BASING"
@@ -212,7 +212,7 @@
     "stage": "STALE_BOS2"
   },
   "NETWEB": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "PGIL": {
     "stage": "FRESH_REVERSAL"
@@ -1175,7 +1175,7 @@
     "stage": "FRESH_BOS2"
   },
   "MANORAMA": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "GMMPFAUDLR": {
     "stage": "IN_RETEST"
@@ -1196,7 +1196,7 @@
     "stage": "IN_RETEST"
   },
   "HEG": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "BAJAJHIND": {
     "stage": "BASING"
