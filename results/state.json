@@ -3,7 +3,7 @@
     "stage": "IN_RETEST"
   },
   "PNBHOUSING": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "SUPRAJIT": {
     "stage": "BASING"
@@ -21,7 +21,7 @@
     "stage": "BASING"
   },
   "MARINE": {
-    "stage": "IN_RETEST"
+    "stage": "STALE_BOS2"
   },
   "NAHARSPING": {
     "stage": "BASING",
@@ -85,7 +85,7 @@
     "stage": "IN_RETEST"
   },
   "NAZARA": {
-    "stage": "IN_RETEST"
+    "stage": "FRESH_REVERSAL"
   },
   "KAPSTON": {
     "stage": "STALE_BOS2"
@@ -112,7 +112,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "OFSS": {
-    "stage": "IN_RETEST",
+    "stage": "STALE_BOS2",
     "last_reversal_alerted": "2026-08-27"
   },
   "AZAD": {
@@ -255,7 +255,7 @@
     "stage": "BASING"
   },
   "ALKYLAMINE": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "NITINSPIN": {
     "stage": "PRE_BOS2_READY"
@@ -759,7 +759,7 @@
     "stage": "BASING"
   },
   "THEJO": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "VSSL": {
     "stage": "STALE_BOS2"
@@ -862,7 +862,7 @@
     "last_reversal_alerted": "2026-09-02"
   },
   "ICICIBANK": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "RPEL": {
     "stage": "STALE_BOS2"
@@ -942,7 +942,7 @@
     "stage": "BASING"
   },
   "SMLMAH": {
-    "stage": "FRESH_REVERSAL",
+    "stage": "FRESH_BOS2",
     "last_reversal_alerted": "2026-09-04"
   },
   "GPTHEALTH": {
@@ -1250,7 +1250,7 @@
     "stage": "FRESH_BOS2"
   },
   "SURAKSHA": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "KRBL": {
     "stage": "BASING"
