@@ -85,7 +85,7 @@
     "stage": "IN_RETEST"
   },
   "NAZARA": {
-    "stage": "FRESH_REVERSAL"
+    "stage": "IN_RETEST"
   },
   "KAPSTON": {
     "stage": "STALE_BOS2"
@@ -97,7 +97,7 @@
     "stage": "STALE_BOS2"
   },
   "ARMANFIN": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "OLECTRA": {
     "stage": "BASING"
@@ -759,7 +759,7 @@
     "stage": "BASING"
   },
   "THEJO": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "VSSL": {
     "stage": "STALE_BOS2"
@@ -1223,7 +1223,7 @@
     "stage": "BASING"
   },
   "GLAXO": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "HNDFDS": {
     "stage": "FRESH_REVERSAL"
