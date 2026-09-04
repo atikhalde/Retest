@@ -70,7 +70,7 @@
     "stage": "STALE_BOS2"
   },
   "IGPL": {
-    "stage": "BASING"
+    "stage": "FRESH_BOS2"
   },
   "GRASIM": {
     "stage": "STALE_BOS2"
@@ -103,7 +103,7 @@
     "stage": "BASING"
   },
   "SUVEN": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "ADOR": {
     "stage": "FRESH_REVERSAL"
@@ -136,7 +136,7 @@
     "last_reversal_alerted": "2026-08-17"
   },
   "ANTELOPUS": {
-    "stage": "FRESH_BOS2",
+    "stage": "IN_RETEST",
     "last_reversal_alerted": "2026-09-02"
   },
   "ASTRAMICRO": {
