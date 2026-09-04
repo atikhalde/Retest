@@ -24,7 +24,7 @@
     "stage": "STALE_BOS2"
   },
   "NAHARSPING": {
-    "stage": "BASING",
+    "stage": "FRESH_REVERSAL",
     "last_reversal_alerted": "2026-09-01"
   },
   "ASTERDM": {
@@ -1124,7 +1124,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "PPLPHARMA": {
-    "stage": "FRESH_REVERSAL"
+    "stage": "PRE_BOS2_READY"
   },
   "DOLPHIN": {
     "stage": "FRESH_REVERSAL",
