@@ -21,7 +21,7 @@
     "stage": "BASING"
   },
   "MARINE": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "NAHARSPING": {
     "stage": "BASING",
@@ -40,7 +40,7 @@
     "stage": "IN_RETEST"
   },
   "GLAND": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "LLOYDSENGG": {
     "stage": "STALE_BOS2"
@@ -167,7 +167,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "KPIL": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "ZYDUSWELL": {
     "stage": "BASING"
@@ -240,7 +240,7 @@
     "last_reversal_alerted": "2026-08-26"
   },
   "PVRINOX": {
-    "stage": "BASING"
+    "stage": "FRESH_REVERSAL"
   },
   "KIRLOSBROS": {
     "stage": "BASING"
@@ -255,10 +255,10 @@
     "stage": "BASING"
   },
   "ALKYLAMINE": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "NITINSPIN": {
-    "stage": "IN_RETEST"
+    "stage": "PRE_BOS2_READY"
   },
   "DIVGIITTS": {
     "stage": "FRESH_REVERSAL"
@@ -296,7 +296,7 @@
     "last_reversal_alerted": "2026-08-21"
   },
   "WELENT": {
-    "stage": "IN_RETEST"
+    "stage": "BASING"
   },
   "SHAREINDIA": {
     "stage": "BASING"
@@ -402,7 +402,7 @@
     "last_reversal_alerted": "2026-08-07"
   },
   "TCPLPACK": {
-    "stage": "IN_RETEST"
+    "stage": "FRESH_REVERSAL"
   },
   "HSCL": {
     "stage": "BASING"
@@ -427,7 +427,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "UNIPARTS": {
-    "stage": "FRESH_BOS2"
+    "stage": "IN_RETEST"
   },
   "RADICO": {
     "stage": "PRE_BOS2_READY"
@@ -478,7 +478,7 @@
     "stage": "STALE_BOS2"
   },
   "ENTERO": {
-    "stage": "FRESH_BOS2"
+    "stage": "STALE_BOS2"
   },
   "HINDALCO": {
     "stage": "STALE_BOS2"
@@ -496,7 +496,7 @@
     "stage": "BASING"
   },
   "MARKSANS": {
-    "stage": "BASING"
+    "stage": "FRESH_REVERSAL"
   },
   "NAVINFLUOR": {
     "stage": "PRE_BOS2_READY"
@@ -508,7 +508,7 @@
     "stage": "STALE_BOS2"
   },
   "AEROFLEX": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "ROSSTECH": {
     "stage": "STALE_BOS2"
@@ -532,7 +532,7 @@
     "stage": "STALE_BOS2"
   },
   "MEDANTA": {
-    "stage": "FRESH_BOS2",
+    "stage": "STALE_BOS2",
     "last_reversal_alerted": "2026-08-26"
   },
   "CHENNPETRO": {
@@ -579,7 +579,7 @@
     "stage": "STALE_BOS2"
   },
   "PRECWIRE": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "APOLLOHOSP": {
     "stage": "BASING"
@@ -636,10 +636,10 @@
     "stage": "STALE_BOS2"
   },
   "IFCI": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "KINGFA": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "APARINDS": {
     "stage": "STALE_BOS2"
@@ -681,7 +681,7 @@
     "stage": "BASING"
   },
   "CYIENTDLM": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "JASH": {
     "stage": "STALE_BOS2"
@@ -702,7 +702,7 @@
     "stage": "STALE_BOS2"
   },
   "SOLARINDS": {
-    "stage": "FRESH_BOS2"
+    "stage": "STALE_BOS2"
   },
   "PSPPROJECT": {
     "stage": "STALE_BOS2"
@@ -824,7 +824,7 @@
     "stage": "STALE_BOS2"
   },
   "BFINVEST": {
-    "stage": "BASING",
+    "stage": "FRESH_REVERSAL",
     "last_reversal_alerted": "2026-09-03"
   },
   "KIRLOSENG": {
@@ -834,7 +834,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "OBEROIRLTY": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "ACUTAAS": {
     "stage": "BASING"
@@ -923,7 +923,7 @@
     "stage": "BASING"
   },
   "EMCURE": {
-    "stage": "FRESH_REVERSAL"
+    "stage": "BASING"
   },
   "AVADHSUGAR": {
     "stage": "STALE_BOS2"
@@ -1127,7 +1127,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "DOLPHIN": {
-    "stage": "BASING",
+    "stage": "FRESH_REVERSAL",
     "last_reversal_alerted": "2026-09-04"
   },
   "THYROCARE": {
@@ -1232,7 +1232,7 @@
     "stage": "BASING"
   },
   "KIRIINDUS": {
-    "stage": "BASING"
+    "stage": "FRESH_BOS2"
   },
   "AGI": {
     "stage": "BASING"
