@@ -3,7 +3,7 @@
     "stage": "IN_RETEST"
   },
   "PNBHOUSING": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "SUPRAJIT": {
     "stage": "BASING"
@@ -212,7 +212,7 @@
     "stage": "STALE_BOS2"
   },
   "NETWEB": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "PGIL": {
     "stage": "FRESH_REVERSAL"
@@ -843,7 +843,7 @@
     "stage": "BASING"
   },
   "MAHSEAMLES": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "LMW": {
     "stage": "BASING"
@@ -1223,7 +1223,7 @@
     "stage": "BASING"
   },
   "GLAXO": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "HNDFDS": {
     "stage": "FRESH_REVERSAL"
