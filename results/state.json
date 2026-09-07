@@ -169,7 +169,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "KPIL": {
-    "stage": "BASING"
+    "stage": "FRESH_REVERSAL"
   },
   "ZYDUSWELL": {
     "stage": "BASING"
@@ -904,7 +904,7 @@
     "stage": "STALE_BOS2"
   },
   "MANGLMCEM": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "GANECOS": {
     "stage": "BASING"
@@ -1226,7 +1226,7 @@
     "stage": "BASING"
   },
   "GLAXO": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "HNDFDS": {
     "stage": "FRESH_REVERSAL"
