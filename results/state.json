@@ -169,7 +169,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "KPIL": {
-    "stage": "BASING"
+    "stage": "FRESH_REVERSAL"
   },
   "ZYDUSWELL": {
     "stage": "BASING"
@@ -641,7 +641,7 @@
     "stage": "IN_RETEST"
   },
   "KINGFA": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "APARINDS": {
     "stage": "STALE_BOS2"
@@ -845,7 +845,7 @@
     "stage": "BASING"
   },
   "MAHSEAMLES": {
-    "stage": "FRESH_BOS2"
+    "stage": "PRE_BOS2_READY"
   },
   "LMW": {
     "stage": "BASING"
@@ -1277,7 +1277,7 @@
     "stage": "BASING"
   },
   "DCBBANK": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "PERSISTENT": {
     "stage": "BASING"
@@ -1322,6 +1322,9 @@
     "stage": "BASING"
   },
   "DYCL": {
+    "stage": "IN_RETEST"
+  },
+  "CYIENT": {
     "stage": "IN_RETEST"
   }
 }
