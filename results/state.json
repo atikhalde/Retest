@@ -3,7 +3,7 @@
     "stage": "IN_RETEST"
   },
   "PNBHOUSING": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "SUPRAJIT": {
     "stage": "BASING"
@@ -550,7 +550,7 @@
     "stage": "STALE_BOS2"
   },
   "RKFORGE": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "IOC": {
     "stage": "STALE_BOS2"
@@ -790,7 +790,7 @@
     "stage": "STALE_BOS2"
   },
   "BOSCHLTD": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "IOLCP": {
     "stage": "IN_RETEST"
@@ -845,7 +845,7 @@
     "stage": "BASING"
   },
   "MAHSEAMLES": {
-    "stage": "BASING"
+    "stage": "FRESH_BOS2"
   },
   "LMW": {
     "stage": "BASING"
@@ -1003,7 +1003,7 @@
     "stage": "STALE_BOS2"
   },
   "HUHTAMAKI": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "BANKBARODA": {
     "stage": "STALE_BOS2"
@@ -1256,7 +1256,7 @@
     "stage": "BASING"
   },
   "KRBL": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "MAXESTATES": {
     "stage": "BASING"
