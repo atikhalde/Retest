@@ -105,10 +105,10 @@
     "stage": "BASING"
   },
   "SUVEN": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "ADOR": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "MMFL": {
     "stage": "BASING"
@@ -169,7 +169,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "KPIL": {
-    "stage": "FRESH_REVERSAL"
+    "stage": "BASING"
   },
   "ZYDUSWELL": {
     "stage": "BASING"
@@ -904,7 +904,7 @@
     "stage": "STALE_BOS2"
   },
   "MANGLMCEM": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "GANECOS": {
     "stage": "BASING"
