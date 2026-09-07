@@ -169,7 +169,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "KPIL": {
-    "stage": "BASING"
+    "stage": "FRESH_REVERSAL"
   },
   "ZYDUSWELL": {
     "stage": "BASING"
@@ -260,7 +260,7 @@
     "stage": "BASING"
   },
   "NITINSPIN": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "DIVGIITTS": {
     "stage": "FRESH_REVERSAL"
@@ -337,7 +337,7 @@
     "stage": "BASING"
   },
   "IPCALAB": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "NDRAUTO": {
     "stage": "BASING"
@@ -845,7 +845,7 @@
     "stage": "BASING"
   },
   "MAHSEAMLES": {
-    "stage": "FRESH_BOS2"
+    "stage": "PRE_BOS2_READY"
   },
   "LMW": {
     "stage": "BASING"
@@ -1256,7 +1256,7 @@
     "stage": "BASING"
   },
   "KRBL": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "MAXESTATES": {
     "stage": "BASING"
