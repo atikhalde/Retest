@@ -23,7 +23,7 @@
     "last_reversal_alerted": "2026-09-07"
   },
   "MARINE": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "NAHARSPING": {
     "stage": "FRESH_REVERSAL",
@@ -169,7 +169,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "KPIL": {
-    "stage": "FRESH_REVERSAL",
+    "stage": "BASING",
     "last_reversal_alerted": "2026-09-08"
   },
   "ZYDUSWELL": {
@@ -261,7 +261,7 @@
     "stage": "BASING"
   },
   "NITINSPIN": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "DIVGIITTS": {
     "stage": "FRESH_REVERSAL"
@@ -585,7 +585,7 @@
     "stage": "IN_RETEST"
   },
   "APOLLOHOSP": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "VEDL": {
     "stage": "STALE_BOS2"
@@ -1127,7 +1127,7 @@
     "stage": "BASING"
   },
   "PPLPHARMA": {
-    "stage": "BASING"
+    "stage": "FRESH_BOS2"
   },
   "DOLPHIN": {
     "stage": "FRESH_REVERSAL",
@@ -1227,7 +1227,7 @@
     "stage": "BASING"
   },
   "GLAXO": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "HNDFDS": {
     "stage": "FRESH_REVERSAL"
@@ -1257,7 +1257,7 @@
     "stage": "BASING"
   },
   "KRBL": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "MAXESTATES": {
     "stage": "BASING"
@@ -1272,7 +1272,7 @@
     "stage": "BASING"
   },
   "BRIGADE": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "360ONE": {
     "stage": "BASING"
@@ -1317,7 +1317,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "MMP": {
-    "stage": "BASING"
+    "stage": "FRESH_BOS2"
   },
   "UTTAMSUGAR": {
     "stage": "BASING"
