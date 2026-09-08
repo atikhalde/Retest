@@ -3,7 +3,7 @@
     "stage": "IN_RETEST"
   },
   "PNBHOUSING": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "SUPRAJIT": {
     "stage": "BASING"
@@ -66,7 +66,7 @@
     "stage": "STALE_BOS2"
   },
   "KMEW": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "ARVIND": {
     "stage": "STALE_BOS2"
@@ -585,7 +585,7 @@
     "stage": "IN_RETEST"
   },
   "APOLLOHOSP": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "VEDL": {
     "stage": "STALE_BOS2"
@@ -899,7 +899,7 @@
     "stage": "BASING"
   },
   "CGCL": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "J&KBANK": {
     "stage": "STALE_BOS2"
@@ -1272,7 +1272,7 @@
     "stage": "BASING"
   },
   "BRIGADE": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "360ONE": {
     "stage": "BASING"
@@ -1329,6 +1329,9 @@
     "stage": "IN_RETEST"
   },
   "BEML": {
+    "stage": "IN_RETEST"
+  },
+  "EDELWEISS": {
     "stage": "IN_RETEST"
   }
 }
