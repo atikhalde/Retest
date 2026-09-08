@@ -942,7 +942,7 @@
     "stage": "STALE_BOS2"
   },
   "ASIANENE": {
-    "stage": "BASING"
+    "stage": "FRESH_BOS2"
   },
   "SMLMAH": {
     "stage": "FRESH_BOS2",
@@ -1061,7 +1061,7 @@
     "stage": "BASING"
   },
   "INOXINDIA": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "NIBE": {
     "stage": "STALE_BOS2"
