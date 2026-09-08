@@ -261,7 +261,7 @@
     "stage": "BASING"
   },
   "NITINSPIN": {
-    "stage": "BASING"
+    "stage": "FRESH_BOS2"
   },
   "DIVGIITTS": {
     "stage": "FRESH_REVERSAL"
@@ -382,7 +382,7 @@
     "stage": "BASING"
   },
   "VOLTAMP": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "TANLA": {
     "stage": "BASING",
@@ -392,7 +392,7 @@
     "stage": "BASING"
   },
   "PITTIENG": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "GIPCL": {
     "stage": "IN_RETEST"
@@ -1239,7 +1239,7 @@
     "stage": "FRESH_BOS2"
   },
   "AGI": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "FRESH_BOS2"
   },
   "HAL": {
     "stage": "IN_RETEST"
