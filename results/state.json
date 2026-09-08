@@ -66,7 +66,7 @@
     "stage": "STALE_BOS2"
   },
   "KMEW": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "ARVIND": {
     "stage": "STALE_BOS2"
@@ -224,7 +224,7 @@
     "stage": "BASING"
   },
   "TEXINFRA": {
-    "stage": "BASING"
+    "stage": "FRESH_BOS2"
   },
   "IKS": {
     "stage": "BASING"
@@ -261,7 +261,7 @@
     "stage": "BASING"
   },
   "NITINSPIN": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "DIVGIITTS": {
     "stage": "FRESH_REVERSAL"
@@ -1272,7 +1272,7 @@
     "stage": "BASING"
   },
   "BRIGADE": {
-    "stage": "BASING"
+    "stage": "IN_RETEST"
   },
   "360ONE": {
     "stage": "BASING"
