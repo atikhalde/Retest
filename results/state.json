@@ -66,7 +66,7 @@
     "stage": "STALE_BOS2"
   },
   "KMEW": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "ARVIND": {
     "stage": "STALE_BOS2"
@@ -392,7 +392,7 @@
     "stage": "BASING"
   },
   "PITTIENG": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "GIPCL": {
     "stage": "IN_RETEST"
@@ -475,7 +475,7 @@
     "last_reversal_alerted": "2026-08-31"
   },
   "APOLLOPIPE": {
-    "stage": "FRESH_REVERSAL"
+    "stage": "BASING"
   },
   "AMBIKCO": {
     "stage": "STALE_BOS2"
@@ -1100,7 +1100,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "WINDLAS": {
-    "stage": "FRESH_BOS2"
+    "stage": "IN_RETEST"
   },
   "FIEMIND": {
     "stage": "IN_RETEST"
@@ -1168,7 +1168,7 @@
     "stage": "BASING"
   },
   "INDGN": {
-    "stage": "IN_RETEST",
+    "stage": "STALE_BOS2",
     "last_reversal_alerted": "2026-08-31"
   },
   "YUKEN": {
