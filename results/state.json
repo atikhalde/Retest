@@ -233,7 +233,7 @@
     "stage": "BASING"
   },
   "MUTHOOTMF": {
-    "stage": "BASING"
+    "stage": "FRESH_REVERSAL"
   },
   "STYRENIX": {
     "stage": "BASING"
@@ -261,7 +261,7 @@
     "stage": "BASING"
   },
   "NITINSPIN": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "DIVGIITTS": {
     "stage": "FRESH_REVERSAL"
@@ -382,7 +382,7 @@
     "stage": "BASING"
   },
   "VOLTAMP": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "TANLA": {
     "stage": "BASING",
@@ -392,7 +392,7 @@
     "stage": "BASING"
   },
   "PITTIENG": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "GIPCL": {
     "stage": "IN_RETEST"
@@ -1168,7 +1168,7 @@
     "stage": "BASING"
   },
   "INDGN": {
-    "stage": "FRESH_BOS2",
+    "stage": "STALE_BOS2",
     "last_reversal_alerted": "2026-08-31"
   },
   "YUKEN": {
@@ -1227,7 +1227,7 @@
     "stage": "BASING"
   },
   "GLAXO": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "HNDFDS": {
     "stage": "FRESH_REVERSAL"
@@ -1239,7 +1239,7 @@
     "stage": "FRESH_BOS2"
   },
   "AGI": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "HAL": {
     "stage": "IN_RETEST"
@@ -1260,7 +1260,7 @@
     "stage": "PRE_BOS2_READY"
   },
   "MAXESTATES": {
-    "stage": "BASING"
+    "stage": "FRESH_REVERSAL"
   },
   "FMGOETZE": {
     "stage": "BASING"
@@ -1296,7 +1296,7 @@
     "stage": "IN_RETEST"
   },
   "DIVISLAB": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "FRESH_BOS2"
   },
   "JYOTICNC": {
     "stage": "IN_RETEST"
