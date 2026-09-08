@@ -66,7 +66,7 @@
     "stage": "STALE_BOS2"
   },
   "KMEW": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "ARVIND": {
     "stage": "STALE_BOS2"
@@ -261,7 +261,7 @@
     "stage": "BASING"
   },
   "NITINSPIN": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "DIVGIITTS": {
     "stage": "FRESH_REVERSAL"
@@ -899,7 +899,7 @@
     "stage": "BASING"
   },
   "CGCL": {
-    "stage": "IN_RETEST"
+    "stage": "STALE_BOS2"
   },
   "J&KBANK": {
     "stage": "STALE_BOS2"
@@ -1272,7 +1272,7 @@
     "stage": "BASING"
   },
   "BRIGADE": {
-    "stage": "BASING"
+    "stage": "IN_RETEST"
   },
   "360ONE": {
     "stage": "BASING"
