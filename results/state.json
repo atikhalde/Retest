@@ -3,7 +3,7 @@
     "stage": "IN_RETEST"
   },
   "PNBHOUSING": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "SUPRAJIT": {
     "stage": "BASING"
@@ -23,7 +23,7 @@
     "last_reversal_alerted": "2026-09-07"
   },
   "MARINE": {
-    "stage": "IN_RETEST"
+    "stage": "STALE_BOS2"
   },
   "NAHARSPING": {
     "stage": "FRESH_REVERSAL",
@@ -261,7 +261,7 @@
     "stage": "BASING"
   },
   "NITINSPIN": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "DIVGIITTS": {
     "stage": "FRESH_REVERSAL"
@@ -585,7 +585,7 @@
     "stage": "IN_RETEST"
   },
   "APOLLOHOSP": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "VEDL": {
     "stage": "STALE_BOS2"
@@ -837,7 +837,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "OBEROIRLTY": {
-    "stage": "FRESH_REVERSAL"
+    "stage": "BASING"
   },
   "ACUTAAS": {
     "stage": "BASING"
@@ -1178,7 +1178,7 @@
     "stage": "IN_RETEST"
   },
   "MANORAMA": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "GMMPFAUDLR": {
     "stage": "IN_RETEST"
@@ -1227,7 +1227,7 @@
     "stage": "BASING"
   },
   "GLAXO": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "HNDFDS": {
     "stage": "FRESH_REVERSAL"
@@ -1272,13 +1272,13 @@
     "stage": "BASING"
   },
   "BRIGADE": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "360ONE": {
     "stage": "BASING"
   },
   "DCBBANK": {
-    "stage": "BASING"
+    "stage": "FRESH_BOS2"
   },
   "PERSISTENT": {
     "stage": "BASING"
