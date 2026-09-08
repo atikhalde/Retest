@@ -1239,7 +1239,7 @@
     "stage": "FRESH_BOS2"
   },
   "AGI": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "HAL": {
     "stage": "IN_RETEST"
