@@ -261,7 +261,7 @@
     "stage": "BASING"
   },
   "NITINSPIN": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "DIVGIITTS": {
     "stage": "FRESH_REVERSAL"
@@ -338,7 +338,7 @@
     "stage": "BASING"
   },
   "IPCALAB": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "NDRAUTO": {
     "stage": "BASING"
@@ -382,7 +382,7 @@
     "stage": "BASING"
   },
   "VOLTAMP": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "TANLA": {
     "stage": "BASING",
@@ -502,7 +502,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "NAVINFLUOR": {
-    "stage": "FRESH_REVERSAL"
+    "stage": "FRESH_BOS2"
   },
   "KARURVYSYA": {
     "stage": "STALE_BOS2"
@@ -654,7 +654,7 @@
     "stage": "STALE_BOS2"
   },
   "GHCLTEXTIL": {
-    "stage": "IN_RETEST"
+    "stage": "STALE_BOS2"
   },
   "PARACABLES": {
     "stage": "STALE_BOS2"
@@ -899,13 +899,13 @@
     "stage": "BASING"
   },
   "CGCL": {
-    "stage": "IN_RETEST"
+    "stage": "STALE_BOS2"
   },
   "J&KBANK": {
     "stage": "STALE_BOS2"
   },
   "MANGLMCEM": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "GANECOS": {
     "stage": "BASING"
