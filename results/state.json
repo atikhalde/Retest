@@ -261,7 +261,7 @@
     "stage": "BASING"
   },
   "NITINSPIN": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "DIVGIITTS": {
     "stage": "FRESH_REVERSAL"
@@ -654,7 +654,7 @@
     "stage": "STALE_BOS2"
   },
   "GHCLTEXTIL": {
-    "stage": "IN_RETEST"
+    "stage": "STALE_BOS2"
   },
   "PARACABLES": {
     "stage": "STALE_BOS2"
