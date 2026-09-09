@@ -23,7 +23,7 @@
     "last_reversal_alerted": "2026-09-07"
   },
   "MARINE": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "NAHARSPING": {
     "stage": "FRESH_REVERSAL",
@@ -295,7 +295,7 @@
     "stage": "IN_RETEST"
   },
   "HIRECT": {
-    "stage": "FRESH_REVERSAL",
+    "stage": "BASING",
     "last_reversal_alerted": "2026-09-09"
   },
   "WELENT": {
@@ -395,7 +395,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "GIPCL": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "CUMMINSIND": {
     "stage": "BASING"
@@ -418,7 +418,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "RPGLIFE": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "PFC": {
     "stage": "BASING"
@@ -1061,7 +1061,7 @@
     "stage": "BASING"
   },
   "INOXINDIA": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "NIBE": {
     "stage": "STALE_BOS2"
