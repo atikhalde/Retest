@@ -302,7 +302,7 @@
     "stage": "FRESH_BOS2"
   },
   "SHAREINDIA": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "STEL": {
     "stage": "STALE_BOS2"
@@ -1316,7 +1316,7 @@
     "stage": "IN_RETEST"
   },
   "SALSTEEL": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "MMP": {
     "stage": "FRESH_BOS2"
