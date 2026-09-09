@@ -66,7 +66,7 @@
     "stage": "STALE_BOS2"
   },
   "KMEW": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "ARVIND": {
     "stage": "STALE_BOS2"
@@ -302,7 +302,7 @@
     "stage": "FRESH_BOS2"
   },
   "SHAREINDIA": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "STEL": {
     "stage": "FRESH_BOS2"
@@ -959,7 +959,7 @@
     "stage": "BASING"
   },
   "MIDHANI": {
-    "stage": "IN_RETEST"
+    "stage": "STALE_BOS2"
   },
   "MACPOWER": {
     "stage": "STALE_BOS2"
@@ -1257,7 +1257,7 @@
     "stage": "BASING"
   },
   "KRBL": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "MAXESTATES": {
     "stage": "FRESH_REVERSAL"
