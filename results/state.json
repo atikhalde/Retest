@@ -23,7 +23,7 @@
     "last_reversal_alerted": "2026-09-07"
   },
   "MARINE": {
-    "stage": "IN_RETEST"
+    "stage": "STALE_BOS2"
   },
   "NAHARSPING": {
     "stage": "FRESH_REVERSAL",
@@ -36,7 +36,7 @@
     "stage": "STALE_BOS2"
   },
   "AVALON": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "CRAFTSMAN": {
     "stage": "IN_RETEST"
@@ -382,7 +382,7 @@
     "stage": "BASING"
   },
   "VOLTAMP": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "TANLA": {
     "stage": "BASING",
@@ -395,7 +395,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "GIPCL": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "CUMMINSIND": {
     "stage": "BASING"
@@ -418,7 +418,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "RPGLIFE": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "PFC": {
     "stage": "BASING"
@@ -642,7 +642,7 @@
     "stage": "IN_RETEST"
   },
   "KINGFA": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "APARINDS": {
     "stage": "STALE_BOS2"
@@ -762,7 +762,7 @@
     "stage": "BASING"
   },
   "THEJO": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "VSSL": {
     "stage": "STALE_BOS2"
@@ -1061,7 +1061,7 @@
     "stage": "BASING"
   },
   "INOXINDIA": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "NIBE": {
     "stage": "STALE_BOS2"
