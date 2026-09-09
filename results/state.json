@@ -1106,7 +1106,7 @@
     "stage": "IN_RETEST"
   },
   "INDIGOPNTS": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "SUDARSCHEM": {
     "stage": "IN_RETEST"
