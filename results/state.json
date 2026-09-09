@@ -36,7 +36,7 @@
     "stage": "STALE_BOS2"
   },
   "AVALON": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "CRAFTSMAN": {
     "stage": "IN_RETEST"
@@ -66,7 +66,7 @@
     "stage": "STALE_BOS2"
   },
   "KMEW": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "ARVIND": {
     "stage": "STALE_BOS2"
@@ -176,7 +176,7 @@
     "stage": "BASING"
   },
   "INGERRAND": {
-    "stage": "IN_RETEST"
+    "stage": "STALE_BOS2"
   },
   "GOKULAGRO": {
     "stage": "STALE_BOS2"
@@ -295,8 +295,8 @@
     "stage": "IN_RETEST"
   },
   "HIRECT": {
-    "stage": "BASING",
-    "last_reversal_alerted": "2026-08-21"
+    "stage": "FRESH_REVERSAL",
+    "last_reversal_alerted": "2026-09-09"
   },
   "WELENT": {
     "stage": "FRESH_BOS2"
@@ -526,7 +526,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "KABRAEXTRU": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "LAURUSLABS": {
     "stage": "IN_RETEST"
@@ -762,7 +762,7 @@
     "stage": "BASING"
   },
   "THEJO": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "VSSL": {
     "stage": "STALE_BOS2"
