@@ -108,7 +108,7 @@
     "stage": "BASING"
   },
   "ADOR": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "MMFL": {
     "stage": "BASING"
@@ -382,7 +382,7 @@
     "stage": "BASING"
   },
   "VOLTAMP": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "TANLA": {
     "stage": "BASING",
@@ -579,7 +579,7 @@
     "stage": "STALE_BOS2"
   },
   "AYMSYNTEX": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "PRECWIRE": {
     "stage": "IN_RETEST"
@@ -654,7 +654,7 @@
     "stage": "STALE_BOS2"
   },
   "GHCLTEXTIL": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "PARACABLES": {
     "stage": "STALE_BOS2"
@@ -959,7 +959,7 @@
     "stage": "BASING"
   },
   "MIDHANI": {
-    "stage": "IN_RETEST"
+    "stage": "STALE_BOS2"
   },
   "MACPOWER": {
     "stage": "STALE_BOS2"
