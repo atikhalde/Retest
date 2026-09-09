@@ -66,7 +66,7 @@
     "stage": "STALE_BOS2"
   },
   "KMEW": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "ARVIND": {
     "stage": "STALE_BOS2"
@@ -224,7 +224,7 @@
     "stage": "BASING"
   },
   "TEXINFRA": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "IKS": {
     "stage": "BASING"
@@ -395,7 +395,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "GIPCL": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "CUMMINSIND": {
     "stage": "BASING"
@@ -452,7 +452,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "KRISHANA": {
-    "stage": "BASING"
+    "stage": "FRESH_BOS2"
   },
   "APCOTEXIND": {
     "stage": "BASING"
@@ -502,7 +502,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "NAVINFLUOR": {
-    "stage": "FRESH_REVERSAL"
+    "stage": "FRESH_BOS2"
   },
   "KARURVYSYA": {
     "stage": "STALE_BOS2"
@@ -642,7 +642,7 @@
     "stage": "IN_RETEST"
   },
   "KINGFA": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "APARINDS": {
     "stage": "STALE_BOS2"
