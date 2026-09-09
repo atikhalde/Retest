@@ -302,7 +302,7 @@
     "stage": "FRESH_BOS2"
   },
   "SHAREINDIA": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "STEL": {
     "stage": "FRESH_BOS2"
@@ -762,7 +762,7 @@
     "stage": "BASING"
   },
   "THEJO": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "VSSL": {
     "stage": "STALE_BOS2"
@@ -959,7 +959,7 @@
     "stage": "BASING"
   },
   "MIDHANI": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "MACPOWER": {
     "stage": "STALE_BOS2"
@@ -1106,7 +1106,7 @@
     "stage": "IN_RETEST"
   },
   "INDIGOPNTS": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "SUDARSCHEM": {
     "stage": "IN_RETEST"
