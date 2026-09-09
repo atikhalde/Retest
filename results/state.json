@@ -364,7 +364,7 @@
     "stage": "BASING"
   },
   "AURUM": {
-    "stage": "FRESH_REVERSAL"
+    "stage": "BASING"
   },
   "JBMA": {
     "stage": "BASING"
@@ -395,7 +395,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "GIPCL": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "CUMMINSIND": {
     "stage": "BASING"
@@ -1257,7 +1257,7 @@
     "stage": "FRESH_BOS2"
   },
   "SURAKSHA": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "KRBL": {
     "stage": "PRE_BOS2_READY"
@@ -1335,6 +1335,9 @@
     "stage": "IN_RETEST"
   },
   "EDELWEISS": {
+    "stage": "IN_RETEST"
+  },
+  "ASIANHOTNR": {
     "stage": "IN_RETEST"
   }
 }
