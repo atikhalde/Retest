@@ -108,7 +108,7 @@
     "stage": "BASING"
   },
   "ADOR": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "MMFL": {
     "stage": "BASING"
@@ -166,7 +166,7 @@
     "stage": "STALE_BOS2"
   },
   "HARSHA": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "KPIL": {
     "stage": "BASING",
@@ -224,7 +224,7 @@
     "stage": "BASING"
   },
   "TEXINFRA": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "IKS": {
     "stage": "BASING"
@@ -418,7 +418,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "RPGLIFE": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "PFC": {
     "stage": "BASING"
@@ -959,7 +959,7 @@
     "stage": "BASING"
   },
   "MIDHANI": {
-    "stage": "IN_RETEST"
+    "stage": "STALE_BOS2"
   },
   "MACPOWER": {
     "stage": "STALE_BOS2"
