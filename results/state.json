@@ -66,7 +66,7 @@
     "stage": "STALE_BOS2"
   },
   "KMEW": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "ARVIND": {
     "stage": "STALE_BOS2"
@@ -108,7 +108,7 @@
     "stage": "BASING"
   },
   "ADOR": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "MMFL": {
     "stage": "BASING"
@@ -166,7 +166,7 @@
     "stage": "STALE_BOS2"
   },
   "HARSHA": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "KPIL": {
     "stage": "BASING",
@@ -526,7 +526,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "KABRAEXTRU": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "LAURUSLABS": {
     "stage": "IN_RETEST"
@@ -654,7 +654,7 @@
     "stage": "STALE_BOS2"
   },
   "GHCLTEXTIL": {
-    "stage": "IN_RETEST"
+    "stage": "STALE_BOS2"
   },
   "PARACABLES": {
     "stage": "STALE_BOS2"
@@ -959,7 +959,7 @@
     "stage": "BASING"
   },
   "MIDHANI": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "MACPOWER": {
     "stage": "STALE_BOS2"
