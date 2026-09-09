@@ -66,7 +66,7 @@
     "stage": "STALE_BOS2"
   },
   "KMEW": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "ARVIND": {
     "stage": "STALE_BOS2"
@@ -395,7 +395,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "GIPCL": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "CUMMINSIND": {
     "stage": "BASING"
@@ -502,7 +502,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "NAVINFLUOR": {
-    "stage": "FRESH_BOS2"
+    "stage": "FRESH_REVERSAL"
   },
   "KARURVYSYA": {
     "stage": "STALE_BOS2"
@@ -642,7 +642,7 @@
     "stage": "IN_RETEST"
   },
   "KINGFA": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "APARINDS": {
     "stage": "STALE_BOS2"
