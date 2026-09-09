@@ -23,7 +23,7 @@
     "last_reversal_alerted": "2026-09-07"
   },
   "MARINE": {
-    "stage": "IN_RETEST"
+    "stage": "STALE_BOS2"
   },
   "NAHARSPING": {
     "stage": "FRESH_REVERSAL",
@@ -395,7 +395,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "GIPCL": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "CUMMINSIND": {
     "stage": "BASING"
@@ -906,7 +906,7 @@
     "stage": "STALE_BOS2"
   },
   "MANGLMCEM": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "GANECOS": {
     "stage": "BASING"
@@ -1257,7 +1257,7 @@
     "stage": "FRESH_BOS2"
   },
   "SURAKSHA": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "KRBL": {
     "stage": "PRE_BOS2_READY"
@@ -1317,7 +1317,7 @@
     "stage": "IN_RETEST"
   },
   "SALSTEEL": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "MMP": {
     "stage": "FRESH_BOS2"
