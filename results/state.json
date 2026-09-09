@@ -66,7 +66,7 @@
     "stage": "STALE_BOS2"
   },
   "KMEW": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "ARVIND": {
     "stage": "STALE_BOS2"
@@ -338,7 +338,7 @@
     "stage": "BASING"
   },
   "IPCALAB": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "NDRAUTO": {
     "stage": "BASING"
@@ -526,7 +526,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "KABRAEXTRU": {
-    "stage": "IN_RETEST"
+    "stage": "STALE_BOS2"
   },
   "LAURUSLABS": {
     "stage": "IN_RETEST"
@@ -579,7 +579,7 @@
     "stage": "STALE_BOS2"
   },
   "AYMSYNTEX": {
-    "stage": "IN_RETEST"
+    "stage": "STALE_BOS2"
   },
   "PRECWIRE": {
     "stage": "IN_RETEST"
@@ -959,7 +959,7 @@
     "stage": "BASING"
   },
   "MIDHANI": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "MACPOWER": {
     "stage": "STALE_BOS2"
@@ -1061,7 +1061,7 @@
     "stage": "BASING"
   },
   "INOXINDIA": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "NIBE": {
     "stage": "STALE_BOS2"
