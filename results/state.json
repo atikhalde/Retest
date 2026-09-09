@@ -42,7 +42,7 @@
     "stage": "BASING"
   },
   "GLAND": {
-    "stage": "FRESH_REVERSAL"
+    "stage": "FRESH_BOS2"
   },
   "LLOYDSENGG": {
     "stage": "STALE_BOS2"
@@ -317,7 +317,7 @@
     "stage": "BASING"
   },
   "WELSPUNLIV": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "LUPIN": {
     "stage": "STALE_BOS2"
@@ -642,7 +642,8 @@
     "stage": "IN_RETEST"
   },
   "KINGFA": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "FRESH_REVERSAL",
+    "last_reversal_alerted": "2026-09-09"
   },
   "APARINDS": {
     "stage": "STALE_BOS2"
