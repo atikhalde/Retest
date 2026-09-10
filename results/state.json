@@ -1319,7 +1319,7 @@
     "stage": "IN_RETEST"
   },
   "SALSTEEL": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "MMP": {
     "stage": "FRESH_BOS2"
