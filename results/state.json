@@ -1,6 +1,6 @@
 {
   "SHILPAMED": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "PNBHOUSING": {
     "stage": "FRESH_REVERSAL"
@@ -111,7 +111,7 @@
     "stage": "BASING"
   },
   "MMFL": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "OFSS": {
     "stage": "STALE_BOS2",
@@ -962,7 +962,7 @@
     "stage": "BASING"
   },
   "MIDHANI": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "MACPOWER": {
     "stage": "STALE_BOS2"
@@ -1321,7 +1321,7 @@
     "stage": "BASING"
   },
   "MMP": {
-    "stage": "FRESH_BOS2"
+    "stage": "IN_RETEST"
   },
   "UTTAMSUGAR": {
     "stage": "BASING"
