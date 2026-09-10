@@ -377,7 +377,7 @@
     "stage": "BASING"
   },
   "FLUOROCHEM": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "UJJIVANSFB": {
     "stage": "FRESH_REVERSAL",
