@@ -39,7 +39,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "CRAFTSMAN": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "GLAND": {
     "stage": "FRESH_BOS2"
@@ -338,7 +338,8 @@
     "stage": "BASING"
   },
   "IPCALAB": {
-    "stage": "BASING"
+    "stage": "FRESH_REVERSAL",
+    "last_reversal_alerted": "2026-09-10"
   },
   "NDRAUTO": {
     "stage": "BASING"
@@ -642,7 +643,7 @@
     "stage": "IN_RETEST"
   },
   "KINGFA": {
-    "stage": "FRESH_REVERSAL",
+    "stage": "FRESH_BOS2",
     "last_reversal_alerted": "2026-09-10"
   },
   "APARINDS": {
@@ -655,7 +656,7 @@
     "stage": "STALE_BOS2"
   },
   "GHCLTEXTIL": {
-    "stage": "IN_RETEST"
+    "stage": "STALE_BOS2"
   },
   "PARACABLES": {
     "stage": "STALE_BOS2"
@@ -1062,7 +1063,7 @@
     "stage": "BASING"
   },
   "INOXINDIA": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "NIBE": {
     "stage": "STALE_BOS2"
@@ -1198,7 +1199,7 @@
     "stage": "PRE_BOS2_READY"
   },
   "MANALIPETC": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "HEG": {
     "stage": "PRE_BOS2_READY"
