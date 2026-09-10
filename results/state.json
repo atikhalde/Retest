@@ -611,7 +611,7 @@
     "stage": "STALE_BOS2"
   },
   "MANINDS": {
-    "stage": "BASING"
+    "stage": "FRESH_BOS2"
   },
   "PREMIERENE": {
     "stage": "STALE_BOS2"
@@ -1064,7 +1064,7 @@
     "stage": "BASING"
   },
   "INOXINDIA": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "FRESH_BOS2"
   },
   "NIBE": {
     "stage": "STALE_BOS2"
