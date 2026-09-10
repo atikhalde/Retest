@@ -364,7 +364,7 @@
     "stage": "BASING"
   },
   "AURUM": {
-    "stage": "FRESH_REVERSAL"
+    "stage": "BASING"
   },
   "JBMA": {
     "stage": "BASING"
@@ -655,7 +655,7 @@
     "stage": "STALE_BOS2"
   },
   "GHCLTEXTIL": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "PARACABLES": {
     "stage": "STALE_BOS2"
@@ -1198,7 +1198,7 @@
     "stage": "PRE_BOS2_READY"
   },
   "MANALIPETC": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "HEG": {
     "stage": "PRE_BOS2_READY"
@@ -1320,7 +1320,7 @@
     "stage": "BASING"
   },
   "MMP": {
-    "stage": "IN_RETEST"
+    "stage": "FRESH_BOS2"
   },
   "UTTAMSUGAR": {
     "stage": "BASING"
