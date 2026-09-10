@@ -962,7 +962,7 @@
     "stage": "BASING"
   },
   "MIDHANI": {
-    "stage": "IN_RETEST"
+    "stage": "STALE_BOS2"
   },
   "MACPOWER": {
     "stage": "STALE_BOS2"
@@ -1134,7 +1134,7 @@
     "stage": "FRESH_BOS2"
   },
   "DOLPHIN": {
-    "stage": "IN_RETEST",
+    "stage": "FRESH_REVERSAL",
     "last_reversal_alerted": "2026-09-04"
   },
   "THYROCARE": {
