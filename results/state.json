@@ -169,7 +169,7 @@
     "stage": "BASING"
   },
   "KPIL": {
-    "stage": "BASING",
+    "stage": "FRESH_REVERSAL",
     "last_reversal_alerted": "2026-09-10"
   },
   "ZYDUSWELL": {
@@ -644,7 +644,8 @@
     "stage": "STALE_BOS2"
   },
   "KINGFA": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "FRESH_REVERSAL",
+    "last_reversal_alerted": "2026-09-10"
   },
   "APARINDS": {
     "stage": "STALE_BOS2"
@@ -1318,7 +1319,7 @@
     "stage": "IN_RETEST"
   },
   "SALSTEEL": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "MMP": {
     "stage": "FRESH_BOS2"
