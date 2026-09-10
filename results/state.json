@@ -36,7 +36,7 @@
     "stage": "STALE_BOS2"
   },
   "AVALON": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "FRESH_REVERSAL"
   },
   "CRAFTSMAN": {
     "stage": "BASING"
@@ -81,7 +81,7 @@
     "stage": "STALE_BOS2"
   },
   "TORNTPHARM": {
-    "stage": "BASING"
+    "stage": "FRESH_REVERSAL"
   },
   "INDORAMA": {
     "stage": "FRESH_BOS2"
@@ -302,7 +302,7 @@
     "stage": "FRESH_BOS2"
   },
   "SHAREINDIA": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "STEL": {
     "stage": "STALE_BOS2"
@@ -364,7 +364,7 @@
     "stage": "BASING"
   },
   "AURUM": {
-    "stage": "BASING"
+    "stage": "FRESH_REVERSAL"
   },
   "JBMA": {
     "stage": "BASING"
@@ -452,7 +452,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "KRISHANA": {
-    "stage": "FRESH_BOS2"
+    "stage": "BASING"
   },
   "APCOTEXIND": {
     "stage": "BASING"
@@ -529,7 +529,7 @@
     "stage": "IN_RETEST"
   },
   "LAURUSLABS": {
-    "stage": "IN_RETEST"
+    "stage": "FRESH_REVERSAL"
   },
   "NMDC": {
     "stage": "STALE_BOS2"
@@ -643,7 +643,7 @@
   },
   "KINGFA": {
     "stage": "FRESH_REVERSAL",
-    "last_reversal_alerted": "2026-09-09"
+    "last_reversal_alerted": "2026-09-10"
   },
   "APARINDS": {
     "stage": "STALE_BOS2"
@@ -685,7 +685,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "CYIENTDLM": {
-    "stage": "IN_RETEST"
+    "stage": "BASING"
   },
   "JASH": {
     "stage": "STALE_BOS2"
@@ -960,7 +960,7 @@
     "stage": "BASING"
   },
   "MIDHANI": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "MACPOWER": {
     "stage": "STALE_BOS2"
@@ -990,7 +990,7 @@
     "stage": "STALE_BOS2"
   },
   "INNOVACAP": {
-    "stage": "FRESH_BOS2"
+    "stage": "STALE_BOS2"
   },
   "COALINDIA": {
     "stage": "STALE_BOS2"
@@ -1017,7 +1017,7 @@
     "stage": "STALE_BOS2"
   },
   "EXICOM": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "ANGELONE": {
     "stage": "STALE_BOS2"
@@ -1062,7 +1062,7 @@
     "stage": "BASING"
   },
   "INOXINDIA": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "NIBE": {
     "stage": "STALE_BOS2"
@@ -1177,7 +1177,7 @@
     "stage": "STALE_BOS2"
   },
   "COFORGE": {
-    "stage": "IN_RETEST"
+    "stage": "BASING"
   },
   "MANORAMA": {
     "stage": "FRESH_REVERSAL"
@@ -1245,16 +1245,16 @@
     "stage": "FRESH_BOS2"
   },
   "HAL": {
-    "stage": "IN_RETEST"
+    "stage": "FRESH_REVERSAL"
   },
   "PCJEWELLER": {
     "stage": "IN_RETEST"
   },
   "SYNCOMF": {
-    "stage": "FRESH_BOS2"
+    "stage": "STALE_BOS2"
   },
   "HATSUN": {
-    "stage": "FRESH_BOS2"
+    "stage": "STALE_BOS2"
   },
   "SURAKSHA": {
     "stage": "BASING"
@@ -1296,7 +1296,7 @@
     "stage": "IN_RETEST"
   },
   "VIDHIING": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "DIVISLAB": {
     "stage": "FRESH_BOS2"
@@ -1320,7 +1320,7 @@
     "stage": "BASING"
   },
   "MMP": {
-    "stage": "FRESH_BOS2"
+    "stage": "IN_RETEST"
   },
   "UTTAMSUGAR": {
     "stage": "BASING"
