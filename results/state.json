@@ -644,8 +644,7 @@
     "stage": "STALE_BOS2"
   },
   "KINGFA": {
-    "stage": "FRESH_REVERSAL",
-    "last_reversal_alerted": "2026-09-10"
+    "stage": "PRE_BOS2_READY"
   },
   "APARINDS": {
     "stage": "STALE_BOS2"
@@ -908,7 +907,7 @@
     "stage": "STALE_BOS2"
   },
   "MANGLMCEM": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "GANECOS": {
     "stage": "BASING"
@@ -1340,6 +1339,9 @@
     "stage": "IN_RETEST"
   },
   "ASIANHOTNR": {
+    "stage": "IN_RETEST"
+  },
+  "ANDHRAPAP": {
     "stage": "IN_RETEST"
   }
 }
