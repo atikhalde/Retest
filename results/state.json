@@ -39,7 +39,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "CRAFTSMAN": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "GLAND": {
     "stage": "FRESH_BOS2"
@@ -273,7 +273,7 @@
     "stage": "BASING"
   },
   "YATHARTH": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "ICIL": {
     "stage": "STALE_BOS2"
@@ -302,7 +302,7 @@
     "stage": "FRESH_BOS2"
   },
   "SHAREINDIA": {
-    "stage": "BASING"
+    "stage": "FRESH_BOS2"
   },
   "STEL": {
     "stage": "STALE_BOS2"
@@ -376,7 +376,7 @@
     "stage": "BASING"
   },
   "FLUOROCHEM": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "UJJIVANSFB": {
     "stage": "BASING"
@@ -655,7 +655,7 @@
     "stage": "STALE_BOS2"
   },
   "GHCLTEXTIL": {
-    "stage": "IN_RETEST"
+    "stage": "STALE_BOS2"
   },
   "PARACABLES": {
     "stage": "STALE_BOS2"
@@ -670,7 +670,7 @@
     "stage": "STALE_BOS2"
   },
   "BALAMINES": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "CCL": {
     "stage": "STALE_BOS2"
@@ -1017,7 +1017,7 @@
     "stage": "STALE_BOS2"
   },
   "EXICOM": {
-    "stage": "IN_RETEST"
+    "stage": "STALE_BOS2"
   },
   "ANGELONE": {
     "stage": "STALE_BOS2"
@@ -1198,7 +1198,7 @@
     "stage": "PRE_BOS2_READY"
   },
   "MANALIPETC": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "HEG": {
     "stage": "PRE_BOS2_READY"
@@ -1260,7 +1260,7 @@
     "stage": "BASING"
   },
   "KRBL": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "MAXESTATES": {
     "stage": "FRESH_REVERSAL"
