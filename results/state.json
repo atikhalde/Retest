@@ -273,7 +273,7 @@
     "stage": "BASING"
   },
   "YATHARTH": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "ICIL": {
     "stage": "STALE_BOS2"
@@ -671,7 +671,7 @@
     "stage": "STALE_BOS2"
   },
   "BALAMINES": {
-    "stage": "IN_RETEST"
+    "stage": "STALE_BOS2"
   },
   "CCL": {
     "stage": "STALE_BOS2"
@@ -1199,7 +1199,7 @@
     "stage": "PRE_BOS2_READY"
   },
   "MANALIPETC": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "HEG": {
     "stage": "PRE_BOS2_READY"
