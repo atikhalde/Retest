@@ -170,7 +170,7 @@
   },
   "KPIL": {
     "stage": "FRESH_REVERSAL",
-    "last_reversal_alerted": "2026-09-08"
+    "last_reversal_alerted": "2026-09-10"
   },
   "ZYDUSWELL": {
     "stage": "BASING"
@@ -397,7 +397,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "GIPCL": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "CUMMINSIND": {
     "stage": "BASING"
@@ -1156,7 +1156,7 @@
     "stage": "BASING"
   },
   "TASTYBITE": {
-    "stage": "FRESH_REVERSAL",
+    "stage": "BASING",
     "last_reversal_alerted": "2026-09-10"
   },
   "NINSYS": {
