@@ -377,7 +377,7 @@
     "stage": "BASING"
   },
   "FLUOROCHEM": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "UJJIVANSFB": {
     "stage": "FRESH_REVERSAL",
@@ -641,7 +641,7 @@
     "stage": "STALE_BOS2"
   },
   "IFCI": {
-    "stage": "IN_RETEST"
+    "stage": "STALE_BOS2"
   },
   "KINGFA": {
     "stage": "FRESH_REVERSAL",
@@ -1259,7 +1259,7 @@
     "stage": "STALE_BOS2"
   },
   "SURAKSHA": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "KRBL": {
     "stage": "BASING"
