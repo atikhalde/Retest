@@ -111,7 +111,7 @@
     "stage": "BASING"
   },
   "MMFL": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "OFSS": {
     "stage": "STALE_BOS2",
