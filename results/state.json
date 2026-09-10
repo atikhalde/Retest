@@ -169,7 +169,7 @@
     "stage": "BASING"
   },
   "KPIL": {
-    "stage": "FRESH_REVERSAL",
+    "stage": "BASING",
     "last_reversal_alerted": "2026-09-10"
   },
   "ZYDUSWELL": {
@@ -377,7 +377,7 @@
     "stage": "BASING"
   },
   "FLUOROCHEM": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "UJJIVANSFB": {
     "stage": "FRESH_REVERSAL",
@@ -656,7 +656,7 @@
     "stage": "STALE_BOS2"
   },
   "GHCLTEXTIL": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "PARACABLES": {
     "stage": "STALE_BOS2"
@@ -907,7 +907,7 @@
     "stage": "STALE_BOS2"
   },
   "MANGLMCEM": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "GANECOS": {
     "stage": "BASING"
