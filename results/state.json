@@ -656,7 +656,7 @@
     "stage": "STALE_BOS2"
   },
   "GHCLTEXTIL": {
-    "stage": "IN_RETEST"
+    "stage": "STALE_BOS2"
   },
   "PARACABLES": {
     "stage": "STALE_BOS2"
@@ -901,7 +901,7 @@
     "stage": "BASING"
   },
   "CGCL": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "J&KBANK": {
     "stage": "STALE_BOS2"
@@ -1258,7 +1258,7 @@
     "stage": "STALE_BOS2"
   },
   "SURAKSHA": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "KRBL": {
     "stage": "BASING"
