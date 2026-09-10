@@ -111,7 +111,7 @@
     "stage": "BASING"
   },
   "MMFL": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "OFSS": {
     "stage": "STALE_BOS2",
@@ -569,7 +569,7 @@
     "stage": "STALE_BOS2"
   },
   "FINCABLES": {
-    "stage": "FRESH_REVERSAL"
+    "stage": "FRESH_BOS2"
   },
   "APOLLO": {
     "stage": "STALE_BOS2"
@@ -849,7 +849,7 @@
     "stage": "BASING"
   },
   "MAHSEAMLES": {
-    "stage": "BASING"
+    "stage": "FRESH_BOS2"
   },
   "LMW": {
     "stage": "BASING"
@@ -902,7 +902,7 @@
     "stage": "BASING"
   },
   "CGCL": {
-    "stage": "IN_RETEST"
+    "stage": "STALE_BOS2"
   },
   "J&KBANK": {
     "stage": "STALE_BOS2"
