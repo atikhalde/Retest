@@ -644,7 +644,7 @@
     "stage": "STALE_BOS2"
   },
   "KINGFA": {
-    "stage": "FRESH_REVERSAL",
+    "stage": "FRESH_BOS2",
     "last_reversal_alerted": "2026-09-10"
   },
   "APARINDS": {
@@ -962,7 +962,7 @@
     "stage": "BASING"
   },
   "MIDHANI": {
-    "stage": "IN_RETEST"
+    "stage": "STALE_BOS2"
   },
   "MACPOWER": {
     "stage": "STALE_BOS2"
@@ -1064,7 +1064,7 @@
     "stage": "BASING"
   },
   "INOXINDIA": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "NIBE": {
     "stage": "STALE_BOS2"
