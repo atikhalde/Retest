@@ -1064,7 +1064,7 @@
     "stage": "BASING"
   },
   "INOXINDIA": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "NIBE": {
     "stage": "STALE_BOS2"
@@ -1156,8 +1156,7 @@
     "stage": "BASING"
   },
   "TASTYBITE": {
-    "stage": "BASING",
-    "last_reversal_alerted": "2026-09-10"
+    "stage": "PRE_BOS2_READY"
   },
   "NINSYS": {
     "stage": "STALE_BOS2"
