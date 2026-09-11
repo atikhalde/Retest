@@ -87,7 +87,7 @@
     "stage": "FRESH_BOS2"
   },
   "NAZARA": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "KAPSTON": {
     "stage": "STALE_BOS2"
@@ -765,7 +765,7 @@
     "stage": "BASING"
   },
   "THEJO": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "VSSL": {
     "stage": "STALE_BOS2"
@@ -1265,7 +1265,7 @@
     "stage": "BASING"
   },
   "MAXESTATES": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "FMGOETZE": {
     "stage": "BASING"
@@ -1322,7 +1322,7 @@
     "stage": "BASING"
   },
   "MMP": {
-    "stage": "FRESH_BOS2"
+    "stage": "IN_RETEST"
   },
   "UTTAMSUGAR": {
     "stage": "BASING"
