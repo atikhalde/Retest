@@ -114,7 +114,7 @@
     "stage": "BASING"
   },
   "OFSS": {
-    "stage": "STALE_BOS2",
+    "stage": "IN_RETEST",
     "last_reversal_alerted": "2026-08-27"
   },
   "AZAD": {
@@ -942,7 +942,7 @@
     "stage": "FRESH_BOS2"
   },
   "UNIMECH": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "ASIANENE": {
     "stage": "FRESH_BOS2"
@@ -1197,7 +1197,7 @@
     "stage": "FRESH_BOS2"
   },
   "AVTNPL": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "MANALIPETC": {
     "stage": "BASING"
@@ -1265,7 +1265,7 @@
     "stage": "BASING"
   },
   "MAXESTATES": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "FMGOETZE": {
     "stage": "BASING"
