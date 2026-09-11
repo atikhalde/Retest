@@ -72,7 +72,7 @@
     "stage": "STALE_BOS2"
   },
   "IGPL": {
-    "stage": "FRESH_BOS2"
+    "stage": "IN_RETEST"
   },
   "GRASIM": {
     "stage": "STALE_BOS2"
@@ -87,7 +87,7 @@
     "stage": "FRESH_BOS2"
   },
   "NAZARA": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "KAPSTON": {
     "stage": "STALE_BOS2"
@@ -114,7 +114,7 @@
     "stage": "BASING"
   },
   "OFSS": {
-    "stage": "IN_RETEST",
+    "stage": "STALE_BOS2",
     "last_reversal_alerted": "2026-08-27"
   },
   "AZAD": {
@@ -176,7 +176,7 @@
     "stage": "BASING"
   },
   "INGERRAND": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "GOKULAGRO": {
     "stage": "STALE_BOS2"
@@ -525,7 +525,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "FILATEX": {
-    "stage": "FRESH_REVERSAL"
+    "stage": "FRESH_BOS2"
   },
   "KABRAEXTRU": {
     "stage": "IN_RETEST"
@@ -672,7 +672,7 @@
     "stage": "STALE_BOS2"
   },
   "BALAMINES": {
-    "stage": "IN_RETEST"
+    "stage": "STALE_BOS2"
   },
   "CCL": {
     "stage": "STALE_BOS2"
@@ -765,7 +765,7 @@
     "stage": "BASING"
   },
   "THEJO": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "VSSL": {
     "stage": "STALE_BOS2"
@@ -1265,7 +1265,7 @@
     "stage": "BASING"
   },
   "MAXESTATES": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "FMGOETZE": {
     "stage": "BASING"
