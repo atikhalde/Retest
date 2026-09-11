@@ -72,7 +72,7 @@
     "stage": "STALE_BOS2"
   },
   "IGPL": {
-    "stage": "IN_RETEST"
+    "stage": "FRESH_BOS2"
   },
   "GRASIM": {
     "stage": "STALE_BOS2"
@@ -596,7 +596,7 @@
     "stage": "STALE_BOS2"
   },
   "SYRMA": {
-    "stage": "IN_RETEST"
+    "stage": "STALE_BOS2"
   },
   "SPARC": {
     "stage": "STALE_BOS2"
@@ -1156,7 +1156,7 @@
     "stage": "BASING"
   },
   "TASTYBITE": {
-    "stage": "FRESH_REVERSAL",
+    "stage": "BASING",
     "last_reversal_alerted": "2026-09-11"
   },
   "NINSYS": {
