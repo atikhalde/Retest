@@ -1,6 +1,6 @@
 {
   "SHILPAMED": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "PNBHOUSING": {
     "stage": "FRESH_REVERSAL"
@@ -72,7 +72,7 @@
     "stage": "STALE_BOS2"
   },
   "IGPL": {
-    "stage": "FRESH_BOS2"
+    "stage": "IN_RETEST"
   },
   "GRASIM": {
     "stage": "STALE_BOS2"
@@ -203,7 +203,7 @@
     "stage": "BASING"
   },
   "SANGHVIMOV": {
-    "stage": "STALE_BOS2"
+    "stage": "BASING"
   },
   "GARFIBRES": {
     "stage": "STALE_BOS2"
@@ -286,7 +286,7 @@
     "last_reversal_alerted": "2026-08-20"
   },
   "SHREEPUSHK": {
-    "stage": "FRESH_BOS2"
+    "stage": "IN_RETEST"
   },
   "KPRMILL": {
     "stage": "BASING"
@@ -516,7 +516,7 @@
     "stage": "BASING"
   },
   "ROSSTECH": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "ADVENZYMES": {
     "stage": "STALE_BOS2"
@@ -596,7 +596,7 @@
     "stage": "STALE_BOS2"
   },
   "SYRMA": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "SPARC": {
     "stage": "STALE_BOS2"
@@ -1156,7 +1156,7 @@
     "stage": "BASING"
   },
   "TASTYBITE": {
-    "stage": "BASING",
+    "stage": "FRESH_REVERSAL",
     "last_reversal_alerted": "2026-09-11"
   },
   "NINSYS": {
@@ -1322,7 +1322,7 @@
     "stage": "BASING"
   },
   "MMP": {
-    "stage": "FRESH_BOS2"
+    "stage": "IN_RETEST"
   },
   "UTTAMSUGAR": {
     "stage": "BASING"
