@@ -362,7 +362,7 @@
     "stage": "BASING"
   },
   "KIRLOSIND": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "AURUM": {
     "stage": "BASING"
@@ -1322,7 +1322,7 @@
     "stage": "BASING"
   },
   "MMP": {
-    "stage": "IN_RETEST"
+    "stage": "FRESH_BOS2"
   },
   "UTTAMSUGAR": {
     "stage": "BASING"
