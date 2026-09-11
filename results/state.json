@@ -87,7 +87,7 @@
     "stage": "FRESH_BOS2"
   },
   "NAZARA": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "KAPSTON": {
     "stage": "STALE_BOS2"
@@ -114,7 +114,7 @@
     "stage": "BASING"
   },
   "OFSS": {
-    "stage": "IN_RETEST",
+    "stage": "STALE_BOS2",
     "last_reversal_alerted": "2026-08-27"
   },
   "AZAD": {
@@ -176,7 +176,7 @@
     "stage": "BASING"
   },
   "INGERRAND": {
-    "stage": "IN_RETEST"
+    "stage": "STALE_BOS2"
   },
   "GOKULAGRO": {
     "stage": "STALE_BOS2"
@@ -203,7 +203,7 @@
     "stage": "BASING"
   },
   "SANGHVIMOV": {
-    "stage": "BASING"
+    "stage": "STALE_BOS2"
   },
   "GARFIBRES": {
     "stage": "STALE_BOS2"
@@ -672,7 +672,7 @@
     "stage": "STALE_BOS2"
   },
   "BALAMINES": {
-    "stage": "IN_RETEST"
+    "stage": "STALE_BOS2"
   },
   "CCL": {
     "stage": "STALE_BOS2"
@@ -765,7 +765,7 @@
     "stage": "BASING"
   },
   "THEJO": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "VSSL": {
     "stage": "STALE_BOS2"
@@ -1156,8 +1156,8 @@
     "stage": "BASING"
   },
   "TASTYBITE": {
-    "stage": "BASING",
-    "last_reversal_alerted": "2026-09-10"
+    "stage": "FRESH_REVERSAL",
+    "last_reversal_alerted": "2026-09-11"
   },
   "NINSYS": {
     "stage": "STALE_BOS2"
@@ -1200,7 +1200,7 @@
     "stage": "PRE_BOS2_READY"
   },
   "MANALIPETC": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "HEG": {
     "stage": "PRE_BOS2_READY"
@@ -1265,7 +1265,7 @@
     "stage": "BASING"
   },
   "MAXESTATES": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "FMGOETZE": {
     "stage": "BASING"
