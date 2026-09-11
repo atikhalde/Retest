@@ -87,7 +87,7 @@
     "stage": "FRESH_BOS2"
   },
   "NAZARA": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "KAPSTON": {
     "stage": "STALE_BOS2"
@@ -463,7 +463,7 @@
     "stage": "BASING"
   },
   "CENTUM": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "WSTCSTPAPR": {
     "stage": "IN_RETEST",
@@ -1265,7 +1265,7 @@
     "stage": "BASING"
   },
   "MAXESTATES": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "FMGOETZE": {
     "stage": "BASING"
