@@ -87,7 +87,7 @@
     "stage": "FRESH_BOS2"
   },
   "NAZARA": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "KAPSTON": {
     "stage": "STALE_BOS2"
@@ -114,7 +114,7 @@
     "stage": "BASING"
   },
   "OFSS": {
-    "stage": "STALE_BOS2",
+    "stage": "IN_RETEST",
     "last_reversal_alerted": "2026-08-27"
   },
   "AZAD": {
@@ -176,7 +176,7 @@
     "stage": "BASING"
   },
   "INGERRAND": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "GOKULAGRO": {
     "stage": "STALE_BOS2"
@@ -1200,7 +1200,7 @@
     "stage": "PRE_BOS2_READY"
   },
   "MANALIPETC": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "HEG": {
     "stage": "PRE_BOS2_READY"
