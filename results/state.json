@@ -1,6 +1,6 @@
 {
   "SHILPAMED": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "PNBHOUSING": {
     "stage": "FRESH_REVERSAL"
@@ -362,7 +362,7 @@
     "stage": "BASING"
   },
   "KIRLOSIND": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "AURUM": {
     "stage": "BASING"
@@ -1200,7 +1200,7 @@
     "stage": "PRE_BOS2_READY"
   },
   "MANALIPETC": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "HEG": {
     "stage": "PRE_BOS2_READY"
@@ -1265,7 +1265,7 @@
     "stage": "BASING"
   },
   "MAXESTATES": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "FMGOETZE": {
     "stage": "BASING"
