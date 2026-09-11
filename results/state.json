@@ -23,7 +23,7 @@
     "last_reversal_alerted": "2026-09-07"
   },
   "MARINE": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "NAHARSPING": {
     "stage": "BASING",
@@ -39,7 +39,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "CRAFTSMAN": {
-    "stage": "FRESH_BOS2"
+    "stage": "BASING"
   },
   "GLAND": {
     "stage": "FRESH_BOS2"
@@ -111,7 +111,7 @@
     "stage": "BASING"
   },
   "MMFL": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "OFSS": {
     "stage": "STALE_BOS2",
@@ -138,7 +138,7 @@
     "last_reversal_alerted": "2026-08-17"
   },
   "ANTELOPUS": {
-    "stage": "IN_RETEST",
+    "stage": "BASING",
     "last_reversal_alerted": "2026-09-02"
   },
   "ASTRAMICRO": {
@@ -200,7 +200,7 @@
     "stage": "BASING"
   },
   "POWERGRID": {
-    "stage": "FRESH_REVERSAL"
+    "stage": "BASING"
   },
   "SANGHVIMOV": {
     "stage": "BASING"
@@ -338,14 +338,14 @@
     "stage": "BASING"
   },
   "IPCALAB": {
-    "stage": "BASING",
-    "last_reversal_alerted": "2026-09-10"
+    "stage": "FRESH_REVERSAL",
+    "last_reversal_alerted": "2026-09-11"
   },
   "NDRAUTO": {
     "stage": "BASING"
   },
   "TMB": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "JSWENERGY": {
     "stage": "BASING"
@@ -362,7 +362,7 @@
     "stage": "BASING"
   },
   "KIRLOSIND": {
-    "stage": "BASING"
+    "stage": "FRESH_BOS2"
   },
   "AURUM": {
     "stage": "BASING"
@@ -397,7 +397,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "GIPCL": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "CUMMINSIND": {
     "stage": "BASING"
@@ -504,7 +504,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "NAVINFLUOR": {
-    "stage": "FRESH_REVERSAL"
+    "stage": "PRE_BOS2_READY"
   },
   "KARURVYSYA": {
     "stage": "STALE_BOS2"
@@ -672,7 +672,7 @@
     "stage": "STALE_BOS2"
   },
   "BALAMINES": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "CCL": {
     "stage": "STALE_BOS2"
@@ -765,7 +765,7 @@
     "stage": "BASING"
   },
   "THEJO": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "VSSL": {
     "stage": "STALE_BOS2"
@@ -942,13 +942,13 @@
     "stage": "FRESH_BOS2"
   },
   "UNIMECH": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "ASIANENE": {
     "stage": "FRESH_BOS2"
   },
   "SMLMAH": {
-    "stage": "FRESH_BOS2",
+    "stage": "IN_RETEST",
     "last_reversal_alerted": "2026-09-04"
   },
   "GPTHEALTH": {
@@ -1061,7 +1061,7 @@
     "stage": "STALE_BOS2"
   },
   "DIXON": {
-    "stage": "BASING"
+    "stage": "STALE_BOS2"
   },
   "INOXINDIA": {
     "stage": "FRESH_BOS2"
@@ -1116,7 +1116,7 @@
     "last_reversal_alerted": "2026-09-09"
   },
   "ALLCARGO": {
-    "stage": "FRESH_REVERSAL"
+    "stage": "BASING"
   },
   "ORISSAMINE": {
     "stage": "BASING"
@@ -1156,7 +1156,7 @@
     "stage": "BASING"
   },
   "TASTYBITE": {
-    "stage": "FRESH_REVERSAL",
+    "stage": "BASING",
     "last_reversal_alerted": "2026-09-10"
   },
   "NINSYS": {
@@ -1200,7 +1200,7 @@
     "stage": "PRE_BOS2_READY"
   },
   "MANALIPETC": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "HEG": {
     "stage": "PRE_BOS2_READY"
@@ -1241,7 +1241,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "KIRIINDUS": {
-    "stage": "FRESH_BOS2"
+    "stage": "STALE_BOS2"
   },
   "AGI": {
     "stage": "FRESH_BOS2"
@@ -1259,13 +1259,13 @@
     "stage": "STALE_BOS2"
   },
   "SURAKSHA": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "KRBL": {
     "stage": "BASING"
   },
   "MAXESTATES": {
-    "stage": "FRESH_REVERSAL"
+    "stage": "BASING"
   },
   "FMGOETZE": {
     "stage": "BASING"
@@ -1310,7 +1310,7 @@
     "stage": "BASING"
   },
   "UFLEX": {
-    "stage": "IN_RETEST"
+    "stage": "BASING"
   },
   "LUMAXIND": {
     "stage": "IN_RETEST"
@@ -1322,7 +1322,7 @@
     "stage": "BASING"
   },
   "MMP": {
-    "stage": "IN_RETEST"
+    "stage": "FRESH_BOS2"
   },
   "UTTAMSUGAR": {
     "stage": "BASING"
@@ -1346,6 +1346,12 @@
     "stage": "IN_RETEST"
   },
   "SMCGLOBAL": {
+    "stage": "IN_RETEST"
+  },
+  "KROSS": {
+    "stage": "IN_RETEST"
+  },
+  "DEEPINDS": {
     "stage": "IN_RETEST"
   }
 }
