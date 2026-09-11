@@ -72,7 +72,7 @@
     "stage": "STALE_BOS2"
   },
   "IGPL": {
-    "stage": "FRESH_BOS2"
+    "stage": "IN_RETEST"
   },
   "GRASIM": {
     "stage": "STALE_BOS2"
@@ -361,7 +361,7 @@
     "stage": "BASING"
   },
   "KIRLOSIND": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "AURUM": {
     "stage": "BASING"
@@ -524,7 +524,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "FILATEX": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "FRESH_BOS2"
   },
   "KABRAEXTRU": {
     "stage": "IN_RETEST"
