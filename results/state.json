@@ -87,7 +87,7 @@
     "stage": "FRESH_BOS2"
   },
   "NAZARA": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "KAPSTON": {
     "stage": "STALE_BOS2"
@@ -203,7 +203,7 @@
     "stage": "BASING"
   },
   "SANGHVIMOV": {
-    "stage": "BASING"
+    "stage": "STALE_BOS2"
   },
   "GARFIBRES": {
     "stage": "STALE_BOS2"
@@ -345,7 +345,7 @@
     "stage": "BASING"
   },
   "TMB": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "JSWENERGY": {
     "stage": "BASING"
@@ -362,7 +362,7 @@
     "stage": "BASING"
   },
   "KIRLOSIND": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "AURUM": {
     "stage": "BASING"
@@ -1292,7 +1292,7 @@
     "stage": "BASING"
   },
   "GODREJAGRO": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "OAL": {
     "stage": "BASING"
@@ -1322,7 +1322,7 @@
     "stage": "BASING"
   },
   "MMP": {
-    "stage": "FRESH_BOS2"
+    "stage": "IN_RETEST"
   },
   "UTTAMSUGAR": {
     "stage": "BASING"
