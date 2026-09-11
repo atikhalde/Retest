@@ -1,6 +1,6 @@
 {
   "SHILPAMED": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "PNBHOUSING": {
     "stage": "FRESH_REVERSAL"
@@ -286,7 +286,7 @@
     "last_reversal_alerted": "2026-08-20"
   },
   "SHREEPUSHK": {
-    "stage": "IN_RETEST"
+    "stage": "FRESH_BOS2"
   },
   "KPRMILL": {
     "stage": "BASING"
@@ -596,7 +596,7 @@
     "stage": "STALE_BOS2"
   },
   "SYRMA": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "SPARC": {
     "stage": "STALE_BOS2"
@@ -1352,6 +1352,9 @@
     "stage": "IN_RETEST"
   },
   "DEEPINDS": {
+    "stage": "IN_RETEST"
+  },
+  "PARAGMILK": {
     "stage": "IN_RETEST"
   }
 }
