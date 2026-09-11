@@ -203,7 +203,7 @@
     "stage": "BASING"
   },
   "SANGHVIMOV": {
-    "stage": "STALE_BOS2"
+    "stage": "BASING"
   },
   "GARFIBRES": {
     "stage": "STALE_BOS2"
@@ -345,7 +345,7 @@
     "stage": "BASING"
   },
   "TMB": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "JSWENERGY": {
     "stage": "BASING"
@@ -362,7 +362,7 @@
     "stage": "BASING"
   },
   "KIRLOSIND": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "AURUM": {
     "stage": "BASING"
@@ -516,7 +516,7 @@
     "stage": "BASING"
   },
   "ROSSTECH": {
-    "stage": "IN_RETEST"
+    "stage": "STALE_BOS2"
   },
   "ADVENZYMES": {
     "stage": "STALE_BOS2"
@@ -596,7 +596,7 @@
     "stage": "STALE_BOS2"
   },
   "SYRMA": {
-    "stage": "IN_RETEST"
+    "stage": "STALE_BOS2"
   },
   "SPARC": {
     "stage": "STALE_BOS2"
@@ -765,7 +765,7 @@
     "stage": "BASING"
   },
   "THEJO": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "VSSL": {
     "stage": "STALE_BOS2"
@@ -1134,7 +1134,7 @@
     "stage": "FRESH_BOS2"
   },
   "DOLPHIN": {
-    "stage": "FRESH_REVERSAL",
+    "stage": "IN_RETEST",
     "last_reversal_alerted": "2026-09-04"
   },
   "THYROCARE": {
@@ -1322,7 +1322,7 @@
     "stage": "BASING"
   },
   "MMP": {
-    "stage": "IN_RETEST"
+    "stage": "FRESH_BOS2"
   },
   "UTTAMSUGAR": {
     "stage": "BASING"
