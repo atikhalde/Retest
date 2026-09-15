@@ -176,7 +176,7 @@
     "stage": "BASING"
   },
   "INGERRAND": {
-    "stage": "IN_RETEST"
+    "stage": "STALE_BOS2"
   },
   "GOKULAGRO": {
     "stage": "STALE_BOS2"
@@ -261,7 +261,7 @@
     "stage": "BASING"
   },
   "NITINSPIN": {
-    "stage": "FRESH_BOS2"
+    "stage": "IN_RETEST"
   },
   "DIVGIITTS": {
     "stage": "BASING"
@@ -273,8 +273,7 @@
     "stage": "BASING"
   },
   "YATHARTH": {
-    "stage": "FRESH_REVERSAL",
-    "last_reversal_alerted": "2026-09-15"
+    "stage": "PRE_BOS2_READY"
   },
   "ICIL": {
     "stage": "STALE_BOS2"
@@ -339,7 +338,7 @@
     "stage": "BASING"
   },
   "IPCALAB": {
-    "stage": "FRESH_REVERSAL",
+    "stage": "BASING",
     "last_reversal_alerted": "2026-09-15"
   },
   "NDRAUTO": {
@@ -384,7 +383,7 @@
     "last_reversal_alerted": "2026-09-10"
   },
   "VOLTAMP": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "TANLA": {
     "stage": "BASING",
