@@ -87,7 +87,7 @@
     "stage": "FRESH_BOS2"
   },
   "NAZARA": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "KAPSTON": {
     "stage": "STALE_BOS2"
@@ -273,7 +273,7 @@
     "stage": "BASING"
   },
   "YATHARTH": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "ICIL": {
     "stage": "STALE_BOS2"
@@ -899,7 +899,7 @@
     "stage": "BASING"
   },
   "TRITURBINE": {
-    "stage": "BASING"
+    "stage": "STALE_BOS2"
   },
   "CGCL": {
     "stage": "STALE_BOS2"
@@ -1292,7 +1292,7 @@
     "stage": "BASING"
   },
   "GODREJAGRO": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "OAL": {
     "stage": "BASING"
