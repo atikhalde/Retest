@@ -1168,7 +1168,7 @@
     "stage": "BASING"
   },
   "FOSECOIND": {
-    "stage": "FRESH_REVERSAL",
+    "stage": "BASING",
     "last_reversal_alerted": "2026-09-15"
   },
   "INDGN": {
