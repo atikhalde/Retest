@@ -215,7 +215,7 @@
     "stage": "STALE_BOS2"
   },
   "NETWEB": {
-    "stage": "BASING"
+    "stage": "STALE_BOS2"
   },
   "PGIL": {
     "stage": "BASING"
@@ -408,7 +408,7 @@
     "stage": "BASING"
   },
   "HSCL": {
-    "stage": "STALE_BOS2"
+    "stage": "BASING"
   },
   "BIOCON": {
     "stage": "BASING",
