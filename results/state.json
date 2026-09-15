@@ -1,6 +1,6 @@
 {
   "SHILPAMED": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "PNBHOUSING": {
     "stage": "FRESH_REVERSAL"
@@ -338,7 +338,7 @@
     "stage": "BASING"
   },
   "IPCALAB": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "NDRAUTO": {
     "stage": "BASING"
@@ -398,7 +398,7 @@
     "stage": "BASING"
   },
   "CUMMINSIND": {
-    "stage": "BASING"
+    "stage": "STALE_BOS2"
   },
   "GMRAIRPORT": {
     "stage": "BASING",
