@@ -215,7 +215,7 @@
     "stage": "STALE_BOS2"
   },
   "NETWEB": {
-    "stage": "STALE_BOS2"
+    "stage": "BASING"
   },
   "PGIL": {
     "stage": "BASING"
@@ -338,7 +338,7 @@
     "stage": "BASING"
   },
   "IPCALAB": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "NDRAUTO": {
     "stage": "BASING"
@@ -354,7 +354,7 @@
     "last_reversal_alerted": "2026-08-12"
   },
   "GRANULES": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "GANESHHOU": {
     "stage": "BASING"
@@ -540,7 +540,7 @@
     "last_reversal_alerted": "2026-08-26"
   },
   "CHENNPETRO": {
-    "stage": "IN_RETEST"
+    "stage": "STALE_BOS2"
   },
   "GOLDIAM": {
     "stage": "STALE_BOS2"
@@ -991,7 +991,7 @@
     "stage": "STALE_BOS2"
   },
   "INNOVACAP": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "COALINDIA": {
     "stage": "STALE_BOS2"
@@ -1264,7 +1264,7 @@
     "stage": "BASING"
   },
   "MAXESTATES": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "FMGOETZE": {
     "stage": "BASING"
