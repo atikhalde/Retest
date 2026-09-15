@@ -258,7 +258,7 @@
     "stage": "BASING"
   },
   "ALKYLAMINE": {
-    "stage": "BASING"
+    "stage": "STALE_BOS2"
   },
   "NITINSPIN": {
     "stage": "FRESH_BOS2"
@@ -764,7 +764,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "THEJO": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "VSSL": {
     "stage": "IN_RETEST"
@@ -1168,7 +1168,7 @@
     "stage": "BASING"
   },
   "FOSECOIND": {
-    "stage": "BASING",
+    "stage": "FRESH_REVERSAL",
     "last_reversal_alerted": "2026-09-15"
   },
   "INDGN": {
