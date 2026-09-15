@@ -408,7 +408,7 @@
     "stage": "BASING"
   },
   "HSCL": {
-    "stage": "BASING"
+    "stage": "STALE_BOS2"
   },
   "BIOCON": {
     "stage": "BASING",
