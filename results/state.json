@@ -261,7 +261,7 @@
     "stage": "STALE_BOS2"
   },
   "NITINSPIN": {
-    "stage": "FRESH_BOS2"
+    "stage": "IN_RETEST"
   },
   "DIVGIITTS": {
     "stage": "BASING"
