@@ -26,7 +26,7 @@
     "stage": "IN_RETEST"
   },
   "NAHARSPING": {
-    "stage": "BASING",
+    "stage": "STALE_BOS2",
     "last_reversal_alerted": "2026-09-01"
   },
   "ASTERDM": {
@@ -114,7 +114,7 @@
     "stage": "BASING"
   },
   "OFSS": {
-    "stage": "STALE_BOS2",
+    "stage": "IN_RETEST",
     "last_reversal_alerted": "2026-08-27"
   },
   "AZAD": {
@@ -360,7 +360,7 @@
     "stage": "BASING"
   },
   "KIRLOSIND": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "AURUM": {
     "stage": "BASING"
@@ -433,7 +433,7 @@
     "stage": "BASING"
   },
   "RADICO": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "MANAPPURAM": {
     "stage": "BASING"
@@ -1182,7 +1182,7 @@
     "stage": "BASING"
   },
   "MANORAMA": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "GMMPFAUDLR": {
     "stage": "FRESH_BOS2"
