@@ -93,7 +93,7 @@
     "stage": "STALE_BOS2"
   },
   "NESTLEIND": {
-    "stage": "BASING"
+    "stage": "STALE_BOS2"
   },
   "XPROINDIA": {
     "stage": "STALE_BOS2"
@@ -215,7 +215,7 @@
     "stage": "STALE_BOS2"
   },
   "NETWEB": {
-    "stage": "BASING"
+    "stage": "STALE_BOS2"
   },
   "PGIL": {
     "stage": "BASING"
@@ -273,8 +273,7 @@
     "stage": "BASING"
   },
   "YATHARTH": {
-    "stage": "FRESH_REVERSAL",
-    "last_reversal_alerted": "2026-09-15"
+    "stage": "PRE_BOS2_READY"
   },
   "ICIL": {
     "stage": "STALE_BOS2"
@@ -293,7 +292,7 @@
     "stage": "BASING"
   },
   "SSWL": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "HIRECT": {
     "stage": "BASING",
@@ -420,7 +419,7 @@
     "stage": "BASING"
   },
   "RPGLIFE": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "PFC": {
     "stage": "BASING"
@@ -766,7 +765,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "THEJO": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "VSSL": {
     "stage": "IN_RETEST"
@@ -993,7 +992,7 @@
     "stage": "STALE_BOS2"
   },
   "INNOVACAP": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "COALINDIA": {
     "stage": "STALE_BOS2"
