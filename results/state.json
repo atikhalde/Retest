@@ -258,7 +258,7 @@
     "stage": "BASING"
   },
   "ALKYLAMINE": {
-    "stage": "STALE_BOS2"
+    "stage": "BASING"
   },
   "NITINSPIN": {
     "stage": "FRESH_BOS2"
@@ -354,7 +354,7 @@
     "last_reversal_alerted": "2026-08-12"
   },
   "GRANULES": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "GANESHHOU": {
     "stage": "BASING"
@@ -568,7 +568,7 @@
     "stage": "STALE_BOS2"
   },
   "FINCABLES": {
-    "stage": "FRESH_BOS2"
+    "stage": "IN_RETEST"
   },
   "APOLLO": {
     "stage": "STALE_BOS2"
@@ -1168,7 +1168,8 @@
     "stage": "BASING"
   },
   "FOSECOIND": {
-    "stage": "BASING"
+    "stage": "FRESH_REVERSAL",
+    "last_reversal_alerted": "2026-09-15"
   },
   "INDGN": {
     "stage": "STALE_BOS2",
