@@ -258,7 +258,7 @@
     "stage": "BASING"
   },
   "ALKYLAMINE": {
-    "stage": "BASING"
+    "stage": "STALE_BOS2"
   },
   "NITINSPIN": {
     "stage": "FRESH_BOS2"
@@ -394,7 +394,7 @@
     "stage": "BASING"
   },
   "PITTIENG": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "GIPCL": {
     "stage": "BASING"
