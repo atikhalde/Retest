@@ -273,8 +273,7 @@
     "stage": "BASING"
   },
   "YATHARTH": {
-    "stage": "FRESH_REVERSAL",
-    "last_reversal_alerted": "2026-09-15"
+    "stage": "PRE_BOS2_READY"
   },
   "ICIL": {
     "stage": "STALE_BOS2"
@@ -766,7 +765,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "THEJO": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "VSSL": {
     "stage": "IN_RETEST"
