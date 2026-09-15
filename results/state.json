@@ -258,7 +258,7 @@
     "stage": "BASING"
   },
   "ALKYLAMINE": {
-    "stage": "STALE_BOS2"
+    "stage": "BASING"
   },
   "NITINSPIN": {
     "stage": "FRESH_BOS2"
@@ -273,7 +273,8 @@
     "stage": "BASING"
   },
   "YATHARTH": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "FRESH_REVERSAL",
+    "last_reversal_alerted": "2026-09-15"
   },
   "ICIL": {
     "stage": "STALE_BOS2"
@@ -338,8 +339,7 @@
     "stage": "BASING"
   },
   "IPCALAB": {
-    "stage": "BASING",
-    "last_reversal_alerted": "2026-09-15"
+    "stage": "PRE_BOS2_READY"
   },
   "NDRAUTO": {
     "stage": "BASING"
