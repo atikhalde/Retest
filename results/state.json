@@ -258,7 +258,7 @@
     "stage": "BASING"
   },
   "ALKYLAMINE": {
-    "stage": "BASING"
+    "stage": "STALE_BOS2"
   },
   "NITINSPIN": {
     "stage": "FRESH_BOS2"
@@ -273,8 +273,7 @@
     "stage": "BASING"
   },
   "YATHARTH": {
-    "stage": "FRESH_REVERSAL",
-    "last_reversal_alerted": "2026-09-15"
+    "stage": "PRE_BOS2_READY"
   },
   "ICIL": {
     "stage": "STALE_BOS2"
@@ -361,7 +360,7 @@
     "stage": "BASING"
   },
   "KIRLOSIND": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "AURUM": {
     "stage": "BASING"
@@ -409,7 +408,7 @@
     "stage": "BASING"
   },
   "HSCL": {
-    "stage": "BASING"
+    "stage": "STALE_BOS2"
   },
   "BIOCON": {
     "stage": "BASING",
