@@ -261,7 +261,7 @@
     "stage": "BASING"
   },
   "NITINSPIN": {
-    "stage": "IN_RETEST"
+    "stage": "FRESH_BOS2"
   },
   "DIVGIITTS": {
     "stage": "BASING"
@@ -273,7 +273,8 @@
     "stage": "BASING"
   },
   "YATHARTH": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "FRESH_REVERSAL",
+    "last_reversal_alerted": "2026-09-15"
   },
   "ICIL": {
     "stage": "STALE_BOS2"
@@ -292,7 +293,7 @@
     "stage": "BASING"
   },
   "SSWL": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "HIRECT": {
     "stage": "BASING",
@@ -393,7 +394,7 @@
     "stage": "BASING"
   },
   "PITTIENG": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "GIPCL": {
     "stage": "BASING"
@@ -899,7 +900,7 @@
     "stage": "BASING"
   },
   "TRITURBINE": {
-    "stage": "STALE_BOS2"
+    "stage": "BASING"
   },
   "CGCL": {
     "stage": "STALE_BOS2"
@@ -992,7 +993,7 @@
     "stage": "STALE_BOS2"
   },
   "INNOVACAP": {
-    "stage": "IN_RETEST"
+    "stage": "STALE_BOS2"
   },
   "COALINDIA": {
     "stage": "STALE_BOS2"
@@ -1185,7 +1186,7 @@
     "stage": "PRE_BOS2_READY"
   },
   "GMMPFAUDLR": {
-    "stage": "BASING"
+    "stage": "FRESH_BOS2"
   },
   "CASTROLIND": {
     "stage": "BASING"
