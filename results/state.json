@@ -105,7 +105,7 @@
     "stage": "BASING"
   },
   "SUVEN": {
-    "stage": "BASING"
+    "stage": "STALE_BOS2"
   },
   "ADOR": {
     "stage": "BASING"
@@ -338,7 +338,7 @@
     "stage": "BASING"
   },
   "IPCALAB": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "NDRAUTO": {
     "stage": "BASING"
@@ -991,7 +991,7 @@
     "stage": "STALE_BOS2"
   },
   "INNOVACAP": {
-    "stage": "IN_RETEST"
+    "stage": "STALE_BOS2"
   },
   "COALINDIA": {
     "stage": "STALE_BOS2"
