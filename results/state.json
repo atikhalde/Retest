@@ -273,7 +273,8 @@
     "stage": "BASING"
   },
   "YATHARTH": {
-    "stage": "BASING"
+    "stage": "FRESH_REVERSAL",
+    "last_reversal_alerted": "2026-09-15"
   },
   "ICIL": {
     "stage": "STALE_BOS2"
@@ -292,7 +293,7 @@
     "stage": "BASING"
   },
   "SSWL": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "HIRECT": {
     "stage": "BASING",
@@ -393,7 +394,7 @@
     "stage": "BASING"
   },
   "PITTIENG": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "GIPCL": {
     "stage": "BASING"
@@ -419,13 +420,13 @@
     "stage": "BASING"
   },
   "RPGLIFE": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "PFC": {
     "stage": "BASING"
   },
   "JINDALPOLY": {
-    "stage": "BASING"
+    "stage": "FRESH_REVERSAL"
   },
   "GABRIEL": {
     "stage": "FRESH_REVERSAL"
@@ -434,7 +435,7 @@
     "stage": "BASING"
   },
   "RADICO": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "MANAPPURAM": {
     "stage": "BASING"
@@ -541,7 +542,7 @@
     "last_reversal_alerted": "2026-08-26"
   },
   "CHENNPETRO": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "GOLDIAM": {
     "stage": "STALE_BOS2"
@@ -992,7 +993,7 @@
     "stage": "STALE_BOS2"
   },
   "INNOVACAP": {
-    "stage": "IN_RETEST"
+    "stage": "STALE_BOS2"
   },
   "COALINDIA": {
     "stage": "STALE_BOS2"
