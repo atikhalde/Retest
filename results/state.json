@@ -513,7 +513,7 @@
     "stage": "STALE_BOS2"
   },
   "AEROFLEX": {
-    "stage": "STALE_BOS2"
+    "stage": "BASING"
   },
   "ROSSTECH": {
     "stage": "IN_RETEST"
@@ -765,7 +765,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "THEJO": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "VSSL": {
     "stage": "IN_RETEST"
@@ -1173,7 +1173,7 @@
     "last_reversal_alerted": "2026-09-16"
   },
   "INDGN": {
-    "stage": "STALE_BOS2",
+    "stage": "IN_RETEST",
     "last_reversal_alerted": "2026-08-31"
   },
   "YUKEN": {
