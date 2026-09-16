@@ -118,7 +118,7 @@
     "last_reversal_alerted": "2026-08-27"
   },
   "AZAD": {
-    "stage": "PRE_BOS2_READY",
+    "stage": "BASING",
     "last_reversal_alerted": "2026-08-05"
   },
   "RISHABH": {
@@ -282,7 +282,7 @@
     "stage": "BASING"
   },
   "MPSLTD": {
-    "stage": "FRESH_BOS2",
+    "stage": "BASING",
     "last_reversal_alerted": "2026-08-20"
   },
   "SHREEPUSHK": {
@@ -399,7 +399,7 @@
     "stage": "BASING"
   },
   "CUMMINSIND": {
-    "stage": "STALE_BOS2"
+    "stage": "BASING"
   },
   "GMRAIRPORT": {
     "stage": "BASING",
@@ -434,7 +434,7 @@
     "stage": "BASING"
   },
   "RADICO": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "MANAPPURAM": {
     "stage": "BASING"
@@ -501,7 +501,7 @@
     "stage": "BASING"
   },
   "MARKSANS": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "NAVINFLUOR": {
     "stage": "BASING"
@@ -569,7 +569,7 @@
     "stage": "STALE_BOS2"
   },
   "FINCABLES": {
-    "stage": "FRESH_BOS2"
+    "stage": "IN_RETEST"
   },
   "APOLLO": {
     "stage": "STALE_BOS2"
@@ -871,7 +871,7 @@
     "stage": "BASING"
   },
   "RPEL": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "JSFB": {
     "stage": "STALE_BOS2"
@@ -977,7 +977,7 @@
     "stage": "STALE_BOS2"
   },
   "SEAMECLTD": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "THERMAX": {
     "stage": "STALE_BOS2"
@@ -992,7 +992,7 @@
     "stage": "STALE_BOS2"
   },
   "INNOVACAP": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "COALINDIA": {
     "stage": "STALE_BOS2"
@@ -1260,7 +1260,7 @@
     "stage": "STALE_BOS2"
   },
   "SURAKSHA": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "KRBL": {
     "stage": "BASING"
@@ -1296,7 +1296,7 @@
     "stage": "BASING"
   },
   "OAL": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "VIDHIING": {
     "stage": "BASING"
