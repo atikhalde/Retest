@@ -26,7 +26,7 @@
     "stage": "IN_RETEST"
   },
   "NAHARSPING": {
-    "stage": "BASING",
+    "stage": "STALE_BOS2",
     "last_reversal_alerted": "2026-09-01"
   },
   "ASTERDM": {
@@ -249,7 +249,7 @@
     "stage": "BASING"
   },
   "RBLBANK": {
-    "stage": "IN_RETEST"
+    "stage": "BASING"
   },
   "WELCORP": {
     "stage": "STALE_BOS2"
@@ -687,7 +687,7 @@
     "stage": "BASING"
   },
   "CYIENTDLM": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "JASH": {
     "stage": "STALE_BOS2"
