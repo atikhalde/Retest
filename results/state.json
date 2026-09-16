@@ -142,7 +142,7 @@
     "last_reversal_alerted": "2026-09-02"
   },
   "ASTRAMICRO": {
-    "stage": "STALE_BOS2"
+    "stage": "BASING"
   },
   "BHARATSE": {
     "stage": "BASING"
@@ -584,7 +584,7 @@
     "stage": "BASING"
   },
   "PRECWIRE": {
-    "stage": "STALE_BOS2"
+    "stage": "BASING"
   },
   "APOLLOHOSP": {
     "stage": "BASING"
@@ -1144,7 +1144,7 @@
     "stage": "BASING"
   },
   "INDOTECH": {
-    "stage": "STALE_BOS2"
+    "stage": "BASING"
   },
   "SIGMAADV": {
     "stage": "FRESH_BOS2"
