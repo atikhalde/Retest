@@ -1,6 +1,6 @@
 {
   "SHILPAMED": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "PNBHOUSING": {
     "stage": "FRESH_REVERSAL"
@@ -26,7 +26,7 @@
     "stage": "IN_RETEST"
   },
   "NAHARSPING": {
-    "stage": "STALE_BOS2",
+    "stage": "BASING",
     "last_reversal_alerted": "2026-09-01"
   },
   "ASTERDM": {
@@ -243,7 +243,7 @@
     "last_reversal_alerted": "2026-08-26"
   },
   "PVRINOX": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "KIRLOSBROS": {
     "stage": "BASING"
@@ -1183,7 +1183,7 @@
     "stage": "BASING"
   },
   "MANORAMA": {
-    "stage": "BASING"
+    "stage": "IN_RETEST"
   },
   "GMMPFAUDLR": {
     "stage": "BASING"
