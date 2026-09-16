@@ -26,7 +26,7 @@
     "stage": "IN_RETEST"
   },
   "NAHARSPING": {
-    "stage": "BASING",
+    "stage": "STALE_BOS2",
     "last_reversal_alerted": "2026-09-01"
   },
   "ASTERDM": {
@@ -105,7 +105,7 @@
     "stage": "BASING"
   },
   "SUVEN": {
-    "stage": "STALE_BOS2"
+    "stage": "BASING"
   },
   "ADOR": {
     "stage": "BASING"
@@ -434,7 +434,7 @@
     "stage": "BASING"
   },
   "RADICO": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "MANAPPURAM": {
     "stage": "BASING"
@@ -513,7 +513,7 @@
     "stage": "STALE_BOS2"
   },
   "AEROFLEX": {
-    "stage": "BASING"
+    "stage": "STALE_BOS2"
   },
   "ROSSTECH": {
     "stage": "IN_RETEST"
@@ -765,7 +765,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "THEJO": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "VSSL": {
     "stage": "IN_RETEST"
@@ -902,7 +902,7 @@
     "stage": "STALE_BOS2"
   },
   "CGCL": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "J&KBANK": {
     "stage": "STALE_BOS2"
@@ -1183,7 +1183,7 @@
     "stage": "BASING"
   },
   "MANORAMA": {
-    "stage": "IN_RETEST"
+    "stage": "BASING"
   },
   "GMMPFAUDLR": {
     "stage": "BASING"
@@ -1296,7 +1296,7 @@
     "stage": "BASING"
   },
   "OAL": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "VIDHIING": {
     "stage": "BASING"
