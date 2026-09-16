@@ -105,7 +105,7 @@
     "stage": "BASING"
   },
   "SUVEN": {
-    "stage": "STALE_BOS2"
+    "stage": "BASING"
   },
   "ADOR": {
     "stage": "BASING"
@@ -258,7 +258,7 @@
     "stage": "BASING"
   },
   "ALKYLAMINE": {
-    "stage": "STALE_BOS2"
+    "stage": "BASING"
   },
   "NITINSPIN": {
     "stage": "IN_RETEST"
@@ -513,7 +513,7 @@
     "stage": "STALE_BOS2"
   },
   "AEROFLEX": {
-    "stage": "STALE_BOS2"
+    "stage": "BASING"
   },
   "ROSSTECH": {
     "stage": "IN_RETEST"
@@ -765,7 +765,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "THEJO": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "VSSL": {
     "stage": "IN_RETEST"
@@ -871,7 +871,7 @@
     "stage": "BASING"
   },
   "RPEL": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "JSFB": {
     "stage": "STALE_BOS2"
@@ -1296,7 +1296,7 @@
     "stage": "BASING"
   },
   "OAL": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "VIDHIING": {
     "stage": "BASING"
