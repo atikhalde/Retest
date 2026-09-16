@@ -114,11 +114,11 @@
     "stage": "BASING"
   },
   "OFSS": {
-    "stage": "IN_RETEST",
+    "stage": "STALE_BOS2",
     "last_reversal_alerted": "2026-08-27"
   },
   "AZAD": {
-    "stage": "BASING",
+    "stage": "PRE_BOS2_READY",
     "last_reversal_alerted": "2026-08-05"
   },
   "RISHABH": {
@@ -138,11 +138,11 @@
     "last_reversal_alerted": "2026-08-17"
   },
   "ANTELOPUS": {
-    "stage": "PRE_BOS2_READY",
+    "stage": "BASING",
     "last_reversal_alerted": "2026-09-02"
   },
   "ASTRAMICRO": {
-    "stage": "BASING"
+    "stage": "STALE_BOS2"
   },
   "BHARATSE": {
     "stage": "BASING"
@@ -338,7 +338,7 @@
     "stage": "BASING"
   },
   "IPCALAB": {
-    "stage": "FRESH_REVERSAL",
+    "stage": "PRE_BOS2_READY",
     "last_reversal_alerted": "2026-09-16"
   },
   "NDRAUTO": {
@@ -513,7 +513,7 @@
     "stage": "STALE_BOS2"
   },
   "AEROFLEX": {
-    "stage": "BASING"
+    "stage": "STALE_BOS2"
   },
   "ROSSTECH": {
     "stage": "IN_RETEST"
@@ -531,7 +531,7 @@
     "stage": "IN_RETEST"
   },
   "LAURUSLABS": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "NMDC": {
     "stage": "STALE_BOS2"
@@ -587,7 +587,7 @@
     "stage": "BASING"
   },
   "APOLLOHOSP": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "VEDL": {
     "stage": "STALE_BOS2"
@@ -687,7 +687,7 @@
     "stage": "BASING"
   },
   "CYIENTDLM": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "JASH": {
     "stage": "STALE_BOS2"
@@ -765,7 +765,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "THEJO": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "VSSL": {
     "stage": "IN_RETEST"
@@ -849,7 +849,7 @@
     "stage": "BASING"
   },
   "MAHSEAMLES": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "LMW": {
     "stage": "BASING"
@@ -929,7 +929,7 @@
     "stage": "BASING"
   },
   "EMCURE": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "AVADHSUGAR": {
     "stage": "STALE_BOS2"
@@ -992,7 +992,7 @@
     "stage": "STALE_BOS2"
   },
   "INNOVACAP": {
-    "stage": "IN_RETEST"
+    "stage": "STALE_BOS2"
   },
   "COALINDIA": {
     "stage": "STALE_BOS2"
@@ -1144,7 +1144,7 @@
     "stage": "BASING"
   },
   "INDOTECH": {
-    "stage": "BASING"
+    "stage": "STALE_BOS2"
   },
   "SIGMAADV": {
     "stage": "FRESH_BOS2"
@@ -1169,7 +1169,7 @@
     "stage": "BASING"
   },
   "FOSECOIND": {
-    "stage": "FRESH_REVERSAL",
+    "stage": "BASING",
     "last_reversal_alerted": "2026-09-16"
   },
   "INDGN": {
@@ -1183,7 +1183,7 @@
     "stage": "BASING"
   },
   "MANORAMA": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "GMMPFAUDLR": {
     "stage": "BASING"
@@ -1371,7 +1371,7 @@
     "stage": "BASING"
   },
   "EPL": {
-    "stage": "BASING"
+    "stage": "STALE_BOS2"
   },
   "AETHER": {
     "stage": "BASING"
@@ -1383,7 +1383,7 @@
     "stage": "IN_RETEST"
   },
   "SAKAR": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "AXISCADES": {
     "stage": "STALE_BOS2"
