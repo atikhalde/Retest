@@ -26,7 +26,7 @@
     "stage": "IN_RETEST"
   },
   "NAHARSPING": {
-    "stage": "STALE_BOS2",
+    "stage": "BASING",
     "last_reversal_alerted": "2026-09-01"
   },
   "ASTERDM": {
@@ -118,7 +118,7 @@
     "last_reversal_alerted": "2026-08-27"
   },
   "AZAD": {
-    "stage": "PRE_BOS2_READY",
+    "stage": "BASING",
     "last_reversal_alerted": "2026-08-05"
   },
   "RISHABH": {
@@ -302,7 +302,7 @@
     "stage": "STALE_BOS2"
   },
   "SHAREINDIA": {
-    "stage": "FRESH_BOS2"
+    "stage": "IN_RETEST"
   },
   "STEL": {
     "stage": "STALE_BOS2"
@@ -1183,7 +1183,7 @@
     "stage": "BASING"
   },
   "MANORAMA": {
-    "stage": "BASING"
+    "stage": "IN_RETEST"
   },
   "GMMPFAUDLR": {
     "stage": "BASING"
