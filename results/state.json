@@ -105,7 +105,7 @@
     "stage": "BASING"
   },
   "SUVEN": {
-    "stage": "BASING"
+    "stage": "STALE_BOS2"
   },
   "ADOR": {
     "stage": "BASING"
@@ -243,7 +243,7 @@
     "last_reversal_alerted": "2026-08-26"
   },
   "PVRINOX": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "KIRLOSBROS": {
     "stage": "BASING"
@@ -434,7 +434,7 @@
     "stage": "BASING"
   },
   "RADICO": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "MANAPPURAM": {
     "stage": "BASING"
@@ -687,7 +687,7 @@
     "stage": "BASING"
   },
   "CYIENTDLM": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "JASH": {
     "stage": "STALE_BOS2"
@@ -765,7 +765,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "THEJO": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "VSSL": {
     "stage": "IN_RETEST"
@@ -871,7 +871,7 @@
     "stage": "BASING"
   },
   "RPEL": {
-    "stage": "IN_RETEST"
+    "stage": "STALE_BOS2"
   },
   "JSFB": {
     "stage": "STALE_BOS2"
