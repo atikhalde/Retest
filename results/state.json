@@ -338,7 +338,7 @@
     "stage": "BASING"
   },
   "IPCALAB": {
-    "stage": "BASING",
+    "stage": "PRE_BOS2_READY",
     "last_reversal_alerted": "2026-09-16"
   },
   "NDRAUTO": {
@@ -687,7 +687,7 @@
     "stage": "BASING"
   },
   "CYIENTDLM": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "JASH": {
     "stage": "STALE_BOS2"
@@ -1183,7 +1183,7 @@
     "stage": "BASING"
   },
   "MANORAMA": {
-    "stage": "BASING"
+    "stage": "IN_RETEST"
   },
   "GMMPFAUDLR": {
     "stage": "FRESH_BOS2"
