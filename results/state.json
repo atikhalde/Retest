@@ -249,7 +249,7 @@
     "stage": "BASING"
   },
   "RBLBANK": {
-    "stage": "BASING"
+    "stage": "IN_RETEST"
   },
   "WELCORP": {
     "stage": "STALE_BOS2"
@@ -258,7 +258,7 @@
     "stage": "BASING"
   },
   "ALKYLAMINE": {
-    "stage": "STALE_BOS2"
+    "stage": "BASING"
   },
   "NITINSPIN": {
     "stage": "IN_RETEST"
@@ -797,7 +797,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "IOLCP": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "MOREPENLAB": {
     "stage": "STALE_BOS2"
@@ -1169,7 +1169,7 @@
     "stage": "BASING"
   },
   "FOSECOIND": {
-    "stage": "FRESH_REVERSAL",
+    "stage": "FRESH_BOS2",
     "last_reversal_alerted": "2026-09-16"
   },
   "INDGN": {
