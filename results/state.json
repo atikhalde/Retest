@@ -118,7 +118,7 @@
     "last_reversal_alerted": "2026-08-27"
   },
   "AZAD": {
-    "stage": "BASING",
+    "stage": "FRESH_BOS2",
     "last_reversal_alerted": "2026-08-05"
   },
   "RISHABH": {
@@ -249,7 +249,7 @@
     "stage": "BASING"
   },
   "RBLBANK": {
-    "stage": "BASING"
+    "stage": "IN_RETEST"
   },
   "WELCORP": {
     "stage": "STALE_BOS2"
@@ -302,7 +302,7 @@
     "stage": "STALE_BOS2"
   },
   "SHAREINDIA": {
-    "stage": "IN_RETEST"
+    "stage": "FRESH_BOS2"
   },
   "STEL": {
     "stage": "STALE_BOS2"
