@@ -687,7 +687,7 @@
     "stage": "BASING"
   },
   "CYIENTDLM": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "JASH": {
     "stage": "STALE_BOS2"
@@ -1183,7 +1183,7 @@
     "stage": "BASING"
   },
   "MANORAMA": {
-    "stage": "IN_RETEST"
+    "stage": "BASING"
   },
   "GMMPFAUDLR": {
     "stage": "FRESH_BOS2"
