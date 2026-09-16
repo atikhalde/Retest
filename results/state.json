@@ -1,6 +1,6 @@
 {
   "SHILPAMED": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "PNBHOUSING": {
     "stage": "FRESH_REVERSAL"
@@ -118,7 +118,7 @@
     "last_reversal_alerted": "2026-08-27"
   },
   "AZAD": {
-    "stage": "FRESH_BOS2",
+    "stage": "PRE_BOS2_READY",
     "last_reversal_alerted": "2026-08-05"
   },
   "RISHABH": {
@@ -258,7 +258,7 @@
     "stage": "BASING"
   },
   "ALKYLAMINE": {
-    "stage": "BASING"
+    "stage": "STALE_BOS2"
   },
   "NITINSPIN": {
     "stage": "IN_RETEST"
@@ -531,7 +531,7 @@
     "stage": "IN_RETEST"
   },
   "LAURUSLABS": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "NMDC": {
     "stage": "STALE_BOS2"
@@ -797,7 +797,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "IOLCP": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "MOREPENLAB": {
     "stage": "STALE_BOS2"
@@ -1183,7 +1183,7 @@
     "stage": "BASING"
   },
   "MANORAMA": {
-    "stage": "IN_RETEST"
+    "stage": "BASING"
   },
   "GMMPFAUDLR": {
     "stage": "FRESH_BOS2"
