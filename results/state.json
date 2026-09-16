@@ -1266,7 +1266,7 @@
     "stage": "BASING"
   },
   "MAXESTATES": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "FMGOETZE": {
     "stage": "BASING"
@@ -1383,7 +1383,7 @@
     "stage": "IN_RETEST"
   },
   "SAKAR": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "AXISCADES": {
     "stage": "STALE_BOS2"
