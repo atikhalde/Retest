@@ -1,6 +1,6 @@
 {
   "SHILPAMED": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "PNBHOUSING": {
     "stage": "BASING"
@@ -393,7 +393,7 @@
     "stage": "BASING"
   },
   "PITTIENG": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "GIPCL": {
     "stage": "BASING"
@@ -587,7 +587,7 @@
     "stage": "BASING"
   },
   "APOLLOHOSP": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "VEDL": {
     "stage": "STALE_BOS2"
@@ -1128,7 +1128,8 @@
     "stage": "BASING"
   },
   "LUMAXTECH": {
-    "stage": "BASING"
+    "stage": "FRESH_REVERSAL",
+    "last_reversal_alerted": "2026-09-17"
   },
   "PPLPHARMA": {
     "stage": "STALE_BOS2"
