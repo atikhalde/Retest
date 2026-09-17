@@ -482,7 +482,7 @@
     "stage": "STALE_BOS2"
   },
   "ENTERO": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "HINDALCO": {
     "stage": "STALE_BOS2"
