@@ -12,7 +12,7 @@
     "stage": "STALE_BOS2"
   },
   "TALBROAUTO": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "RBA": {
     "stage": "STALE_BOS2"
@@ -765,7 +765,7 @@
     "stage": "BASING"
   },
   "THEJO": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "VSSL": {
     "stage": "IN_RETEST"
@@ -1189,7 +1189,7 @@
     "stage": "FRESH_BOS2"
   },
   "CASTROLIND": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "TVSSRICHAK": {
     "stage": "STALE_BOS2"
