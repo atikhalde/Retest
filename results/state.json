@@ -117,7 +117,7 @@
     "last_reversal_alerted": "2026-08-27"
   },
   "AZAD": {
-    "stage": "PRE_BOS2_READY",
+    "stage": "BASING",
     "last_reversal_alerted": "2026-08-05"
   },
   "RISHABH": {
@@ -317,7 +317,7 @@
     "stage": "BASING"
   },
   "WELSPUNLIV": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "LUPIN": {
     "stage": "STALE_BOS2"
@@ -977,7 +977,7 @@
     "stage": "STALE_BOS2"
   },
   "SEAMECLTD": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "THERMAX": {
     "stage": "STALE_BOS2"
@@ -1173,7 +1173,7 @@
     "last_reversal_alerted": "2026-09-16"
   },
   "INDGN": {
-    "stage": "STALE_BOS2",
+    "stage": "IN_RETEST",
     "last_reversal_alerted": "2026-08-31"
   },
   "YUKEN": {
@@ -1183,13 +1183,13 @@
     "stage": "BASING"
   },
   "MANORAMA": {
-    "stage": "IN_RETEST"
+    "stage": "BASING"
   },
   "GMMPFAUDLR": {
     "stage": "FRESH_BOS2"
   },
   "CASTROLIND": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "TVSSRICHAK": {
     "stage": "STALE_BOS2"
