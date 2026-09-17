@@ -117,7 +117,7 @@
     "last_reversal_alerted": "2026-08-27"
   },
   "AZAD": {
-    "stage": "BASING",
+    "stage": "PRE_BOS2_READY",
     "last_reversal_alerted": "2026-08-05"
   },
   "RISHABH": {
@@ -317,7 +317,7 @@
     "stage": "BASING"
   },
   "WELSPUNLIV": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "LUPIN": {
     "stage": "STALE_BOS2"
@@ -338,7 +338,7 @@
     "stage": "BASING"
   },
   "IPCALAB": {
-    "stage": "FRESH_REVERSAL",
+    "stage": "PRE_BOS2_READY",
     "last_reversal_alerted": "2026-09-17"
   },
   "NDRAUTO": {
@@ -765,7 +765,7 @@
     "stage": "BASING"
   },
   "THEJO": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "VSSL": {
     "stage": "IN_RETEST"
@@ -977,7 +977,7 @@
     "stage": "STALE_BOS2"
   },
   "SEAMECLTD": {
-    "stage": "IN_RETEST"
+    "stage": "STALE_BOS2"
   },
   "THERMAX": {
     "stage": "STALE_BOS2"
@@ -1372,7 +1372,7 @@
     "last_reversal_alerted": "2026-09-17"
   },
   "EPL": {
-    "stage": "BASING"
+    "stage": "STALE_BOS2"
   },
   "AETHER": {
     "stage": "BASING"
