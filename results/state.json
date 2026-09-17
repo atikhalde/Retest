@@ -1,6 +1,6 @@
 {
   "SHILPAMED": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "PNBHOUSING": {
     "stage": "BASING"
@@ -293,7 +293,7 @@
     "stage": "BASING"
   },
   "SSWL": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "HIRECT": {
     "stage": "BASING",
@@ -318,7 +318,7 @@
     "stage": "BASING"
   },
   "WELSPUNLIV": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "LUPIN": {
     "stage": "STALE_BOS2"
@@ -502,7 +502,7 @@
     "stage": "BASING"
   },
   "MARKSANS": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "NAVINFLUOR": {
     "stage": "BASING"
@@ -1258,7 +1258,7 @@
     "stage": "STALE_BOS2"
   },
   "HATSUN": {
-    "stage": "IN_RETEST"
+    "stage": "STALE_BOS2"
   },
   "SURAKSHA": {
     "stage": "PRE_BOS2_READY"
@@ -1267,7 +1267,7 @@
     "stage": "BASING"
   },
   "MAXESTATES": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "FMGOETZE": {
     "stage": "BASING"
@@ -1369,7 +1369,8 @@
     "stage": "FRESH_REVERSAL"
   },
   "RAINBOW": {
-    "stage": "BASING"
+    "stage": "FRESH_REVERSAL",
+    "last_reversal_alerted": "2026-09-17"
   },
   "EPL": {
     "stage": "BASING"
