@@ -113,11 +113,11 @@
     "stage": "BASING"
   },
   "OFSS": {
-    "stage": "IN_RETEST",
+    "stage": "BASING",
     "last_reversal_alerted": "2026-08-27"
   },
   "AZAD": {
-    "stage": "PRE_BOS2_READY",
+    "stage": "BASING",
     "last_reversal_alerted": "2026-08-05"
   },
   "RISHABH": {
@@ -223,7 +223,7 @@
     "stage": "BASING"
   },
   "TEXINFRA": {
-    "stage": "FRESH_BOS2"
+    "stage": "STALE_BOS2"
   },
   "IKS": {
     "stage": "BASING"
@@ -248,7 +248,7 @@
     "stage": "BASING"
   },
   "RBLBANK": {
-    "stage": "BASING"
+    "stage": "IN_RETEST"
   },
   "WELCORP": {
     "stage": "STALE_BOS2"
@@ -794,7 +794,7 @@
     "stage": "STALE_BOS2"
   },
   "BOSCHLTD": {
-    "stage": "FRESH_REVERSAL"
+    "stage": "BASING"
   },
   "IOLCP": {
     "stage": "PRE_BOS2_READY"
@@ -815,7 +815,7 @@
     "stage": "BASING"
   },
   "HONASA": {
-    "stage": "FRESH_REVERSAL"
+    "stage": "BASING"
   },
   "GANDHAR": {
     "stage": "STALE_BOS2"
@@ -871,7 +871,7 @@
     "stage": "BASING"
   },
   "RPEL": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "JSFB": {
     "stage": "STALE_BOS2"
@@ -899,7 +899,7 @@
     "stage": "BASING"
   },
   "TRITURBINE": {
-    "stage": "BASING"
+    "stage": "STALE_BOS2"
   },
   "CGCL": {
     "stage": "IN_RETEST"
@@ -1183,7 +1183,7 @@
     "stage": "BASING"
   },
   "MANORAMA": {
-    "stage": "BASING"
+    "stage": "IN_RETEST"
   },
   "GMMPFAUDLR": {
     "stage": "FRESH_BOS2"
@@ -1245,7 +1245,7 @@
     "stage": "STALE_BOS2"
   },
   "AGI": {
-    "stage": "FRESH_BOS2"
+    "stage": "STALE_BOS2"
   },
   "HAL": {
     "stage": "BASING"
@@ -1344,10 +1344,10 @@
     "stage": "IN_RETEST"
   },
   "ANDHRAPAP": {
-    "stage": "IN_RETEST"
+    "stage": "BASING"
   },
   "SMCGLOBAL": {
-    "stage": "IN_RETEST"
+    "stage": "BASING"
   },
   "KROSS": {
     "stage": "IN_RETEST"
@@ -1362,7 +1362,7 @@
     "stage": "IN_RETEST"
   },
   "PARADEEP": {
-    "stage": "FRESH_REVERSAL"
+    "stage": "BASING"
   },
   "PRUDENT": {
     "stage": "FRESH_REVERSAL"
@@ -1378,13 +1378,13 @@
     "stage": "BASING"
   },
   "VENUSPIPES": {
-    "stage": "IN_RETEST"
+    "stage": "FRESH_BOS2"
   },
   "NRAIL": {
     "stage": "IN_RETEST"
   },
   "SAKAR": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "AXISCADES": {
     "stage": "STALE_BOS2"
