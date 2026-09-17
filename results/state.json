@@ -12,7 +12,7 @@
     "stage": "STALE_BOS2"
   },
   "TALBROAUTO": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "RBA": {
     "stage": "STALE_BOS2"
@@ -977,7 +977,7 @@
     "stage": "STALE_BOS2"
   },
   "SEAMECLTD": {
-    "stage": "IN_RETEST"
+    "stage": "STALE_BOS2"
   },
   "THERMAX": {
     "stage": "STALE_BOS2"
