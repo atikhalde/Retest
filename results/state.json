@@ -899,7 +899,7 @@
     "stage": "BASING"
   },
   "TRITURBINE": {
-    "stage": "STALE_BOS2"
+    "stage": "BASING"
   },
   "CGCL": {
     "stage": "IN_RETEST"
@@ -1183,7 +1183,7 @@
     "stage": "BASING"
   },
   "MANORAMA": {
-    "stage": "BASING"
+    "stage": "IN_RETEST"
   },
   "GMMPFAUDLR": {
     "stage": "FRESH_BOS2"
