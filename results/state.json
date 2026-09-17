@@ -117,7 +117,7 @@
     "last_reversal_alerted": "2026-08-27"
   },
   "AZAD": {
-    "stage": "PRE_BOS2_READY",
+    "stage": "BASING",
     "last_reversal_alerted": "2026-08-05"
   },
   "RISHABH": {
@@ -393,7 +393,7 @@
     "stage": "BASING"
   },
   "PITTIENG": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "GIPCL": {
     "stage": "BASING"
@@ -587,7 +587,7 @@
     "stage": "BASING"
   },
   "APOLLOHOSP": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "VEDL": {
     "stage": "STALE_BOS2"
