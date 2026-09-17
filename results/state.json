@@ -1,6 +1,6 @@
 {
   "SHILPAMED": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "PNBHOUSING": {
     "stage": "BASING"
@@ -12,7 +12,7 @@
     "stage": "STALE_BOS2"
   },
   "TALBROAUTO": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "RBA": {
     "stage": "STALE_BOS2"
@@ -117,7 +117,7 @@
     "last_reversal_alerted": "2026-08-27"
   },
   "AZAD": {
-    "stage": "BASING",
+    "stage": "PRE_BOS2_READY",
     "last_reversal_alerted": "2026-08-05"
   },
   "RISHABH": {
