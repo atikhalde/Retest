@@ -1,6 +1,6 @@
 {
   "SHILPAMED": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "PNBHOUSING": {
     "stage": "BASING"
@@ -249,7 +249,7 @@
     "stage": "BASING"
   },
   "RBLBANK": {
-    "stage": "BASING"
+    "stage": "IN_RETEST"
   },
   "WELCORP": {
     "stage": "STALE_BOS2"
@@ -293,7 +293,7 @@
     "stage": "BASING"
   },
   "SSWL": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "HIRECT": {
     "stage": "BASING",
@@ -492,8 +492,8 @@
     "stage": "STALE_BOS2"
   },
   "RAMRAT": {
-    "stage": "BASING",
-    "last_reversal_alerted": "2026-09-15"
+    "stage": "FRESH_REVERSAL",
+    "last_reversal_alerted": "2026-09-17"
   },
   "TIMKEN": {
     "stage": "STALE_BOS2"
@@ -766,7 +766,7 @@
     "stage": "BASING"
   },
   "THEJO": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "VSSL": {
     "stage": "IN_RETEST"
