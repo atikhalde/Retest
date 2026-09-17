@@ -117,7 +117,7 @@
     "last_reversal_alerted": "2026-08-27"
   },
   "AZAD": {
-    "stage": "BASING",
+    "stage": "PRE_BOS2_READY",
     "last_reversal_alerted": "2026-08-05"
   },
   "RISHABH": {
@@ -254,7 +254,7 @@
     "stage": "STALE_BOS2"
   },
   "ACE": {
-    "stage": "FRESH_REVERSAL"
+    "stage": "FRESH_BOS2"
   },
   "ALKYLAMINE": {
     "stage": "STALE_BOS2"
