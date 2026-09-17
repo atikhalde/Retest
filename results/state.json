@@ -12,7 +12,7 @@
     "stage": "STALE_BOS2"
   },
   "TALBROAUTO": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "RBA": {
     "stage": "STALE_BOS2"
@@ -317,7 +317,7 @@
     "stage": "BASING"
   },
   "WELSPUNLIV": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "LUPIN": {
     "stage": "STALE_BOS2"
@@ -977,7 +977,7 @@
     "stage": "STALE_BOS2"
   },
   "SEAMECLTD": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "THERMAX": {
     "stage": "STALE_BOS2"
