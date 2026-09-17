@@ -1,6 +1,6 @@
 {
   "SHILPAMED": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "PNBHOUSING": {
     "stage": "BASING"
@@ -338,7 +338,7 @@
     "stage": "BASING"
   },
   "IPCALAB": {
-    "stage": "PRE_BOS2_READY",
+    "stage": "FRESH_REVERSAL",
     "last_reversal_alerted": "2026-09-17"
   },
   "NDRAUTO": {
