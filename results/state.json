@@ -12,8 +12,7 @@
     "stage": "STALE_BOS2"
   },
   "TALBROAUTO": {
-    "stage": "BASING",
-    "last_reversal_alerted": "2026-09-07"
+    "stage": "PRE_BOS2_READY"
   },
   "RBA": {
     "stage": "STALE_BOS2"
@@ -249,7 +248,7 @@
     "stage": "BASING"
   },
   "RBLBANK": {
-    "stage": "IN_RETEST"
+    "stage": "BASING"
   },
   "WELCORP": {
     "stage": "STALE_BOS2"
@@ -766,7 +765,7 @@
     "stage": "BASING"
   },
   "THEJO": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "VSSL": {
     "stage": "IN_RETEST"
@@ -1174,7 +1173,7 @@
     "last_reversal_alerted": "2026-09-16"
   },
   "INDGN": {
-    "stage": "STALE_BOS2",
+    "stage": "IN_RETEST",
     "last_reversal_alerted": "2026-08-31"
   },
   "YUKEN": {
@@ -1360,7 +1359,7 @@
     "stage": "IN_RETEST"
   },
   "SUBEXLTD": {
-    "stage": "STALE_BOS2"
+    "stage": "IN_RETEST"
   },
   "PARADEEP": {
     "stage": "FRESH_REVERSAL"
