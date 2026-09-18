@@ -1306,7 +1306,7 @@
     "stage": "STALE_BOS2"
   },
   "JYOTICNC": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "FRESH_BOS2"
   },
   "UNITDSPR": {
     "stage": "BASING"
