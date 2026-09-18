@@ -354,7 +354,7 @@
     "last_reversal_alerted": "2026-08-12"
   },
   "GRANULES": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "GANESHHOU": {
     "stage": "BASING"
@@ -1260,7 +1260,7 @@
     "stage": "STALE_BOS2"
   },
   "SURAKSHA": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "KRBL": {
     "stage": "BASING"
