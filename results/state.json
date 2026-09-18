@@ -86,7 +86,7 @@
     "stage": "STALE_BOS2"
   },
   "NAZARA": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "KAPSTON": {
     "stage": "STALE_BOS2"
@@ -117,7 +117,7 @@
     "last_reversal_alerted": "2026-08-27"
   },
   "AZAD": {
-    "stage": "BASING",
+    "stage": "FRESH_BOS2",
     "last_reversal_alerted": "2026-08-05"
   },
   "RISHABH": {
@@ -220,7 +220,8 @@
     "stage": "BASING"
   },
   "INDHOTEL": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "FRESH_REVERSAL",
+    "last_reversal_alerted": "2026-09-18"
   },
   "TEXINFRA": {
     "stage": "STALE_BOS2"
@@ -861,7 +862,7 @@
     "stage": "BASING"
   },
   "EXIDEIND": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "SUPRIYA": {
     "stage": "BASING",
