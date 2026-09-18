@@ -516,7 +516,7 @@
     "stage": "BASING"
   },
   "ROSSTECH": {
-    "stage": "IN_RETEST"
+    "stage": "FRESH_BOS2"
   },
   "ADVENZYMES": {
     "stage": "STALE_BOS2"
@@ -861,7 +861,7 @@
     "stage": "BASING"
   },
   "EXIDEIND": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "SUPRIYA": {
     "stage": "BASING",
