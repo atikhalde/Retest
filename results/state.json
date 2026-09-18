@@ -764,7 +764,7 @@
     "stage": "BASING"
   },
   "THEJO": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "VSSL": {
     "stage": "IN_RETEST"
@@ -796,7 +796,7 @@
     "stage": "BASING"
   },
   "IOLCP": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "MOREPENLAB": {
     "stage": "STALE_BOS2"
