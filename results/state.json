@@ -220,7 +220,7 @@
     "stage": "BASING"
   },
   "INDHOTEL": {
-    "stage": "FRESH_REVERSAL"
+    "stage": "PRE_BOS2_READY"
   },
   "TEXINFRA": {
     "stage": "STALE_BOS2"
@@ -338,8 +338,7 @@
     "stage": "BASING"
   },
   "IPCALAB": {
-    "stage": "FRESH_REVERSAL",
-    "last_reversal_alerted": "2026-09-18"
+    "stage": "PRE_BOS2_READY"
   },
   "NDRAUTO": {
     "stage": "BASING"
@@ -450,7 +449,7 @@
     "stage": "STALE_BOS2"
   },
   "REDINGTON": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "KRISHANA": {
     "stage": "STALE_BOS2"
@@ -501,7 +500,7 @@
     "stage": "BASING"
   },
   "MARKSANS": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "NAVINFLUOR": {
     "stage": "BASING"
@@ -1321,7 +1320,7 @@
     "stage": "IN_RETEST"
   },
   "SALSTEEL": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "MMP": {
     "stage": "IN_RETEST"
