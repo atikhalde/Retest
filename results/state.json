@@ -1338,7 +1338,7 @@
     "stage": "PRE_BOS2_READY"
   },
   "EDELWEISS": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "ASIANHOTNR": {
     "stage": "IN_RETEST"
