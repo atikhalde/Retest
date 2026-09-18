@@ -338,7 +338,8 @@
     "stage": "BASING"
   },
   "IPCALAB": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "FRESH_REVERSAL",
+    "last_reversal_alerted": "2026-09-18"
   },
   "NDRAUTO": {
     "stage": "BASING"
@@ -1299,7 +1300,7 @@
     "stage": "BASING"
   },
   "VIDHIING": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "DIVISLAB": {
     "stage": "STALE_BOS2"
