@@ -35,7 +35,7 @@
     "stage": "STALE_BOS2"
   },
   "AVALON": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "CRAFTSMAN": {
     "stage": "FRESH_BOS2"
@@ -220,7 +220,7 @@
     "stage": "BASING"
   },
   "INDHOTEL": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "TEXINFRA": {
     "stage": "STALE_BOS2"
@@ -355,7 +355,7 @@
     "last_reversal_alerted": "2026-08-12"
   },
   "GRANULES": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "GANESHHOU": {
     "stage": "BASING"
@@ -393,7 +393,7 @@
     "stage": "BASING"
   },
   "PITTIENG": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "GIPCL": {
     "stage": "BASING"
@@ -1336,7 +1336,7 @@
     "stage": "BASING"
   },
   "BEML": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "EDELWEISS": {
     "stage": "BASING"
