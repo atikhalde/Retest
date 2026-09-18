@@ -86,7 +86,7 @@
     "stage": "STALE_BOS2"
   },
   "NAZARA": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "KAPSTON": {
     "stage": "STALE_BOS2"
@@ -292,7 +292,7 @@
     "stage": "BASING"
   },
   "SSWL": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "HIRECT": {
     "stage": "BASING",
@@ -942,7 +942,7 @@
     "stage": "STALE_BOS2"
   },
   "UNIMECH": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "ASIANENE": {
     "stage": "STALE_BOS2"
