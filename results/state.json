@@ -1,6 +1,6 @@
 {
   "SHILPAMED": {
-    "stage": "BASING"
+    "stage": "FRESH_BOS2"
   },
   "PNBHOUSING": {
     "stage": "BASING"
@@ -242,7 +242,7 @@
     "last_reversal_alerted": "2026-08-26"
   },
   "PVRINOX": {
-    "stage": "BASING"
+    "stage": "FRESH_BOS2"
   },
   "KIRLOSBROS": {
     "stage": "BASING"
@@ -338,7 +338,7 @@
     "stage": "BASING"
   },
   "IPCALAB": {
-    "stage": "FRESH_BOS2",
+    "stage": "FRESH_REVERSAL",
     "last_reversal_alerted": "2026-09-18"
   },
   "NDRAUTO": {
@@ -434,7 +434,7 @@
     "stage": "BASING"
   },
   "RADICO": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "FRESH_BOS2"
   },
   "MANAPPURAM": {
     "stage": "BASING"
@@ -765,7 +765,7 @@
     "stage": "BASING"
   },
   "THEJO": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "VSSL": {
     "stage": "IN_RETEST"
@@ -1167,7 +1167,7 @@
     "stage": "STALE_BOS2"
   },
   "UNOMINDA": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "FOSECOIND": {
     "stage": "FRESH_BOS2",
@@ -1336,7 +1336,7 @@
     "stage": "BASING"
   },
   "BEML": {
-    "stage": "FRESH_BOS2"
+    "stage": "PRE_BOS2_READY"
   },
   "EDELWEISS": {
     "stage": "PRE_BOS2_READY"
