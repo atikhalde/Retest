@@ -796,7 +796,7 @@
     "stage": "BASING"
   },
   "IOLCP": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "MOREPENLAB": {
     "stage": "STALE_BOS2"
