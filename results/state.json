@@ -12,7 +12,7 @@
     "stage": "STALE_BOS2"
   },
   "TALBROAUTO": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "RBA": {
     "stage": "STALE_BOS2"
@@ -35,7 +35,7 @@
     "stage": "STALE_BOS2"
   },
   "AVALON": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "CRAFTSMAN": {
     "stage": "FRESH_BOS2"
@@ -242,7 +242,7 @@
     "last_reversal_alerted": "2026-08-26"
   },
   "PVRINOX": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "KIRLOSBROS": {
     "stage": "BASING"
@@ -419,7 +419,7 @@
     "stage": "BASING"
   },
   "RPGLIFE": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "PFC": {
     "stage": "BASING"
@@ -528,7 +528,7 @@
     "stage": "IN_RETEST"
   },
   "KABRAEXTRU": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "LAURUSLABS": {
     "stage": "IN_RETEST"
@@ -596,7 +596,7 @@
     "stage": "STALE_BOS2"
   },
   "SYRMA": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "SPARC": {
     "stage": "STALE_BOS2"
@@ -929,7 +929,7 @@
     "stage": "BASING"
   },
   "EMCURE": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "AVADHSUGAR": {
     "stage": "STALE_BOS2"
@@ -1300,7 +1300,7 @@
     "stage": "BASING"
   },
   "VIDHIING": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "DIVISLAB": {
     "stage": "STALE_BOS2"
@@ -1382,7 +1382,7 @@
     "stage": "FRESH_BOS2"
   },
   "NRAIL": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "SAKAR": {
     "stage": "IN_RETEST"
