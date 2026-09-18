@@ -1299,7 +1299,7 @@
     "stage": "BASING"
   },
   "VIDHIING": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "DIVISLAB": {
     "stage": "STALE_BOS2"
