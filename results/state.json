@@ -168,7 +168,7 @@
     "stage": "BASING"
   },
   "KPIL": {
-    "stage": "FRESH_REVERSAL",
+    "stage": "PRE_BOS2_READY",
     "last_reversal_alerted": "2026-09-10"
   },
   "ZYDUSWELL": {
@@ -393,7 +393,7 @@
     "stage": "BASING"
   },
   "PITTIENG": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "STALE_BOS2"
   },
   "GIPCL": {
     "stage": "BASING"
@@ -425,7 +425,7 @@
     "stage": "BASING"
   },
   "JINDALPOLY": {
-    "stage": "FRESH_REVERSAL"
+    "stage": "BASING"
   },
   "GABRIEL": {
     "stage": "BASING"
@@ -687,7 +687,7 @@
     "stage": "BASING"
   },
   "CYIENTDLM": {
-    "stage": "BASING"
+    "stage": "FRESH_BOS2"
   },
   "JASH": {
     "stage": "STALE_BOS2"
@@ -977,7 +977,7 @@
     "stage": "STALE_BOS2"
   },
   "SEAMECLTD": {
-    "stage": "IN_RETEST"
+    "stage": "BASING"
   },
   "THERMAX": {
     "stage": "STALE_BOS2"
@@ -1007,7 +1007,7 @@
     "stage": "STALE_BOS2"
   },
   "HUHTAMAKI": {
-    "stage": "BASING"
+    "stage": "FRESH_REVERSAL"
   },
   "BANKBARODA": {
     "stage": "STALE_BOS2"
@@ -1187,7 +1187,7 @@
     "stage": "IN_RETEST"
   },
   "GMMPFAUDLR": {
-    "stage": "FRESH_BOS2"
+    "stage": "STALE_BOS2"
   },
   "CASTROLIND": {
     "stage": "FRESH_BOS2"
@@ -1212,7 +1212,7 @@
     "last_reversal_alerted": "2026-09-07"
   },
   "GALAXYSURF": {
-    "stage": "FRESH_REVERSAL"
+    "stage": "BASING"
   },
   "UDS": {
     "stage": "STALE_BOS2"
@@ -1382,7 +1382,7 @@
     "stage": "FRESH_BOS2"
   },
   "NRAIL": {
-    "stage": "BASING"
+    "stage": "FRESH_BOS2"
   },
   "SAKAR": {
     "stage": "IN_RETEST"
