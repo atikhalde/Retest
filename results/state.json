@@ -338,7 +338,8 @@
     "stage": "BASING"
   },
   "IPCALAB": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "FRESH_REVERSAL",
+    "last_reversal_alerted": "2026-09-18"
   },
   "NDRAUTO": {
     "stage": "BASING"
@@ -449,7 +450,7 @@
     "stage": "STALE_BOS2"
   },
   "REDINGTON": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "KRISHANA": {
     "stage": "STALE_BOS2"
@@ -500,7 +501,7 @@
     "stage": "BASING"
   },
   "MARKSANS": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "NAVINFLUOR": {
     "stage": "BASING"
@@ -941,7 +942,7 @@
     "stage": "STALE_BOS2"
   },
   "UNIMECH": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "ASIANENE": {
     "stage": "STALE_BOS2"
@@ -1305,7 +1306,7 @@
     "stage": "STALE_BOS2"
   },
   "JYOTICNC": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "UNITDSPR": {
     "stage": "BASING"
