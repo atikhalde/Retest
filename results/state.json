@@ -465,7 +465,7 @@
     "stage": "PRE_BOS2_READY"
   },
   "WSTCSTPAPR": {
-    "stage": "BASING",
+    "stage": "FRESH_BOS2",
     "last_reversal_alerted": "2026-09-01"
   },
   "NGLFINE": {
@@ -1306,7 +1306,7 @@
     "stage": "STALE_BOS2"
   },
   "JYOTICNC": {
-    "stage": "FRESH_BOS2"
+    "stage": "PRE_BOS2_READY"
   },
   "UNITDSPR": {
     "stage": "BASING"
