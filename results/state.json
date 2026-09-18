@@ -338,8 +338,7 @@
     "stage": "BASING"
   },
   "IPCALAB": {
-    "stage": "FRESH_REVERSAL",
-    "last_reversal_alerted": "2026-09-18"
+    "stage": "PRE_BOS2_READY"
   },
   "NDRAUTO": {
     "stage": "BASING"
@@ -501,7 +500,7 @@
     "stage": "BASING"
   },
   "MARKSANS": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "NAVINFLUOR": {
     "stage": "BASING"
@@ -942,7 +941,7 @@
     "stage": "STALE_BOS2"
   },
   "UNIMECH": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "ASIANENE": {
     "stage": "STALE_BOS2"
