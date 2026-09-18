@@ -35,7 +35,7 @@
     "stage": "STALE_BOS2"
   },
   "AVALON": {
-    "stage": "BASING"
+    "stage": "FRESH_BOS2"
   },
   "CRAFTSMAN": {
     "stage": "FRESH_BOS2"
@@ -797,7 +797,7 @@
     "stage": "BASING"
   },
   "IOLCP": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "MOREPENLAB": {
     "stage": "STALE_BOS2"
@@ -1336,7 +1336,7 @@
     "stage": "BASING"
   },
   "BEML": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "EDELWEISS": {
     "stage": "BASING"
@@ -1382,7 +1382,7 @@
     "stage": "FRESH_BOS2"
   },
   "NRAIL": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "BASING"
   },
   "SAKAR": {
     "stage": "IN_RETEST"
