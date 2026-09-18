@@ -12,7 +12,7 @@
     "stage": "STALE_BOS2"
   },
   "TALBROAUTO": {
-    "stage": "BASING"
+    "stage": "FRESH_BOS2"
   },
   "RBA": {
     "stage": "STALE_BOS2"
@@ -220,7 +220,7 @@
     "stage": "BASING"
   },
   "INDHOTEL": {
-    "stage": "PRE_BOS2_READY"
+    "stage": "FRESH_REVERSAL"
   },
   "TEXINFRA": {
     "stage": "STALE_BOS2"
@@ -393,7 +393,7 @@
     "stage": "BASING"
   },
   "PITTIENG": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "GIPCL": {
     "stage": "BASING"
@@ -596,7 +596,7 @@
     "stage": "STALE_BOS2"
   },
   "SYRMA": {
-    "stage": "BASING"
+    "stage": "FRESH_BOS2"
   },
   "SPARC": {
     "stage": "STALE_BOS2"
@@ -797,7 +797,7 @@
     "stage": "BASING"
   },
   "IOLCP": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "MOREPENLAB": {
     "stage": "STALE_BOS2"
@@ -942,7 +942,7 @@
     "stage": "STALE_BOS2"
   },
   "UNIMECH": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "ASIANENE": {
     "stage": "STALE_BOS2"
@@ -1369,7 +1369,7 @@
     "stage": "FRESH_REVERSAL"
   },
   "RAINBOW": {
-    "stage": "FRESH_REVERSAL",
+    "stage": "BASING",
     "last_reversal_alerted": "2026-09-18"
   },
   "EPL": {
@@ -1382,7 +1382,7 @@
     "stage": "FRESH_BOS2"
   },
   "NRAIL": {
-    "stage": "BASING"
+    "stage": "PRE_BOS2_READY"
   },
   "SAKAR": {
     "stage": "IN_RETEST"
